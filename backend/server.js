@@ -15,6 +15,7 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 const store = require("./store");
+const notify = require("./notify");
 
 const PORT = Number(process.env.PORT) || 8790;
 const ADMIN_SECRET = process.env.ADMIN_SECRET || "change-me";
@@ -412,7 +413,8 @@ const server = http.createServer(async (req, res) => {
           expiresAt: new Date(now + 30 * 24 * 60 * 60 * 1000).toISOString(),
         },
       ]);
-      return sendJson(res, 201, { token, user: publicUser(user) });
+      const notifications = notify.sendWelcome(user);
+      return sendJson(res, 201, { token, user: publicUser(user), notifications });
     }
 
     if (pathname === "/api/auth/login" && req.method === "POST") {
@@ -536,6 +538,7 @@ const server = http.createServer(async (req, res) => {
 
       const sessionUser = await getSessionUser(req);
       const isPlus = plusActive(sessionUser);
+      const email = cleanText(customer.email, 120).toLowerCase() || (sessionUser ? sessionUser.email : "");
 
       const geo =
         customer.lat != null && customer.lon != null
@@ -548,7 +551,7 @@ const server = http.createServer(async (req, res) => {
         status: "PLACED",
         userId: sessionUser ? sessionUser.id : null,
         plusMember: isPlus,
-        customer: { name, phone, address, ...(geo || {}) },
+        customer: { name, phone, address, ...(email ? { email } : {}), ...(geo || {}) },
         notes: cleanText(body.notes, 300),
         createdAt: new Date().toISOString(),
       };
@@ -654,7 +657,8 @@ const server = http.createServer(async (req, res) => {
       const orders = await store.getOrders();
       orders.push(order);
       await store.saveOrders([order]);
-      return sendJson(res, 201, order);
+      const notifications = notify.sendOrder(order);
+      return sendJson(res, 201, { ...order, notifications });
     }
 
     // Get a single order
