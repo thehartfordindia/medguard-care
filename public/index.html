@@ -21,7 +21,7 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
-    <link rel="stylesheet" href="styles.css?v=4" />
+    <link rel="stylesheet" href="styles.css?v=5" />
   </head>
   <body>
     <!-- Header -->
@@ -34,13 +34,13 @@
         </div>
       </div>
       <nav class="top-nav">
-        <a href="#medicines">Medicines</a>
-        <a href="#devices">Devices</a>
-        <a href="#labs">Lab Tests</a>
-        <a href="#care">Doctors & Care</a>
-        <a href="#plus">Plus</a>
-        <a href="#track">Track Order</a>
-        <a href="#support">Support</a>
+        <a href="#" data-view="medicines">Medicines</a>
+        <a href="#" data-view="devices">Devices</a>
+        <a href="#" data-view="labs">Lab Tests</a>
+        <a href="#" data-view="care">Doctors &amp; Care</a>
+        <a href="#" data-view="plus">Plus</a>
+        <a href="#" data-view="track">Track Order</a>
+        <a href="#" data-view="support">Support</a>
       </nav>
       <div class="header-actions">
         <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark mode">🌙</button>
@@ -59,7 +59,7 @@
               </div>
               <div id="ddPlusStatus" class="dd-plus"></div>
               <button id="ddMyOrders" class="dd-item" type="button">📦 My orders</button>
-              <a href="#plus" class="dd-item" id="ddPlusLink">⭐ MedGuard Plus</a>
+              <a href="#" class="dd-item" id="ddPlusLink" data-view="plus">⭐ MedGuard Plus</a>
               <button id="logoutBtn" class="dd-item danger" type="button">🚪 Log out</button>
             </div>
           </div>
@@ -74,14 +74,25 @@
     <section class="hero">
       <div class="hero-copy">
         <span class="pill">🚚 Door-to-door • ⚕️ At-home care • 💻 Online consults</span>
-        <h1>Healthcare that comes <span class="grad">to you</span>.</h1>
+        <h1>What do you need <span class="grad">care</span> for today?</h1>
         <p>
-          Order medicines for delivery, book a doctor, nurse or caretaker to your home, or consult a
-          doctor online — all matched to your live location for the fastest care.
+          Search by your condition or symptom — we’ll instantly show the right medicines, tests and
+          doctors for you. No endless scrolling.
         </p>
+        <div class="hero-search">
+          <span class="hero-search-icon">🔍</span>
+          <input
+            id="globalSearch"
+            type="search"
+            placeholder="Try “fever”, “diabetes”, “BP”, “thyroid”…"
+            autocomplete="off"
+            aria-label="Search by condition"
+          />
+          <button id="globalSearchBtn" class="btn btn-primary" type="button">Search</button>
+        </div>
+        <div class="condition-chips" id="conditionChips" aria-label="Common conditions"></div>
         <div class="hero-cta">
-          <button id="useLocationBtn" class="btn btn-primary">📍 Use my location</button>
-          <a href="#care" class="btn btn-ghost">Book a doctor</a>
+          <button id="useLocationBtn" class="btn btn-ghost btn-sm">📍 Use my location</button>
         </div>
         <p id="locationStatus" class="loc-status">Location not set — tap “Use my location” for accurate delivery ETA.</p>
       </div>
@@ -99,6 +110,17 @@
     </section>
 
     <main class="container">
+      <!-- Section switcher -->
+      <nav class="view-tabs" id="viewTabs" aria-label="Sections">
+        <button class="view-tab active" type="button" data-view="medicines">💊 Medicines</button>
+        <button class="view-tab" type="button" data-view="devices">🩻 Devices</button>
+        <button class="view-tab" type="button" data-view="labs">🧪 Lab Tests</button>
+        <button class="view-tab" type="button" data-view="care">⚕️ Doctors &amp; Care</button>
+        <button class="view-tab" type="button" data-view="plus">⭐ Plus</button>
+        <button class="view-tab" type="button" data-view="track">📦 Track &amp; Help</button>
+        <button class="view-tab" type="button" data-view="support">🎧 Support</button>
+      </nav>
+
       <!-- Quick stats -->
       <section class="stat-strip">
         <div class="stat"><b>24/7</b><span>Emergency support</span></div>
@@ -108,7 +130,7 @@
       </section>
 
       <!-- Medicines -->
-      <section id="medicines" class="panel">
+      <section id="medicines" class="panel view active" data-view-panel="medicines">
         <div class="panel-head">
           <h2>💊 Order Medicines</h2>
           <p>Search, add to cart, and get them delivered from your nearest hub.</p>
@@ -121,7 +143,7 @@
       </section>
 
       <!-- Medical devices & equipment -->
-      <section id="devices" class="panel">
+      <section id="devices" class="panel view" data-view-panel="devices">
         <div class="panel-head">
           <h2>🩻 Medical Devices & Equipment</h2>
           <p>Monitors, nebulizers, mobility aids and first-aid essentials — delivered to your door.</p>
@@ -130,7 +152,7 @@
       </section>
 
       <!-- Lab tests at home -->
-      <section id="labs" class="panel">
+      <section id="labs" class="panel view" data-view-panel="labs">
         <div class="panel-head">
           <h2>🧪 Lab Tests at Home</h2>
           <p>Book diagnostic tests with free home sample collection. Reports on your phone.</p>
@@ -143,7 +165,7 @@
       </section>
 
       <!-- Care providers -->
-      <section id="care" class="panel">
+      <section id="care" class="panel view" data-view-panel="care">
         <div class="panel-head">
           <h2>⚕️ Doctors, Nurses & Caretakers</h2>
           <p>Book a visit at home or an online consultation. Sorted by distance when your location is on.</p>
@@ -158,7 +180,7 @@
       </section>
 
       <!-- MedGuard Plus membership -->
-      <section id="plus" class="panel plus-panel">
+      <section id="plus" class="panel plus-panel view" data-view-panel="plus">
         <div class="plus-hero">
           <div class="plus-hero-copy">
             <span class="pill plus-pill">⭐ Membership</span>
@@ -175,7 +197,7 @@
       </section>
 
       <!-- Track order -->
-      <section id="track" class="panel two-col">
+      <section id="track" class="panel two-col view" data-view-panel="track">
         <div>
           <div class="panel-head">
             <h2>📦 Track your order</h2>
@@ -210,7 +232,7 @@
       </section>
 
       <!-- Customer support -->
-      <section id="support" class="panel two-col">
+      <section id="support" class="panel two-col view" data-view-panel="support">
         <div>
           <div class="panel-head">
             <h2>🎧 Customer Support</h2>
@@ -352,6 +374,6 @@
       crossorigin=""
       defer
     ></script>
-    <script src="app.js?v=4" defer></script>
+    <script src="app.js?v=5" defer></script>
   </body>
 </html>
