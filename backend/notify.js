@@ -184,6 +184,23 @@ function buildWelcome(user) {
   return { email, sms };
 }
 
+function buildReset(user, code) {
+  const email = {
+    subject: "Your MedGuard Care password reset code",
+    message:
+      `Hi ${user.name || "there"},\n\n` +
+      `We received a request to reset the password for your MedGuard Care account (${user.email}).\n` +
+      `Your reset code is: ${code}\n\n` +
+      `Enter this code in the app to set a new password. It expires in 15 minutes.\n` +
+      `If you didn't request this, you can safely ignore this message.\n\n` +
+      `— The MedGuard Care Team`,
+  };
+  const sms = {
+    message: `MedGuard Care: Your password reset code is ${code}. It expires in 15 minutes. Didn't request it? Ignore this message.`,
+  };
+  return { email, sms };
+}
+
 function buildOrder(order) {
   const link = WEBSITE_URL ? `\nTrack: ${WEBSITE_URL}` : "";
   const email = {
@@ -246,9 +263,14 @@ function sendOrder(order) {
   return send(c.email || "", c.phone || "", buildOrder(order));
 }
 
+function sendReset(user, code) {
+  return send(user.email || "", user.phone || "", buildReset(user, code));
+}
+
 module.exports = {
   sendWelcome,
   sendOrder,
+  sendReset,
   anyChannelReady,
   getProvider,
   isConfigured,
