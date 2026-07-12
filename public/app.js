@@ -754,8 +754,73 @@ function switchAuthTab(tab) {
   });
   $("loginForm").hidden = tab !== "login";
   $("signupForm").hidden = tab !== "signup";
+  if ($("forgotForm")) $("forgotForm").hidden = true;
   $("loginMsg").textContent = "";
   $("signupMsg").textContent = "";
+}
+function showForgotForm() {
+  document.querySelectorAll(".auth-tab").forEach((b) => b.classList.remove("active"));
+  $("loginForm").hidden = true;
+  $("signupForm").hidden = true;
+  $("forgotForm").hidden = false;
+  $("forgotForm").reset();
+  $("forgotResetFields").hidden = true;
+  $("forgotMsg").textContent = "";
+  $("forgotMsg").className = "auth-msg";
+  const email = $("loginEmail").value.trim();
+  if (email) $("forgotEmail").value = email;
+}
+async function doForgot(e) {
+  e.preventDefault();
+  const email = $("forgotEmail").value.trim();
+  const msg = $("forgotMsg");
+  msg.className = "auth-msg";
+  msg.textContent = "Sending reset code…";
+  try {
+    const res = await fetch(`${API}/api/auth/forgot`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Could not send reset code");
+    $("forgotResetFields").hidden = false;
+    $("forgotSendBtn").textContent = "Resend code";
+    msg.className = "auth-msg ok";
+    const via = (data.delivered || []).length
+      ? `We sent a code by ${data.delivered.join(" & ")}.`
+      : "If SMS/email isn't set up yet, ask the site admin for your code.";
+    msg.textContent = `✅ ${via} Enter it below with your new password.`;
+    $("resetCode").focus();
+  } catch (err) {
+    msg.className = "auth-msg err";
+    msg.textContent = `⚠️ ${err.message}`;
+  }
+}
+async function doReset() {
+  const email = $("forgotEmail").value.trim();
+  const code = $("resetCode").value.trim();
+  const password = $("resetPassword").value;
+  const msg = $("forgotMsg");
+  msg.className = "auth-msg";
+  msg.textContent = "Updating your password…";
+  try {
+    const res = await fetch(`${API}/api/auth/reset`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, code, password }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Reset failed");
+    setUser(data.user, data.token);
+    $("authModal").hidden = true;
+    $("forgotForm").reset();
+    $("forgotResetFields").hidden = true;
+    toast(`Password updated. Welcome back, ${data.user.name.split(" ")[0]}!`);
+  } catch (err) {
+    msg.className = "auth-msg err";
+    msg.textContent = `⚠️ ${err.message}`;
+  }
 }
 async function doLogin(e) {
   e.preventDefault();
@@ -1276,6 +1341,10 @@ function bindEvents() {
   });
   $("loginForm").addEventListener("submit", doLogin);
   $("signupForm").addEventListener("submit", doRegister);
+  $("forgotLink").addEventListener("click", showForgotForm);
+  $("backToLogin").addEventListener("click", () => switchAuthTab("login"));
+  $("forgotForm").addEventListener("submit", doForgot);
+  $("resetConfirmBtn").addEventListener("click", doReset);
   $("userMenuBtn").addEventListener("click", () => {
     $("userDropdown").hidden = !$("userDropdown").hidden;
   });
