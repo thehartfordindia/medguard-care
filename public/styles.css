@@ -1247,6 +1247,27 @@ a:hover {
 .auth-msg.err {
   color: var(--danger);
 }
+.auth-msg.ok {
+  color: var(--primary);
+}
+.auth-link {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.2rem 0;
+  align-self: flex-start;
+}
+.auth-link:hover {
+  text-decoration: underline;
+}
+.auth-hint {
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+  margin: 0 0 0.2rem;
+}
 
 /* MedGuard Plus panel */
 .plus-panel {
