@@ -1,3 +1,9 @@
+databases:
+  - name: medguard-db
+    plan: free
+    databaseName: medguard
+    user: medguard
+
 services:
   - type: web
     name: medguard-care
@@ -8,5 +14,8 @@ services:
     envVars:
       - key: ADMIN_SECRET
         generateValue: true
-      # - key: DATABASE_URL   # add a Postgres URL for durable storage
+      - key: DATABASE_URL
+        fromDatabase:
+          name: medguard-db
+          property: connectionString
       # - key: WEBSITE_URL     # e.g. https://medguard-care.onrender.com
