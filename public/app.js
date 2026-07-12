@@ -1345,6 +1345,16 @@ function bindEvents() {
   $("backToLogin").addEventListener("click", () => switchAuthTab("login"));
   $("forgotForm").addEventListener("submit", doForgot);
   $("resetConfirmBtn").addEventListener("click", doReset);
+  // Pressing Enter in the code / new-password fields should verify the code,
+  // not resubmit the form (which would resend a new code and invalidate this one).
+  ["resetCode", "resetPassword"].forEach((id) => {
+    $(id).addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        doReset();
+      }
+    });
+  });
   $("userMenuBtn").addEventListener("click", () => {
     $("userDropdown").hidden = !$("userDropdown").hidden;
   });
