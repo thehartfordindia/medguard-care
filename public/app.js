@@ -19,10 +19,25 @@ const state = {
   user: null, // logged-in user { id, name, email, plusActive }
   token: null, // session token
   plan: null, // MedGuard Plus plan details
+  view: "medicines", // active section view
+  labQuery: "", // free-text filter for lab tests
 };
 
 const DEVICE_CATEGORIES = ["Devices", "Mobility Aids", "Protection"];
 const MEMBER_RATE = 0.05;
+const VIEWS = ["medicines", "devices", "labs", "care", "plus", "track", "support"];
+
+const CONDITIONS = [
+  { emoji: "🤒", label: "Fever", term: "fever" },
+  { emoji: "🩸", label: "Diabetes", term: "sugar" },
+  { emoji: "❤️", label: "BP / Heart", term: "bp" },
+  { emoji: "🤧", label: "Allergy & Cold", term: "allergy" },
+  { emoji: "🦋", label: "Thyroid", term: "thyroid" },
+  { emoji: "💊", label: "Pain", term: "pain" },
+  { emoji: "🦴", label: "Bones & Vitamins", term: "bones" },
+  { emoji: "🫁", label: "Breathing", term: "breathing" },
+  { emoji: "🤢", label: "Digestion", term: "acidity" },
+];
 
 const dom = {};
 
@@ -164,7 +179,16 @@ function renderLabTests() {
   const grid = $("labGrid");
   if (!grid) return;
   const cat = $("labCategory") ? $("labCategory").value : "all";
-  const list = state.labTests.filter((t) => cat === "all" || t.category === cat);
+  const q = (state.labQuery || "").toLowerCase();
+  const list = state.labTests.filter((t) => {
+    if (cat !== "all" && t.category !== cat) return false;
+    if (!q) return true;
+    return (
+      t.name.toLowerCase().includes(q) ||
+      t.category.toLowerCase().includes(q) ||
+      (t.tags || []).some((x) => x.includes(q))
+    );
+  });
   if (!list.length) {
     grid.innerHTML = "<p>No lab tests found.</p>";
     return;
@@ -1020,6 +1044,77 @@ function initChat() {
   renderChips(DEFAULT_CHIPS);
 }
 
+/* ---------- view router + condition search ---------- */
+function showView(name) {
+  if (!VIEWS.includes(name)) name = "medicines";
+  state.view = name;
+  document.querySelectorAll(".view").forEach((v) => {
+    v.classList.toggle("active", v.getAttribute("data-view-panel") === name);
+  });
+  document.querySelectorAll(".view-tab").forEach((t) => {
+    t.classList.toggle("active", t.getAttribute("data-view") === name);
+  });
+  const tabs = document.querySelector(".view-tabs");
+  if (tabs) tabs.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (miniMap) setTimeout(() => miniMap.invalidateSize(), 150);
+}
+
+function renderConditionChips() {
+  const host = $("conditionChips");
+  if (!host) return;
+  host.innerHTML = CONDITIONS.map(
+    (c) => `<button class="condition-chip" type="button" data-term="${c.term}">
+      <span>${c.emoji}</span> ${escapeHtml(c.label)}
+    </button>`
+  ).join("");
+}
+
+function countMedMatches(q) {
+  const t = q.toLowerCase();
+  return state.medicines.filter(
+    (m) =>
+      !DEVICE_CATEGORIES.includes(m.category) &&
+      (m.name.toLowerCase().includes(t) ||
+        m.category.toLowerCase().includes(t) ||
+        (m.tags || []).some((x) => x.includes(t)))
+  ).length;
+}
+function countLabMatches(q) {
+  const t = q.toLowerCase();
+  return state.labTests.filter(
+    (l) =>
+      l.name.toLowerCase().includes(t) ||
+      l.category.toLowerCase().includes(t) ||
+      (l.tags || []).some((x) => x.includes(t))
+  ).length;
+}
+
+/** Search by condition/symptom: filter medicines + lab tests, land on the best match. */
+function globalSearch(term) {
+  const q = String(term || "").trim();
+  if (!q) {
+    showView("medicines");
+    return;
+  }
+  $("medSearch").value = q;
+  if ($("medCategory")) $("medCategory").value = "all";
+  renderMedicines();
+  state.labQuery = q;
+  if ($("labCategory")) $("labCategory").value = "all";
+  renderLabTests();
+
+  const medN = countMedMatches(q);
+  const labN = countLabMatches(q);
+  if (medN === 0 && labN > 0) {
+    showView("labs");
+    toast(`No medicines for “${q}” — showing ${labN} matching lab test${labN > 1 ? "s" : ""}.`);
+  } else {
+    showView("medicines");
+    const extra = labN > 0 ? ` · ${labN} lab test${labN > 1 ? "s" : ""} in 🧪 tab` : "";
+    toast(`${medN} result${medN === 1 ? "" : "s"} for “${q}”${extra}`);
+  }
+}
+
 /* ---------- theme ---------- */
 function initTheme() {
   const saved = localStorage.getItem("mg_theme");
@@ -1041,6 +1136,31 @@ function updateThemeIcon() {
 
 /* ---------- events ---------- */
 function bindEvents() {
+  // view router: any element with data-view switches section
+  document.querySelectorAll("[data-view]").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+      showView(el.getAttribute("data-view"));
+    });
+  });
+
+  // global condition search
+  if ($("globalSearchBtn")) $("globalSearchBtn").addEventListener("click", () => globalSearch($("globalSearch").value));
+  if ($("globalSearch")) {
+    $("globalSearch").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        globalSearch($("globalSearch").value);
+      }
+    });
+  }
+  if ($("conditionChips")) {
+    $("conditionChips").addEventListener("click", (e) => {
+      const chip = e.target.closest("[data-term]");
+      if (chip) globalSearch(chip.getAttribute("data-term"));
+    });
+  }
+
   $("medSearch").addEventListener("input", renderMedicines);
   $("medCategory").addEventListener("change", renderMedicines);
   $("medGrid").addEventListener("click", (e) => {
@@ -1194,5 +1314,7 @@ function init() {
   restoreSession();
   renderCart();
   initChat();
+  renderConditionChips();
+  showView("medicines");
 }
 init();
