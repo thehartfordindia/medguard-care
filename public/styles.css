@@ -1073,3 +1073,295 @@ a:hover {
   font-size: 0.78rem;
   color: var(--ink-soft);
 }
+
+/* ============================================================
+   Accounts / auth / membership
+   ============================================================ */
+
+.btn-sm {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+}
+.btn-lg {
+  padding: 0.85rem 1.4rem;
+  font-size: 1rem;
+}
+.account-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.user-menu {
+  position: relative;
+}
+.user-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.6rem 0.35rem 0.4rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  transition: border-color 0.15s ease;
+}
+.user-chip:hover {
+  border-color: var(--primary);
+}
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  background: var(--primary);
+}
+.user-name {
+  font-weight: 600;
+  font-size: 0.88rem;
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.plus-badge,
+.mini-plus {
+  background: linear-gradient(135deg, #f59e0b, #eab308);
+  color: #3b2500;
+  font-size: 0.62rem;
+  font-weight: 800;
+  padding: 0.1rem 0.4rem;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: 230px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 0.5rem;
+  z-index: 80;
+}
+.user-dropdown-head {
+  padding: 0.5rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 0.4rem;
+}
+.user-dropdown-head small {
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dd-plus {
+  padding: 0.25rem 0.6rem 0.5rem;
+  font-size: 0.78rem;
+}
+.dd-plus-on {
+  color: var(--warn);
+  font-weight: 700;
+}
+.dd-plus-off {
+  color: var(--ink-soft);
+}
+.dd-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.55rem 0.6rem;
+  border: none;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.dd-item:hover {
+  background: var(--surface-2);
+}
+.dd-item.danger {
+  color: var(--danger);
+}
+
+/* auth modal */
+.auth-tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  background: var(--surface-2);
+  padding: 0.3rem;
+  border-radius: 12px;
+}
+.auth-tab {
+  flex: 1;
+  padding: 0.55rem;
+  border: none;
+  background: none;
+  color: var(--ink-soft);
+  font: inherit;
+  font-weight: 600;
+  border-radius: 9px;
+  cursor: pointer;
+}
+.auth-tab.active {
+  background: var(--surface);
+  color: var(--primary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.auth-form h3 {
+  margin: 0 0 0.2rem;
+}
+.auth-form input {
+  padding: 0.75rem 0.9rem;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+.auth-msg {
+  font-size: 0.84rem;
+  min-height: 1.1rem;
+}
+.auth-msg.err {
+  color: var(--danger);
+}
+
+/* MedGuard Plus panel */
+.plus-panel {
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.08), rgba(20, 184, 166, 0.08));
+  border: 1px solid var(--line);
+}
+.plus-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+  align-items: center;
+}
+.plus-pill {
+  background: linear-gradient(135deg, #f59e0b, #eab308);
+  color: #3b2500;
+}
+.plus-hero-copy h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+.plus-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  margin: 0.8rem 0;
+}
+.plus-price strong {
+  font-size: 2.2rem;
+  color: var(--primary);
+}
+.plus-price span {
+  color: var(--ink-soft);
+}
+.plus-note {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin-top: 0.6rem;
+}
+.plus-active-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #f59e0b, #eab308);
+  color: #3b2500;
+  font-weight: 800;
+  padding: 0.7rem 1.2rem;
+  border-radius: 12px;
+}
+.plus-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.plus-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+}
+.plus-benefit-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.plus-benefit strong {
+  display: block;
+  font-size: 0.92rem;
+}
+.plus-benefit span {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+/* my orders modal */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.order-row {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.order-row-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--surface-2);
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+}
+.order-row small {
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+}
+.order-row-foot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 860px) {
+  .plus-hero {
+    grid-template-columns: 1fr;
+  }
+  .user-name {
+    display: none;
+  }
+}
+
