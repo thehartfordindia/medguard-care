@@ -1,0 +1,237 @@
+{
+  "patient_id": "d29cf986",
+  "first_name": "Kayla",
+  "last_name": "Dunlap",
+  "date_of_birth": "1949-10-11",
+  "gender": "Female",
+  "blood_type": "B-",
+  "phone": "7104170269",
+  "email": "christy11@example.net",
+  "address": "3477 Daniels Valleys Apt. 061, Colefurt, NV 60749",
+  "emergency_contact_name": "Christopher Hopkins",
+  "emergency_contact_phone": "001-942-976-2467x19788",
+  "insurance_provider": "Humana",
+  "insurance_id": "CIG-287110",
+  "allergies": [
+    "Sulfa drugs",
+    "Aspirin",
+    "Morphine"
+  ],
+  "medications": [
+    {
+      "name": "Metoprolol",
+      "dosage": "50mg",
+      "frequency": "twice daily",
+      "start_date": "2024-02-02",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hernandez",
+      "is_active": true
+    },
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-03-03",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Gibson",
+      "is_active": true
+    },
+    {
+      "name": "Amlodipine",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2025-04-12",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Martinez",
+      "is_active": true
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2025-02-05",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Burns",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2025-09-09",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hall",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2021-03-23",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "COPD",
+      "icd10_code": "J44.1",
+      "diagnosed_date": "2023-06-11",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T16:00:00",
+      "blood_pressure_systolic": 118,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 61,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 97.9,
+      "weight_lbs": 175.1,
+      "bmi": 27.2
+    },
+    {
+      "recorded_date": "2025-01-31T11:00:00",
+      "blood_pressure_systolic": 170,
+      "blood_pressure_diastolic": 110,
+      "heart_rate": 95,
+      "temperature_f": 101.8,
+      "oxygen_saturation": 91.3,
+      "weight_lbs": 177.3,
+      "bmi": 32.2
+    },
+    {
+      "recorded_date": "2025-03-02T09:00:00",
+      "blood_pressure_systolic": 166,
+      "blood_pressure_diastolic": 105,
+      "heart_rate": 125,
+      "temperature_f": 100.6,
+      "oxygen_saturation": 92.2,
+      "weight_lbs": 249.3,
+      "bmi": 33.8
+    },
+    {
+      "recorded_date": "2025-04-01T09:00:00",
+      "blood_pressure_systolic": 122,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 63,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 99.7,
+      "weight_lbs": 190.2,
+      "bmi": 31.8
+    },
+    {
+      "recorded_date": "2025-05-01T10:00:00",
+      "blood_pressure_systolic": 121,
+      "blood_pressure_diastolic": 80,
+      "heart_rate": 62,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 98.8,
+      "weight_lbs": 180.6,
+      "bmi": 22.5
+    },
+    {
+      "recorded_date": "2025-05-31T15:00:00",
+      "blood_pressure_systolic": 116,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 82,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 95.5,
+      "weight_lbs": 236.4,
+      "bmi": 28.0
+    },
+    {
+      "recorded_date": "2025-06-30T16:00:00",
+      "blood_pressure_systolic": 173,
+      "blood_pressure_diastolic": 96,
+      "heart_rate": 103,
+      "temperature_f": 99.6,
+      "oxygen_saturation": 88.1,
+      "weight_lbs": 279.5,
+      "bmi": 23.2
+    },
+    {
+      "recorded_date": "2025-07-30T17:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 75,
+      "temperature_f": 98.3,
+      "oxygen_saturation": 99.2,
+      "weight_lbs": 202.9,
+      "bmi": 37.9
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "TSH",
+      "value": 1.16,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-12-01"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 9.02,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": true,
+      "test_date": "2025-12-14"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 219.36,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-01-15"
+    },
+    {
+      "test_name": "INR",
+      "value": 4.77,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2025-01-19"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "585cc1e2",
+      "encounter_type": "inpatient",
+      "date": "2024-01-20T14:00:00",
+      "provider": "Dr. Hart",
+      "department": "Emergency",
+      "reason": "Acute complaint",
+      "notes": "Argue enjoy opportunity help put short expect. Agreement and student give.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "7bdcb76b",
+      "encounter_type": "telehealth",
+      "date": "2024-03-06T08:00:00",
+      "provider": "Dr. Watkins",
+      "department": "Neurology",
+      "reason": "Lab review",
+      "notes": "Boy college Mrs also price. Nothing top entire receive onto worry.",
+      "followup_required": true,
+      "followup_date": "2024-03-28"
+    },
+    {
+      "encounter_id": "e1dfbcf1",
+      "encounter_type": "outpatient",
+      "date": "2025-10-09T07:30:00",
+      "provider": "Dr. Harmon",
+      "department": "Pulmonology",
+      "reason": "Acute complaint",
+      "notes": "Game best generation group goal product easy possible.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Gray, MD",
+  "record_created": "2026-04-17T00:52:12.580319",
+  "last_updated": "2026-04-17T00:52:12.580322"
+}

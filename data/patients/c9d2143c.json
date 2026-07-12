@@ -1,0 +1,210 @@
+{
+  "patient_id": "c9d2143c",
+  "first_name": "Andrew",
+  "last_name": "Burke",
+  "date_of_birth": "1948-07-21",
+  "gender": "Male",
+  "blood_type": "B+",
+  "phone": "653.639.0550",
+  "email": "lyonsdeborah@example.com",
+  "address": "8685 Sara Mount Suite 528, New Ryan, LA 86956",
+  "emergency_contact_name": "Jessica Campbell",
+  "emergency_contact_phone": "+1-311-911-0961x798",
+  "insurance_provider": "Cigna",
+  "insurance_id": "CIG-812449",
+  "allergies": [
+    "Penicillin"
+  ],
+  "medications": [
+    {
+      "name": "Sertraline",
+      "dosage": "50mg",
+      "frequency": "once daily",
+      "start_date": "2025-04-03",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Reese",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2025-01-22",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Lopez",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2024-01-06",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Horton",
+      "is_active": true
+    },
+    {
+      "name": "Prednisone",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2024-08-12",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Schroeder",
+      "is_active": false
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2020-04-17",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2020-08-28",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "Osteoarthritis",
+      "icd10_code": "M17.11",
+      "diagnosed_date": "2022-11-21",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "diagnosed_date": "2023-08-24",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T11:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 67,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 96.2,
+      "weight_lbs": 208.4,
+      "bmi": 31.9
+    },
+    {
+      "recorded_date": "2025-01-31T15:00:00",
+      "blood_pressure_systolic": 174,
+      "blood_pressure_diastolic": 92,
+      "heart_rate": 124,
+      "temperature_f": 101.7,
+      "oxygen_saturation": 91.3,
+      "weight_lbs": 178.5,
+      "bmi": 31.2
+    },
+    {
+      "recorded_date": "2025-03-02T10:00:00",
+      "blood_pressure_systolic": 113,
+      "blood_pressure_diastolic": 72,
+      "heart_rate": 63,
+      "temperature_f": 98.2,
+      "oxygen_saturation": 98.3,
+      "weight_lbs": 211.4,
+      "bmi": 18.9
+    },
+    {
+      "recorded_date": "2025-04-01T16:00:00",
+      "blood_pressure_systolic": 118,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 85,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 96.9,
+      "weight_lbs": 280.0,
+      "bmi": 32.2
+    },
+    {
+      "recorded_date": "2025-05-01T11:00:00",
+      "blood_pressure_systolic": 113,
+      "blood_pressure_diastolic": 80,
+      "heart_rate": 62,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 99.3,
+      "weight_lbs": 215.3,
+      "bmi": 26.4
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "WBC Count",
+      "value": 7.87,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2025-10-27"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 6.73,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-11-30"
+    },
+    {
+      "test_name": "INR",
+      "value": 1.1,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-12-04"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 126.63,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-11-03"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "acbee981",
+      "encounter_type": "outpatient",
+      "date": "2024-03-30T15:30:00",
+      "provider": "Dr. Gates",
+      "department": "Internal Medicine",
+      "reason": "Medication review",
+      "notes": "Whose trial include star region scientist. Vote site medical.",
+      "followup_required": true,
+      "followup_date": "2024-06-16"
+    },
+    {
+      "encounter_id": "d15bba33",
+      "encounter_type": "outpatient",
+      "date": "2025-04-02T12:00:00",
+      "provider": "Dr. Gordon",
+      "department": "Cardiology",
+      "reason": "Lab review",
+      "notes": "System deep since necessary boy.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "97d8e0bc",
+      "encounter_type": "outpatient",
+      "date": "2025-07-11T09:45:00",
+      "provider": "Dr. Adams",
+      "department": "Cardiology",
+      "reason": "New symptom evaluation",
+      "notes": "Stuff somebody increase drop too. Allow ago so subject million scientist.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Stewart, MD",
+  "record_created": "2026-04-17T00:52:12.634656",
+  "last_updated": "2026-04-17T00:52:12.634657"
+}

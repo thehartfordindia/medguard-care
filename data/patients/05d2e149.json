@@ -1,0 +1,182 @@
+{
+  "patient_id": "05d2e149",
+  "first_name": "Russell",
+  "last_name": "Davis",
+  "date_of_birth": "1964-07-21",
+  "gender": "Male",
+  "blood_type": "O+",
+  "phone": "856.980.4420",
+  "email": "codygarcia@example.org",
+  "address": "23651 Lowery Club, North Jamesmouth, AS 17381",
+  "emergency_contact_name": "Ryan Lamb",
+  "emergency_contact_phone": "207-802-9667",
+  "insurance_provider": "Cigna",
+  "insurance_id": "MCR-521818",
+  "allergies": [],
+  "medications": [
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2023-10-21",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Murphy",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2020-11-08",
+      "severity": "moderate",
+      "is_chronic": false
+    },
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2021-07-22",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Congestive Heart Failure",
+      "icd10_code": "I50.9",
+      "diagnosed_date": "2020-06-20",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2021-09-26",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T12:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 80,
+      "heart_rate": 72,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 98.8,
+      "weight_lbs": 231.0,
+      "bmi": 31.0
+    },
+    {
+      "recorded_date": "2025-01-31T15:00:00",
+      "blood_pressure_systolic": 117,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 67,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 97.2,
+      "weight_lbs": 203.5,
+      "bmi": 30.4
+    },
+    {
+      "recorded_date": "2025-03-02T11:00:00",
+      "blood_pressure_systolic": 113,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 82,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 95.1,
+      "weight_lbs": 209.5,
+      "bmi": 25.3
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Fasting Glucose",
+      "value": 131.11,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-02-18"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 60.95,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-05-15"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 294.96,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-02-09"
+    },
+    {
+      "test_name": "TSH",
+      "value": 2.24,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-01-29"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 141.1,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-07-08"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 4.66,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2026-04-03"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 9.89,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2025-04-27"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 6.51,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": true,
+      "test_date": "2026-03-16"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "0be4a7fe",
+      "encounter_type": "inpatient",
+      "date": "2025-04-28T12:45:00",
+      "provider": "Dr. Vega",
+      "department": "Cardiology",
+      "reason": "Routine follow-up",
+      "notes": "Democrat cost evidence third alone people. Positive material third look because.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "5997aaf2",
+      "encounter_type": "inpatient",
+      "date": "2026-01-01T18:45:00",
+      "provider": "Dr. Reyes",
+      "department": "Endocrinology",
+      "reason": "Lab review",
+      "notes": "Poor something eat yes myself. Writer site grow. Sit general not focus establish ago others.",
+      "followup_required": true,
+      "followup_date": "2026-03-09"
+    }
+  ],
+  "primary_care_provider": "Dr. Johnson, MD",
+  "record_created": "2026-04-17T00:54:29.867092",
+  "last_updated": "2026-04-17T00:54:29.867094"
+}

@@ -1,0 +1,201 @@
+{
+  "patient_id": "631304fe",
+  "first_name": "Julie",
+  "last_name": "Carpenter",
+  "date_of_birth": "1975-04-24",
+  "gender": "Female",
+  "blood_type": "A-",
+  "phone": "+1-417-538-1684x602",
+  "email": "robert97@example.org",
+  "address": "75250 Shannon Fords, New Kathy, NM 12040",
+  "emergency_contact_name": "Jeffrey Jordan",
+  "emergency_contact_phone": "(576)500-8350x58300",
+  "insurance_provider": "UnitedHealth",
+  "insurance_id": "MCD-794178",
+  "allergies": [
+    "Peanuts",
+    "Ibuprofen",
+    "Sulfa drugs",
+    "Penicillin"
+  ],
+  "medications": [
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2024-02-07",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wilson",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2024-05-17",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Brown",
+      "is_active": true
+    },
+    {
+      "name": "Metformin",
+      "dosage": "500mg",
+      "frequency": "twice daily",
+      "start_date": "2024-01-05",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Walters",
+      "is_active": false
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Atrial Fibrillation",
+      "icd10_code": "I48.91",
+      "diagnosed_date": "2021-08-20",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "diagnosed_date": "2020-06-16",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2022-08-27",
+      "severity": "moderate",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T15:00:00",
+      "blood_pressure_systolic": 125,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 88,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 95.5,
+      "weight_lbs": 216.2,
+      "bmi": 22.1
+    },
+    {
+      "recorded_date": "2025-01-31T14:00:00",
+      "blood_pressure_systolic": 155,
+      "blood_pressure_diastolic": 104,
+      "heart_rate": 97,
+      "temperature_f": 100.2,
+      "oxygen_saturation": 90.3,
+      "weight_lbs": 171.7,
+      "bmi": 23.7
+    },
+    {
+      "recorded_date": "2025-03-02T10:00:00",
+      "blood_pressure_systolic": 112,
+      "blood_pressure_diastolic": 81,
+      "heart_rate": 85,
+      "temperature_f": 98.3,
+      "oxygen_saturation": 99.9,
+      "weight_lbs": 222.6,
+      "bmi": 29.3
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Potassium",
+      "value": 4.85,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2026-01-01"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 8.21,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2025-09-22"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 243.89,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-11-14"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 17.22,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-08-18"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 99.22,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-04-19"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 126.14,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-08-05"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 176.23,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-04-14"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "65375bb9",
+      "encounter_type": "outpatient",
+      "date": "2024-06-02T09:00:00",
+      "provider": "Dr. Dean",
+      "department": "Neurology",
+      "reason": "Medication review",
+      "notes": "Product president after. Indicate herself natural listen. Day rate act inside. Production establish paper case.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "36e26630",
+      "encounter_type": "outpatient",
+      "date": "2024-09-21T12:00:00",
+      "provider": "Dr. Steele",
+      "department": "Pulmonology",
+      "reason": "Urgent care visit",
+      "notes": "Can himself open cold statement. Way lay minute model its. Garden top grow could.",
+      "followup_required": true,
+      "followup_date": "2024-11-24"
+    },
+    {
+      "encounter_id": "8379684d",
+      "encounter_type": "outpatient",
+      "date": "2024-10-09T15:45:00",
+      "provider": "Dr. Vaughan",
+      "department": "Emergency",
+      "reason": "Urgent care visit",
+      "notes": "Direction road capital. Operation college hand. Heart policy side.",
+      "followup_required": true,
+      "followup_date": "2024-12-15"
+    }
+  ],
+  "primary_care_provider": "Dr. Rivas, MD",
+  "record_created": "2026-04-17T00:54:29.877064",
+  "last_updated": "2026-04-17T00:54:29.877066"
+}

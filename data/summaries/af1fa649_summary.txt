@@ -1,0 +1,37 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Pamela Shannon (ID: af1fa649)
+Age: 86 | Gender: Female | Blood Type: A-
+PCP: Dr. Davis, MD
+
+ALLERGIES: Latex
+
+ACTIVE MEDICATIONS:
+  - Prednisone 10mg (once daily)
+  - Atorvastatin 20mg (once daily at bedtime)
+  - Amlodipine 5mg (once daily)
+  - Sertraline 50mg (once daily)
+  - Aspirin 81mg (once daily)
+
+DIAGNOSES:
+  - Chronic Kidney Disease Stage 3 (N18.3) — severe [CHRONIC]
+  - Pneumonia (J18.9) — moderate
+  - Major Depressive Disorder (F33.0) — moderate [CHRONIC]
+  - Urinary Tract Infection (N39.0) — mild
+
+LATEST VITALS (2025-05-01):
+  BP: 125/84 mmHg
+  HR: 87 bpm | Temp: 98.3°F
+  SpO2: 96.4% | BMI: 37.4
+
+⚠️ ABNORMAL LAB RESULTS:
+  - WBC Count: 16.47 K/uL (Ref: 4.5-11.0 K/uL)
+  - HDL Cholesterol: 28.76 mg/dL (Ref: >40 mg/dL)
+  - TSH: 9.77 mIU/L (Ref: 0.4-4.0 mIU/L)
+  - Potassium: 6.7 mEq/L (Ref: 3.5-5.0 mEq/L)
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2026-01-02 — New symptom evaluation
+  - [EMERGENCY] 2025-10-02 — Urgent care visit
+  - [TELEHEALTH] 2025-07-15 — Annual physical
+    ⚡ Follow-up required by 2025-09-17

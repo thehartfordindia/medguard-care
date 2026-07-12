@@ -1,0 +1,35 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Jennifer Haney (ID: 6c086d12)
+Age: 51 | Gender: Female | Blood Type: O+
+PCP: Dr. Sellers, MD
+
+ALLERGIES: Shellfish, Sulfa drugs, Penicillin, Cephalosporins
+
+ACTIVE MEDICATIONS:
+  - Warfarin 5mg (once daily)
+  - Atorvastatin 20mg (once daily at bedtime)
+
+DIAGNOSES:
+  - Chronic Kidney Disease Stage 3 (N18.3) — severe [CHRONIC]
+  - Hypothyroidism (E03.9) — mild [CHRONIC]
+  - Essential Hypertension (I10) — moderate [CHRONIC]
+
+LATEST VITALS (2025-05-01):
+  BP: 164/100 mmHg
+  HR: 122 bpm | Temp: 101.5°F
+  SpO2: 92.3% | BMI: 21.2
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Sodium: 127.62 mEq/L (Ref: 136-145 mEq/L)
+  - LDL Cholesterol: 246.13 mg/dL (Ref: <100 mg/dL)
+  - TSH: 8.65 mIU/L (Ref: 0.4-4.0 mIU/L)
+  - INR: 3.65  (Ref: 0.8-1.2 (2.0-3.0 on warfarin))
+
+RECENT ENCOUNTERS:
+  - [OUTPATIENT] 2026-04-11 — Post-hospitalization check
+    ⚡ Follow-up required by 2026-05-16
+  - [TELEHEALTH] 2025-05-05 — Routine follow-up
+    ⚡ Follow-up required by 2025-07-04
+  - [TELEHEALTH] 2024-09-04 — Medication review
+    ⚡ Follow-up required by 2024-11-14

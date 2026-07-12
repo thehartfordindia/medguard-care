@@ -1,0 +1,218 @@
+{
+  "patient_id": "2f5304b9",
+  "first_name": "Mary",
+  "last_name": "Hunter",
+  "date_of_birth": "1949-02-02",
+  "gender": "Female",
+  "blood_type": "A+",
+  "phone": "+1-770-976-6046x41978",
+  "email": "megan51@example.org",
+  "address": "Unit 8612 Box 0594, DPO AE 67989",
+  "emergency_contact_name": "Monica Gibson",
+  "emergency_contact_phone": "7746017750",
+  "insurance_provider": "Aetna",
+  "insurance_id": "CIG-176453",
+  "allergies": [
+    "Contrast dye",
+    "Cephalosporins",
+    "Penicillin",
+    "Latex"
+  ],
+  "medications": [
+    {
+      "name": "Amlodipine",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2023-03-02",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Sullivan",
+      "is_active": false
+    },
+    {
+      "name": "Gabapentin",
+      "dosage": "300mg",
+      "frequency": "three times daily",
+      "start_date": "2024-07-14",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Roman",
+      "is_active": true
+    },
+    {
+      "name": "Prednisone",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-12-04",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Martin",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2024-11-10",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Anderson",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2024-02-23",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "COPD",
+      "icd10_code": "J44.1",
+      "diagnosed_date": "2023-06-08",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2025-03-18",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T16:00:00",
+      "blood_pressure_systolic": 180,
+      "blood_pressure_diastolic": 94,
+      "heart_rate": 112,
+      "temperature_f": 101.3,
+      "oxygen_saturation": 88.5,
+      "weight_lbs": 209.5,
+      "bmi": 22.9
+    },
+    {
+      "recorded_date": "2025-01-31T16:00:00",
+      "blood_pressure_systolic": 119,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 60,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 95.1,
+      "weight_lbs": 249.5,
+      "bmi": 22.3
+    },
+    {
+      "recorded_date": "2025-03-02T15:00:00",
+      "blood_pressure_systolic": 110,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 61,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 96.9,
+      "weight_lbs": 157.5,
+      "bmi": 32.2
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Total Cholesterol",
+      "value": 129.34,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-04-29"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 0.61,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-07-31"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 10.55,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2026-02-11"
+    },
+    {
+      "test_name": "INR",
+      "value": 2.14,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2026-02-15"
+    },
+    {
+      "test_name": "TSH",
+      "value": 2.99,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2026-02-21"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 71.7,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-08-13"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 3.57,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-06-29"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 23.58,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": true,
+      "test_date": "2025-05-30"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "2d27b823",
+      "encounter_type": "outpatient",
+      "date": "2025-05-05T17:00:00",
+      "provider": "Dr. Simmons",
+      "department": "Internal Medicine",
+      "reason": "New symptom evaluation",
+      "notes": "Myself condition ground. Land fear along.",
+      "followup_required": true,
+      "followup_date": "2025-07-27"
+    },
+    {
+      "encounter_id": "faee8cf1",
+      "encounter_type": "inpatient",
+      "date": "2025-12-23T18:30:00",
+      "provider": "Dr. Rodriguez",
+      "department": "Pulmonology",
+      "reason": "New symptom evaluation",
+      "notes": "School eat base behind risk plan issue.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "906649a4",
+      "encounter_type": "inpatient",
+      "date": "2026-03-09T15:30:00",
+      "provider": "Dr. Hill",
+      "department": "Neurology",
+      "reason": "New symptom evaluation",
+      "notes": "Each stay strong run model learn baby head. Participant rich speech big. Woman bad until see institution against wear.",
+      "followup_required": true,
+      "followup_date": "2026-05-02"
+    }
+  ],
+  "primary_care_provider": "Dr. Scott, MD",
+  "record_created": "2026-04-17T00:52:12.662232",
+  "last_updated": "2026-04-17T00:52:12.662232"
+}

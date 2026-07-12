@@ -1,0 +1,252 @@
+{
+  "patient_id": "fb81a544",
+  "first_name": "Julie",
+  "last_name": "Carpenter",
+  "date_of_birth": "1949-11-24",
+  "gender": "Female",
+  "blood_type": "A-",
+  "phone": "2974052774",
+  "email": "vincent83@example.com",
+  "address": "PSC 8681, Box 2259, APO AA 60726",
+  "emergency_contact_name": "Rachel Ramirez",
+  "emergency_contact_phone": "001-746-717-6792x98842",
+  "insurance_provider": "Medicaid",
+  "insurance_id": "BCB-255863",
+  "allergies": [
+    "Latex"
+  ],
+  "medications": [
+    {
+      "name": "Omeprazole",
+      "dosage": "20mg",
+      "frequency": "once daily before breakfast",
+      "start_date": "2023-11-05",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Li",
+      "is_active": true
+    },
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2023-10-21",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hernandez",
+      "is_active": true
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-04-17",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Campbell",
+      "is_active": true
+    },
+    {
+      "name": "Gabapentin",
+      "dosage": "300mg",
+      "frequency": "three times daily",
+      "start_date": "2024-05-26",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wilson",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-09-29",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Price",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "diagnosed_date": "2024-01-17",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "COPD",
+      "icd10_code": "J44.1",
+      "diagnosed_date": "2024-06-19",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Osteoarthritis",
+      "icd10_code": "M17.11",
+      "diagnosed_date": "2024-05-27",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T10:00:00",
+      "blood_pressure_systolic": 168,
+      "blood_pressure_diastolic": 103,
+      "heart_rate": 112,
+      "temperature_f": 99.9,
+      "oxygen_saturation": 89.6,
+      "weight_lbs": 157.9,
+      "bmi": 33.5
+    },
+    {
+      "recorded_date": "2025-01-31T16:00:00",
+      "blood_pressure_systolic": 123,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 82,
+      "temperature_f": 99.0,
+      "oxygen_saturation": 98.0,
+      "weight_lbs": 229.1,
+      "bmi": 21.2
+    },
+    {
+      "recorded_date": "2025-03-02T12:00:00",
+      "blood_pressure_systolic": 162,
+      "blood_pressure_diastolic": 103,
+      "heart_rate": 130,
+      "temperature_f": 100.7,
+      "oxygen_saturation": 90.7,
+      "weight_lbs": 214.5,
+      "bmi": 34.5
+    },
+    {
+      "recorded_date": "2025-04-01T15:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 82,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 96.8,
+      "weight_lbs": 168.5,
+      "bmi": 35.1
+    },
+    {
+      "recorded_date": "2025-05-01T16:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 61,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 96.8,
+      "weight_lbs": 258.9,
+      "bmi": 33.7
+    },
+    {
+      "recorded_date": "2025-05-31T16:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 67,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 96.1,
+      "weight_lbs": 244.6,
+      "bmi": 20.8
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "WBC Count",
+      "value": 20.62,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": true,
+      "test_date": "2025-02-07"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 4.95,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": false,
+      "test_date": "2025-03-22"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 80.96,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-02-10"
+    },
+    {
+      "test_name": "TSH",
+      "value": 0.44,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2026-03-02"
+    },
+    {
+      "test_name": "INR",
+      "value": 2.45,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2025-04-04"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "1eb1be11",
+      "encounter_type": "outpatient",
+      "date": "2024-06-26T15:15:00",
+      "provider": "Dr. Gonzalez",
+      "department": "Pulmonology",
+      "reason": "Annual physical",
+      "notes": "Join experience cut class sport speak court. Agency where benefit almost cell accept similar nothing.",
+      "followup_required": true,
+      "followup_date": "2024-09-06"
+    },
+    {
+      "encounter_id": "890545ac",
+      "encounter_type": "inpatient",
+      "date": "2024-09-21T16:30:00",
+      "provider": "Dr. Lin",
+      "department": "Pulmonology",
+      "reason": "Acute complaint",
+      "notes": "Radio whatever rock month. Strategy now list goal peace. Table soon keep personal them notice camera.",
+      "followup_required": true,
+      "followup_date": "2024-11-08"
+    },
+    {
+      "encounter_id": "5b29a2f1",
+      "encounter_type": "inpatient",
+      "date": "2025-06-18T13:15:00",
+      "provider": "Dr. Holmes",
+      "department": "Pulmonology",
+      "reason": "Routine follow-up",
+      "notes": "Material anything music against. Two edge reflect attack the.",
+      "followup_required": true,
+      "followup_date": "2025-07-30"
+    },
+    {
+      "encounter_id": "8c25ea79",
+      "encounter_type": "outpatient",
+      "date": "2025-12-12T07:30:00",
+      "provider": "Dr. Nielsen",
+      "department": "Cardiology",
+      "reason": "Routine follow-up",
+      "notes": "Economy also seek kid hear piece ahead company. Recognize help writer off.",
+      "followup_required": true,
+      "followup_date": "2025-12-30"
+    },
+    {
+      "encounter_id": "c87ed135",
+      "encounter_type": "telehealth",
+      "date": "2026-02-05T15:30:00",
+      "provider": "Dr. Silva",
+      "department": "Pulmonology",
+      "reason": "Post-hospitalization check",
+      "notes": "And system city benefit. Material quickly food discuss. Black thing rock himself wind.",
+      "followup_required": true,
+      "followup_date": "2026-04-16"
+    }
+  ],
+  "primary_care_provider": "Dr. Donaldson, MD",
+  "record_created": "2026-04-17T00:52:12.645986",
+  "last_updated": "2026-04-17T00:52:12.645987"
+}

@@ -1,0 +1,28 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Michael Mcneil (ID: 631b9e75)
+Age: 20 | Gender: Male | Blood Type: A-
+PCP: Dr. Johnson, MD
+
+ALLERGIES: Latex, Morphine, Penicillin, Peanuts
+
+ACTIVE MEDICATIONS:
+  - Metoprolol 50mg (twice daily)
+  - Insulin Glargine 20 units (once daily at bedtime)
+  - Amiodarone 200mg (once daily)
+
+DIAGNOSES:
+  - Hypothyroidism (E03.9) — mild [CHRONIC]
+
+LATEST VITALS (2025-05-31):
+  BP: 128/78 mmHg
+  HR: 80 bpm | Temp: 98.1°F
+  SpO2: 97.3% | BMI: 35.7
+
+⚠️ ABNORMAL LAB RESULTS:
+  - TSH: 8.58 mIU/L (Ref: 0.4-4.0 mIU/L)
+
+RECENT ENCOUNTERS:
+  - [OUTPATIENT] 2025-10-03 — Chronic disease management
+  - [TELEHEALTH] 2025-10-02 — Medication review
+  - [EMERGENCY] 2025-08-14 — Routine follow-up

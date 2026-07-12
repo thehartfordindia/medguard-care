@@ -1,0 +1,33 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Jennifer Vazquez (ID: 3c248386)
+Age: 75 | Gender: Female | Blood Type: AB+
+PCP: Dr. Clements, MD
+
+ALLERGIES: Aspirin, Contrast dye, Penicillin, Codeine
+
+ACTIVE MEDICATIONS:
+  - Gabapentin 300mg (three times daily)
+  - Metformin 500mg (twice daily)
+  - Insulin Glargine 20 units (once daily at bedtime)
+  - Metoprolol 50mg (twice daily)
+
+DIAGNOSES:
+  - Acute Bronchitis (J20.9) — mild
+
+LATEST VITALS (2025-06-30):
+  BP: 122/80 mmHg
+  HR: 90 bpm | Temp: 98.3°F
+  SpO2: 99.8% | BMI: 28.9
+
+⚠️ ABNORMAL LAB RESULTS:
+  - WBC Count: 15.32 K/uL (Ref: 4.5-11.0 K/uL)
+  - INR: 2.94  (Ref: 0.8-1.2 (2.0-3.0 on warfarin))
+  - Total Cholesterol: 328.12 mg/dL (Ref: <200 mg/dL)
+
+RECENT ENCOUNTERS:
+  - [EMERGENCY] 2025-11-07 — Post-hospitalization check
+  - [OUTPATIENT] 2025-10-25 — Acute complaint
+    ⚡ Follow-up required by 2025-12-10
+  - [OUTPATIENT] 2025-10-15 — Acute complaint
+    ⚡ Follow-up required by 2025-12-16

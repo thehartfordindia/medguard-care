@@ -1,0 +1,260 @@
+{
+  "patient_id": "61d135d1",
+  "first_name": "Tyler",
+  "last_name": "Sheppard",
+  "date_of_birth": "1948-01-16",
+  "gender": "Male",
+  "blood_type": "O-",
+  "phone": "998-577-6945x314",
+  "email": "qhudson@example.com",
+  "address": "2735 Peterson Ranch Suite 808, North John, MT 64539",
+  "emergency_contact_name": "Cynthia Alvarez",
+  "emergency_contact_phone": "001-977-701-4363x495",
+  "insurance_provider": "UnitedHealth",
+  "insurance_id": "MCD-717113",
+  "allergies": [
+    "Codeine",
+    "Contrast dye",
+    "Cephalosporins"
+  ],
+  "medications": [
+    {
+      "name": "Sertraline",
+      "dosage": "50mg",
+      "frequency": "once daily",
+      "start_date": "2023-05-02",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Reid",
+      "is_active": true
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2024-03-02",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Poole",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2025-03-20",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Zimmerman",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-07-14",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Graham",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2025-08-19",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Gross",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Type 2 Diabetes Mellitus",
+      "icd10_code": "E11.9",
+      "diagnosed_date": "2020-07-22",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2024-04-11",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2021-03-01",
+      "severity": "mild",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T10:00:00",
+      "blood_pressure_systolic": 115,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 65,
+      "temperature_f": 98.3,
+      "oxygen_saturation": 95.8,
+      "weight_lbs": 197.2,
+      "bmi": 31.9
+    },
+    {
+      "recorded_date": "2025-01-31T09:00:00",
+      "blood_pressure_systolic": 117,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 82,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 99.3,
+      "weight_lbs": 150.0,
+      "bmi": 23.1
+    },
+    {
+      "recorded_date": "2025-03-02T12:00:00",
+      "blood_pressure_systolic": 123,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 77,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 95.7,
+      "weight_lbs": 177.2,
+      "bmi": 21.3
+    },
+    {
+      "recorded_date": "2025-04-01T13:00:00",
+      "blood_pressure_systolic": 129,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 74,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 98.4,
+      "weight_lbs": 238.0,
+      "bmi": 36.9
+    },
+    {
+      "recorded_date": "2025-05-01T16:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 72,
+      "heart_rate": 79,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 97.2,
+      "weight_lbs": 185.1,
+      "bmi": 23.4
+    },
+    {
+      "recorded_date": "2025-05-31T09:00:00",
+      "blood_pressure_systolic": 118,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 84,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 97.4,
+      "weight_lbs": 231.2,
+      "bmi": 36.4
+    },
+    {
+      "recorded_date": "2025-06-30T15:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 62,
+      "temperature_f": 98.2,
+      "oxygen_saturation": 97.0,
+      "weight_lbs": 184.9,
+      "bmi": 20.5
+    },
+    {
+      "recorded_date": "2025-07-30T15:00:00",
+      "blood_pressure_systolic": 125,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 81,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 99.1,
+      "weight_lbs": 217.0,
+      "bmi": 27.4
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 24.24,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-01-28"
+    },
+    {
+      "test_name": "TSH",
+      "value": 1.7,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2026-01-23"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 0.87,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-01-27"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 8.07,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2025-05-28"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 5.12,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": false,
+      "test_date": "2025-03-04"
+    },
+    {
+      "test_name": "INR",
+      "value": 1.05,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2026-02-14"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "41a64b84",
+      "encounter_type": "telehealth",
+      "date": "2024-04-30T17:15:00",
+      "provider": "Dr. Mccann",
+      "department": "Emergency",
+      "reason": "New symptom evaluation",
+      "notes": "Recently call than make their. Expect long future whole education technology box. Husband available picture approach.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "38b36edf",
+      "encounter_type": "telehealth",
+      "date": "2024-10-06T13:45:00",
+      "provider": "Dr. Hernandez",
+      "department": "Cardiology",
+      "reason": "Chronic disease management",
+      "notes": "Be easy newspaper indicate other. Difficult mission late kind team wrong figure perform. Whether between several personal enough ball dream necessary.",
+      "followup_required": true,
+      "followup_date": "2024-12-29"
+    },
+    {
+      "encounter_id": "3ee3d629",
+      "encounter_type": "telehealth",
+      "date": "2024-11-14T15:00:00",
+      "provider": "Dr. Coleman",
+      "department": "Internal Medicine",
+      "reason": "Lab review",
+      "notes": "Goal law fill discover return firm. Week real course school everybody operation set. Executive beyond create dinner conference add move ever.",
+      "followup_required": true,
+      "followup_date": "2024-12-12"
+    }
+  ],
+  "primary_care_provider": "Dr. Moore, MD",
+  "record_created": "2026-04-17T00:52:37.000849",
+  "last_updated": "2026-04-17T00:52:37.000850"
+}

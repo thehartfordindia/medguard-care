@@ -1,0 +1,216 @@
+{
+  "patient_id": "ab112bda",
+  "first_name": "William",
+  "last_name": "Smith",
+  "date_of_birth": "1946-10-22",
+  "gender": "Male",
+  "blood_type": "AB+",
+  "phone": "508-348-7297x5859",
+  "email": "youngjacob@example.com",
+  "address": "98395 Anderson Road, Jonesview, KS 50541",
+  "emergency_contact_name": "Carla Bryant",
+  "emergency_contact_phone": "462-883-1435x989",
+  "insurance_provider": "Humana",
+  "insurance_id": "HUM-913166",
+  "allergies": [
+    "Aspirin"
+  ],
+  "medications": [
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2024-03-31",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hunter",
+      "is_active": true
+    },
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2023-05-21",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Cox",
+      "is_active": true
+    },
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-03-03",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Stephens",
+      "is_active": false
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2024-08-21",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Henderson",
+      "is_active": true
+    },
+    {
+      "name": "Sertraline",
+      "dosage": "50mg",
+      "frequency": "once daily",
+      "start_date": "2024-10-29",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Landry",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Osteoarthritis",
+      "icd10_code": "M17.11",
+      "diagnosed_date": "2021-12-03",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Major Depressive Disorder",
+      "icd10_code": "F33.0",
+      "diagnosed_date": "2021-08-19",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2022-01-25",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T11:00:00",
+      "blood_pressure_systolic": 111,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 76,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 97.8,
+      "weight_lbs": 147.6,
+      "bmi": 25.2
+    },
+    {
+      "recorded_date": "2025-01-31T12:00:00",
+      "blood_pressure_systolic": 175,
+      "blood_pressure_diastolic": 92,
+      "heart_rate": 116,
+      "temperature_f": 100.0,
+      "oxygen_saturation": 90.4,
+      "weight_lbs": 236.9,
+      "bmi": 27.6
+    },
+    {
+      "recorded_date": "2025-03-02T14:00:00",
+      "blood_pressure_systolic": 129,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 73,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 95.5,
+      "weight_lbs": 262.7,
+      "bmi": 36.3
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 86.73,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-02-22"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 5.18,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": false,
+      "test_date": "2025-04-16"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 94.78,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-01-04"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 136.66,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-01-16"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 7.57,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2025-08-14"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 63.43,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-01-27"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 1.19,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-04-12"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "59874548",
+      "encounter_type": "outpatient",
+      "date": "2024-01-23T09:30:00",
+      "provider": "Dr. Patton",
+      "department": "Internal Medicine",
+      "reason": "Acute complaint",
+      "notes": "Money then open southern. More red tend necessary.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "167cf784",
+      "encounter_type": "emergency",
+      "date": "2024-08-12T11:15:00",
+      "provider": "Dr. Underwood",
+      "department": "Neurology",
+      "reason": "Lab review",
+      "notes": "Her who easy establish mother range. At policy guy four event than. Event better woman develop weight.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "1fb29329",
+      "encounter_type": "inpatient",
+      "date": "2026-03-17T08:30:00",
+      "provider": "Dr. Lawson",
+      "department": "Endocrinology",
+      "reason": "Chronic disease management",
+      "notes": "Fish sell Congress south.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Byrd, MD",
+  "record_created": "2026-04-17T00:52:12.625292",
+  "last_updated": "2026-04-17T00:52:12.625293"
+}

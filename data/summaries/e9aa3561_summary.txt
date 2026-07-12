@@ -1,0 +1,35 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Deborah West (ID: e9aa3561)
+Age: 87 | Gender: Female | Blood Type: AB+
+PCP: Dr. Bonilla, MD
+
+ALLERGIES: Contrast dye, Sulfa drugs, Penicillin, Aspirin
+
+ACTIVE MEDICATIONS:
+  - Metformin 500mg (twice daily)
+  - Atorvastatin 20mg (once daily at bedtime)
+  - Hydrocodone/APAP 5/325mg (every 6 hours as needed)
+  - Alprazolam 0.5mg (twice daily as needed)
+
+DIAGNOSES:
+  - Hyperlipidemia (E78.5) — mild [CHRONIC]
+  - Acute Bronchitis (J20.9) — mild
+  - Gastroesophageal Reflux Disease (K21.0) — mild [CHRONIC]
+
+LATEST VITALS (2025-05-01):
+  BP: 128/83 mmHg
+  HR: 78 bpm | Temp: 98.1°F
+  SpO2: 98.2% | BMI: 26.4
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Total Cholesterol: 251.63 mg/dL (Ref: <200 mg/dL)
+  - TSH: 5.76 mIU/L (Ref: 0.4-4.0 mIU/L)
+  - LDL Cholesterol: 172.13 mg/dL (Ref: <100 mg/dL)
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2025-11-02 — Chronic disease management
+    ⚡ Follow-up required by 2026-01-27
+  - [INPATIENT] 2025-10-01 — Medication review
+    ⚡ Follow-up required by 2025-12-14
+  - [INPATIENT] 2024-05-29 — Acute complaint

@@ -1,0 +1,271 @@
+{
+  "patient_id": "221e30eb",
+  "first_name": "Susan",
+  "last_name": "Manning",
+  "date_of_birth": "1958-04-11",
+  "gender": "Female",
+  "blood_type": "B-",
+  "phone": "+1-396-216-4236",
+  "email": "frankchan@example.com",
+  "address": "47649 Michael Court, Williamfort, NV 51368",
+  "emergency_contact_name": "Justin Henderson",
+  "emergency_contact_phone": "001-965-392-6610x85732",
+  "insurance_provider": "Medicaid",
+  "insurance_id": "MCD-391427",
+  "allergies": [
+    "Penicillin"
+  ],
+  "medications": [
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2024-07-18",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Robles",
+      "is_active": false
+    },
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-01-26",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Anderson",
+      "is_active": true
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-08-14",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Boyer",
+      "is_active": true
+    },
+    {
+      "name": "Gabapentin",
+      "dosage": "300mg",
+      "frequency": "three times daily",
+      "start_date": "2023-04-05",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Solis",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-11-25",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Campbell",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2025-04-10",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Yates",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2024-10-05",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2022-07-01",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T10:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 66,
+      "temperature_f": 98.2,
+      "oxygen_saturation": 98.0,
+      "weight_lbs": 211.6,
+      "bmi": 19.6
+    },
+    {
+      "recorded_date": "2025-01-31T15:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 71,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 95.1,
+      "weight_lbs": 188.3,
+      "bmi": 24.5
+    },
+    {
+      "recorded_date": "2025-03-02T17:00:00",
+      "blood_pressure_systolic": 112,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 83,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 98.7,
+      "weight_lbs": 198.2,
+      "bmi": 27.1
+    },
+    {
+      "recorded_date": "2025-04-01T15:00:00",
+      "blood_pressure_systolic": 123,
+      "blood_pressure_diastolic": 74,
+      "heart_rate": 86,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 95.4,
+      "weight_lbs": 169.1,
+      "bmi": 27.8
+    },
+    {
+      "recorded_date": "2025-05-01T14:00:00",
+      "blood_pressure_systolic": 152,
+      "blood_pressure_diastolic": 108,
+      "heart_rate": 119,
+      "temperature_f": 99.7,
+      "oxygen_saturation": 90.0,
+      "weight_lbs": 268.0,
+      "bmi": 26.6
+    },
+    {
+      "recorded_date": "2025-05-31T11:00:00",
+      "blood_pressure_systolic": 116,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 86,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 97.8,
+      "weight_lbs": 145.9,
+      "bmi": 34.6
+    },
+    {
+      "recorded_date": "2025-06-30T13:00:00",
+      "blood_pressure_systolic": 165,
+      "blood_pressure_diastolic": 107,
+      "heart_rate": 124,
+      "temperature_f": 100.1,
+      "oxygen_saturation": 92.0,
+      "weight_lbs": 161.6,
+      "bmi": 24.4
+    },
+    {
+      "recorded_date": "2025-07-30T16:00:00",
+      "blood_pressure_systolic": 113,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 73,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 99.5,
+      "weight_lbs": 230.3,
+      "bmi": 19.1
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Hemoglobin",
+      "value": 13.42,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-12-18"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 1.02,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-03-03"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 142.6,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-01-09"
+    },
+    {
+      "test_name": "TSH",
+      "value": 6.63,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-01-30"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 83.83,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-12-21"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 46.53,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-05-20"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "846470b0",
+      "encounter_type": "emergency",
+      "date": "2024-11-19T17:30:00",
+      "provider": "Dr. Miller",
+      "department": "Emergency",
+      "reason": "Post-hospitalization check",
+      "notes": "The blood move accept bring. Pretty least if price. Rise field spend pattern real white push source. By add born administration.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "08b7e033",
+      "encounter_type": "emergency",
+      "date": "2024-12-30T07:30:00",
+      "provider": "Dr. Roberts",
+      "department": "Neurology",
+      "reason": "Medication review",
+      "notes": "Trade local chance campaign. Success mission far answer baby. Message member including.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "cfdd9733",
+      "encounter_type": "outpatient",
+      "date": "2025-08-16T12:15:00",
+      "provider": "Dr. Waller",
+      "department": "Cardiology",
+      "reason": "Urgent care visit",
+      "notes": "Loss certain drop success teach.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "6a03d58f",
+      "encounter_type": "outpatient",
+      "date": "2026-02-23T17:15:00",
+      "provider": "Dr. Marshall",
+      "department": "Neurology",
+      "reason": "Acute complaint",
+      "notes": "Green one shoulder administration scientist. Conference consider hotel bar theory fear onto. Serious last space game truth special decision.",
+      "followup_required": true,
+      "followup_date": "2026-05-17"
+    }
+  ],
+  "primary_care_provider": "Dr. Ryan, MD",
+  "record_created": "2026-04-17T00:52:12.596370",
+  "last_updated": "2026-04-17T00:52:12.596374"
+}

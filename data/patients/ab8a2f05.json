@@ -1,0 +1,283 @@
+{
+  "patient_id": "ab8a2f05",
+  "first_name": "Omar",
+  "last_name": "Alvarado",
+  "date_of_birth": "1958-07-15",
+  "gender": "Male",
+  "blood_type": "B-",
+  "phone": "448-546-5648",
+  "email": "yortega@example.net",
+  "address": "946 Kevin Fords, Floydmouth, NH 58406",
+  "emergency_contact_name": "Daniel Kennedy",
+  "emergency_contact_phone": "001-221-248-9513x4332",
+  "insurance_provider": "Medicare",
+  "insurance_id": "MCR-502630",
+  "allergies": [
+    "Shellfish",
+    "Ibuprofen",
+    "Aspirin"
+  ],
+  "medications": [
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-01-26",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Gonzalez",
+      "is_active": false
+    },
+    {
+      "name": "Amlodipine",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2024-05-01",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Reynolds",
+      "is_active": true
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-02-25",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Rush",
+      "is_active": false
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2026-03-30",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Mccall",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2025-11-19",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hanson",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2024-05-13",
+      "severity": "moderate",
+      "is_chronic": false
+    },
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2022-05-20",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Type 2 Diabetes Mellitus",
+      "icd10_code": "E11.9",
+      "diagnosed_date": "2021-03-24",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2020-12-26",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T09:00:00",
+      "blood_pressure_systolic": 127,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 89,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 97.3,
+      "weight_lbs": 252.2,
+      "bmi": 31.5
+    },
+    {
+      "recorded_date": "2025-01-31T14:00:00",
+      "blood_pressure_systolic": 180,
+      "blood_pressure_diastolic": 104,
+      "heart_rate": 127,
+      "temperature_f": 100.6,
+      "oxygen_saturation": 92.5,
+      "weight_lbs": 202.4,
+      "bmi": 21.6
+    },
+    {
+      "recorded_date": "2025-03-02T16:00:00",
+      "blood_pressure_systolic": 158,
+      "blood_pressure_diastolic": 97,
+      "heart_rate": 112,
+      "temperature_f": 101.4,
+      "oxygen_saturation": 90.6,
+      "weight_lbs": 227.7,
+      "bmi": 23.9
+    },
+    {
+      "recorded_date": "2025-04-01T13:00:00",
+      "blood_pressure_systolic": 117,
+      "blood_pressure_diastolic": 78,
+      "heart_rate": 70,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 97.7,
+      "weight_lbs": 159.4,
+      "bmi": 23.0
+    },
+    {
+      "recorded_date": "2025-05-01T12:00:00",
+      "blood_pressure_systolic": 112,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 73,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 97.3,
+      "weight_lbs": 148.7,
+      "bmi": 34.7
+    },
+    {
+      "recorded_date": "2025-05-31T09:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 75,
+      "temperature_f": 97.5,
+      "oxygen_saturation": 96.8,
+      "weight_lbs": 245.5,
+      "bmi": 35.1
+    },
+    {
+      "recorded_date": "2025-06-30T15:00:00",
+      "blood_pressure_systolic": 167,
+      "blood_pressure_diastolic": 107,
+      "heart_rate": 109,
+      "temperature_f": 100.7,
+      "oxygen_saturation": 89.4,
+      "weight_lbs": 208.0,
+      "bmi": 26.1
+    },
+    {
+      "recorded_date": "2025-07-30T15:00:00",
+      "blood_pressure_systolic": 115,
+      "blood_pressure_diastolic": 84,
+      "heart_rate": 89,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 98.1,
+      "weight_lbs": 143.8,
+      "bmi": 26.2
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "INR",
+      "value": 0.95,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-04-19"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 4.54,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": false,
+      "test_date": "2026-03-27"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 1.05,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-03-02"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 9.93,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2025-08-29"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 165.46,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-06-29"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 3.6,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-11-30"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 51.55,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-05-07"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 136.18,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-03-20"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "4f2e968c",
+      "encounter_type": "inpatient",
+      "date": "2024-06-20T16:00:00",
+      "provider": "Dr. Martinez",
+      "department": "Endocrinology",
+      "reason": "Medication review",
+      "notes": "Property write other wear through partner rest. Interview trade knowledge city technology late seem.",
+      "followup_required": true,
+      "followup_date": "2024-09-16"
+    },
+    {
+      "encounter_id": "d1d1c859",
+      "encounter_type": "telehealth",
+      "date": "2024-11-15T16:45:00",
+      "provider": "Dr. Larsen",
+      "department": "Emergency",
+      "reason": "Lab review",
+      "notes": "Machine dream key require doctor from throw. Catch discuss really relationship.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "b47282ae",
+      "encounter_type": "telehealth",
+      "date": "2025-11-16T08:15:00",
+      "provider": "Dr. Sanchez",
+      "department": "Emergency",
+      "reason": "New symptom evaluation",
+      "notes": "Sure authority increase picture create recent manager during. Throughout team those. Despite sound receive let newspaper true.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Brown, MD",
+  "record_created": "2026-04-17T00:54:29.786067",
+  "last_updated": "2026-04-17T00:54:29.786068"
+}

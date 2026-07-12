@@ -1,0 +1,260 @@
+{
+  "patient_id": "1311e1ca",
+  "first_name": "Nichole",
+  "last_name": "Bradley",
+  "date_of_birth": "1936-05-31",
+  "gender": "Female",
+  "blood_type": "A+",
+  "phone": "802-929-0147",
+  "email": "nperry@example.net",
+  "address": "49784 Jeffrey Rapid Apt. 034, Port Derrick, KS 38439",
+  "emergency_contact_name": "Adam Burgess",
+  "emergency_contact_phone": "(826)283-8851",
+  "insurance_provider": "Cigna",
+  "insurance_id": "MCD-699425",
+  "allergies": [
+    "Latex"
+  ],
+  "medications": [
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-11-14",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Lewis",
+      "is_active": true
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2023-02-08",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Barnes",
+      "is_active": false
+    },
+    {
+      "name": "Metoprolol",
+      "dosage": "50mg",
+      "frequency": "twice daily",
+      "start_date": "2023-10-21",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Peterson",
+      "is_active": false
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2023-04-03",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wood",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-07-16",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Griffith",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2025-08-25",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Frank",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2020-05-06",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Osteoarthritis",
+      "icd10_code": "M17.11",
+      "diagnosed_date": "2022-07-11",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2020-07-30",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "diagnosed_date": "2024-07-18",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T10:00:00",
+      "blood_pressure_systolic": 166,
+      "blood_pressure_diastolic": 110,
+      "heart_rate": 106,
+      "temperature_f": 99.6,
+      "oxygen_saturation": 91.5,
+      "weight_lbs": 278.7,
+      "bmi": 28.7
+    },
+    {
+      "recorded_date": "2025-01-31T14:00:00",
+      "blood_pressure_systolic": 121,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 72,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 96.7,
+      "weight_lbs": 223.7,
+      "bmi": 33.9
+    },
+    {
+      "recorded_date": "2025-03-02T10:00:00",
+      "blood_pressure_systolic": 120,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 77,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 96.4,
+      "weight_lbs": 241.3,
+      "bmi": 31.3
+    },
+    {
+      "recorded_date": "2025-04-01T11:00:00",
+      "blood_pressure_systolic": 160,
+      "blood_pressure_diastolic": 92,
+      "heart_rate": 104,
+      "temperature_f": 101.8,
+      "oxygen_saturation": 89.6,
+      "weight_lbs": 231.8,
+      "bmi": 31.4
+    },
+    {
+      "recorded_date": "2025-05-01T10:00:00",
+      "blood_pressure_systolic": 119,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 80,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 99.1,
+      "weight_lbs": 233.8,
+      "bmi": 34.7
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Creatinine",
+      "value": 0.73,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-01-28"
+    },
+    {
+      "test_name": "INR",
+      "value": 0.89,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-03-12"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 6.42,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2026-02-08"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 4.66,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2026-03-04"
+    },
+    {
+      "test_name": "TSH",
+      "value": 10.27,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-12-05"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 5.23,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": false,
+      "test_date": "2025-03-09"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 240.05,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-04-03"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 10.08,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2026-02-19"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "66eec929",
+      "encounter_type": "inpatient",
+      "date": "2024-02-14T13:30:00",
+      "provider": "Dr. Graham",
+      "department": "Pulmonology",
+      "reason": "New symptom evaluation",
+      "notes": "Television office of remember. Face if whom commercial way least. Because such during open model how.",
+      "followup_required": true,
+      "followup_date": "2024-04-25"
+    },
+    {
+      "encounter_id": "28220817",
+      "encounter_type": "inpatient",
+      "date": "2024-09-01T11:45:00",
+      "provider": "Dr. Collins",
+      "department": "Endocrinology",
+      "reason": "Chronic disease management",
+      "notes": "Four collection member box member. Go when population challenge bill eight. Own set pretty concern.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "dc34e79e",
+      "encounter_type": "inpatient",
+      "date": "2024-10-15T13:45:00",
+      "provider": "Dr. Mejia",
+      "department": "Cardiology",
+      "reason": "Acute complaint",
+      "notes": "Senior service large under north play person. Firm key light place someone option goal avoid. Later arm story baby ten talk past.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Hunter, MD",
+  "record_created": "2026-04-17T00:56:40.566538",
+  "last_updated": "2026-04-17T00:56:40.566539"
+}

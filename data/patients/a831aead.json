@@ -1,0 +1,238 @@
+{
+  "patient_id": "a831aead",
+  "first_name": "Nicole",
+  "last_name": "Hardin",
+  "date_of_birth": "1974-07-20",
+  "gender": "Female",
+  "blood_type": "AB+",
+  "phone": "339.968.5270",
+  "email": "mckaybrett@example.org",
+  "address": "USNS Davis, FPO AP 72439",
+  "emergency_contact_name": "Tara Young",
+  "emergency_contact_phone": "567-642-3362",
+  "insurance_provider": "Medicare",
+  "insurance_id": "CIG-629818",
+  "allergies": [],
+  "medications": [
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2023-12-15",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Perez",
+      "is_active": true
+    },
+    {
+      "name": "Sertraline",
+      "dosage": "50mg",
+      "frequency": "once daily",
+      "start_date": "2023-06-13",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Quinn",
+      "is_active": false
+    },
+    {
+      "name": "Metoprolol",
+      "dosage": "50mg",
+      "frequency": "twice daily",
+      "start_date": "2025-03-26",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Cooper",
+      "is_active": true
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2025-05-04",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Harris",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2026-03-03",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Brown",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2024-09-19",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Type 2 Diabetes Mellitus",
+      "icd10_code": "E11.9",
+      "diagnosed_date": "2022-02-02",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T14:00:00",
+      "blood_pressure_systolic": 113,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 84,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 95.6,
+      "weight_lbs": 181.7,
+      "bmi": 32.9
+    },
+    {
+      "recorded_date": "2025-01-31T12:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 71,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 98.3,
+      "weight_lbs": 254.1,
+      "bmi": 29.7
+    },
+    {
+      "recorded_date": "2025-03-02T15:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 63,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 97.9,
+      "weight_lbs": 255.2,
+      "bmi": 25.5
+    },
+    {
+      "recorded_date": "2025-04-01T15:00:00",
+      "blood_pressure_systolic": 123,
+      "blood_pressure_diastolic": 72,
+      "heart_rate": 62,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 99.4,
+      "weight_lbs": 206.7,
+      "bmi": 27.2
+    },
+    {
+      "recorded_date": "2025-05-01T17:00:00",
+      "blood_pressure_systolic": 122,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 87,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 97.5,
+      "weight_lbs": 199.3,
+      "bmi": 27.1
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Fasting Glucose",
+      "value": 99.04,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-09-20"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 13.53,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": true,
+      "test_date": "2025-04-19"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 127.45,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-03-22"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 128.32,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-03-02"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 6.11,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-03-03"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 64.48,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-09-25"
+    },
+    {
+      "test_name": "TSH",
+      "value": 1.74,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-07-11"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "8a4cb244",
+      "encounter_type": "telehealth",
+      "date": "2024-01-29T09:15:00",
+      "provider": "Dr. Mitchell",
+      "department": "Internal Medicine",
+      "reason": "New symptom evaluation",
+      "notes": "Even sit bag win huge. Likely institution participant item. Standard soldier after high.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "0a9790ac",
+      "encounter_type": "emergency",
+      "date": "2024-02-15T13:45:00",
+      "provider": "Dr. Swanson",
+      "department": "Neurology",
+      "reason": "Chronic disease management",
+      "notes": "Understand wait wife health majority political. Author those yeah buy usually class several whatever. Meeting major read recent prepare unit.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "1029c9b5",
+      "encounter_type": "outpatient",
+      "date": "2024-08-08T09:45:00",
+      "provider": "Dr. Dickerson",
+      "department": "Internal Medicine",
+      "reason": "Urgent care visit",
+      "notes": "Mr need compare herself figure exist no lose. Carry light choice couple actually may.",
+      "followup_required": true,
+      "followup_date": "2024-10-05"
+    },
+    {
+      "encounter_id": "96b70b86",
+      "encounter_type": "inpatient",
+      "date": "2026-03-11T13:45:00",
+      "provider": "Dr. Fitzgerald",
+      "department": "Cardiology",
+      "reason": "Urgent care visit",
+      "notes": "Alone spend piece put recently population end. Want challenge easy official production claim bring.",
+      "followup_required": true,
+      "followup_date": "2026-05-22"
+    }
+  ],
+  "primary_care_provider": "Dr. Davis, MD",
+  "record_created": "2026-04-17T00:52:12.616958",
+  "last_updated": "2026-04-17T00:52:12.616960"
+}

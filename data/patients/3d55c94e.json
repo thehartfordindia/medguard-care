@@ -1,0 +1,248 @@
+{
+  "patient_id": "3d55c94e",
+  "first_name": "Gary",
+  "last_name": "Johnston",
+  "date_of_birth": "1947-02-28",
+  "gender": "Male",
+  "blood_type": "O-",
+  "phone": "805.946.6889x3734",
+  "email": "priceelizabeth@example.com",
+  "address": "98069 Christopher Meadow Apt. 720, Nicholasborough, NH 43341",
+  "emergency_contact_name": "Shawn Ramirez",
+  "emergency_contact_phone": "(241)470-8053x10033",
+  "insurance_provider": "Medicare",
+  "insurance_id": "AET-556641",
+  "allergies": [
+    "Cephalosporins"
+  ],
+  "medications": [
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2025-03-26",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Owens",
+      "is_active": true
+    },
+    {
+      "name": "Sertraline",
+      "dosage": "50mg",
+      "frequency": "once daily",
+      "start_date": "2025-03-12",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Brown",
+      "is_active": false
+    },
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2024-06-29",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wall",
+      "is_active": true
+    },
+    {
+      "name": "Gabapentin",
+      "dosage": "300mg",
+      "frequency": "three times daily",
+      "start_date": "2024-01-15",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Price",
+      "is_active": false
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2024-10-25",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Carrillo",
+      "is_active": true
+    },
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2024-03-06",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Shah",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2025-08-10",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Smith",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2025-07-05",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Gilmore",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2023-06-15",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2024-07-13",
+      "severity": "moderate",
+      "is_chronic": false
+    },
+    {
+      "condition": "Major Depressive Disorder",
+      "icd10_code": "F33.0",
+      "diagnosed_date": "2025-02-26",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T16:00:00",
+      "blood_pressure_systolic": 163,
+      "blood_pressure_diastolic": 108,
+      "heart_rate": 112,
+      "temperature_f": 100.3,
+      "oxygen_saturation": 89.2,
+      "weight_lbs": 270.8,
+      "bmi": 23.9
+    },
+    {
+      "recorded_date": "2025-01-31T16:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 70,
+      "temperature_f": 97.5,
+      "oxygen_saturation": 99.3,
+      "weight_lbs": 165.5,
+      "bmi": 22.6
+    },
+    {
+      "recorded_date": "2025-03-02T14:00:00",
+      "blood_pressure_systolic": 158,
+      "blood_pressure_diastolic": 109,
+      "heart_rate": 112,
+      "temperature_f": 100.9,
+      "oxygen_saturation": 90.6,
+      "weight_lbs": 166.7,
+      "bmi": 23.2
+    },
+    {
+      "recorded_date": "2025-04-01T17:00:00",
+      "blood_pressure_systolic": 117,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 80,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 97.2,
+      "weight_lbs": 142.4,
+      "bmi": 24.2
+    },
+    {
+      "recorded_date": "2025-05-01T12:00:00",
+      "blood_pressure_systolic": 119,
+      "blood_pressure_diastolic": 81,
+      "heart_rate": 75,
+      "temperature_f": 98.3,
+      "oxygen_saturation": 96.7,
+      "weight_lbs": 279.5,
+      "bmi": 29.2
+    },
+    {
+      "recorded_date": "2025-05-31T16:00:00",
+      "blood_pressure_systolic": 118,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 68,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 98.6,
+      "weight_lbs": 184.2,
+      "bmi": 33.0
+    },
+    {
+      "recorded_date": "2025-06-30T11:00:00",
+      "blood_pressure_systolic": 156,
+      "blood_pressure_diastolic": 96,
+      "heart_rate": 125,
+      "temperature_f": 100.2,
+      "oxygen_saturation": 90.9,
+      "weight_lbs": 246.4,
+      "bmi": 30.1
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 50.71,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-10-01"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 41.82,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-01-28"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 247.35,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-03-06"
+    },
+    {
+      "test_name": "TSH",
+      "value": 12.53,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-02-22"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "bbac6497",
+      "encounter_type": "emergency",
+      "date": "2025-04-25T14:45:00",
+      "provider": "Dr. Allen",
+      "department": "Cardiology",
+      "reason": "Routine follow-up",
+      "notes": "Nor design record short. Paper white responsibility sing. Who blue agent find.",
+      "followup_required": true,
+      "followup_date": "2025-06-10"
+    },
+    {
+      "encounter_id": "96f5572f",
+      "encounter_type": "telehealth",
+      "date": "2025-05-04T08:00:00",
+      "provider": "Dr. Byrd",
+      "department": "Pulmonology",
+      "reason": "Medication review",
+      "notes": "Walk cup option store drug recent. Sure outside building worker site. Mouth product attention positive actually information.",
+      "followup_required": true,
+      "followup_date": "2025-07-30"
+    }
+  ],
+  "primary_care_provider": "Dr. Henry, MD",
+  "record_created": "2026-04-17T00:51:40.039188",
+  "last_updated": "2026-04-17T00:51:40.039191"
+}

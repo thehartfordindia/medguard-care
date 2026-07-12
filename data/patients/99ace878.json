@@ -1,0 +1,273 @@
+{
+  "patient_id": "99ace878",
+  "first_name": "John",
+  "last_name": "Johnson",
+  "date_of_birth": "1997-02-22",
+  "gender": "Male",
+  "blood_type": "B+",
+  "phone": "9922221610",
+  "email": "connor84@example.org",
+  "address": "5295 Shelia Lodge, Monroeton, CA 25790",
+  "emergency_contact_name": "Kathryn Daniel",
+  "emergency_contact_phone": "427-204-9386",
+  "insurance_provider": "Medicare",
+  "insurance_id": "MCD-309197",
+  "allergies": [
+    "Aspirin",
+    "Shellfish"
+  ],
+  "medications": [
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-04-11",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wells",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2023-11-06",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Golden",
+      "is_active": true
+    },
+    {
+      "name": "Amlodipine",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2023-06-27",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Christensen",
+      "is_active": true
+    },
+    {
+      "name": "Prednisone",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2024-11-26",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Aguirre",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2021-09-16",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Atrial Fibrillation",
+      "icd10_code": "I48.91",
+      "diagnosed_date": "2020-06-24",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Major Depressive Disorder",
+      "icd10_code": "F33.0",
+      "diagnosed_date": "2021-08-31",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T16:00:00",
+      "blood_pressure_systolic": 167,
+      "blood_pressure_diastolic": 95,
+      "heart_rate": 119,
+      "temperature_f": 101.5,
+      "oxygen_saturation": 92.2,
+      "weight_lbs": 153.4,
+      "bmi": 28.8
+    },
+    {
+      "recorded_date": "2025-01-31T17:00:00",
+      "blood_pressure_systolic": 121,
+      "blood_pressure_diastolic": 84,
+      "heart_rate": 71,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 97.1,
+      "weight_lbs": 197.4,
+      "bmi": 19.0
+    },
+    {
+      "recorded_date": "2025-03-02T15:00:00",
+      "blood_pressure_systolic": 112,
+      "blood_pressure_diastolic": 74,
+      "heart_rate": 79,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 98.9,
+      "weight_lbs": 221.2,
+      "bmi": 25.8
+    },
+    {
+      "recorded_date": "2025-04-01T13:00:00",
+      "blood_pressure_systolic": 111,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 64,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 95.0,
+      "weight_lbs": 253.0,
+      "bmi": 35.6
+    },
+    {
+      "recorded_date": "2025-05-01T09:00:00",
+      "blood_pressure_systolic": 112,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 68,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 98.2,
+      "weight_lbs": 186.7,
+      "bmi": 20.4
+    },
+    {
+      "recorded_date": "2025-05-31T16:00:00",
+      "blood_pressure_systolic": 120,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 63,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 98.4,
+      "weight_lbs": 243.5,
+      "bmi": 19.5
+    },
+    {
+      "recorded_date": "2025-06-30T11:00:00",
+      "blood_pressure_systolic": 127,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 64,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 98.4,
+      "weight_lbs": 259.3,
+      "bmi": 24.4
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Fasting Glucose",
+      "value": 88.11,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-03-03"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 7.86,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": true,
+      "test_date": "2025-02-23"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 16.58,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-08-16"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 96.3,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-06-03"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 1.19,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-02-24"
+    },
+    {
+      "test_name": "INR",
+      "value": 1.14,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-05-14"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "34452d97",
+      "encounter_type": "outpatient",
+      "date": "2024-02-04T17:45:00",
+      "provider": "Dr. Neal",
+      "department": "Endocrinology",
+      "reason": "Acute complaint",
+      "notes": "Street education health full question feel wife. Shake too medical inside similar. Husband agreement mention two though whole wall.",
+      "followup_required": true,
+      "followup_date": "2024-04-17"
+    },
+    {
+      "encounter_id": "cc8b6c3d",
+      "encounter_type": "telehealth",
+      "date": "2024-05-31T07:30:00",
+      "provider": "Dr. Taylor",
+      "department": "Internal Medicine",
+      "reason": "Annual physical",
+      "notes": "Head help open almost red picture. City little from. Cost group clear national. Keep pattern order.",
+      "followup_required": true,
+      "followup_date": "2024-06-15"
+    },
+    {
+      "encounter_id": "8a271465",
+      "encounter_type": "outpatient",
+      "date": "2024-10-08T13:45:00",
+      "provider": "Dr. Brewer",
+      "department": "Pulmonology",
+      "reason": "Annual physical",
+      "notes": "Garden why necessary sea especially. Significant election life all boy probably cost.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "2763a116",
+      "encounter_type": "outpatient",
+      "date": "2025-05-06T11:30:00",
+      "provider": "Dr. Cunningham",
+      "department": "Neurology",
+      "reason": "Chronic disease management",
+      "notes": "Structure evening current without else. Enough majority official give politics last. Reach color wear one choose notice year its.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "30287975",
+      "encounter_type": "telehealth",
+      "date": "2025-11-04T16:00:00",
+      "provider": "Dr. Collins",
+      "department": "Cardiology",
+      "reason": "Routine follow-up",
+      "notes": "Brother letter structure beat us because. Consumer beat fish phone. Short small design.",
+      "followup_required": true,
+      "followup_date": "2025-12-11"
+    },
+    {
+      "encounter_id": "ca886df7",
+      "encounter_type": "inpatient",
+      "date": "2026-02-01T17:15:00",
+      "provider": "Dr. Brooks",
+      "department": "Neurology",
+      "reason": "Urgent care visit",
+      "notes": "Film race wall ten section. Financial here expert everything.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Gonzalez, MD",
+  "record_created": "2026-04-17T00:52:12.660014",
+  "last_updated": "2026-04-17T00:52:12.660016"
+}

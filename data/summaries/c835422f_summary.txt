@@ -1,0 +1,32 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Caitlin Diaz (ID: c835422f)
+Age: 67 | Gender: Female | Blood Type: AB+
+PCP: Dr. Kent, MD
+
+ALLERGIES: Morphine, Fluoroquinolones
+
+ACTIVE MEDICATIONS:
+  - Gabapentin 300mg (three times daily)
+
+DIAGNOSES:
+  - Type 2 Diabetes Mellitus (E11.9) — moderate [CHRONIC]
+  - Atrial Fibrillation (I48.91) — moderate [CHRONIC]
+  - Gastroesophageal Reflux Disease (K21.0) — mild [CHRONIC]
+  - Pneumonia (J18.9) — moderate
+
+LATEST VITALS (2025-05-01):
+  BP: 126/74 mmHg
+  HR: 66 bpm | Temp: 98.6°F
+  SpO2: 97.3% | BMI: 28.7
+
+⚠️ ABNORMAL LAB RESULTS:
+  - HbA1c: 10.12 % (Ref: 4.0-5.6%)
+  - Creatinine: 2.3 mg/dL (Ref: 0.6-1.2 mg/dL)
+
+RECENT ENCOUNTERS:
+  - [OUTPATIENT] 2024-12-12 — Routine follow-up
+    ⚡ Follow-up required by 2025-02-24
+  - [EMERGENCY] 2024-11-22 — Acute complaint
+  - [INPATIENT] 2024-10-04 — Medication review
+    ⚡ Follow-up required by 2024-11-26

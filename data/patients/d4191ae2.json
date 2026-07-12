@@ -1,0 +1,181 @@
+{
+  "patient_id": "d4191ae2",
+  "first_name": "Virginia",
+  "last_name": "Martin",
+  "date_of_birth": "1966-11-04",
+  "gender": "Female",
+  "blood_type": "B-",
+  "phone": "7516028767",
+  "email": "allenphillip@example.com",
+  "address": "8581 Stephanie Roads Suite 268, Henryview, TX 16261",
+  "emergency_contact_name": "Jessica Bailey",
+  "emergency_contact_phone": "8577563983",
+  "insurance_provider": "Medicare",
+  "insurance_id": "AET-474545",
+  "allergies": [
+    "Penicillin",
+    "Ibuprofen",
+    "Contrast dye"
+  ],
+  "medications": [
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2023-10-04",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Davis",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-01-15",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Pratt",
+      "is_active": true
+    },
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-06-01",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Thomas",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2022-01-06",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Chronic Low Back Pain",
+      "icd10_code": "M54.5",
+      "diagnosed_date": "2021-02-26",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "COPD",
+      "icd10_code": "J44.1",
+      "diagnosed_date": "2024-03-04",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T15:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 90,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 98.1,
+      "weight_lbs": 216.3,
+      "bmi": 36.3
+    },
+    {
+      "recorded_date": "2025-01-31T17:00:00",
+      "blood_pressure_systolic": 155,
+      "blood_pressure_diastolic": 98,
+      "heart_rate": 117,
+      "temperature_f": 101.7,
+      "oxygen_saturation": 90.0,
+      "weight_lbs": 198.4,
+      "bmi": 37.9
+    },
+    {
+      "recorded_date": "2025-03-02T09:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 80,
+      "heart_rate": 86,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 97.2,
+      "weight_lbs": 203.7,
+      "bmi": 37.4
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 25.46,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-05-29"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 3.16,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-06-05"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 4.1,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": false,
+      "test_date": "2025-05-31"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 12.23,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-05-25"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 236.05,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-09-08"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 71.52,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-12-05"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "696fa85c",
+      "encounter_type": "inpatient",
+      "date": "2024-05-21T12:30:00",
+      "provider": "Dr. White",
+      "department": "Internal Medicine",
+      "reason": "New symptom evaluation",
+      "notes": "Kind moment accept financial behind.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "525cfe81",
+      "encounter_type": "outpatient",
+      "date": "2026-01-20T10:45:00",
+      "provider": "Dr. Wood",
+      "department": "Endocrinology",
+      "reason": "Lab review",
+      "notes": "Tv parent almost ever long analysis receive. Ever arm occur air responsibility.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Ruiz, MD",
+  "record_created": "2026-04-17T00:52:12.658218",
+  "last_updated": "2026-04-17T00:52:12.658219"
+}

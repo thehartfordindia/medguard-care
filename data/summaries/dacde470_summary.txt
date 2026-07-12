@@ -1,0 +1,35 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Lauren Armstrong (ID: dacde470)
+Age: 77 | Gender: Female | Blood Type: B+
+PCP: Dr. Andrews, MD
+
+ALLERGIES: Peanuts
+
+ACTIVE MEDICATIONS:
+  - Hydrocodone/APAP 5/325mg (every 6 hours as needed)
+  - Warfarin 5mg (once daily)
+  - Warfarin 5mg (once daily)
+  - Aspirin 81mg (once daily)
+
+DIAGNOSES:
+  - Chronic Low Back Pain (M54.5) — moderate [CHRONIC]
+  - Chronic Kidney Disease Stage 3 (N18.3) — severe [CHRONIC]
+  - Type 2 Diabetes Mellitus (E11.9) — moderate [CHRONIC]
+  - COPD (J44.1) — moderate [CHRONIC]
+  - Acute Bronchitis (J20.9) — mild
+
+LATEST VITALS (2025-03-02):
+  BP: 180/109 mmHg
+  HR: 128 bpm | Temp: 100.6°F
+  SpO2: 91.9% | BMI: 20.9
+
+⚠️ ABNORMAL LAB RESULTS:
+  - INR: 3.9  (Ref: 0.8-1.2 (2.0-3.0 on warfarin))
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2025-10-20 — Acute complaint
+  - [INPATIENT] 2025-10-05 — Post-hospitalization check
+    ⚡ Follow-up required by 2025-12-27
+  - [EMERGENCY] 2024-09-16 — Post-hospitalization check
+    ⚡ Follow-up required by 2024-10-30

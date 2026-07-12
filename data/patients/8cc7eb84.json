@@ -1,0 +1,218 @@
+{
+  "patient_id": "8cc7eb84",
+  "first_name": "Christopher",
+  "last_name": "Burns",
+  "date_of_birth": "1955-09-08",
+  "gender": "Male",
+  "blood_type": "O-",
+  "phone": "870.672.8679x08740",
+  "email": "reesebeth@example.org",
+  "address": "017 Justin Falls, Port Darlene, VA 85157",
+  "emergency_contact_name": "Jacqueline Vance",
+  "emergency_contact_phone": "466.518.2512x868",
+  "insurance_provider": "Humana",
+  "insurance_id": "MCR-479358",
+  "allergies": [],
+  "medications": [
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2025-04-01",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Bond",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-08-12",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Ramos",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2024-11-27",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Frazier",
+      "is_active": true
+    },
+    {
+      "name": "Metoprolol",
+      "dosage": "50mg",
+      "frequency": "twice daily",
+      "start_date": "2025-03-17",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Love",
+      "is_active": false
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Chronic Low Back Pain",
+      "icd10_code": "M54.5",
+      "diagnosed_date": "2020-05-06",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2024-08-24",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2023-01-26",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T17:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 70,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 97.2,
+      "weight_lbs": 235.2,
+      "bmi": 32.5
+    },
+    {
+      "recorded_date": "2025-01-31T17:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 74,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 97.1,
+      "weight_lbs": 218.9,
+      "bmi": 29.4
+    },
+    {
+      "recorded_date": "2025-03-02T13:00:00",
+      "blood_pressure_systolic": 110,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 68,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 98.7,
+      "weight_lbs": 221.0,
+      "bmi": 19.4
+    },
+    {
+      "recorded_date": "2025-04-01T10:00:00",
+      "blood_pressure_systolic": 127,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 89,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 99.9,
+      "weight_lbs": 206.1,
+      "bmi": 24.1
+    },
+    {
+      "recorded_date": "2025-05-01T11:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 71,
+      "temperature_f": 99.0,
+      "oxygen_saturation": 96.9,
+      "weight_lbs": 261.7,
+      "bmi": 36.2
+    },
+    {
+      "recorded_date": "2025-05-31T17:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 81,
+      "heart_rate": 63,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 97.7,
+      "weight_lbs": 214.0,
+      "bmi": 32.7
+    },
+    {
+      "recorded_date": "2025-06-30T09:00:00",
+      "blood_pressure_systolic": 110,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 74,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 97.7,
+      "weight_lbs": 214.5,
+      "bmi": 34.6
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Hemoglobin",
+      "value": 9.9,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2025-02-27"
+    },
+    {
+      "test_name": "TSH",
+      "value": 2.78,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-11-11"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 334.89,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-01-09"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 42.69,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-11-01"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 79.89,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-12-27"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "0f950934",
+      "encounter_type": "inpatient",
+      "date": "2024-02-15T13:45:00",
+      "provider": "Dr. Davenport",
+      "department": "Neurology",
+      "reason": "Lab review",
+      "notes": "Leg rest interest here discover.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "c0fa452f",
+      "encounter_type": "emergency",
+      "date": "2026-03-05T07:15:00",
+      "provider": "Dr. Murray",
+      "department": "Cardiology",
+      "reason": "Post-hospitalization check",
+      "notes": "Country themselves she allow produce. She this administration deal beyond almost our reflect.",
+      "followup_required": true,
+      "followup_date": "2026-05-31"
+    }
+  ],
+  "primary_care_provider": "Dr. Williams, MD",
+  "record_created": "2026-04-17T00:54:29.837746",
+  "last_updated": "2026-04-17T00:54:29.837749"
+}

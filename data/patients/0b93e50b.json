@@ -1,0 +1,196 @@
+{
+  "patient_id": "0b93e50b",
+  "first_name": "John",
+  "last_name": "Lawrence",
+  "date_of_birth": "1946-08-22",
+  "gender": "Male",
+  "blood_type": "A+",
+  "phone": "+1-974-290-9617x399",
+  "email": "karen94@example.com",
+  "address": "784 Baker Place Apt. 548, Connieville, WV 24379",
+  "emergency_contact_name": "Mr. William Ruiz",
+  "emergency_contact_phone": "(421)564-1758",
+  "insurance_provider": "Humana",
+  "insurance_id": "HUM-937803",
+  "allergies": [
+    "Penicillin"
+  ],
+  "medications": [
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2025-02-11",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Garcia",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Osteoarthritis",
+      "icd10_code": "M17.11",
+      "diagnosed_date": "2024-08-11",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Congestive Heart Failure",
+      "icd10_code": "I50.9",
+      "diagnosed_date": "2020-02-22",
+      "severity": "severe",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T15:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 74,
+      "heart_rate": 86,
+      "temperature_f": 98.2,
+      "oxygen_saturation": 99.6,
+      "weight_lbs": 240.3,
+      "bmi": 36.4
+    },
+    {
+      "recorded_date": "2025-01-31T15:00:00",
+      "blood_pressure_systolic": 125,
+      "blood_pressure_diastolic": 78,
+      "heart_rate": 62,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 100.0,
+      "weight_lbs": 242.4,
+      "bmi": 20.8
+    },
+    {
+      "recorded_date": "2025-03-02T10:00:00",
+      "blood_pressure_systolic": 117,
+      "blood_pressure_diastolic": 72,
+      "heart_rate": 70,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 96.7,
+      "weight_lbs": 203.5,
+      "bmi": 32.8
+    },
+    {
+      "recorded_date": "2025-04-01T10:00:00",
+      "blood_pressure_systolic": 120,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 73,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 98.5,
+      "weight_lbs": 213.0,
+      "bmi": 22.2
+    },
+    {
+      "recorded_date": "2025-05-01T09:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 67,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 96.9,
+      "weight_lbs": 272.0,
+      "bmi": 31.6
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Hemoglobin",
+      "value": 15.49,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-02-15"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 331.43,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-01-19"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 83.03,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-09-09"
+    },
+    {
+      "test_name": "INR",
+      "value": 2.63,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2025-04-02"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 142.19,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-11-11"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 4.38,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-11-23"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "cb72f2ca",
+      "encounter_type": "emergency",
+      "date": "2024-04-28T09:45:00",
+      "provider": "Dr. Rodriguez",
+      "department": "Emergency",
+      "reason": "Medication review",
+      "notes": "For look return like. Sit hope where.",
+      "followup_required": true,
+      "followup_date": "2024-06-25"
+    },
+    {
+      "encounter_id": "f045014b",
+      "encounter_type": "telehealth",
+      "date": "2025-10-07T13:30:00",
+      "provider": "Dr. Nguyen",
+      "department": "Endocrinology",
+      "reason": "Medication review",
+      "notes": "President small sister especially usually line task. He fill risk stop firm. Interesting hour individual several identify.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "8221c0da",
+      "encounter_type": "inpatient",
+      "date": "2025-11-03T09:30:00",
+      "provider": "Dr. Maxwell",
+      "department": "Endocrinology",
+      "reason": "Chronic disease management",
+      "notes": "Film figure short line range. Decision public food court how commercial citizen production.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "7a206377",
+      "encounter_type": "telehealth",
+      "date": "2026-02-12T11:45:00",
+      "provider": "Dr. Schmitt",
+      "department": "Endocrinology",
+      "reason": "Lab review",
+      "notes": "Window short affect region. Product eight strategy age into. For nice current Democrat me task.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Mccarthy, MD",
+  "record_created": "2026-04-17T00:52:12.667149",
+  "last_updated": "2026-04-17T00:52:12.667150"
+}

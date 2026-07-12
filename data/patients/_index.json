@@ -1,0 +1,502 @@
+[
+  {
+    "patient_id": "150ea6d6",
+    "name": "Brian Yang",
+    "age": 71,
+    "gender": "Male",
+    "num_medications": 4,
+    "num_diagnoses": 4,
+    "num_chronic": 4,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "e4325860",
+    "name": "Andrea Young",
+    "age": 92,
+    "gender": "Female",
+    "num_medications": 5,
+    "num_diagnoses": 2,
+    "num_chronic": 1,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "e401b985",
+    "name": "Barbara Donovan",
+    "age": 79,
+    "gender": "Female",
+    "num_medications": 6,
+    "num_diagnoses": 4,
+    "num_chronic": 3,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "e2d91008",
+    "name": "Omar Alvarado",
+    "age": 67,
+    "gender": "Male",
+    "num_medications": 3,
+    "num_diagnoses": 4,
+    "num_chronic": 2,
+    "has_abnormal_labs": false
+  },
+  {
+    "patient_id": "244b9b5a",
+    "name": "Gary Johnston",
+    "age": 79,
+    "gender": "Male",
+    "num_medications": 6,
+    "num_diagnoses": 3,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "163573b3",
+    "name": "Tyler Sheppard",
+    "age": 78,
+    "gender": "Male",
+    "num_medications": 5,
+    "num_diagnoses": 3,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "0748cb6b",
+    "name": "Jerry Bradshaw",
+    "age": 79,
+    "gender": "Male",
+    "num_medications": 7,
+    "num_diagnoses": 3,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "0609cae3",
+    "name": "Patricia Keller",
+    "age": 83,
+    "gender": "Female",
+    "num_medications": 7,
+    "num_diagnoses": 4,
+    "num_chronic": 3,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "2ac7fdd8",
+    "name": "Joshua Kidd",
+    "age": 69,
+    "gender": "Male",
+    "num_medications": 6,
+    "num_diagnoses": 4,
+    "num_chronic": 1,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "246003eb",
+    "name": "Deborah West",
+    "age": 87,
+    "gender": "Female",
+    "num_medications": 4,
+    "num_diagnoses": 3,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "1311e1ca",
+    "name": "Nichole Bradley",
+    "age": 89,
+    "gender": "Female",
+    "num_medications": 4,
+    "num_diagnoses": 4,
+    "num_chronic": 4,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "d634fc05",
+    "name": "Lauren Armstrong",
+    "age": 77,
+    "gender": "Female",
+    "num_medications": 4,
+    "num_diagnoses": 5,
+    "num_chronic": 4,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "8f088219",
+    "name": "Eddie Mills",
+    "age": 71,
+    "gender": "Male",
+    "num_medications": 5,
+    "num_diagnoses": 4,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "76930473",
+    "name": "Sarah Reed",
+    "age": 72,
+    "gender": "Female",
+    "num_medications": 6,
+    "num_diagnoses": 3,
+    "num_chronic": 3,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "fc582ea6",
+    "name": "Lisa Aguirre",
+    "age": 34,
+    "gender": "Female",
+    "num_medications": 5,
+    "num_diagnoses": 5,
+    "num_chronic": 4,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "377acdd7",
+    "name": "Ray Burns",
+    "age": 50,
+    "gender": "Male",
+    "num_medications": 2,
+    "num_diagnoses": 3,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "b24ae9eb",
+    "name": "Christopher Burns",
+    "age": 70,
+    "gender": "Male",
+    "num_medications": 3,
+    "num_diagnoses": 3,
+    "num_chronic": 3,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "faba5b30",
+    "name": "Jennifer Shields",
+    "age": 84,
+    "gender": "Female",
+    "num_medications": 2,
+    "num_diagnoses": 3,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "b1a8b0b5",
+    "name": "Adam Williamson",
+    "age": 70,
+    "gender": "Male",
+    "num_medications": 1,
+    "num_diagnoses": 4,
+    "num_chronic": 3,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "6405a4db",
+    "name": "Jennifer Haney",
+    "age": 51,
+    "gender": "Female",
+    "num_medications": 2,
+    "num_diagnoses": 3,
+    "num_chronic": 3,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "f7b80836",
+    "name": "Michael Brooks",
+    "age": 79,
+    "gender": "Male",
+    "num_medications": 3,
+    "num_diagnoses": 2,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "5785a3f4",
+    "name": "Michael Mcneil",
+    "age": 20,
+    "gender": "Male",
+    "num_medications": 3,
+    "num_diagnoses": 1,
+    "num_chronic": 1,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "6a303b20",
+    "name": "Danny Moon",
+    "age": 33,
+    "gender": "Male",
+    "num_medications": 0,
+    "num_diagnoses": 2,
+    "num_chronic": 1,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "ebe36ea5",
+    "name": "Russell Davis",
+    "age": 61,
+    "gender": "Male",
+    "num_medications": 1,
+    "num_diagnoses": 4,
+    "num_chronic": 3,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "e8ca47af",
+    "name": "Amy Key",
+    "age": 52,
+    "gender": "Female",
+    "num_medications": 3,
+    "num_diagnoses": 1,
+    "num_chronic": 1,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "6ab33270",
+    "name": "Glenn Martin",
+    "age": 80,
+    "gender": "Male",
+    "num_medications": 1,
+    "num_diagnoses": 2,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "2bcf0b8f",
+    "name": "Douglas Melton",
+    "age": 48,
+    "gender": "Male",
+    "num_medications": 2,
+    "num_diagnoses": 1,
+    "num_chronic": 1,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "73d0bc29",
+    "name": "Julie Carpenter",
+    "age": 50,
+    "gender": "Female",
+    "num_medications": 2,
+    "num_diagnoses": 3,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "583fd775",
+    "name": "Kayla Strickland",
+    "age": 76,
+    "gender": "Female",
+    "num_medications": 3,
+    "num_diagnoses": 3,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "bf70f2f7",
+    "name": "Karen Alexander",
+    "age": 73,
+    "gender": "Female",
+    "num_medications": 1,
+    "num_diagnoses": 4,
+    "num_chronic": 4,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "e71b21d7",
+    "name": "Nicole Garcia",
+    "age": 63,
+    "gender": "Female",
+    "num_medications": 2,
+    "num_diagnoses": 1,
+    "num_chronic": 0,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "7c187cdf",
+    "name": "Matthew Burgess",
+    "age": 31,
+    "gender": "Male",
+    "num_medications": 1,
+    "num_diagnoses": 2,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "75244b38",
+    "name": "Noah Brown",
+    "age": 71,
+    "gender": "Male",
+    "num_medications": 4,
+    "num_diagnoses": 3,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "9edde615",
+    "name": "Joseph Williams",
+    "age": 32,
+    "gender": "Male",
+    "num_medications": 1,
+    "num_diagnoses": 3,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "aea3d1d6",
+    "name": "Dustin Hall",
+    "age": 20,
+    "gender": "Male",
+    "num_medications": 2,
+    "num_diagnoses": 1,
+    "num_chronic": 1,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "2153d2f9",
+    "name": "Kathleen White",
+    "age": 65,
+    "gender": "Female",
+    "num_medications": 4,
+    "num_diagnoses": 4,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "12059844",
+    "name": "Adam Woods",
+    "age": 18,
+    "gender": "Male",
+    "num_medications": 1,
+    "num_diagnoses": 3,
+    "num_chronic": 3,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "61951a15",
+    "name": "Jordan Hunter",
+    "age": 41,
+    "gender": "Female",
+    "num_medications": 1,
+    "num_diagnoses": 1,
+    "num_chronic": 1,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "d37c7eeb",
+    "name": "Bradley Hansen",
+    "age": 55,
+    "gender": "Male",
+    "num_medications": 4,
+    "num_diagnoses": 3,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "af1fa649",
+    "name": "Pamela Shannon",
+    "age": 86,
+    "gender": "Female",
+    "num_medications": 5,
+    "num_diagnoses": 4,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "676f9511",
+    "name": "Melissa Wilson",
+    "age": 46,
+    "gender": "Female",
+    "num_medications": 4,
+    "num_diagnoses": 2,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "fccc7550",
+    "name": "Andrea Brooks",
+    "age": 42,
+    "gender": "Female",
+    "num_medications": 3,
+    "num_diagnoses": 3,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "e5d3d53b",
+    "name": "Melissa Murphy",
+    "age": 76,
+    "gender": "Female",
+    "num_medications": 2,
+    "num_diagnoses": 4,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "45cf774f",
+    "name": "Michael Berger",
+    "age": 80,
+    "gender": "Male",
+    "num_medications": 3,
+    "num_diagnoses": 1,
+    "num_chronic": 0,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "71c96e91",
+    "name": "George Mejia",
+    "age": 53,
+    "gender": "Male",
+    "num_medications": 4,
+    "num_diagnoses": 2,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "17b6e8cb",
+    "name": "Matthew Lee",
+    "age": 51,
+    "gender": "Male",
+    "num_medications": 3,
+    "num_diagnoses": 2,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "c835422f",
+    "name": "Caitlin Diaz",
+    "age": 67,
+    "gender": "Female",
+    "num_medications": 1,
+    "num_diagnoses": 4,
+    "num_chronic": 3,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "9b3b0d0a",
+    "name": "Stephen Diaz",
+    "age": 41,
+    "gender": "Male",
+    "num_medications": 1,
+    "num_diagnoses": 4,
+    "num_chronic": 3,
+    "has_abnormal_labs": false
+  },
+  {
+    "patient_id": "ae2065be",
+    "name": "George Williams",
+    "age": 30,
+    "gender": "Male",
+    "num_medications": 2,
+    "num_diagnoses": 2,
+    "num_chronic": 2,
+    "has_abnormal_labs": true
+  },
+  {
+    "patient_id": "9815cc01",
+    "name": "Jennifer Vazquez",
+    "age": 75,
+    "gender": "Female",
+    "num_medications": 4,
+    "num_diagnoses": 1,
+    "num_chronic": 0,
+    "has_abnormal_labs": true
+  }
+]

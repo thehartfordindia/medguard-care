@@ -1,0 +1,28 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Stephen Diaz (ID: 99b55429)
+Age: 41 | Gender: Male | Blood Type: B+
+PCP: Dr. Chandler, MD
+
+ALLERGIES: Contrast dye, Latex, Codeine
+
+ACTIVE MEDICATIONS:
+  - Lisinopril 10mg (once daily)
+
+DIAGNOSES:
+  - Chronic Kidney Disease Stage 3 (N18.3) — severe [CHRONIC]
+  - Congestive Heart Failure (I50.9) — severe [CHRONIC]
+  - Atrial Fibrillation (I48.91) — moderate [CHRONIC]
+  - Urinary Tract Infection (N39.0) — mild
+
+LATEST VITALS (2025-03-02):
+  BP: 120/84 mmHg
+  HR: 75 bpm | Temp: 97.5°F
+  SpO2: 97.4% | BMI: 27.5
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2025-12-11 — Post-hospitalization check
+  - [TELEHEALTH] 2025-03-31 — Medication review
+    ⚡ Follow-up required by 2025-06-29
+  - [OUTPATIENT] 2025-01-23 — Lab review
+    ⚡ Follow-up required by 2025-02-23

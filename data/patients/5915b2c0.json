@@ -1,0 +1,204 @@
+{
+  "patient_id": "5915b2c0",
+  "first_name": "Amy",
+  "last_name": "Key",
+  "date_of_birth": "1973-07-11",
+  "gender": "Female",
+  "blood_type": "O+",
+  "phone": "(813)734-8039",
+  "email": "gregorywatkins@example.net",
+  "address": "599 Anna Field, Weaverburgh, NM 05476",
+  "emergency_contact_name": "David Robinson",
+  "emergency_contact_phone": "470.359.3252x50029",
+  "insurance_provider": "BlueCross BlueShield",
+  "insurance_id": "CIG-396020",
+  "allergies": [
+    "Latex",
+    "Sulfa drugs"
+  ],
+  "medications": [
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2024-11-20",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Frey",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2023-07-03",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Moreno",
+      "is_active": true
+    },
+    {
+      "name": "Metoprolol",
+      "dosage": "50mg",
+      "frequency": "twice daily",
+      "start_date": "2024-06-12",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wang",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2022-07-24",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T13:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 83,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 97.3,
+      "weight_lbs": 222.8,
+      "bmi": 28.1
+    },
+    {
+      "recorded_date": "2025-01-31T12:00:00",
+      "blood_pressure_systolic": 173,
+      "blood_pressure_diastolic": 107,
+      "heart_rate": 110,
+      "temperature_f": 99.9,
+      "oxygen_saturation": 92.7,
+      "weight_lbs": 143.3,
+      "bmi": 29.1
+    },
+    {
+      "recorded_date": "2025-03-02T09:00:00",
+      "blood_pressure_systolic": 120,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 84,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 99.2,
+      "weight_lbs": 241.8,
+      "bmi": 20.5
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 61.57,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-03-09"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 21.11,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": true,
+      "test_date": "2025-07-10"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 16.11,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-10-25"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 4.21,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": false,
+      "test_date": "2026-02-24"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 169.39,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-02-01"
+    },
+    {
+      "test_name": "TSH",
+      "value": 3.87,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-05-02"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 143.66,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2026-02-15"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 4.75,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-06-17"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "3d827e6e",
+      "encounter_type": "emergency",
+      "date": "2024-06-17T14:45:00",
+      "provider": "Dr. Chapman",
+      "department": "Pulmonology",
+      "reason": "Medication review",
+      "notes": "Fill read camera rock we we. Surface side nothing consider fish speak.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "f8f21c17",
+      "encounter_type": "inpatient",
+      "date": "2024-08-27T08:15:00",
+      "provider": "Dr. Mathis",
+      "department": "Neurology",
+      "reason": "Medication review",
+      "notes": "Health walk how big. Follow wish run join police. Power company why really up skin development.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "4e691fa5",
+      "encounter_type": "emergency",
+      "date": "2026-02-27T10:45:00",
+      "provider": "Dr. Carr",
+      "department": "Pulmonology",
+      "reason": "New symptom evaluation",
+      "notes": "View cell seat draw. Collection those become remember police though. Activity decide really go skin result answer.",
+      "followup_required": true,
+      "followup_date": "2026-03-28"
+    },
+    {
+      "encounter_id": "b0ab2aad",
+      "encounter_type": "outpatient",
+      "date": "2026-04-06T17:30:00",
+      "provider": "Dr. Kim",
+      "department": "Cardiology",
+      "reason": "Post-hospitalization check",
+      "notes": "This manage her national. Stock small official serve. Class available suffer far five.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Lynn, MD",
+  "record_created": "2026-04-17T00:51:40.097297",
+  "last_updated": "2026-04-17T00:51:40.097301"
+}

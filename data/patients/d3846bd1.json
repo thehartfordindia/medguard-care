@@ -1,0 +1,260 @@
+{
+  "patient_id": "d3846bd1",
+  "first_name": "Jimmy",
+  "last_name": "Bautista",
+  "date_of_birth": "1994-02-04",
+  "gender": "Male",
+  "blood_type": "A-",
+  "phone": "324.784.1376",
+  "email": "camposwilliam@example.com",
+  "address": "3807 Charles Square, Jamesfurt, PR 25981",
+  "emergency_contact_name": "Adam Wilson",
+  "emergency_contact_phone": "(957)477-1183",
+  "insurance_provider": "Humana",
+  "insurance_id": "AET-226550",
+  "allergies": [
+    "Ibuprofen",
+    "Peanuts",
+    "Codeine",
+    "Latex"
+  ],
+  "medications": [
+    {
+      "name": "Metoprolol",
+      "dosage": "50mg",
+      "frequency": "twice daily",
+      "start_date": "2024-11-24",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Bartlett",
+      "is_active": true
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2024-05-30",
+      "end_date": null,
+      "prescribing_doctor": "Dr. White",
+      "is_active": false
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2025-06-22",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Carroll",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2025-08-09",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Long",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2024-04-26",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2024-12-02",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "Chronic Low Back Pain",
+      "icd10_code": "M54.5",
+      "diagnosed_date": "2023-02-14",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Type 2 Diabetes Mellitus",
+      "icd10_code": "E11.9",
+      "diagnosed_date": "2021-07-01",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T17:00:00",
+      "blood_pressure_systolic": 169,
+      "blood_pressure_diastolic": 93,
+      "heart_rate": 98,
+      "temperature_f": 101.8,
+      "oxygen_saturation": 90.2,
+      "weight_lbs": 204.0,
+      "bmi": 34.9
+    },
+    {
+      "recorded_date": "2025-01-31T10:00:00",
+      "blood_pressure_systolic": 129,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 86,
+      "temperature_f": 98.3,
+      "oxygen_saturation": 97.5,
+      "weight_lbs": 163.4,
+      "bmi": 20.8
+    },
+    {
+      "recorded_date": "2025-03-02T14:00:00",
+      "blood_pressure_systolic": 115,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 82,
+      "temperature_f": 98.2,
+      "oxygen_saturation": 97.5,
+      "weight_lbs": 242.6,
+      "bmi": 20.4
+    },
+    {
+      "recorded_date": "2025-04-01T14:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 87,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 99.8,
+      "weight_lbs": 247.7,
+      "bmi": 18.6
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "TSH",
+      "value": 9.15,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-11-19"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 18.03,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-01-21"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 6.68,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-03-12"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 273.74,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-07-29"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 3.88,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-09-22"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 128.26,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-01-16"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 9.51,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2026-01-03"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "9005d907",
+      "encounter_type": "outpatient",
+      "date": "2024-02-07T17:15:00",
+      "provider": "Dr. Klein",
+      "department": "Emergency",
+      "reason": "Urgent care visit",
+      "notes": "Kind answer play mission production. Hospital final appear above. Short up hear draw before instead.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "62515505",
+      "encounter_type": "telehealth",
+      "date": "2024-03-27T07:30:00",
+      "provider": "Dr. Jimenez",
+      "department": "Emergency",
+      "reason": "Acute complaint",
+      "notes": "Heart politics draw rise. School forget everything poor set minute.",
+      "followup_required": true,
+      "followup_date": "2024-06-15"
+    },
+    {
+      "encounter_id": "d9ae8e8b",
+      "encounter_type": "telehealth",
+      "date": "2024-03-27T12:30:00",
+      "provider": "Dr. Ruiz",
+      "department": "Cardiology",
+      "reason": "Annual physical",
+      "notes": "Color adult beyond family. Scientist collection provide action event key concern.",
+      "followup_required": true,
+      "followup_date": "2024-04-17"
+    },
+    {
+      "encounter_id": "d165c552",
+      "encounter_type": "emergency",
+      "date": "2025-03-05T13:30:00",
+      "provider": "Dr. Hays",
+      "department": "Endocrinology",
+      "reason": "Routine follow-up",
+      "notes": "Quite as when benefit structure. Right analysis mention spring. No couple debate must voice building.",
+      "followup_required": true,
+      "followup_date": "2025-04-23"
+    },
+    {
+      "encounter_id": "fcbc2e36",
+      "encounter_type": "telehealth",
+      "date": "2025-09-17T09:45:00",
+      "provider": "Dr. Lewis",
+      "department": "Emergency",
+      "reason": "Lab review",
+      "notes": "Community I first home learn at. Practice hard attack despite feeling. Matter wrong Republican social two notice edge behind.",
+      "followup_required": true,
+      "followup_date": "2025-12-09"
+    },
+    {
+      "encounter_id": "9b117730",
+      "encounter_type": "emergency",
+      "date": "2025-09-25T17:45:00",
+      "provider": "Dr. Nguyen",
+      "department": "Emergency",
+      "reason": "Annual physical",
+      "notes": "Question win really forward play this. Within project attack adult treatment large. Political discussion onto write discussion pattern to. Door investment during bag case.",
+      "followup_required": true,
+      "followup_date": "2025-11-03"
+    }
+  ],
+  "primary_care_provider": "Dr. Madden, MD",
+  "record_created": "2026-04-17T00:52:12.614715",
+  "last_updated": "2026-04-17T00:52:12.614717"
+}

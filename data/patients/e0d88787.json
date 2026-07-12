@@ -1,0 +1,179 @@
+{
+  "patient_id": "e0d88787",
+  "first_name": "Danny",
+  "last_name": "Moon",
+  "date_of_birth": "1992-05-13",
+  "gender": "Male",
+  "blood_type": "B-",
+  "phone": "941-695-1802x38061",
+  "email": "mark87@example.org",
+  "address": "493 Richardson Park Apt. 832, South Andrewside, MI 83855",
+  "emergency_contact_name": "Sherry Tapia",
+  "emergency_contact_phone": "2644138367",
+  "insurance_provider": "Humana",
+  "insurance_id": "MCR-566686",
+  "allergies": [],
+  "medications": [
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-03-21",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wright",
+      "is_active": false
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Type 2 Diabetes Mellitus",
+      "icd10_code": "E11.9",
+      "diagnosed_date": "2021-12-04",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2024-07-31",
+      "severity": "mild",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T15:00:00",
+      "blood_pressure_systolic": 172,
+      "blood_pressure_diastolic": 94,
+      "heart_rate": 125,
+      "temperature_f": 99.7,
+      "oxygen_saturation": 89.9,
+      "weight_lbs": 242.3,
+      "bmi": 20.5
+    },
+    {
+      "recorded_date": "2025-01-31T13:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 84,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 99.4,
+      "weight_lbs": 229.8,
+      "bmi": 31.7
+    },
+    {
+      "recorded_date": "2025-03-02T09:00:00",
+      "blood_pressure_systolic": 129,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 74,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 96.1,
+      "weight_lbs": 244.8,
+      "bmi": 36.4
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "INR",
+      "value": 3.05,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2025-08-08"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 12.77,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-05-22"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 159.78,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-11-04"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 3.02,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-02-03"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 5.54,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2026-03-10"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 178.49,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-09-23"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 7.54,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": true,
+      "test_date": "2025-07-20"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 42.18,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-04-05"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "dc401977",
+      "encounter_type": "outpatient",
+      "date": "2024-04-25T10:45:00",
+      "provider": "Dr. Dawson",
+      "department": "Neurology",
+      "reason": "Routine follow-up",
+      "notes": "Tv today mind. Learn security oil measure PM hour.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "8fecd921",
+      "encounter_type": "telehealth",
+      "date": "2024-11-20T09:45:00",
+      "provider": "Dr. Vargas",
+      "department": "Endocrinology",
+      "reason": "Urgent care visit",
+      "notes": "Production candidate factor surface unit hotel. Fish evening avoid dark sister once.",
+      "followup_required": true,
+      "followup_date": "2024-12-26"
+    },
+    {
+      "encounter_id": "2369ea6f",
+      "encounter_type": "outpatient",
+      "date": "2026-02-27T08:00:00",
+      "provider": "Dr. Moore",
+      "department": "Internal Medicine",
+      "reason": "New symptom evaluation",
+      "notes": "Letter image movie who debate final enter. Bed space fight relate.",
+      "followup_required": true,
+      "followup_date": "2026-04-09"
+    }
+  ],
+  "primary_care_provider": "Dr. Morrison, MD",
+  "record_created": "2026-04-17T00:54:29.864600",
+  "last_updated": "2026-04-17T00:54:29.864603"
+}

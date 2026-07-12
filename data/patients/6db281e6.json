@@ -1,0 +1,184 @@
+{
+  "patient_id": "6db281e6",
+  "first_name": "Stephen",
+  "last_name": "Diaz",
+  "date_of_birth": "1984-10-30",
+  "gender": "Male",
+  "blood_type": "B+",
+  "phone": "+1-305-952-8183x253",
+  "email": "karenhodges@example.com",
+  "address": "640 Nathan Mission Suite 881, Mckinneyside, MH 38808",
+  "emergency_contact_name": "Jacob Nunez",
+  "emergency_contact_phone": "001-613-371-1624x112",
+  "insurance_provider": "Medicare",
+  "insurance_id": "HUM-721549",
+  "allergies": [
+    "Contrast dye",
+    "Latex",
+    "Codeine"
+  ],
+  "medications": [
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-03-30",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Rodriguez",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2024-04-02",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "Congestive Heart Failure",
+      "icd10_code": "I50.9",
+      "diagnosed_date": "2023-10-05",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "Atrial Fibrillation",
+      "icd10_code": "I48.91",
+      "diagnosed_date": "2024-07-15",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2022-12-28",
+      "severity": "mild",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T16:00:00",
+      "blood_pressure_systolic": 168,
+      "blood_pressure_diastolic": 94,
+      "heart_rate": 100,
+      "temperature_f": 101.5,
+      "oxygen_saturation": 92.6,
+      "weight_lbs": 205.6,
+      "bmi": 27.4
+    },
+    {
+      "recorded_date": "2025-01-31T16:00:00",
+      "blood_pressure_systolic": 125,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 90,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 99.3,
+      "weight_lbs": 226.4,
+      "bmi": 36.3
+    },
+    {
+      "recorded_date": "2025-03-02T14:00:00",
+      "blood_pressure_systolic": 120,
+      "blood_pressure_diastolic": 84,
+      "heart_rate": 75,
+      "temperature_f": 97.5,
+      "oxygen_saturation": 97.4,
+      "weight_lbs": 189.2,
+      "bmi": 27.5
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 68.57,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-02-24"
+    },
+    {
+      "test_name": "TSH",
+      "value": 2.74,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2026-02-10"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 140.15,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-10-30"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 171.57,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-10-08"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 0.89,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-02-03"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "a66c842b",
+      "encounter_type": "telehealth",
+      "date": "2024-08-29T09:00:00",
+      "provider": "Dr. Buchanan",
+      "department": "Internal Medicine",
+      "reason": "Chronic disease management",
+      "notes": "Program morning nature leader note together fill smile. Machine wife show another good. What peace claim movement consider compare remain.",
+      "followup_required": true,
+      "followup_date": "2024-10-23"
+    },
+    {
+      "encounter_id": "72fa1694",
+      "encounter_type": "outpatient",
+      "date": "2025-01-23T12:45:00",
+      "provider": "Dr. Hernandez",
+      "department": "Internal Medicine",
+      "reason": "Lab review",
+      "notes": "Wish move building agent use shoulder way. Choose wife national medical positive far. Wide senior yes project son.",
+      "followup_required": true,
+      "followup_date": "2025-02-23"
+    },
+    {
+      "encounter_id": "a414b495",
+      "encounter_type": "telehealth",
+      "date": "2025-03-31T09:30:00",
+      "provider": "Dr. Conway",
+      "department": "Internal Medicine",
+      "reason": "Medication review",
+      "notes": "Draw American first call. Hard day religious program within.",
+      "followup_required": true,
+      "followup_date": "2025-06-29"
+    },
+    {
+      "encounter_id": "14d6aea0",
+      "encounter_type": "telehealth",
+      "date": "2025-12-11T16:45:00",
+      "provider": "Dr. Terry",
+      "department": "Neurology",
+      "reason": "Post-hospitalization check",
+      "notes": "Themselves minute physical fall. Use listen information scene again country against. Strong mind from official pretty.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Chandler, MD",
+  "record_created": "2026-04-17T00:51:40.172349",
+  "last_updated": "2026-04-17T00:51:40.172350"
+}

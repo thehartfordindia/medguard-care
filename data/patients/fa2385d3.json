@@ -1,0 +1,186 @@
+{
+  "patient_id": "fa2385d3",
+  "first_name": "Sarah",
+  "last_name": "Williams",
+  "date_of_birth": "1940-03-14",
+  "gender": "Female",
+  "blood_type": "B+",
+  "phone": "340-333-0416x6241",
+  "email": "vsmith@example.net",
+  "address": "96394 Coleman Summit, West Joshuaborough, CT 35139",
+  "emergency_contact_name": "Laura Bennett",
+  "emergency_contact_phone": "(813)768-4748x83607",
+  "insurance_provider": "BlueCross BlueShield",
+  "insurance_id": "AET-859282",
+  "allergies": [
+    "Morphine",
+    "Penicillin"
+  ],
+  "medications": [
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2023-02-18",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Fischer",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2023-05-23",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Rose",
+      "is_active": false
+    },
+    {
+      "name": "Metformin",
+      "dosage": "500mg",
+      "frequency": "twice daily",
+      "start_date": "2023-11-27",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Mason",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-01-11",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Moody",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Chronic Low Back Pain",
+      "icd10_code": "M54.5",
+      "diagnosed_date": "2023-11-10",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T09:00:00",
+      "blood_pressure_systolic": 113,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 90,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 96.3,
+      "weight_lbs": 236.3,
+      "bmi": 33.9
+    },
+    {
+      "recorded_date": "2025-01-31T11:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 84,
+      "heart_rate": 63,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 99.3,
+      "weight_lbs": 245.4,
+      "bmi": 35.8
+    },
+    {
+      "recorded_date": "2025-03-02T15:00:00",
+      "blood_pressure_systolic": 170,
+      "blood_pressure_diastolic": 104,
+      "heart_rate": 102,
+      "temperature_f": 100.8,
+      "oxygen_saturation": 89.2,
+      "weight_lbs": 206.9,
+      "bmi": 28.1
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "TSH",
+      "value": 0.7,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-10-13"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 7.97,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2025-11-28"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 154.71,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-02-09"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 0.9,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-04-19"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 48.65,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-02-24"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 7.67,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2025-06-24"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "982429b6",
+      "encounter_type": "emergency",
+      "date": "2024-04-18T09:15:00",
+      "provider": "Dr. Watkins",
+      "department": "Pulmonology",
+      "reason": "Chronic disease management",
+      "notes": "Idea study model style. Arrive management in scientist strong.",
+      "followup_required": true,
+      "followup_date": "2024-07-06"
+    },
+    {
+      "encounter_id": "8bf86d54",
+      "encounter_type": "emergency",
+      "date": "2025-02-13T10:00:00",
+      "provider": "Dr. Johnson",
+      "department": "Pulmonology",
+      "reason": "Acute complaint",
+      "notes": "Image accept real sense some nation fine present. Leave lot never science run TV. Recognize heart series class security coach.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "37539780",
+      "encounter_type": "emergency",
+      "date": "2026-02-18T15:30:00",
+      "provider": "Dr. Farmer",
+      "department": "Emergency",
+      "reason": "Chronic disease management",
+      "notes": "Difference window however discussion have none poor. Century picture base night debate walk.",
+      "followup_required": true,
+      "followup_date": "2026-03-23"
+    }
+  ],
+  "primary_care_provider": "Dr. Kim, MD",
+  "record_created": "2026-04-17T00:52:12.655759",
+  "last_updated": "2026-04-17T00:52:12.655760"
+}

@@ -1,0 +1,37 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Lisa Aguirre (ID: 41a0cc20)
+Age: 34 | Gender: Female | Blood Type: AB+
+PCP: Dr. Dudley, MD
+
+ALLERGIES: No Known Allergies (NKA)
+
+ACTIVE MEDICATIONS:
+  - Metformin 500mg (twice daily)
+  - Atorvastatin 20mg (once daily at bedtime)
+  - Metoprolol 50mg (twice daily)
+  - Simvastatin 40mg (once daily at bedtime)
+  - Amiodarone 200mg (once daily)
+
+DIAGNOSES:
+  - COPD (J44.1) — moderate [CHRONIC]
+  - Hyperlipidemia (E78.5) — mild [CHRONIC]
+  - Major Depressive Disorder (F33.0) — moderate [CHRONIC]
+  - Urinary Tract Infection (N39.0) — mild
+  - Chronic Kidney Disease Stage 3 (N18.3) — severe [CHRONIC]
+
+LATEST VITALS (2025-03-02):
+  BP: 122/71 mmHg
+  HR: 61 bpm | Temp: 97.6°F
+  SpO2: 98.6% | BMI: 28.6
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Potassium: 6.39 mEq/L (Ref: 3.5-5.0 mEq/L)
+  - Total Cholesterol: 289.2 mg/dL (Ref: <200 mg/dL)
+  - TSH: 9.75 mIU/L (Ref: 0.4-4.0 mIU/L)
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2026-01-12 — Lab review
+  - [OUTPATIENT] 2025-12-18 — Post-hospitalization check
+    ⚡ Follow-up required by 2026-02-23
+  - [TELEHEALTH] 2025-12-08 — Routine follow-up

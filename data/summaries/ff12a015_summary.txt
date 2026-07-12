@@ -1,0 +1,31 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Christopher Burns (ID: ff12a015)
+Age: 70 | Gender: Male | Blood Type: O-
+PCP: Dr. Williams, MD
+
+ALLERGIES: No Known Allergies (NKA)
+
+ACTIVE MEDICATIONS:
+  - Levothyroxine 75mcg (once daily on empty stomach)
+  - Simvastatin 40mg (once daily at bedtime)
+  - Alprazolam 0.5mg (twice daily as needed)
+
+DIAGNOSES:
+  - Chronic Low Back Pain (M54.5) — moderate [CHRONIC]
+  - Gastroesophageal Reflux Disease (K21.0) — mild [CHRONIC]
+  - Essential Hypertension (I10) — moderate [CHRONIC]
+
+LATEST VITALS (2025-06-30):
+  BP: 110/79 mmHg
+  HR: 74 bpm | Temp: 98.5°F
+  SpO2: 97.7% | BMI: 34.6
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Hemoglobin: 9.9 g/dL (Ref: 12.0-17.5 g/dL)
+  - Total Cholesterol: 334.89 mg/dL (Ref: <200 mg/dL)
+
+RECENT ENCOUNTERS:
+  - [EMERGENCY] 2026-03-05 — Post-hospitalization check
+    ⚡ Follow-up required by 2026-05-31
+  - [INPATIENT] 2024-02-15 — Lab review

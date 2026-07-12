@@ -1,0 +1,230 @@
+{
+  "patient_id": "1806027c",
+  "first_name": "Tammy",
+  "last_name": "Flynn",
+  "date_of_birth": "1952-05-04",
+  "gender": "Female",
+  "blood_type": "A+",
+  "phone": "451-316-6829x73270",
+  "email": "jbaker@example.net",
+  "address": "USS Martinez, FPO AE 57048",
+  "emergency_contact_name": "Christopher Jones",
+  "emergency_contact_phone": "386.265.2683x41559",
+  "insurance_provider": "Medicare",
+  "insurance_id": "MCR-236889",
+  "allergies": [
+    "Amoxicillin",
+    "Fluoroquinolones",
+    "Latex"
+  ],
+  "medications": [
+    {
+      "name": "Gabapentin",
+      "dosage": "300mg",
+      "frequency": "three times daily",
+      "start_date": "2024-03-23",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Sanchez",
+      "is_active": false
+    },
+    {
+      "name": "Amlodipine",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2025-02-27",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Blankenship",
+      "is_active": true
+    },
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-01-29",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Craig",
+      "is_active": true
+    },
+    {
+      "name": "Prednisone",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2024-07-10",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wade",
+      "is_active": true
+    },
+    {
+      "name": "Metformin",
+      "dosage": "500mg",
+      "frequency": "twice daily",
+      "start_date": "2023-03-22",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Jacobs",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "diagnosed_date": "2023-08-29",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Atrial Fibrillation",
+      "icd10_code": "I48.91",
+      "diagnosed_date": "2025-01-12",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T17:00:00",
+      "blood_pressure_systolic": 117,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 84,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 95.3,
+      "weight_lbs": 151.6,
+      "bmi": 21.3
+    },
+    {
+      "recorded_date": "2025-01-31T10:00:00",
+      "blood_pressure_systolic": 113,
+      "blood_pressure_diastolic": 84,
+      "heart_rate": 89,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 95.5,
+      "weight_lbs": 179.5,
+      "bmi": 35.9
+    },
+    {
+      "recorded_date": "2025-03-02T16:00:00",
+      "blood_pressure_systolic": 121,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 72,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 99.0,
+      "weight_lbs": 197.9,
+      "bmi": 28.0
+    },
+    {
+      "recorded_date": "2025-04-01T12:00:00",
+      "blood_pressure_systolic": 123,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 88,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 99.5,
+      "weight_lbs": 253.2,
+      "bmi": 22.0
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Total Cholesterol",
+      "value": 150.71,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-06-27"
+    },
+    {
+      "test_name": "INR",
+      "value": 1.05,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-10-07"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 140.7,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-05-11"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 7.56,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": true,
+      "test_date": "2025-01-16"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "c42f3479",
+      "encounter_type": "telehealth",
+      "date": "2024-04-04T12:30:00",
+      "provider": "Dr. Roberts",
+      "department": "Emergency",
+      "reason": "Chronic disease management",
+      "notes": "Send under project cell deal stuff senior agree. Whether music sometimes.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "dcdf4bce",
+      "encounter_type": "inpatient",
+      "date": "2024-04-15T16:30:00",
+      "provider": "Dr. Phillips",
+      "department": "Cardiology",
+      "reason": "Chronic disease management",
+      "notes": "Know it enjoy ten. Rule bring government bad soldier.",
+      "followup_required": true,
+      "followup_date": "2024-06-23"
+    },
+    {
+      "encounter_id": "a36f7dee",
+      "encounter_type": "inpatient",
+      "date": "2024-05-21T10:00:00",
+      "provider": "Dr. Williams",
+      "department": "Endocrinology",
+      "reason": "New symptom evaluation",
+      "notes": "Oil such interview follow five condition century. Issue everything they fire girl. Budget event keep those.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "a409e1ce",
+      "encounter_type": "inpatient",
+      "date": "2025-02-13T10:30:00",
+      "provider": "Dr. Smith",
+      "department": "Cardiology",
+      "reason": "New symptom evaluation",
+      "notes": "Data walk number rule minute store.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "cc8899e6",
+      "encounter_type": "emergency",
+      "date": "2025-03-09T16:30:00",
+      "provider": "Dr. Luna",
+      "department": "Neurology",
+      "reason": "Medication review",
+      "notes": "Medical everybody piece mention. Religious fire under item. Fish success produce there along play account.",
+      "followup_required": true,
+      "followup_date": "2025-05-11"
+    },
+    {
+      "encounter_id": "7231712e",
+      "encounter_type": "emergency",
+      "date": "2025-06-08T09:15:00",
+      "provider": "Dr. Jones",
+      "department": "Internal Medicine",
+      "reason": "Lab review",
+      "notes": "Treat piece scientist job serious record safe. Trouble view base time order have power here. Computer reveal evidence significant discussion manage.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Taylor, MD",
+  "record_created": "2026-04-17T00:52:12.651713",
+  "last_updated": "2026-04-17T00:52:12.651720"
+}

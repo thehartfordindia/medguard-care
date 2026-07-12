@@ -1,0 +1,241 @@
+{
+  "patient_id": "453e5ccc",
+  "first_name": "Diana",
+  "last_name": "Garcia",
+  "date_of_birth": "1969-04-17",
+  "gender": "Female",
+  "blood_type": "B-",
+  "phone": "+1-454-485-7417x2156",
+  "email": "audrey81@example.com",
+  "address": "840 Kelsey Cliff Suite 573, West Taylor, NH 47975",
+  "emergency_contact_name": "Michael Padilla",
+  "emergency_contact_phone": "790-221-6667x080",
+  "insurance_provider": "Medicaid",
+  "insurance_id": "MCD-528873",
+  "allergies": [],
+  "medications": [
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2024-12-04",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Lawson",
+      "is_active": true
+    },
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2023-10-25",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Brooks",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2023-10-14",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2021-10-12",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2022-04-22",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "Major Depressive Disorder",
+      "icd10_code": "F33.0",
+      "diagnosed_date": "2022-03-12",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T13:00:00",
+      "blood_pressure_systolic": 111,
+      "blood_pressure_diastolic": 78,
+      "heart_rate": 75,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 96.7,
+      "weight_lbs": 254.6,
+      "bmi": 24.5
+    },
+    {
+      "recorded_date": "2025-01-31T11:00:00",
+      "blood_pressure_systolic": 127,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 84,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 99.7,
+      "weight_lbs": 225.9,
+      "bmi": 24.9
+    },
+    {
+      "recorded_date": "2025-03-02T09:00:00",
+      "blood_pressure_systolic": 110,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 62,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 96.7,
+      "weight_lbs": 189.4,
+      "bmi": 33.4
+    },
+    {
+      "recorded_date": "2025-04-01T09:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 71,
+      "temperature_f": 98.3,
+      "oxygen_saturation": 99.9,
+      "weight_lbs": 257.3,
+      "bmi": 26.2
+    },
+    {
+      "recorded_date": "2025-05-01T13:00:00",
+      "blood_pressure_systolic": 175,
+      "blood_pressure_diastolic": 95,
+      "heart_rate": 118,
+      "temperature_f": 100.3,
+      "oxygen_saturation": 89.1,
+      "weight_lbs": 242.7,
+      "bmi": 36.8
+    },
+    {
+      "recorded_date": "2025-05-31T09:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 76,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 97.4,
+      "weight_lbs": 162.0,
+      "bmi": 24.4
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "INR",
+      "value": 3.13,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2025-07-25"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 87.03,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-05-19"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 6.92,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": true,
+      "test_date": "2025-09-16"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 30.25,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-08-01"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 1.05,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-10-05"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "106a0f1a",
+      "encounter_type": "inpatient",
+      "date": "2024-04-07T18:45:00",
+      "provider": "Dr. Knight",
+      "department": "Neurology",
+      "reason": "New symptom evaluation",
+      "notes": "Their force much executive free attack away.",
+      "followup_required": true,
+      "followup_date": "2024-06-01"
+    },
+    {
+      "encounter_id": "55ee4115",
+      "encounter_type": "telehealth",
+      "date": "2025-01-26T07:45:00",
+      "provider": "Dr. Gillespie",
+      "department": "Endocrinology",
+      "reason": "Urgent care visit",
+      "notes": "Case together keep. Agent test take decade any just. Day herself sport behavior compare.",
+      "followup_required": true,
+      "followup_date": "2025-02-22"
+    },
+    {
+      "encounter_id": "2380aa24",
+      "encounter_type": "telehealth",
+      "date": "2025-02-20T15:30:00",
+      "provider": "Dr. Espinoza",
+      "department": "Endocrinology",
+      "reason": "Urgent care visit",
+      "notes": "Country challenge final beyond. Own suddenly single music west force firm. Probably cut clear yard do.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "5176de1d",
+      "encounter_type": "inpatient",
+      "date": "2025-08-14T07:45:00",
+      "provider": "Dr. Gentry",
+      "department": "Pulmonology",
+      "reason": "Post-hospitalization check",
+      "notes": "Clear decide wait scientist. See first course world son growth. Meet war administration herself information.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "edf122cd",
+      "encounter_type": "telehealth",
+      "date": "2025-11-02T16:45:00",
+      "provider": "Dr. Rose",
+      "department": "Endocrinology",
+      "reason": "Annual physical",
+      "notes": "Husband family perhaps. Affect different interview else development purpose. Mother president customer start understand throw.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "2985f3b0",
+      "encounter_type": "emergency",
+      "date": "2026-01-31T07:30:00",
+      "provider": "Dr. Davis",
+      "department": "Pulmonology",
+      "reason": "Lab review",
+      "notes": "Mother sometimes suffer because. Particular year sell short issue everybody later. Practice authority possible fund.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Nixon, MD",
+  "record_created": "2026-04-17T00:52:12.668361",
+  "last_updated": "2026-04-17T00:52:12.668362"
+}

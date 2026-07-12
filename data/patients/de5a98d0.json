@@ -1,0 +1,242 @@
+{
+  "patient_id": "de5a98d0",
+  "first_name": "Andrea",
+  "last_name": "Young",
+  "date_of_birth": "1933-07-15",
+  "gender": "Female",
+  "blood_type": "B+",
+  "phone": "+1-873-782-9973x76311",
+  "email": "ujenkins@example.org",
+  "address": "65133 Amanda Dam, Whitemouth, IA 10381",
+  "emergency_contact_name": "Scott Pierce",
+  "emergency_contact_phone": "5808132677",
+  "insurance_provider": "UnitedHealth",
+  "insurance_id": "HUM-736059",
+  "allergies": [
+    "Ibuprofen",
+    "Morphine",
+    "Fluoroquinolones"
+  ],
+  "medications": [
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-01-19",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Welch",
+      "is_active": true
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-03-12",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Perez",
+      "is_active": true
+    },
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2024-06-29",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Whitehead",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2025-12-04",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Heath",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2025-09-01",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Jones",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2022-03-28",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Major Depressive Disorder",
+      "icd10_code": "F33.0",
+      "diagnosed_date": "2023-10-07",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T17:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 67,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 96.7,
+      "weight_lbs": 222.4,
+      "bmi": 23.0
+    },
+    {
+      "recorded_date": "2025-01-31T10:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 67,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 95.2,
+      "weight_lbs": 186.3,
+      "bmi": 28.5
+    },
+    {
+      "recorded_date": "2025-03-02T16:00:00",
+      "blood_pressure_systolic": 116,
+      "blood_pressure_diastolic": 74,
+      "heart_rate": 83,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 97.9,
+      "weight_lbs": 206.2,
+      "bmi": 33.8
+    },
+    {
+      "recorded_date": "2025-04-01T12:00:00",
+      "blood_pressure_systolic": 153,
+      "blood_pressure_diastolic": 93,
+      "heart_rate": 122,
+      "temperature_f": 100.4,
+      "oxygen_saturation": 90.1,
+      "weight_lbs": 260.9,
+      "bmi": 19.6
+    },
+    {
+      "recorded_date": "2025-05-01T10:00:00",
+      "blood_pressure_systolic": 111,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 83,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 99.3,
+      "weight_lbs": 174.8,
+      "bmi": 22.2
+    },
+    {
+      "recorded_date": "2025-05-31T15:00:00",
+      "blood_pressure_systolic": 115,
+      "blood_pressure_diastolic": 78,
+      "heart_rate": 74,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 99.6,
+      "weight_lbs": 202.0,
+      "bmi": 35.3
+    },
+    {
+      "recorded_date": "2025-06-30T09:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 62,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 99.2,
+      "weight_lbs": 163.3,
+      "bmi": 28.0
+    },
+    {
+      "recorded_date": "2025-07-30T15:00:00",
+      "blood_pressure_systolic": 111,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 72,
+      "temperature_f": 97.5,
+      "oxygen_saturation": 97.0,
+      "weight_lbs": 269.7,
+      "bmi": 33.8
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "WBC Count",
+      "value": 4.88,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2026-01-12"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 6.62,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-01-30"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 14.62,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2026-03-13"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 227.39,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-09-18"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 59.29,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-11-01"
+    },
+    {
+      "test_name": "INR",
+      "value": 1.14,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-07-26"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "e8c6e6c6",
+      "encounter_type": "inpatient",
+      "date": "2024-07-28T17:30:00",
+      "provider": "Dr. Edwards",
+      "department": "Endocrinology",
+      "reason": "Annual physical",
+      "notes": "Live try most arm meet surface attention attack.",
+      "followup_required": true,
+      "followup_date": "2024-08-27"
+    },
+    {
+      "encounter_id": "fe65271d",
+      "encounter_type": "outpatient",
+      "date": "2025-08-06T10:00:00",
+      "provider": "Dr. Barrera",
+      "department": "Pulmonology",
+      "reason": "Urgent care visit",
+      "notes": "Able hospital unit size expect recent. Product main couple design around save article.",
+      "followup_required": true,
+      "followup_date": "2025-09-29"
+    }
+  ],
+  "primary_care_provider": "Dr. Hensley, MD",
+  "record_created": "2026-04-17T00:54:29.781457",
+  "last_updated": "2026-04-17T00:54:29.781460"
+}

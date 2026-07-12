@@ -1,0 +1,261 @@
+{
+  "patient_id": "7778e912",
+  "first_name": "Robert",
+  "last_name": "Roy",
+  "date_of_birth": "1946-07-24",
+  "gender": "Male",
+  "blood_type": "O+",
+  "phone": "5786515867",
+  "email": "michaelbaldwin@example.com",
+  "address": "034 Parker Squares, Rebeccaville, ND 31484",
+  "emergency_contact_name": "Jasmine Browning",
+  "emergency_contact_phone": "(344)913-4327x5604",
+  "insurance_provider": "Aetna",
+  "insurance_id": "AET-739037",
+  "allergies": [
+    "Aspirin",
+    "Shellfish",
+    "Latex"
+  ],
+  "medications": [
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2023-08-24",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Manning",
+      "is_active": true
+    },
+    {
+      "name": "Amlodipine",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2023-11-30",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Walls",
+      "is_active": true
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2023-08-31",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Robinson",
+      "is_active": true
+    },
+    {
+      "name": "Gabapentin",
+      "dosage": "300mg",
+      "frequency": "three times daily",
+      "start_date": "2023-07-24",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Rodriguez",
+      "is_active": true
+    },
+    {
+      "name": "Omeprazole",
+      "dosage": "20mg",
+      "frequency": "once daily before breakfast",
+      "start_date": "2023-08-14",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Lewis",
+      "is_active": false
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-09-06",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hill",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2025-01-28",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Ortiz",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "diagnosed_date": "2023-07-18",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Osteoarthritis",
+      "icd10_code": "M17.11",
+      "diagnosed_date": "2022-01-04",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2021-07-06",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Atrial Fibrillation",
+      "icd10_code": "I48.91",
+      "diagnosed_date": "2021-02-18",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T09:00:00",
+      "blood_pressure_systolic": 118,
+      "blood_pressure_diastolic": 74,
+      "heart_rate": 63,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 97.3,
+      "weight_lbs": 164.0,
+      "bmi": 25.2
+    },
+    {
+      "recorded_date": "2025-01-31T11:00:00",
+      "blood_pressure_systolic": 175,
+      "blood_pressure_diastolic": 110,
+      "heart_rate": 105,
+      "temperature_f": 100.9,
+      "oxygen_saturation": 90.8,
+      "weight_lbs": 172.2,
+      "bmi": 26.5
+    },
+    {
+      "recorded_date": "2025-03-02T12:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 86,
+      "temperature_f": 98.2,
+      "oxygen_saturation": 95.1,
+      "weight_lbs": 199.9,
+      "bmi": 35.5
+    },
+    {
+      "recorded_date": "2025-04-01T15:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 88,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 99.7,
+      "weight_lbs": 267.9,
+      "bmi": 36.0
+    },
+    {
+      "recorded_date": "2025-05-01T09:00:00",
+      "blood_pressure_systolic": 111,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 83,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 95.2,
+      "weight_lbs": 214.4,
+      "bmi": 27.8
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Hemoglobin",
+      "value": 7.05,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2026-01-10"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 76.54,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-07-03"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 82.38,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-02-16"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 1.0,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-03-24"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "c0bc8dc2",
+      "encounter_type": "outpatient",
+      "date": "2025-01-14T17:45:00",
+      "provider": "Dr. Fuller",
+      "department": "Emergency",
+      "reason": "Medication review",
+      "notes": "Bank citizen might wide store shake suggest. Society floor long same end reach. Son cup increase consider then war.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "4dde624e",
+      "encounter_type": "outpatient",
+      "date": "2025-09-19T15:15:00",
+      "provider": "Dr. Hernandez",
+      "department": "Neurology",
+      "reason": "Post-hospitalization check",
+      "notes": "Water bring responsibility itself. Still management difference data watch spend entire. High issue deal democratic station risk country.",
+      "followup_required": true,
+      "followup_date": "2025-10-10"
+    },
+    {
+      "encounter_id": "77c4c44e",
+      "encounter_type": "outpatient",
+      "date": "2025-11-21T12:00:00",
+      "provider": "Dr. White",
+      "department": "Pulmonology",
+      "reason": "Post-hospitalization check",
+      "notes": "Face energy pay. Hard range leader action card.",
+      "followup_required": true,
+      "followup_date": "2026-02-02"
+    },
+    {
+      "encounter_id": "7f405906",
+      "encounter_type": "emergency",
+      "date": "2025-12-08T12:00:00",
+      "provider": "Dr. Wilkerson",
+      "department": "Pulmonology",
+      "reason": "New symptom evaluation",
+      "notes": "Way type positive. Director become leg energy system anyone peace outside.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "a145b504",
+      "encounter_type": "telehealth",
+      "date": "2026-02-04T16:00:00",
+      "provider": "Dr. Ruiz",
+      "department": "Pulmonology",
+      "reason": "Acute complaint",
+      "notes": "Response theory star station recognize media. Inside role natural force receive seven. Picture social carry husband.",
+      "followup_required": true,
+      "followup_date": "2026-04-10"
+    }
+  ],
+  "primary_care_provider": "Dr. Morris, MD",
+  "record_created": "2026-04-17T00:52:12.587813",
+  "last_updated": "2026-04-17T00:52:12.587817"
+}

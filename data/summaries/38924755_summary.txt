@@ -1,0 +1,32 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Dustin Hall (ID: 38924755)
+Age: 20 | Gender: Male | Blood Type: B-
+PCP: Dr. Cooper, MD
+
+ALLERGIES: No Known Allergies (NKA)
+
+ACTIVE MEDICATIONS:
+  - Warfarin 5mg (once daily)
+  - Alprazolam 0.5mg (twice daily as needed)
+
+DIAGNOSES:
+  - Atrial Fibrillation (I48.91) — moderate [CHRONIC]
+
+LATEST VITALS (2025-07-30):
+  BP: 121/76 mmHg
+  HR: 73 bpm | Temp: 98.9°F
+  SpO2: 99.3% | BMI: 22.1
+
+⚠️ ABNORMAL LAB RESULTS:
+  - HDL Cholesterol: 16.46 mg/dL (Ref: >40 mg/dL)
+  - Creatinine: 3.88 mg/dL (Ref: 0.6-1.2 mg/dL)
+  - Fasting Glucose: 246.66 mg/dL (Ref: 70-100 mg/dL)
+  - INR: 3.09  (Ref: 0.8-1.2 (2.0-3.0 on warfarin))
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2026-01-20 — Post-hospitalization check
+  - [TELEHEALTH] 2025-06-03 — Lab review
+    ⚡ Follow-up required by 2025-06-21
+  - [INPATIENT] 2025-05-13 — Medication review
+    ⚡ Follow-up required by 2025-07-01

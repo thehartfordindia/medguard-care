@@ -1,0 +1,30 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Kayla Strickland (ID: 37bfdd9a)
+Age: 76 | Gender: Female | Blood Type: AB-
+PCP: Dr. Mcpherson, MD
+
+ALLERGIES: Codeine, Latex, Penicillin
+
+ACTIVE MEDICATIONS:
+  - Levothyroxine 75mcg (once daily on empty stomach)
+  - Metoprolol 50mg (twice daily)
+  - Gabapentin 300mg (three times daily)
+
+DIAGNOSES:
+  - Chronic Kidney Disease Stage 3 (N18.3) — severe [CHRONIC]
+  - Congestive Heart Failure (I50.9) — severe [CHRONIC]
+  - Acute Bronchitis (J20.9) — mild
+
+LATEST VITALS (2025-05-31):
+  BP: 115/85 mmHg
+  HR: 78 bpm | Temp: 98.3°F
+  SpO2: 96.7% | BMI: 23.5
+
+⚠️ ABNORMAL LAB RESULTS:
+  - HbA1c: 10.06 % (Ref: 4.0-5.6%)
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2024-11-08 — Post-hospitalization check
+    ⚡ Follow-up required by 2025-01-19
+  - [OUTPATIENT] 2024-05-15 — New symptom evaluation

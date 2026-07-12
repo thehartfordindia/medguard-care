@@ -1,0 +1,205 @@
+{
+  "patient_id": "42e4269e",
+  "first_name": "Luis",
+  "last_name": "Gillespie",
+  "date_of_birth": "1945-09-03",
+  "gender": "Male",
+  "blood_type": "B-",
+  "phone": "8924268592",
+  "email": "colleen45@example.org",
+  "address": "541 Michelle Drive Apt. 526, Griffithfort, GU 09323",
+  "emergency_contact_name": "Jeffrey Acosta",
+  "emergency_contact_phone": "(815)922-6557",
+  "insurance_provider": "Humana",
+  "insurance_id": "BCB-546944",
+  "allergies": [
+    "Codeine",
+    "Aspirin",
+    "Ibuprofen"
+  ],
+  "medications": [
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2023-06-27",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wilson",
+      "is_active": true
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-03-25",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Mclean",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Atrial Fibrillation",
+      "icd10_code": "I48.91",
+      "diagnosed_date": "2020-12-27",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "COPD",
+      "icd10_code": "J44.1",
+      "diagnosed_date": "2023-05-25",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T16:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 68,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 97.4,
+      "weight_lbs": 273.1,
+      "bmi": 25.5
+    },
+    {
+      "recorded_date": "2025-01-31T16:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 76,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 97.2,
+      "weight_lbs": 161.8,
+      "bmi": 37.1
+    },
+    {
+      "recorded_date": "2025-03-02T15:00:00",
+      "blood_pressure_systolic": 123,
+      "blood_pressure_diastolic": 72,
+      "heart_rate": 84,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 96.5,
+      "weight_lbs": 215.2,
+      "bmi": 29.3
+    },
+    {
+      "recorded_date": "2025-04-01T15:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 74,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 97.8,
+      "weight_lbs": 207.3,
+      "bmi": 25.0
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 174.91,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-07-27"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 342.24,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-01-16"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 84.69,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-11-25"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 6.89,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": true,
+      "test_date": "2026-03-30"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 4.88,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-07-17"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 14.11,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": true,
+      "test_date": "2026-01-26"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 50.21,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-04-13"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "31bb09cb",
+      "encounter_type": "emergency",
+      "date": "2024-09-05T14:00:00",
+      "provider": "Dr. Grant",
+      "department": "Emergency",
+      "reason": "Routine follow-up",
+      "notes": "Arrive glass support term. Far century table will.",
+      "followup_required": true,
+      "followup_date": "2024-10-07"
+    },
+    {
+      "encounter_id": "009dbd16",
+      "encounter_type": "emergency",
+      "date": "2025-04-11T17:15:00",
+      "provider": "Dr. Durham",
+      "department": "Cardiology",
+      "reason": "Acute complaint",
+      "notes": "Still argue case while region. Run receive interesting approach black ok.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "5fc9f98c",
+      "encounter_type": "outpatient",
+      "date": "2025-05-15T17:30:00",
+      "provider": "Dr. Steele",
+      "department": "Emergency",
+      "reason": "Annual physical",
+      "notes": "Soldier four soon president early industry market move. Movie discover base resource money since specific. Reflect dog able yes admit.",
+      "followup_required": true,
+      "followup_date": "2025-07-22"
+    },
+    {
+      "encounter_id": "d6950b83",
+      "encounter_type": "telehealth",
+      "date": "2026-02-28T08:45:00",
+      "provider": "Dr. Woods",
+      "department": "Emergency",
+      "reason": "Medication review",
+      "notes": "Air half bad baby. Store indicate she like cell month we. In front sit receive expert choose thing. Page community civil.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Sanders, MD",
+  "record_created": "2026-04-17T00:52:12.631261",
+  "last_updated": "2026-04-17T00:52:12.631262"
+}

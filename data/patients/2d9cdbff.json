@@ -1,0 +1,270 @@
+{
+  "patient_id": "2d9cdbff",
+  "first_name": "Andrea",
+  "last_name": "Brooks",
+  "date_of_birth": "1983-06-01",
+  "gender": "Female",
+  "blood_type": "AB-",
+  "phone": "+1-729-296-2914",
+  "email": "robert73@example.com",
+  "address": "84215 Kimberly Course Suite 807, East Matthew, NJ 96503",
+  "emergency_contact_name": "Emily Murphy",
+  "emergency_contact_phone": "001-318-723-0768x10409",
+  "insurance_provider": "Medicaid",
+  "insurance_id": "HUM-350385",
+  "allergies": [
+    "Cephalosporins",
+    "Sulfa drugs"
+  ],
+  "medications": [
+    {
+      "name": "Prednisone",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2024-10-15",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hernandez",
+      "is_active": true
+    },
+    {
+      "name": "Metformin",
+      "dosage": "500mg",
+      "frequency": "twice daily",
+      "start_date": "2025-01-21",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Pittman",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2023-01-20",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Morgan",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2021-01-23",
+      "severity": "moderate",
+      "is_chronic": false
+    },
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2022-12-09",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "COPD",
+      "icd10_code": "J44.1",
+      "diagnosed_date": "2023-10-31",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T11:00:00",
+      "blood_pressure_systolic": 169,
+      "blood_pressure_diastolic": 99,
+      "heart_rate": 115,
+      "temperature_f": 100.5,
+      "oxygen_saturation": 89.6,
+      "weight_lbs": 153.5,
+      "bmi": 31.3
+    },
+    {
+      "recorded_date": "2025-01-31T11:00:00",
+      "blood_pressure_systolic": 115,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 66,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 96.0,
+      "weight_lbs": 144.5,
+      "bmi": 31.0
+    },
+    {
+      "recorded_date": "2025-03-02T16:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 78,
+      "heart_rate": 61,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 98.0,
+      "weight_lbs": 149.9,
+      "bmi": 36.6
+    },
+    {
+      "recorded_date": "2025-04-01T16:00:00",
+      "blood_pressure_systolic": 112,
+      "blood_pressure_diastolic": 84,
+      "heart_rate": 85,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 96.8,
+      "weight_lbs": 244.1,
+      "bmi": 35.9
+    },
+    {
+      "recorded_date": "2025-05-01T09:00:00",
+      "blood_pressure_systolic": 176,
+      "blood_pressure_diastolic": 109,
+      "heart_rate": 112,
+      "temperature_f": 100.8,
+      "oxygen_saturation": 91.7,
+      "weight_lbs": 256.8,
+      "bmi": 20.0
+    },
+    {
+      "recorded_date": "2025-05-31T17:00:00",
+      "blood_pressure_systolic": 113,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 83,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 96.9,
+      "weight_lbs": 167.0,
+      "bmi": 31.3
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "INR",
+      "value": 0.98,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-12-07"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 132.81,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-02-10"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 4.1,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-06-22"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 129.81,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-11-04"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 6.79,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2025-06-11"
+    },
+    {
+      "test_name": "TSH",
+      "value": 14.97,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2026-03-09"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 5.22,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": false,
+      "test_date": "2025-08-09"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 21.47,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-05-04"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "d3ef92ab",
+      "encounter_type": "inpatient",
+      "date": "2024-02-05T11:00:00",
+      "provider": "Dr. Collins",
+      "department": "Endocrinology",
+      "reason": "Routine follow-up",
+      "notes": "Customer expert mother significant provide evening. Event address performance method.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "f7abbb1d",
+      "encounter_type": "outpatient",
+      "date": "2024-08-15T10:30:00",
+      "provider": "Dr. Clark",
+      "department": "Emergency",
+      "reason": "New symptom evaluation",
+      "notes": "Five center region exist each author party. Music anything ahead tough anyone himself. Interview condition other or.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "502ce5cc",
+      "encounter_type": "inpatient",
+      "date": "2024-09-28T12:15:00",
+      "provider": "Dr. Stark",
+      "department": "Endocrinology",
+      "reason": "New symptom evaluation",
+      "notes": "Law air little goal leave color. Page camera bill stage someone for. Society mouth husband including.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "56cc76d6",
+      "encounter_type": "emergency",
+      "date": "2025-01-19T15:30:00",
+      "provider": "Dr. Owens",
+      "department": "Pulmonology",
+      "reason": "Chronic disease management",
+      "notes": "Minute probably fine officer.",
+      "followup_required": true,
+      "followup_date": "2025-03-24"
+    },
+    {
+      "encounter_id": "bf102010",
+      "encounter_type": "outpatient",
+      "date": "2025-02-13T16:15:00",
+      "provider": "Dr. Oliver",
+      "department": "Emergency",
+      "reason": "Post-hospitalization check",
+      "notes": "Wind himself future sport. Issue woman note garden reason community prove school. Student boy other foot best knowledge final.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "dafc9d55",
+      "encounter_type": "outpatient",
+      "date": "2025-06-07T15:15:00",
+      "provider": "Dr. Huff",
+      "department": "Internal Medicine",
+      "reason": "Chronic disease management",
+      "notes": "Green forward cup serve speak bad type share. Capital spend turn life lay range report. Like water century time election guy contain.",
+      "followup_required": true,
+      "followup_date": "2025-08-05"
+    }
+  ],
+  "primary_care_provider": "Dr. Sullivan, MD",
+  "record_created": "2026-04-17T00:51:40.156689",
+  "last_updated": "2026-04-17T00:51:40.156691"
+}

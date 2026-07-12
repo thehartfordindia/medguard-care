@@ -1,0 +1,216 @@
+{
+  "patient_id": "67f1f8f9",
+  "first_name": "Edward",
+  "last_name": "Taylor",
+  "date_of_birth": "1989-11-06",
+  "gender": "Male",
+  "blood_type": "AB-",
+  "phone": "401-948-4399x1062",
+  "email": "kathyroman@example.org",
+  "address": "669 John Keys, East Tabithaview, DC 53118",
+  "emergency_contact_name": "Patrick Blackburn",
+  "emergency_contact_phone": "(637)324-5018",
+  "insurance_provider": "Medicare",
+  "insurance_id": "AET-715354",
+  "allergies": [
+    "Morphine",
+    "Penicillin"
+  ],
+  "medications": [
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-03-05",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Santana",
+      "is_active": true
+    },
+    {
+      "name": "Prednisone",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2024-07-11",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Stanton",
+      "is_active": true
+    },
+    {
+      "name": "Gabapentin",
+      "dosage": "300mg",
+      "frequency": "three times daily",
+      "start_date": "2023-07-18",
+      "end_date": null,
+      "prescribing_doctor": "Dr. English",
+      "is_active": true
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2025-01-25",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Mcdonald",
+      "is_active": false
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2022-04-05",
+      "severity": "moderate",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T09:00:00",
+      "blood_pressure_systolic": 152,
+      "blood_pressure_diastolic": 96,
+      "heart_rate": 127,
+      "temperature_f": 99.9,
+      "oxygen_saturation": 89.3,
+      "weight_lbs": 164.2,
+      "bmi": 19.4
+    },
+    {
+      "recorded_date": "2025-01-31T17:00:00",
+      "blood_pressure_systolic": 123,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 80,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 99.2,
+      "weight_lbs": 140.5,
+      "bmi": 23.8
+    },
+    {
+      "recorded_date": "2025-03-02T14:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 72,
+      "heart_rate": 78,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 95.4,
+      "weight_lbs": 268.5,
+      "bmi": 22.1
+    },
+    {
+      "recorded_date": "2025-04-01T14:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 84,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 95.1,
+      "weight_lbs": 229.3,
+      "bmi": 27.5
+    },
+    {
+      "recorded_date": "2025-05-01T12:00:00",
+      "blood_pressure_systolic": 159,
+      "blood_pressure_diastolic": 110,
+      "heart_rate": 107,
+      "temperature_f": 101.4,
+      "oxygen_saturation": 91.7,
+      "weight_lbs": 183.5,
+      "bmi": 25.9
+    },
+    {
+      "recorded_date": "2025-05-31T13:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 80,
+      "heart_rate": 73,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 95.9,
+      "weight_lbs": 263.7,
+      "bmi": 22.0
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 21.98,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-11-25"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 10.32,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2025-12-18"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 132.39,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-03-04"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 1.89,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-10-19"
+    },
+    {
+      "test_name": "INR",
+      "value": 1.08,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-06-27"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 308.66,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-05-28"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "e0977344",
+      "encounter_type": "outpatient",
+      "date": "2025-04-23T11:00:00",
+      "provider": "Dr. Allen",
+      "department": "Neurology",
+      "reason": "Acute complaint",
+      "notes": "Instead point tend exactly right every. Policy forget project economy ground. Big south drug.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "0bf8a66e",
+      "encounter_type": "emergency",
+      "date": "2025-04-23T16:30:00",
+      "provider": "Dr. Simpson",
+      "department": "Neurology",
+      "reason": "Annual physical",
+      "notes": "Program billion sit remain night study. Parent that property among blue study. Offer brother shake guess. Instead hour season girl small system of mission.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "b80e99e5",
+      "encounter_type": "outpatient",
+      "date": "2025-05-30T15:30:00",
+      "provider": "Dr. Ingram",
+      "department": "Neurology",
+      "reason": "Lab review",
+      "notes": "Discussion just state must particular child they. Themselves we American study eight phone. One then reality some serve different. Become rule where ten.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Bentley, MD",
+  "record_created": "2026-04-17T00:52:12.672938",
+  "last_updated": "2026-04-17T00:52:12.672939"
+}

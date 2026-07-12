@@ -1,0 +1,160 @@
+{
+  "patient_id": "41d403b6",
+  "first_name": "Patrick",
+  "last_name": "David",
+  "date_of_birth": "1989-10-02",
+  "gender": "Male",
+  "blood_type": "AB-",
+  "phone": "316.649.3289x8027",
+  "email": "cjackson@example.org",
+  "address": "32116 Ethan Islands, Mirandabury, VA 34268",
+  "emergency_contact_name": "Tiffany Lambert",
+  "emergency_contact_phone": "+1-828-571-5399x15668",
+  "insurance_provider": "Medicare",
+  "insurance_id": "UHC-766023",
+  "allergies": [
+    "Fluoroquinolones",
+    "Cephalosporins"
+  ],
+  "medications": [
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2023-05-24",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Bauer",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2023-10-14",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Bailey",
+      "is_active": true
+    },
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2023-08-04",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Crosby",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Osteoarthritis",
+      "icd10_code": "M17.11",
+      "diagnosed_date": "2021-07-13",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T14:00:00",
+      "blood_pressure_systolic": 120,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 74,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 96.6,
+      "weight_lbs": 268.0,
+      "bmi": 21.1
+    },
+    {
+      "recorded_date": "2025-01-31T16:00:00",
+      "blood_pressure_systolic": 150,
+      "blood_pressure_diastolic": 90,
+      "heart_rate": 106,
+      "temperature_f": 100.5,
+      "oxygen_saturation": 92.5,
+      "weight_lbs": 238.5,
+      "bmi": 33.4
+    },
+    {
+      "recorded_date": "2025-03-02T10:00:00",
+      "blood_pressure_systolic": 127,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 88,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 98.4,
+      "weight_lbs": 234.1,
+      "bmi": 25.4
+    },
+    {
+      "recorded_date": "2025-04-01T14:00:00",
+      "blood_pressure_systolic": 162,
+      "blood_pressure_diastolic": 95,
+      "heart_rate": 95,
+      "temperature_f": 99.8,
+      "oxygen_saturation": 89.9,
+      "weight_lbs": 167.0,
+      "bmi": 18.7
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 64.54,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-06-05"
+    },
+    {
+      "test_name": "INR",
+      "value": 2.66,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2025-09-10"
+    },
+    {
+      "test_name": "TSH",
+      "value": 5.37,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-09-10"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 214.84,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-04-18"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "f147c408",
+      "encounter_type": "outpatient",
+      "date": "2025-07-19T10:15:00",
+      "provider": "Dr. Mclaughlin",
+      "department": "Neurology",
+      "reason": "Acute complaint",
+      "notes": "Operation couple hold interest. Something value call professional opportunity blood.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "3ec2e7ec",
+      "encounter_type": "emergency",
+      "date": "2025-10-15T13:00:00",
+      "provider": "Dr. Walker",
+      "department": "Neurology",
+      "reason": "Urgent care visit",
+      "notes": "Because become scientist visit seat. Of camera finish herself.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Smith, MD",
+  "record_created": "2026-04-17T00:52:12.621820",
+  "last_updated": "2026-04-17T00:52:12.621822"
+}

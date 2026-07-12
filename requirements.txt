@@ -1,0 +1,37 @@
+# MedGuard AI - Requirements
+# Core
+langchain>=0.1.0
+langchain-community>=0.0.10
+langchain-core>=0.1.0
+
+# Vector Store & Embeddings
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.2
+
+# LLM Providers (pick one or both)
+# openai>=1.0.0           # Uncomment if using OpenAI
+huggingface-hub>=0.19.0
+
+# Data & ML
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+faker>=20.0.0
+
+# Dashboard
+streamlit>=1.28.0
+plotly>=5.17.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+rich>=13.0.0
+
+# Document Processing
+tiktoken>=0.5.0
+
+# Multilingual voice (JARVIS audio replies)
+gTTS>=2.5.0
+deep-translator>=1.11.4
+pyttsx3>=2.90          # offline Windows SAPI fallback (works behind corporate proxies)
+truststore>=0.9.0      # uses Windows cert store — fixes Zscaler SSL interception

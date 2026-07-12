@@ -1,0 +1,197 @@
+{
+  "patient_id": "ae2065be",
+  "first_name": "George",
+  "last_name": "Williams",
+  "date_of_birth": "1995-06-18",
+  "gender": "Male",
+  "blood_type": "AB-",
+  "phone": "+1-581-540-6937x51509",
+  "email": "james18@example.com",
+  "address": "637 Morrison Pass, Lake Michaelberg, VT 56552",
+  "emergency_contact_name": "Jake Mitchell",
+  "emergency_contact_phone": "(847)481-3767x426",
+  "insurance_provider": "UnitedHealth",
+  "insurance_id": "HUM-932932",
+  "allergies": [
+    "Shellfish",
+    "Cephalosporins"
+  ],
+  "medications": [
+    {
+      "name": "Prednisone",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2024-02-04",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Rodriguez",
+      "is_active": true
+    },
+    {
+      "name": "Sertraline",
+      "dosage": "50mg",
+      "frequency": "once daily",
+      "start_date": "2024-04-02",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Mendoza",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Chronic Low Back Pain",
+      "icd10_code": "M54.5",
+      "diagnosed_date": "2020-07-01",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2023-04-08",
+      "severity": "severe",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T17:00:00",
+      "blood_pressure_systolic": 122,
+      "blood_pressure_diastolic": 74,
+      "heart_rate": 87,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 96.8,
+      "weight_lbs": 216.8,
+      "bmi": 19.5
+    },
+    {
+      "recorded_date": "2025-01-31T14:00:00",
+      "blood_pressure_systolic": 153,
+      "blood_pressure_diastolic": 99,
+      "heart_rate": 96,
+      "temperature_f": 100.1,
+      "oxygen_saturation": 91.5,
+      "weight_lbs": 195.2,
+      "bmi": 24.7
+    },
+    {
+      "recorded_date": "2025-03-02T15:00:00",
+      "blood_pressure_systolic": 123,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 81,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 95.7,
+      "weight_lbs": 217.8,
+      "bmi": 34.9
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "WBC Count",
+      "value": 4.6,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2026-01-05"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 305.53,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-03-11"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 65.69,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-08-01"
+    },
+    {
+      "test_name": "INR",
+      "value": 4.68,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2025-12-23"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 6.14,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-04-03"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 4.68,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": false,
+      "test_date": "2026-02-24"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "b70f80f0",
+      "encounter_type": "outpatient",
+      "date": "2024-08-19T09:45:00",
+      "provider": "Dr. Houston",
+      "department": "Neurology",
+      "reason": "Chronic disease management",
+      "notes": "Century field write moment. At whether series because important trial. Company left nothing trip current strategy. Network amount step strong fight.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "d77f6bcf",
+      "encounter_type": "telehealth",
+      "date": "2024-08-30T18:30:00",
+      "provider": "Dr. Hansen",
+      "department": "Neurology",
+      "reason": "Post-hospitalization check",
+      "notes": "Agree able enjoy what strong. Buy program explain conference trade population agreement. Manage wife out gun lose.",
+      "followup_required": true,
+      "followup_date": "2024-09-17"
+    },
+    {
+      "encounter_id": "1141b2eb",
+      "encounter_type": "outpatient",
+      "date": "2025-08-04T14:30:00",
+      "provider": "Dr. Graham",
+      "department": "Neurology",
+      "reason": "Chronic disease management",
+      "notes": "Rather window stand health run adult employee ok. Floor there career clear.",
+      "followup_required": true,
+      "followup_date": "2025-08-28"
+    },
+    {
+      "encounter_id": "56d97d12",
+      "encounter_type": "telehealth",
+      "date": "2025-09-16T08:15:00",
+      "provider": "Dr. Thomas",
+      "department": "Emergency",
+      "reason": "Medication review",
+      "notes": "Example single include TV clear design me. Somebody next ready weight suffer.",
+      "followup_required": true,
+      "followup_date": "2025-12-08"
+    },
+    {
+      "encounter_id": "a34d0b0d",
+      "encounter_type": "telehealth",
+      "date": "2026-01-18T15:30:00",
+      "provider": "Dr. Nelson",
+      "department": "Neurology",
+      "reason": "Medication review",
+      "notes": "Any factor police baby create physical. Out cold follow first. Even recently guy move goal.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Marquez, MD",
+  "record_created": "2026-04-17T00:56:40.627232",
+  "last_updated": "2026-04-17T00:56:40.627234"
+}

@@ -1,0 +1,29 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Amy Key (ID: 45833cea)
+Age: 52 | Gender: Female | Blood Type: O+
+PCP: Dr. Lynn, MD
+
+ALLERGIES: Latex, Sulfa drugs
+
+ACTIVE MEDICATIONS:
+  - Hydrocodone/APAP 5/325mg (every 6 hours as needed)
+  - Warfarin 5mg (once daily)
+  - Metoprolol 50mg (twice daily)
+
+DIAGNOSES:
+  - Hypothyroidism (E03.9) — mild [CHRONIC]
+
+LATEST VITALS (2025-03-02):
+  BP: 120/70 mmHg
+  HR: 84 bpm | Temp: 98.5°F
+  SpO2: 99.2% | BMI: 20.5
+
+⚠️ ABNORMAL LAB RESULTS:
+  - WBC Count: 21.11 K/uL (Ref: 4.5-11.0 K/uL)
+
+RECENT ENCOUNTERS:
+  - [OUTPATIENT] 2026-04-06 — Post-hospitalization check
+  - [EMERGENCY] 2026-02-27 — New symptom evaluation
+    ⚡ Follow-up required by 2026-03-28
+  - [INPATIENT] 2024-08-27 — Medication review

@@ -1,0 +1,33 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Michael Brooks (ID: 66e72f59)
+Age: 79 | Gender: Male | Blood Type: AB-
+PCP: Dr. Wheeler, MD
+
+ALLERGIES: Shellfish, Sulfa drugs
+
+ACTIVE MEDICATIONS:
+  - Amiodarone 200mg (once daily)
+  - Insulin Glargine 20 units (once daily at bedtime)
+  - Simvastatin 40mg (once daily at bedtime)
+
+DIAGNOSES:
+  - Essential Hypertension (I10) — moderate [CHRONIC]
+  - Congestive Heart Failure (I50.9) — severe [CHRONIC]
+
+LATEST VITALS (2025-04-01):
+  BP: 115/83 mmHg
+  HR: 72 bpm | Temp: 97.5°F
+  SpO2: 98.1% | BMI: 30.0
+
+⚠️ ABNORMAL LAB RESULTS:
+  - HbA1c: 9.45 % (Ref: 4.0-5.6%)
+  - INR: 3.47  (Ref: 0.8-1.2 (2.0-3.0 on warfarin))
+  - Creatinine: 2.37 mg/dL (Ref: 0.6-1.2 mg/dL)
+  - Fasting Glucose: 177.76 mg/dL (Ref: 70-100 mg/dL)
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2025-12-11 — Acute complaint
+  - [OUTPATIENT] 2025-03-30 — Routine follow-up
+  - [INPATIENT] 2025-03-09 — Acute complaint
+    ⚡ Follow-up required by 2025-05-24

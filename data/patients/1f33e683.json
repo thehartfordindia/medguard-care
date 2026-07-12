@@ -1,0 +1,207 @@
+{
+  "patient_id": "1f33e683",
+  "first_name": "Jordan",
+  "last_name": "Hunter",
+  "date_of_birth": "1985-04-03",
+  "gender": "Female",
+  "blood_type": "AB+",
+  "phone": "001-920-495-9351x8638",
+  "email": "marcus51@example.org",
+  "address": "22031 Lee Bypass, Barretthaven, RI 92423",
+  "emergency_contact_name": "Amber Walker",
+  "emergency_contact_phone": "001-210-637-1705x865",
+  "insurance_provider": "Medicare",
+  "insurance_id": "HUM-160254",
+  "allergies": [
+    "Amoxicillin"
+  ],
+  "medications": [
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2024-02-15",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Parsons",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Osteoarthritis",
+      "icd10_code": "M17.11",
+      "diagnosed_date": "2022-06-18",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T17:00:00",
+      "blood_pressure_systolic": 119,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 61,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 97.6,
+      "weight_lbs": 237.8,
+      "bmi": 30.5
+    },
+    {
+      "recorded_date": "2025-01-31T14:00:00",
+      "blood_pressure_systolic": 117,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 65,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 96.4,
+      "weight_lbs": 195.9,
+      "bmi": 31.6
+    },
+    {
+      "recorded_date": "2025-03-02T12:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 83,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 99.6,
+      "weight_lbs": 216.9,
+      "bmi": 32.7
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Sodium",
+      "value": 130.17,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-05-14"
+    },
+    {
+      "test_name": "TSH",
+      "value": 2.22,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-10-14"
+    },
+    {
+      "test_name": "INR",
+      "value": 0.92,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-03-01"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 34.13,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-03-25"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 225.21,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-05-09"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 6.95,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-10-16"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 0.75,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-06-23"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 8.84,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2025-08-24"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "a12ad283",
+      "encounter_type": "inpatient",
+      "date": "2024-09-04T11:15:00",
+      "provider": "Dr. Olson",
+      "department": "Cardiology",
+      "reason": "Lab review",
+      "notes": "Standard believe politics also space high sister. Girl stage indicate test thank dinner. Up plant place approach modern floor north force.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "1e8764f1",
+      "encounter_type": "outpatient",
+      "date": "2024-12-30T09:00:00",
+      "provider": "Dr. Wolfe",
+      "department": "Internal Medicine",
+      "reason": "Chronic disease management",
+      "notes": "Purpose young wife. Offer bed it skill challenge from live seat.",
+      "followup_required": true,
+      "followup_date": "2025-01-13"
+    },
+    {
+      "encounter_id": "0346b1c1",
+      "encounter_type": "emergency",
+      "date": "2025-02-26T12:00:00",
+      "provider": "Dr. Perry",
+      "department": "Cardiology",
+      "reason": "New symptom evaluation",
+      "notes": "Group learn professor third coach Congress husband. Price move outside value total nearly.",
+      "followup_required": true,
+      "followup_date": "2025-03-23"
+    },
+    {
+      "encounter_id": "8a58bbec",
+      "encounter_type": "outpatient",
+      "date": "2025-05-08T08:30:00",
+      "provider": "Dr. Rice",
+      "department": "Pulmonology",
+      "reason": "Lab review",
+      "notes": "Back democratic mind big discuss. Country moment eat personal condition see.",
+      "followup_required": true,
+      "followup_date": "2025-06-20"
+    },
+    {
+      "encounter_id": "06bde32c",
+      "encounter_type": "inpatient",
+      "date": "2025-08-10T11:15:00",
+      "provider": "Dr. Harding",
+      "department": "Pulmonology",
+      "reason": "Lab review",
+      "notes": "Memory number occur behind leave choose enter. Economic eight feel now notice design baby foot.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "72943517",
+      "encounter_type": "inpatient",
+      "date": "2026-02-05T12:00:00",
+      "provider": "Dr. Shea",
+      "department": "Pulmonology",
+      "reason": "Post-hospitalization check",
+      "notes": "Share issue rise part none degree. Unit effect which language however risk work. Administration career three according worker Democrat fire sign.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Kelley, MD",
+  "record_created": "2026-04-17T00:54:29.904184",
+  "last_updated": "2026-04-17T00:54:29.904192"
+}

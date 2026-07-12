@@ -1,0 +1,33 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Adam Williamson (ID: b1a8b0b5)
+Age: 70 | Gender: Male | Blood Type: A+
+PCP: Dr. Cruz, MD
+
+ALLERGIES: Amoxicillin
+
+ACTIVE MEDICATIONS:
+  - Lisinopril 10mg (once daily)
+
+DIAGNOSES:
+  - Atrial Fibrillation (I48.91) — moderate [CHRONIC]
+  - Essential Hypertension (I10) — moderate [CHRONIC]
+  - Urinary Tract Infection (N39.0) — mild
+  - Hyperlipidemia (E78.5) — mild [CHRONIC]
+
+LATEST VITALS (2025-05-01):
+  BP: 111/70 mmHg
+  HR: 82 bpm | Temp: 97.8°F
+  SpO2: 97.5% | BMI: 33.8
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Potassium: 5.92 mEq/L (Ref: 3.5-5.0 mEq/L)
+  - HbA1c: 6.68 % (Ref: 4.0-5.6%)
+  - TSH: 10.67 mIU/L (Ref: 0.4-4.0 mIU/L)
+
+RECENT ENCOUNTERS:
+  - [EMERGENCY] 2025-12-31 — Annual physical
+    ⚡ Follow-up required by 2026-02-02
+  - [OUTPATIENT] 2025-08-22 — New symptom evaluation
+  - [EMERGENCY] 2025-04-06 — Annual physical
+    ⚡ Follow-up required by 2025-06-14

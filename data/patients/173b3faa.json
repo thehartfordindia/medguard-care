@@ -1,0 +1,205 @@
+{
+  "patient_id": "173b3faa",
+  "first_name": "Ethan",
+  "last_name": "Robinson",
+  "date_of_birth": "1997-12-23",
+  "gender": "Male",
+  "blood_type": "AB+",
+  "phone": "+1-972-594-2095x48149",
+  "email": "ycarter@example.org",
+  "address": "Unit 5233 Box 0276, DPO AA 86910",
+  "emergency_contact_name": "Caitlin Smith",
+  "emergency_contact_phone": "(856)375-6618x4438",
+  "insurance_provider": "Medicare",
+  "insurance_id": "HUM-575976",
+  "allergies": [],
+  "medications": [
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-07-16",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Cabrera",
+      "is_active": true
+    },
+    {
+      "name": "Metoprolol",
+      "dosage": "50mg",
+      "frequency": "twice daily",
+      "start_date": "2023-01-24",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Phillips",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "COPD",
+      "icd10_code": "J44.1",
+      "diagnosed_date": "2025-04-15",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2023-08-24",
+      "severity": "moderate",
+      "is_chronic": false
+    },
+    {
+      "condition": "Congestive Heart Failure",
+      "icd10_code": "I50.9",
+      "diagnosed_date": "2020-04-16",
+      "severity": "severe",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T15:00:00",
+      "blood_pressure_systolic": 118,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 81,
+      "temperature_f": 98.3,
+      "oxygen_saturation": 97.5,
+      "weight_lbs": 212.4,
+      "bmi": 19.3
+    },
+    {
+      "recorded_date": "2025-01-31T09:00:00",
+      "blood_pressure_systolic": 158,
+      "blood_pressure_diastolic": 103,
+      "heart_rate": 129,
+      "temperature_f": 100.6,
+      "oxygen_saturation": 88.0,
+      "weight_lbs": 167.2,
+      "bmi": 20.1
+    },
+    {
+      "recorded_date": "2025-03-02T09:00:00",
+      "blood_pressure_systolic": 117,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 90,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 96.2,
+      "weight_lbs": 163.0,
+      "bmi": 24.6
+    },
+    {
+      "recorded_date": "2025-04-01T10:00:00",
+      "blood_pressure_systolic": 110,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 73,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 98.0,
+      "weight_lbs": 227.7,
+      "bmi": 25.0
+    },
+    {
+      "recorded_date": "2025-05-01T10:00:00",
+      "blood_pressure_systolic": 125,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 90,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 95.3,
+      "weight_lbs": 186.7,
+      "bmi": 34.0
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Sodium",
+      "value": 130.21,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-02-13"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 285.51,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-07-13"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 16.66,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-02-03"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 1.66,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-02-15"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "0cf2cdac",
+      "encounter_type": "outpatient",
+      "date": "2024-04-20T08:00:00",
+      "provider": "Dr. Reeves",
+      "department": "Neurology",
+      "reason": "Lab review",
+      "notes": "Whole today Congress out conference. Language fire always offer present because either.",
+      "followup_required": true,
+      "followup_date": "2024-07-16"
+    },
+    {
+      "encounter_id": "974c1552",
+      "encounter_type": "outpatient",
+      "date": "2024-10-28T13:45:00",
+      "provider": "Dr. Brown",
+      "department": "Neurology",
+      "reason": "Annual physical",
+      "notes": "Conference appear woman practice order wide phone. Each budget however few other common. Simply yard provide bed less stand.",
+      "followup_required": true,
+      "followup_date": "2024-12-10"
+    },
+    {
+      "encounter_id": "c66ebdf2",
+      "encounter_type": "outpatient",
+      "date": "2025-09-17T17:45:00",
+      "provider": "Dr. Anderson",
+      "department": "Internal Medicine",
+      "reason": "Routine follow-up",
+      "notes": "Sure report leader. Officer kind lot today. Design security same across rise. Big size teach heavy work quickly collection.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "7a0461c7",
+      "encounter_type": "outpatient",
+      "date": "2025-09-26T08:30:00",
+      "provider": "Dr. Sullivan",
+      "department": "Pulmonology",
+      "reason": "Urgent care visit",
+      "notes": "New movie speech major million once.",
+      "followup_required": true,
+      "followup_date": "2025-11-21"
+    },
+    {
+      "encounter_id": "ec71f641",
+      "encounter_type": "telehealth",
+      "date": "2026-03-17T17:00:00",
+      "provider": "Dr. Reyes",
+      "department": "Pulmonology",
+      "reason": "Chronic disease management",
+      "notes": "Happen build bar majority protect meeting. Only would look. Some Congress machine popular. Fear by foot research television Mr.",
+      "followup_required": true,
+      "followup_date": "2026-05-24"
+    }
+  ],
+  "primary_care_provider": "Dr. Mullins, MD",
+  "record_created": "2026-04-17T00:52:12.623202",
+  "last_updated": "2026-04-17T00:52:12.623203"
+}

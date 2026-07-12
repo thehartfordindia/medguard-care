@@ -1,0 +1,235 @@
+{
+  "patient_id": "f7b80836",
+  "first_name": "Michael",
+  "last_name": "Brooks",
+  "date_of_birth": "1946-10-29",
+  "gender": "Male",
+  "blood_type": "AB-",
+  "phone": "(486)969-2966",
+  "email": "angelaburns@example.org",
+  "address": "050 Taylor Via Suite 887, Cohenchester, VT 58677",
+  "emergency_contact_name": "Bradley Johnson DDS",
+  "emergency_contact_phone": "304-638-4279x7881",
+  "insurance_provider": "BlueCross BlueShield",
+  "insurance_id": "CIG-209627",
+  "allergies": [
+    "Shellfish",
+    "Sulfa drugs"
+  ],
+  "medications": [
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2024-01-19",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Edwards",
+      "is_active": true
+    },
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-03-01",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Allen",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2024-12-08",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wilson",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2025-04-10",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Congestive Heart Failure",
+      "icd10_code": "I50.9",
+      "diagnosed_date": "2024-02-04",
+      "severity": "severe",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T14:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 76,
+      "temperature_f": 98.2,
+      "oxygen_saturation": 97.4,
+      "weight_lbs": 201.3,
+      "bmi": 32.1
+    },
+    {
+      "recorded_date": "2025-01-31T13:00:00",
+      "blood_pressure_systolic": 111,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 60,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 98.2,
+      "weight_lbs": 234.8,
+      "bmi": 21.7
+    },
+    {
+      "recorded_date": "2025-03-02T12:00:00",
+      "blood_pressure_systolic": 166,
+      "blood_pressure_diastolic": 95,
+      "heart_rate": 130,
+      "temperature_f": 99.9,
+      "oxygen_saturation": 90.8,
+      "weight_lbs": 274.2,
+      "bmi": 23.0
+    },
+    {
+      "recorded_date": "2025-04-01T11:00:00",
+      "blood_pressure_systolic": 115,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 72,
+      "temperature_f": 97.5,
+      "oxygen_saturation": 98.1,
+      "weight_lbs": 167.6,
+      "bmi": 30.0
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "HbA1c",
+      "value": 9.45,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": true,
+      "test_date": "2025-07-07"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 72.88,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-05-15"
+    },
+    {
+      "test_name": "INR",
+      "value": 3.47,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2025-11-24"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 55.55,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-07-20"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 2.37,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-03-09"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 3.76,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-12-11"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 177.76,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-11-11"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "0ba42080",
+      "encounter_type": "inpatient",
+      "date": "2024-05-17T12:00:00",
+      "provider": "Dr. Hampton",
+      "department": "Endocrinology",
+      "reason": "Medication review",
+      "notes": "State among rest national wrong bill stop. Fear yourself last give stage. Tend bring speech decide scene ready.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "0ca25bb9",
+      "encounter_type": "outpatient",
+      "date": "2024-07-10T12:45:00",
+      "provider": "Dr. Stanton",
+      "department": "Endocrinology",
+      "reason": "Routine follow-up",
+      "notes": "Somebody huge why station. Environmental stock front official not magazine gas. Animal phone student.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "d1d28687",
+      "encounter_type": "telehealth",
+      "date": "2024-07-18T13:45:00",
+      "provider": "Dr. Smith",
+      "department": "Emergency",
+      "reason": "Chronic disease management",
+      "notes": "Lead yeah into yet travel think. City usually ever pressure economy.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "b89e5a91",
+      "encounter_type": "inpatient",
+      "date": "2025-03-09T09:45:00",
+      "provider": "Dr. Wright",
+      "department": "Neurology",
+      "reason": "Acute complaint",
+      "notes": "Central plan physical heart away some shoulder. Middle everything view hard wear force. Than suggest behavior.",
+      "followup_required": true,
+      "followup_date": "2025-05-24"
+    },
+    {
+      "encounter_id": "d7dddcd9",
+      "encounter_type": "outpatient",
+      "date": "2025-03-30T14:15:00",
+      "provider": "Dr. Watson",
+      "department": "Neurology",
+      "reason": "Routine follow-up",
+      "notes": "How figure record. Investment before believe degree back.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "718ee80e",
+      "encounter_type": "telehealth",
+      "date": "2025-12-11T09:45:00",
+      "provider": "Dr. Callahan",
+      "department": "Neurology",
+      "reason": "Acute complaint",
+      "notes": "Into pattern size spend south now mother others. Food region eye environment. World quickly believe while size try yeah. Reduce car chair focus.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Wheeler, MD",
+  "record_created": "2026-04-17T00:56:40.586282",
+  "last_updated": "2026-04-17T00:56:40.586282"
+}

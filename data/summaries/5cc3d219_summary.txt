@@ -1,0 +1,32 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: George Williams (ID: 5cc3d219)
+Age: 30 | Gender: Male | Blood Type: AB-
+PCP: Dr. Marquez, MD
+
+ALLERGIES: Shellfish, Cephalosporins
+
+ACTIVE MEDICATIONS:
+  - Prednisone 10mg (once daily)
+  - Sertraline 50mg (once daily)
+
+DIAGNOSES:
+  - Chronic Low Back Pain (M54.5) — moderate [CHRONIC]
+  - Chronic Kidney Disease Stage 3 (N18.3) — severe [CHRONIC]
+
+LATEST VITALS (2025-03-02):
+  BP: 123/76 mmHg
+  HR: 81 bpm | Temp: 97.8°F
+  SpO2: 95.7% | BMI: 34.9
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Total Cholesterol: 305.53 mg/dL (Ref: <200 mg/dL)
+  - INR: 4.68  (Ref: 0.8-1.2 (2.0-3.0 on warfarin))
+  - Potassium: 6.14 mEq/L (Ref: 3.5-5.0 mEq/L)
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2026-01-18 — Medication review
+  - [TELEHEALTH] 2025-09-16 — Medication review
+    ⚡ Follow-up required by 2025-12-08
+  - [OUTPATIENT] 2025-08-04 — Chronic disease management
+    ⚡ Follow-up required by 2025-08-28

@@ -1,0 +1,35 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Gary Johnston (ID: ca4748d4)
+Age: 79 | Gender: Male | Blood Type: O-
+PCP: Dr. Henry, MD
+
+ALLERGIES: Cephalosporins
+
+ACTIVE MEDICATIONS:
+  - Warfarin 5mg (once daily)
+  - Levothyroxine 75mcg (once daily on empty stomach)
+  - Simvastatin 40mg (once daily at bedtime)
+  - Lisinopril 10mg (once daily)
+  - Warfarin 5mg (once daily)
+  - Aspirin 81mg (once daily)
+
+DIAGNOSES:
+  - Hypothyroidism (E03.9) — mild [CHRONIC]
+  - Pneumonia (J18.9) — moderate
+  - Major Depressive Disorder (F33.0) — moderate [CHRONIC]
+
+LATEST VITALS (2025-06-30):
+  BP: 156/96 mmHg
+  HR: 125 bpm | Temp: 100.2°F
+  SpO2: 90.9% | BMI: 30.1
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Fasting Glucose: 247.35 mg/dL (Ref: 70-100 mg/dL)
+  - TSH: 12.53 mIU/L (Ref: 0.4-4.0 mIU/L)
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2025-05-04 — Medication review
+    ⚡ Follow-up required by 2025-07-30
+  - [EMERGENCY] 2025-04-25 — Routine follow-up
+    ⚡ Follow-up required by 2025-06-10

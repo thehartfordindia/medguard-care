@@ -1,0 +1,276 @@
+{
+  "patient_id": "b8f974b4",
+  "first_name": "Brian",
+  "last_name": "Yang",
+  "date_of_birth": "1955-01-18",
+  "gender": "Male",
+  "blood_type": "O+",
+  "phone": "+1-219-560-0133",
+  "email": "lrobinson@example.com",
+  "address": "65423 Garcia Light, West Melanieview, AS 06196",
+  "emergency_contact_name": "Kimberly Dudley",
+  "emergency_contact_phone": "(518)349-5931x0341",
+  "insurance_provider": "BlueCross BlueShield",
+  "insurance_id": "BCB-198246",
+  "allergies": [
+    "Ibuprofen"
+  ],
+  "medications": [
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-05-23",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Figueroa",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2024-11-23",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Sanchez",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-02-14",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Taylor",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2025-10-30",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Garcia",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2021-02-11",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2024-01-06",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Type 2 Diabetes Mellitus",
+      "icd10_code": "E11.9",
+      "diagnosed_date": "2023-08-23",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Chronic Low Back Pain",
+      "icd10_code": "M54.5",
+      "diagnosed_date": "2023-12-07",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T16:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 78,
+      "heart_rate": 85,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 98.8,
+      "weight_lbs": 162.4,
+      "bmi": 26.7
+    },
+    {
+      "recorded_date": "2025-01-31T12:00:00",
+      "blood_pressure_systolic": 120,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 62,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 96.8,
+      "weight_lbs": 188.2,
+      "bmi": 23.7
+    },
+    {
+      "recorded_date": "2025-03-02T16:00:00",
+      "blood_pressure_systolic": 127,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 89,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 97.8,
+      "weight_lbs": 256.1,
+      "bmi": 30.6
+    },
+    {
+      "recorded_date": "2025-04-01T12:00:00",
+      "blood_pressure_systolic": 172,
+      "blood_pressure_diastolic": 92,
+      "heart_rate": 97,
+      "temperature_f": 101.2,
+      "oxygen_saturation": 91.9,
+      "weight_lbs": 277.9,
+      "bmi": 35.2
+    },
+    {
+      "recorded_date": "2025-05-01T15:00:00",
+      "blood_pressure_systolic": 158,
+      "blood_pressure_diastolic": 104,
+      "heart_rate": 118,
+      "temperature_f": 99.9,
+      "oxygen_saturation": 89.8,
+      "weight_lbs": 233.8,
+      "bmi": 32.2
+    },
+    {
+      "recorded_date": "2025-05-31T10:00:00",
+      "blood_pressure_systolic": 129,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 77,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 95.8,
+      "weight_lbs": 193.1,
+      "bmi": 37.8
+    },
+    {
+      "recorded_date": "2025-06-30T17:00:00",
+      "blood_pressure_systolic": 117,
+      "blood_pressure_diastolic": 80,
+      "heart_rate": 86,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 95.3,
+      "weight_lbs": 255.1,
+      "bmi": 34.2
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 76.58,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-08-23"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 0.68,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-01-17"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 161.53,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-10-27"
+    },
+    {
+      "test_name": "TSH",
+      "value": 2.5,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-07-05"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 144.98,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-09-18"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 4.63,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2026-03-17"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 15.45,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2026-02-10"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "761d0b58",
+      "encounter_type": "inpatient",
+      "date": "2024-11-01T17:15:00",
+      "provider": "Dr. Brooks",
+      "department": "Endocrinology",
+      "reason": "Acute complaint",
+      "notes": "Well two truth out major born guy. Dream drive note bad rule.",
+      "followup_required": true,
+      "followup_date": "2025-01-23"
+    },
+    {
+      "encounter_id": "a90c7a1e",
+      "encounter_type": "emergency",
+      "date": "2025-01-29T13:45:00",
+      "provider": "Dr. James",
+      "department": "Neurology",
+      "reason": "Routine follow-up",
+      "notes": "Class great prove reduce raise author. Move each left establish. Detail food shoulder argue start source husband.",
+      "followup_required": true,
+      "followup_date": "2025-02-26"
+    },
+    {
+      "encounter_id": "35565303",
+      "encounter_type": "telehealth",
+      "date": "2025-06-27T07:30:00",
+      "provider": "Dr. Cabrera",
+      "department": "Internal Medicine",
+      "reason": "Medication review",
+      "notes": "Campaign little near enter. Institution deep much role cut find yet practice. Tonight later easy ask again network.",
+      "followup_required": true,
+      "followup_date": "2025-08-26"
+    },
+    {
+      "encounter_id": "9759c6cd",
+      "encounter_type": "outpatient",
+      "date": "2025-07-03T11:30:00",
+      "provider": "Dr. Jones",
+      "department": "Endocrinology",
+      "reason": "Annual physical",
+      "notes": "Defense material those poor central cause. Much section investment on gun young catch. Before another body physical society instead as.",
+      "followup_required": true,
+      "followup_date": "2025-08-06"
+    },
+    {
+      "encounter_id": "e10de946",
+      "encounter_type": "inpatient",
+      "date": "2026-01-09T18:30:00",
+      "provider": "Dr. James",
+      "department": "Neurology",
+      "reason": "Medication review",
+      "notes": "Edge network wall quite boy those seem. Born itself law west then enjoy. Seven medical blood personal success medical current.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Chapman, MD",
+  "record_created": "2026-04-17T00:54:29.777831",
+  "last_updated": "2026-04-17T00:54:29.777835"
+}

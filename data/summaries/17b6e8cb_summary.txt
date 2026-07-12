@@ -1,0 +1,35 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Matthew Lee (ID: 17b6e8cb)
+Age: 51 | Gender: Male | Blood Type: O-
+PCP: Dr. Wells, MD
+
+ALLERGIES: No Known Allergies (NKA)
+
+ACTIVE MEDICATIONS:
+  - Omeprazole 20mg (once daily before breakfast)
+  - Aspirin 81mg (once daily)
+  - Atorvastatin 20mg (once daily at bedtime)
+
+DIAGNOSES:
+  - Chronic Low Back Pain (M54.5) — moderate [CHRONIC]
+  - Hyperlipidemia (E78.5) — mild [CHRONIC]
+
+LATEST VITALS (2025-06-30):
+  BP: 123/76 mmHg
+  HR: 82 bpm | Temp: 97.8°F
+  SpO2: 95.3% | BMI: 37.6
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Creatinine: 3.99 mg/dL (Ref: 0.6-1.2 mg/dL)
+  - Hemoglobin: 9.46 g/dL (Ref: 12.0-17.5 g/dL)
+  - Sodium: 130.69 mEq/L (Ref: 136-145 mEq/L)
+  - HDL Cholesterol: 32.67 mg/dL (Ref: >40 mg/dL)
+  - WBC Count: 24.73 K/uL (Ref: 4.5-11.0 K/uL)
+  - TSH: 9.15 mIU/L (Ref: 0.4-4.0 mIU/L)
+
+RECENT ENCOUNTERS:
+  - [OUTPATIENT] 2026-04-05 — Lab review
+  - [TELEHEALTH] 2024-12-12 — Acute complaint
+  - [EMERGENCY] 2024-09-17 — Urgent care visit
+    ⚡ Follow-up required by 2024-11-11

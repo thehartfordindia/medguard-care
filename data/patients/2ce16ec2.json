@@ -1,0 +1,164 @@
+{
+  "patient_id": "2ce16ec2",
+  "first_name": "Joseph",
+  "last_name": "Williams",
+  "date_of_birth": "1994-01-06",
+  "gender": "Male",
+  "blood_type": "O-",
+  "phone": "363.676.5991x62473",
+  "email": "ascott@example.net",
+  "address": "818 Nicholas Ford, Robertville, FL 56347",
+  "emergency_contact_name": "Dawn Wyatt",
+  "emergency_contact_phone": "(995)694-6368x87258",
+  "insurance_provider": "Medicaid",
+  "insurance_id": "AET-764575",
+  "allergies": [
+    "Fluoroquinolones",
+    "Contrast dye"
+  ],
+  "medications": [
+    {
+      "name": "Amlodipine",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2024-09-27",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wood",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2021-02-06",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2024-05-08",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2024-01-24",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T11:00:00",
+      "blood_pressure_systolic": 112,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 90,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 97.6,
+      "weight_lbs": 192.8,
+      "bmi": 26.9
+    },
+    {
+      "recorded_date": "2025-01-31T11:00:00",
+      "blood_pressure_systolic": 115,
+      "blood_pressure_diastolic": 78,
+      "heart_rate": 60,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 98.5,
+      "weight_lbs": 161.7,
+      "bmi": 21.5
+    },
+    {
+      "recorded_date": "2025-03-02T09:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 75,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 97.8,
+      "weight_lbs": 150.2,
+      "bmi": 32.3
+    },
+    {
+      "recorded_date": "2025-04-01T11:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 72,
+      "heart_rate": 85,
+      "temperature_f": 98.3,
+      "oxygen_saturation": 97.1,
+      "weight_lbs": 215.2,
+      "bmi": 20.3
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 97.52,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-11-13"
+    },
+    {
+      "test_name": "INR",
+      "value": 4.99,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2026-02-26"
+    },
+    {
+      "test_name": "TSH",
+      "value": 11.49,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-02-28"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 129.01,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2026-04-09"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 6.88,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-05-05"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "14ad29ac",
+      "encounter_type": "telehealth",
+      "date": "2024-11-24T13:00:00",
+      "provider": "Dr. Hinton",
+      "department": "Endocrinology",
+      "reason": "Urgent care visit",
+      "notes": "Similar huge catch tell budget discover. Beyond meet skill song. Recent religious claim who accept before certainly unit.",
+      "followup_required": true,
+      "followup_date": "2025-01-13"
+    },
+    {
+      "encounter_id": "f8af9bfc",
+      "encounter_type": "telehealth",
+      "date": "2025-06-13T12:45:00",
+      "provider": "Dr. Graham",
+      "department": "Internal Medicine",
+      "reason": "New symptom evaluation",
+      "notes": "Develop bag also his worker. Prevent expert white arm similar compare manager action.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Jefferson, MD",
+  "record_created": "2026-04-17T00:51:40.126334",
+  "last_updated": "2026-04-17T00:51:40.126337"
+}

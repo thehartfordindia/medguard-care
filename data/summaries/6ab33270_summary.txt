@@ -1,0 +1,30 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Glenn Martin (ID: 6ab33270)
+Age: 80 | Gender: Male | Blood Type: AB+
+PCP: Dr. Leon, MD
+
+ALLERGIES: No Known Allergies (NKA)
+
+ACTIVE MEDICATIONS:
+  - Hydrocodone/APAP 5/325mg (every 6 hours as needed)
+
+DIAGNOSES:
+  - COPD (J44.1) — moderate [CHRONIC]
+  - Congestive Heart Failure (I50.9) — severe [CHRONIC]
+
+LATEST VITALS (2025-07-30):
+  BP: 167/105 mmHg
+  HR: 117 bpm | Temp: 101.8°F
+  SpO2: 90.5% | BMI: 22.0
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Sodium: 129.76 mEq/L (Ref: 136-145 mEq/L)
+  - LDL Cholesterol: 157.93 mg/dL (Ref: <100 mg/dL)
+  - HDL Cholesterol: 30.82 mg/dL (Ref: >40 mg/dL)
+  - WBC Count: 24.77 K/uL (Ref: 4.5-11.0 K/uL)
+
+RECENT ENCOUNTERS:
+  - [INPATIENT] 2025-12-18 — Urgent care visit
+  - [OUTPATIENT] 2025-05-17 — Lab review
+  - [INPATIENT] 2025-05-04 — Post-hospitalization check

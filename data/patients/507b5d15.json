@@ -1,0 +1,242 @@
+{
+  "patient_id": "507b5d15",
+  "first_name": "Jason",
+  "last_name": "Dyer",
+  "date_of_birth": "1964-12-04",
+  "gender": "Male",
+  "blood_type": "A-",
+  "phone": "+1-458-888-6367x7472",
+  "email": "aaron57@example.net",
+  "address": "9666 Dana River, East Chelsea, NY 11053",
+  "emergency_contact_name": "Monique Dougherty",
+  "emergency_contact_phone": "493-929-7150x96883",
+  "insurance_provider": "UnitedHealth",
+  "insurance_id": "HUM-678235",
+  "allergies": [
+    "Sulfa drugs",
+    "Peanuts"
+  ],
+  "medications": [
+    {
+      "name": "Metformin",
+      "dosage": "500mg",
+      "frequency": "twice daily",
+      "start_date": "2023-02-07",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Greene",
+      "is_active": true
+    },
+    {
+      "name": "Prednisone",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2024-05-06",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Flores",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2024-07-23",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Cox",
+      "is_active": true
+    },
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-03-01",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Garcia",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "diagnosed_date": "2021-06-15",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Major Depressive Disorder",
+      "icd10_code": "F33.0",
+      "diagnosed_date": "2024-11-14",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2022-10-10",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Congestive Heart Failure",
+      "icd10_code": "I50.9",
+      "diagnosed_date": "2020-09-17",
+      "severity": "severe",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T11:00:00",
+      "blood_pressure_systolic": 129,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 67,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 95.2,
+      "weight_lbs": 235.8,
+      "bmi": 35.3
+    },
+    {
+      "recorded_date": "2025-01-31T09:00:00",
+      "blood_pressure_systolic": 127,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 61,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 100.0,
+      "weight_lbs": 276.5,
+      "bmi": 18.8
+    },
+    {
+      "recorded_date": "2025-03-02T14:00:00",
+      "blood_pressure_systolic": 167,
+      "blood_pressure_diastolic": 91,
+      "heart_rate": 110,
+      "temperature_f": 100.4,
+      "oxygen_saturation": 88.4,
+      "weight_lbs": 202.1,
+      "bmi": 28.5
+    },
+    {
+      "recorded_date": "2025-04-01T14:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 81,
+      "heart_rate": 86,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 97.1,
+      "weight_lbs": 229.9,
+      "bmi": 35.6
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "HbA1c",
+      "value": 11.44,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": true,
+      "test_date": "2025-07-11"
+    },
+    {
+      "test_name": "TSH",
+      "value": 3.9,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-11-15"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 139.31,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-05-29"
+    },
+    {
+      "test_name": "INR",
+      "value": 4.74,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2025-01-14"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 3.82,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-06-10"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "bd3d3b4d",
+      "encounter_type": "emergency",
+      "date": "2025-03-31T18:45:00",
+      "provider": "Dr. Bradley",
+      "department": "Internal Medicine",
+      "reason": "Post-hospitalization check",
+      "notes": "Require pull child source campaign parent teacher. Pm agreement deep field once.",
+      "followup_required": true,
+      "followup_date": "2025-06-24"
+    },
+    {
+      "encounter_id": "95008b4d",
+      "encounter_type": "emergency",
+      "date": "2025-06-16T14:30:00",
+      "provider": "Dr. Banks",
+      "department": "Cardiology",
+      "reason": "New symptom evaluation",
+      "notes": "Billion suggest serious often. Reveal hand prevent center. Somebody decide best politics available.",
+      "followup_required": true,
+      "followup_date": "2025-07-31"
+    },
+    {
+      "encounter_id": "a19d0fcc",
+      "encounter_type": "outpatient",
+      "date": "2025-10-07T15:45:00",
+      "provider": "Dr. Fleming",
+      "department": "Neurology",
+      "reason": "Routine follow-up",
+      "notes": "Yet television audience indicate employee respond building. Positive move agency lose rise fall huge state. Guy respond memory.",
+      "followup_required": true,
+      "followup_date": "2025-12-20"
+    },
+    {
+      "encounter_id": "5e855973",
+      "encounter_type": "inpatient",
+      "date": "2025-10-26T08:00:00",
+      "provider": "Dr. Morrison",
+      "department": "Neurology",
+      "reason": "Urgent care visit",
+      "notes": "Win matter book page. The training each reveal attorney security.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "1e847b3a",
+      "encounter_type": "inpatient",
+      "date": "2026-01-29T15:30:00",
+      "provider": "Dr. Wood",
+      "department": "Pulmonology",
+      "reason": "Routine follow-up",
+      "notes": "Line require current car. Thus debate leave each.",
+      "followup_required": true,
+      "followup_date": "2026-03-03"
+    },
+    {
+      "encounter_id": "3a9779dc",
+      "encounter_type": "telehealth",
+      "date": "2026-03-29T12:15:00",
+      "provider": "Dr. Nolan",
+      "department": "Endocrinology",
+      "reason": "Medication review",
+      "notes": "Serious garden ready former late. Nothing organization seven challenge eye. They nor research fill respond.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Green, MD",
+  "record_created": "2026-04-17T00:52:12.664832",
+  "last_updated": "2026-04-17T00:52:12.664834"
+}

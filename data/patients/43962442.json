@@ -1,0 +1,194 @@
+{
+  "patient_id": "43962442",
+  "first_name": "Douglas",
+  "last_name": "Melton",
+  "date_of_birth": "1977-08-11",
+  "gender": "Male",
+  "blood_type": "A-",
+  "phone": "(947)554-6913",
+  "email": "wfigueroa@example.net",
+  "address": "214 Taylor Vista, East Jamesborough, MP 08054",
+  "emergency_contact_name": "Jesus Hull",
+  "emergency_contact_phone": "001-934-457-8610x357",
+  "insurance_provider": "UnitedHealth",
+  "insurance_id": "MCR-794303",
+  "allergies": [
+    "Contrast dye",
+    "Sulfa drugs",
+    "Latex"
+  ],
+  "medications": [
+    {
+      "name": "Metformin",
+      "dosage": "500mg",
+      "frequency": "twice daily",
+      "start_date": "2024-12-22",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Vasquez",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2025-03-03",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Horton",
+      "is_active": false
+    },
+    {
+      "name": "Sertraline",
+      "dosage": "50mg",
+      "frequency": "once daily",
+      "start_date": "2024-06-22",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Garcia",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Major Depressive Disorder",
+      "icd10_code": "F33.0",
+      "diagnosed_date": "2021-10-22",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T15:00:00",
+      "blood_pressure_systolic": 175,
+      "blood_pressure_diastolic": 110,
+      "heart_rate": 126,
+      "temperature_f": 101.1,
+      "oxygen_saturation": 88.9,
+      "weight_lbs": 275.6,
+      "bmi": 32.0
+    },
+    {
+      "recorded_date": "2025-01-31T14:00:00",
+      "blood_pressure_systolic": 157,
+      "blood_pressure_diastolic": 108,
+      "heart_rate": 106,
+      "temperature_f": 100.4,
+      "oxygen_saturation": 91.7,
+      "weight_lbs": 181.2,
+      "bmi": 22.0
+    },
+    {
+      "recorded_date": "2025-03-02T15:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 65,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 99.6,
+      "weight_lbs": 275.5,
+      "bmi": 22.8
+    },
+    {
+      "recorded_date": "2025-04-01T16:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 80,
+      "heart_rate": 83,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 96.7,
+      "weight_lbs": 184.7,
+      "bmi": 30.9
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Fasting Glucose",
+      "value": 76.29,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-12-21"
+    },
+    {
+      "test_name": "INR",
+      "value": 0.9,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-02-25"
+    },
+    {
+      "test_name": "TSH",
+      "value": 5.48,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-08-13"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 10.88,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2026-03-29"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "4274e3ad",
+      "encounter_type": "outpatient",
+      "date": "2024-03-16T07:30:00",
+      "provider": "Dr. Owen",
+      "department": "Endocrinology",
+      "reason": "New symptom evaluation",
+      "notes": "Part wall require remember every. Surface learn design few minute perhaps.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "2fc66fc3",
+      "encounter_type": "telehealth",
+      "date": "2024-03-16T12:15:00",
+      "provider": "Dr. Silva",
+      "department": "Cardiology",
+      "reason": "Medication review",
+      "notes": "Yourself whom style no order executive range.",
+      "followup_required": true,
+      "followup_date": "2024-06-08"
+    },
+    {
+      "encounter_id": "6be0d029",
+      "encounter_type": "outpatient",
+      "date": "2024-04-05T12:45:00",
+      "provider": "Dr. Olson",
+      "department": "Pulmonology",
+      "reason": "Acute complaint",
+      "notes": "Political technology end represent throughout. Could military drive arm tax. Identify floor cause agent market fast trade identify.",
+      "followup_required": true,
+      "followup_date": "2024-06-13"
+    },
+    {
+      "encounter_id": "309fd8db",
+      "encounter_type": "inpatient",
+      "date": "2024-04-13T12:15:00",
+      "provider": "Dr. Doyle",
+      "department": "Pulmonology",
+      "reason": "Urgent care visit",
+      "notes": "Staff gas require rather point little wait. Medical suddenly subject theory Congress best. Scientist rise next tree. Pressure develop development the inside thought.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "67e719a3",
+      "encounter_type": "outpatient",
+      "date": "2025-01-22T12:45:00",
+      "provider": "Dr. Horne",
+      "department": "Pulmonology",
+      "reason": "Lab review",
+      "notes": "Necessary general study else store bed agree anyone. Sister Democrat determine different deal prepare message. Listen car community.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Watson, MD",
+  "record_created": "2026-04-17T00:51:40.105853",
+  "last_updated": "2026-04-17T00:51:40.105856"
+}

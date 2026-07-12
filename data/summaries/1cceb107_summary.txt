@@ -1,0 +1,31 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Joseph Williams (ID: 1cceb107)
+Age: 32 | Gender: Male | Blood Type: O-
+PCP: Dr. Jefferson, MD
+
+ALLERGIES: Fluoroquinolones, Contrast dye
+
+ACTIVE MEDICATIONS:
+  - Amlodipine 5mg (once daily)
+
+DIAGNOSES:
+  - Hypothyroidism (E03.9) — mild [CHRONIC]
+  - Urinary Tract Infection (N39.0) — mild
+  - Gastroesophageal Reflux Disease (K21.0) — mild [CHRONIC]
+
+LATEST VITALS (2025-04-01):
+  BP: 126/72 mmHg
+  HR: 85 bpm | Temp: 98.3°F
+  SpO2: 97.1% | BMI: 20.3
+
+⚠️ ABNORMAL LAB RESULTS:
+  - INR: 4.99  (Ref: 0.8-1.2 (2.0-3.0 on warfarin))
+  - TSH: 11.49 mIU/L (Ref: 0.4-4.0 mIU/L)
+  - Sodium: 129.01 mEq/L (Ref: 136-145 mEq/L)
+  - Potassium: 6.88 mEq/L (Ref: 3.5-5.0 mEq/L)
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2025-06-13 — New symptom evaluation
+  - [TELEHEALTH] 2024-11-24 — Urgent care visit
+    ⚡ Follow-up required by 2025-01-13

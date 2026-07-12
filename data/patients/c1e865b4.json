@@ -1,0 +1,237 @@
+{
+  "patient_id": "c1e865b4",
+  "first_name": "Jerry",
+  "last_name": "Bradshaw",
+  "date_of_birth": "1947-03-11",
+  "gender": "Male",
+  "blood_type": "B+",
+  "phone": "+1-693-661-8324x2102",
+  "email": "smartinez@example.com",
+  "address": "877 Carly Meadows Suite 940, East Suzanneshire, OR 03220",
+  "emergency_contact_name": "Miss Debra Williams PhD",
+  "emergency_contact_phone": "787.342.9671x7565",
+  "insurance_provider": "Cigna",
+  "insurance_id": "HUM-607868",
+  "allergies": [
+    "Latex",
+    "Morphine"
+  ],
+  "medications": [
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2025-03-02",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wheeler",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2024-02-29",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Carter",
+      "is_active": true
+    },
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2025-03-17",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hall",
+      "is_active": true
+    },
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-01-03",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Mann",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-11-02",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Warner",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-12-04",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Gibson",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2025-09-08",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Mcdaniel",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2022-07-21",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2025-03-25",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "COPD",
+      "icd10_code": "J44.1",
+      "diagnosed_date": "2021-10-21",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T12:00:00",
+      "blood_pressure_systolic": 168,
+      "blood_pressure_diastolic": 102,
+      "heart_rate": 109,
+      "temperature_f": 101.6,
+      "oxygen_saturation": 90.1,
+      "weight_lbs": 184.5,
+      "bmi": 27.7
+    },
+    {
+      "recorded_date": "2025-01-31T15:00:00",
+      "blood_pressure_systolic": 162,
+      "blood_pressure_diastolic": 110,
+      "heart_rate": 104,
+      "temperature_f": 100.7,
+      "oxygen_saturation": 88.2,
+      "weight_lbs": 210.3,
+      "bmi": 30.0
+    },
+    {
+      "recorded_date": "2025-03-02T16:00:00",
+      "blood_pressure_systolic": 153,
+      "blood_pressure_diastolic": 106,
+      "heart_rate": 124,
+      "temperature_f": 99.5,
+      "oxygen_saturation": 88.7,
+      "weight_lbs": 261.9,
+      "bmi": 37.4
+    },
+    {
+      "recorded_date": "2025-04-01T13:00:00",
+      "blood_pressure_systolic": 120,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 80,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 96.6,
+      "weight_lbs": 234.4,
+      "bmi": 28.9
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "INR",
+      "value": 4.76,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2025-04-27"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 8.74,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2025-02-20"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 6.56,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-02-21"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 5.11,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": false,
+      "test_date": "2026-04-08"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 0.79,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-01-29"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 81.25,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-03-16"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "4c9ae675",
+      "encounter_type": "inpatient",
+      "date": "2024-01-10T14:30:00",
+      "provider": "Dr. Skinner",
+      "department": "Internal Medicine",
+      "reason": "Chronic disease management",
+      "notes": "Water positive child usually factor relate indeed. Woman during necessary himself two meet these.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "d3664941",
+      "encounter_type": "inpatient",
+      "date": "2024-09-03T14:15:00",
+      "provider": "Dr. Adams",
+      "department": "Pulmonology",
+      "reason": "New symptom evaluation",
+      "notes": "Just recognize building win participant. Report financial add impact different.",
+      "followup_required": true,
+      "followup_date": "2024-11-14"
+    },
+    {
+      "encounter_id": "4707bed8",
+      "encounter_type": "inpatient",
+      "date": "2025-08-02T17:15:00",
+      "provider": "Dr. Hodge",
+      "department": "Cardiology",
+      "reason": "Medication review",
+      "notes": "Really explain war spend nearly lawyer. Education break significant ten stay ability. Left approach million performance material kind appear.",
+      "followup_required": true,
+      "followup_date": "2025-10-03"
+    }
+  ],
+  "primary_care_provider": "Dr. Shields, MD",
+  "record_created": "2026-04-17T00:54:29.795042",
+  "last_updated": "2026-04-17T00:54:29.795048"
+}

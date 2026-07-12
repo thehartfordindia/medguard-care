@@ -1,0 +1,34 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Bradley Hansen (ID: d470d657)
+Age: 55 | Gender: Male | Blood Type: A+
+PCP: Dr. Hobbs, MD
+
+ALLERGIES: Morphine, Penicillin, Fluoroquinolones
+
+ACTIVE MEDICATIONS:
+  - Gabapentin 300mg (three times daily)
+  - Simvastatin 40mg (once daily at bedtime)
+  - Prednisone 10mg (once daily)
+  - Sertraline 50mg (once daily)
+
+DIAGNOSES:
+  - Chronic Kidney Disease Stage 3 (N18.3) — severe [CHRONIC]
+  - COPD (J44.1) — moderate [CHRONIC]
+  - Pneumonia (J18.9) — moderate
+
+LATEST VITALS (2025-03-02):
+  BP: 121/81 mmHg
+  HR: 87 bpm | Temp: 98.1°F
+  SpO2: 97.3% | BMI: 37.6
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Creatinine: 1.99 mg/dL (Ref: 0.6-1.2 mg/dL)
+  - HDL Cholesterol: 17.99 mg/dL (Ref: >40 mg/dL)
+  - Potassium: 6.77 mEq/L (Ref: 3.5-5.0 mEq/L)
+  - WBC Count: 16.1 K/uL (Ref: 4.5-11.0 K/uL)
+
+RECENT ENCOUNTERS:
+  - [OUTPATIENT] 2026-04-13 — Post-hospitalization check
+  - [INPATIENT] 2025-11-26 — Post-hospitalization check
+  - [OUTPATIENT] 2025-08-04 — Acute complaint

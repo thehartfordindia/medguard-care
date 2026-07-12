@@ -1,0 +1,247 @@
+{
+  "patient_id": "a89a0b06",
+  "first_name": "Melissa",
+  "last_name": "Wilson",
+  "date_of_birth": "1979-05-25",
+  "gender": "Female",
+  "blood_type": "B+",
+  "phone": "451.786.8926x860",
+  "email": "fernandothomas@example.net",
+  "address": "7421 Susan Alley Suite 077, Stephenstown, PA 65180",
+  "emergency_contact_name": "Kevin Alvarez",
+  "emergency_contact_phone": "(471)299-0384x98302",
+  "insurance_provider": "BlueCross BlueShield",
+  "insurance_id": "HUM-123205",
+  "allergies": [
+    "Sulfa drugs"
+  ],
+  "medications": [
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-04-24",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Meadows",
+      "is_active": true
+    },
+    {
+      "name": "Omeprazole",
+      "dosage": "20mg",
+      "frequency": "once daily before breakfast",
+      "start_date": "2024-09-24",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hogan",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2024-12-18",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Higgins",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2023-07-12",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Martinez",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Major Depressive Disorder",
+      "icd10_code": "F33.0",
+      "diagnosed_date": "2020-09-13",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Chronic Low Back Pain",
+      "icd10_code": "M54.5",
+      "diagnosed_date": "2024-01-04",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T12:00:00",
+      "blood_pressure_systolic": 152,
+      "blood_pressure_diastolic": 94,
+      "heart_rate": 95,
+      "temperature_f": 100.7,
+      "oxygen_saturation": 89.7,
+      "weight_lbs": 183.6,
+      "bmi": 34.1
+    },
+    {
+      "recorded_date": "2025-01-31T16:00:00",
+      "blood_pressure_systolic": 172,
+      "blood_pressure_diastolic": 91,
+      "heart_rate": 116,
+      "temperature_f": 99.7,
+      "oxygen_saturation": 91.8,
+      "weight_lbs": 160.5,
+      "bmi": 23.7
+    },
+    {
+      "recorded_date": "2025-03-02T17:00:00",
+      "blood_pressure_systolic": 125,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 66,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 96.3,
+      "weight_lbs": 193.4,
+      "bmi": 18.7
+    },
+    {
+      "recorded_date": "2025-04-01T12:00:00",
+      "blood_pressure_systolic": 162,
+      "blood_pressure_diastolic": 104,
+      "heart_rate": 110,
+      "temperature_f": 101.3,
+      "oxygen_saturation": 88.2,
+      "weight_lbs": 204.5,
+      "bmi": 33.5
+    },
+    {
+      "recorded_date": "2025-05-01T12:00:00",
+      "blood_pressure_systolic": 125,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 81,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 99.7,
+      "weight_lbs": 162.2,
+      "bmi": 32.7
+    },
+    {
+      "recorded_date": "2025-05-31T17:00:00",
+      "blood_pressure_systolic": 166,
+      "blood_pressure_diastolic": 93,
+      "heart_rate": 111,
+      "temperature_f": 100.7,
+      "oxygen_saturation": 89.5,
+      "weight_lbs": 190.5,
+      "bmi": 19.5
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Creatinine",
+      "value": 0.77,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-03-03"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 62.15,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-01-22"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 20.98,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": true,
+      "test_date": "2025-12-19"
+    },
+    {
+      "test_name": "TSH",
+      "value": 8.71,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-02-15"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 4.8,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": false,
+      "test_date": "2025-12-18"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "0d955f1a",
+      "encounter_type": "emergency",
+      "date": "2024-07-13T16:15:00",
+      "provider": "Dr. Marsh",
+      "department": "Endocrinology",
+      "reason": "Chronic disease management",
+      "notes": "Animal glass south defense political real. So film media food accept. Game right pattern ahead compare form.",
+      "followup_required": true,
+      "followup_date": "2024-08-31"
+    },
+    {
+      "encounter_id": "74183d39",
+      "encounter_type": "telehealth",
+      "date": "2024-09-13T07:45:00",
+      "provider": "Dr. Webb",
+      "department": "Neurology",
+      "reason": "New symptom evaluation",
+      "notes": "Interview summer employee offer perhaps. Pass market role marriage. This discussion fact cover. Agency personal brother summer.",
+      "followup_required": true,
+      "followup_date": "2024-12-05"
+    },
+    {
+      "encounter_id": "9b206a76",
+      "encounter_type": "outpatient",
+      "date": "2025-09-05T15:15:00",
+      "provider": "Dr. Morgan",
+      "department": "Neurology",
+      "reason": "Acute complaint",
+      "notes": "Something population loss physical throughout Mr friend. Until argue minute north question new. Decade rate son.",
+      "followup_required": true,
+      "followup_date": "2025-11-15"
+    },
+    {
+      "encounter_id": "1db5eedd",
+      "encounter_type": "inpatient",
+      "date": "2026-02-13T12:45:00",
+      "provider": "Dr. Holt",
+      "department": "Internal Medicine",
+      "reason": "Annual physical",
+      "notes": "Skin concern lay often use behavior federal. Today star serve successful assume likely. Reason ever money modern. Partner body role pick would.",
+      "followup_required": true,
+      "followup_date": "2026-04-13"
+    },
+    {
+      "encounter_id": "4219d312",
+      "encounter_type": "outpatient",
+      "date": "2026-02-16T17:00:00",
+      "provider": "Dr. Delgado",
+      "department": "Endocrinology",
+      "reason": "Acute complaint",
+      "notes": "Take project study fear.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "4d9f8e39",
+      "encounter_type": "telehealth",
+      "date": "2026-03-21T08:15:00",
+      "provider": "Dr. Knapp",
+      "department": "Cardiology",
+      "reason": "Post-hospitalization check",
+      "notes": "Indicate condition public particularly.",
+      "followup_required": true,
+      "followup_date": "2026-06-14"
+    }
+  ],
+  "primary_care_provider": "Dr. Barron, MD",
+  "record_created": "2026-04-17T00:54:29.917098",
+  "last_updated": "2026-04-17T00:54:29.917100"
+}

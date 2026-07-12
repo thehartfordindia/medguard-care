@@ -1,0 +1,38 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Jerry Bradshaw (ID: 3ee10b05)
+Age: 79 | Gender: Male | Blood Type: B+
+PCP: Dr. Shields, MD
+
+ALLERGIES: Latex, Morphine
+
+ACTIVE MEDICATIONS:
+  - Amiodarone 200mg (once daily)
+  - Aspirin 81mg (once daily)
+  - Levothyroxine 75mcg (once daily on empty stomach)
+  - Lisinopril 10mg (once daily)
+  - Simvastatin 40mg (once daily at bedtime)
+  - Simvastatin 40mg (once daily at bedtime)
+  - Amiodarone 200mg (once daily)
+
+DIAGNOSES:
+  - Acute Bronchitis (J20.9) — mild
+  - Hypothyroidism (E03.9) — mild [CHRONIC]
+  - COPD (J44.1) — moderate [CHRONIC]
+
+LATEST VITALS (2025-04-01):
+  BP: 120/82 mmHg
+  HR: 80 bpm | Temp: 97.6°F
+  SpO2: 96.6% | BMI: 28.9
+
+⚠️ ABNORMAL LAB RESULTS:
+  - INR: 4.76  (Ref: 0.8-1.2 (2.0-3.0 on warfarin))
+  - Hemoglobin: 8.74 g/dL (Ref: 12.0-17.5 g/dL)
+  - Potassium: 6.56 mEq/L (Ref: 3.5-5.0 mEq/L)
+
+RECENT ENCOUNTERS:
+  - [INPATIENT] 2025-08-02 — Medication review
+    ⚡ Follow-up required by 2025-10-03
+  - [INPATIENT] 2024-09-03 — New symptom evaluation
+    ⚡ Follow-up required by 2024-11-14
+  - [INPATIENT] 2024-01-10 — Chronic disease management

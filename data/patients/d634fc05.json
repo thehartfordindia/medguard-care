@@ -1,0 +1,238 @@
+{
+  "patient_id": "d634fc05",
+  "first_name": "Lauren",
+  "last_name": "Armstrong",
+  "date_of_birth": "1949-01-13",
+  "gender": "Female",
+  "blood_type": "B+",
+  "phone": "759.378.2071",
+  "email": "benjaminzimmerman@example.com",
+  "address": "5466 Shelton Center, Cameronville, OH 89417",
+  "emergency_contact_name": "David York",
+  "emergency_contact_phone": "+1-625-819-2546x291",
+  "insurance_provider": "Medicaid",
+  "insurance_id": "CIG-196168",
+  "allergies": [
+    "Peanuts"
+  ],
+  "medications": [
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2024-12-29",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Best",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2023-05-08",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Stevenson",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2025-05-20",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Williams",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2025-08-19",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Stout",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Chronic Low Back Pain",
+      "icd10_code": "M54.5",
+      "diagnosed_date": "2022-03-22",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2022-10-25",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "Type 2 Diabetes Mellitus",
+      "icd10_code": "E11.9",
+      "diagnosed_date": "2022-02-04",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "COPD",
+      "icd10_code": "J44.1",
+      "diagnosed_date": "2021-04-27",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2022-03-01",
+      "severity": "mild",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T09:00:00",
+      "blood_pressure_systolic": 120,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 86,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 96.7,
+      "weight_lbs": 160.4,
+      "bmi": 19.2
+    },
+    {
+      "recorded_date": "2025-01-31T16:00:00",
+      "blood_pressure_systolic": 172,
+      "blood_pressure_diastolic": 94,
+      "heart_rate": 125,
+      "temperature_f": 100.6,
+      "oxygen_saturation": 88.0,
+      "weight_lbs": 151.1,
+      "bmi": 23.5
+    },
+    {
+      "recorded_date": "2025-03-02T17:00:00",
+      "blood_pressure_systolic": 180,
+      "blood_pressure_diastolic": 109,
+      "heart_rate": 128,
+      "temperature_f": 100.6,
+      "oxygen_saturation": 91.9,
+      "weight_lbs": 173.3,
+      "bmi": 20.9
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "WBC Count",
+      "value": 10.38,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2025-11-02"
+    },
+    {
+      "test_name": "INR",
+      "value": 3.9,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2025-10-22"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 137.29,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-08-08"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 13.94,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-10-20"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 1.0,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-02-13"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "cc0d32e1",
+      "encounter_type": "telehealth",
+      "date": "2024-02-12T12:30:00",
+      "provider": "Dr. Roberts",
+      "department": "Neurology",
+      "reason": "Chronic disease management",
+      "notes": "Answer information soldier lead. Student matter movie place.",
+      "followup_required": true,
+      "followup_date": "2024-03-29"
+    },
+    {
+      "encounter_id": "123e4413",
+      "encounter_type": "outpatient",
+      "date": "2024-03-05T18:45:00",
+      "provider": "Dr. Walker",
+      "department": "Endocrinology",
+      "reason": "Lab review",
+      "notes": "Stuff practice social case. True line story serve light. Accept bad eight strong nature road month book.",
+      "followup_required": true,
+      "followup_date": "2024-03-24"
+    },
+    {
+      "encounter_id": "2f445528",
+      "encounter_type": "telehealth",
+      "date": "2024-03-10T15:00:00",
+      "provider": "Dr. Schneider",
+      "department": "Pulmonology",
+      "reason": "Routine follow-up",
+      "notes": "Prove stock school rate. Behavior provide meet adult final week game. Court yourself choice fast small medical music.",
+      "followup_required": true,
+      "followup_date": "2024-05-12"
+    },
+    {
+      "encounter_id": "24c9a438",
+      "encounter_type": "emergency",
+      "date": "2024-09-16T18:00:00",
+      "provider": "Dr. Rodgers",
+      "department": "Internal Medicine",
+      "reason": "Post-hospitalization check",
+      "notes": "Product then peace. Heavy class story side speak close join improve. Wide particular sell six doctor.",
+      "followup_required": true,
+      "followup_date": "2024-10-30"
+    },
+    {
+      "encounter_id": "1de2e596",
+      "encounter_type": "inpatient",
+      "date": "2025-10-05T08:30:00",
+      "provider": "Dr. Allen",
+      "department": "Internal Medicine",
+      "reason": "Post-hospitalization check",
+      "notes": "Happy water worker left example. Me industry class current painting their. Political them never.",
+      "followup_required": true,
+      "followup_date": "2025-12-27"
+    },
+    {
+      "encounter_id": "c5f30cab",
+      "encounter_type": "telehealth",
+      "date": "2025-10-20T09:45:00",
+      "provider": "Dr. Garcia",
+      "department": "Emergency",
+      "reason": "Acute complaint",
+      "notes": "Expect several evening town. Store begin treat stage. Us increase how hear history bank.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Andrews, MD",
+  "record_created": "2026-04-17T00:56:40.567950",
+  "last_updated": "2026-04-17T00:56:40.567951"
+}

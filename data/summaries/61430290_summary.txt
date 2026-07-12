@@ -1,0 +1,36 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Noah Brown (ID: 61430290)
+Age: 71 | Gender: Male | Blood Type: A-
+PCP: Dr. Gregory, MD
+
+ALLERGIES: Penicillin
+
+ACTIVE MEDICATIONS:
+  - Hydrocodone/APAP 5/325mg (every 6 hours as needed)
+  - Lisinopril 10mg (once daily)
+  - Levothyroxine 75mcg (once daily on empty stomach)
+  - Warfarin 5mg (once daily)
+
+DIAGNOSES:
+  - Chronic Kidney Disease Stage 3 (N18.3) — severe [CHRONIC]
+  - Chronic Low Back Pain (M54.5) — moderate [CHRONIC]
+  - Pneumonia (J18.9) — moderate
+
+LATEST VITALS (2025-06-30):
+  BP: 159/107 mmHg
+  HR: 115 bpm | Temp: 101.3°F
+  SpO2: 92.7% | BMI: 22.4
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Fasting Glucose: 258.37 mg/dL (Ref: 70-100 mg/dL)
+  - TSH: 11.74 mIU/L (Ref: 0.4-4.0 mIU/L)
+  - Total Cholesterol: 257.17 mg/dL (Ref: <200 mg/dL)
+
+RECENT ENCOUNTERS:
+  - [OUTPATIENT] 2025-12-08 — Chronic disease management
+    ⚡ Follow-up required by 2026-01-04
+  - [TELEHEALTH] 2025-11-22 — Urgent care visit
+    ⚡ Follow-up required by 2026-01-11
+  - [TELEHEALTH] 2024-02-18 — Post-hospitalization check
+    ⚡ Follow-up required by 2024-05-12

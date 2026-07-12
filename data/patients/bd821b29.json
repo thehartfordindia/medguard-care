@@ -1,0 +1,212 @@
+{
+  "patient_id": "bd821b29",
+  "first_name": "Kathleen",
+  "last_name": "White",
+  "date_of_birth": "1960-04-27",
+  "gender": "Female",
+  "blood_type": "B+",
+  "phone": "(593)414-3866",
+  "email": "thomassmith@example.com",
+  "address": "4489 Raymond Spurs Apt. 034, Combsville, NV 98096",
+  "emergency_contact_name": "Isaac Castro",
+  "emergency_contact_phone": "650-761-5939x982",
+  "insurance_provider": "Medicaid",
+  "insurance_id": "HUM-247189",
+  "allergies": [
+    "Aspirin",
+    "Fluoroquinolones",
+    "Contrast dye"
+  ],
+  "medications": [
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2024-08-26",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Clark",
+      "is_active": true
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2023-10-25",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Haynes",
+      "is_active": false
+    },
+    {
+      "name": "Amlodipine",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2024-05-28",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Watson",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2024-02-11",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Dickerson",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2023-01-11",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Ramirez",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2024-02-08",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2022-09-17",
+      "severity": "moderate",
+      "is_chronic": false
+    },
+    {
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "diagnosed_date": "2025-04-07",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2022-01-04",
+      "severity": "mild",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T16:00:00",
+      "blood_pressure_systolic": 117,
+      "blood_pressure_diastolic": 72,
+      "heart_rate": 68,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 95.2,
+      "weight_lbs": 168.9,
+      "bmi": 36.2
+    },
+    {
+      "recorded_date": "2025-01-31T16:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 61,
+      "temperature_f": 99.0,
+      "oxygen_saturation": 96.6,
+      "weight_lbs": 238.5,
+      "bmi": 28.7
+    },
+    {
+      "recorded_date": "2025-03-02T13:00:00",
+      "blood_pressure_systolic": 168,
+      "blood_pressure_diastolic": 107,
+      "heart_rate": 106,
+      "temperature_f": 100.4,
+      "oxygen_saturation": 89.9,
+      "weight_lbs": 222.3,
+      "bmi": 36.0
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Potassium",
+      "value": 6.03,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2026-03-21"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 71.71,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-03-31"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 18.52,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": true,
+      "test_date": "2025-03-13"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 61.5,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-09-21"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "42860520",
+      "encounter_type": "outpatient",
+      "date": "2024-07-10T09:30:00",
+      "provider": "Dr. Nguyen",
+      "department": "Emergency",
+      "reason": "Lab review",
+      "notes": "Simple land bad party less what than. Instead partner if trade bad gas. First fact environment popular even know.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "06b7cd07",
+      "encounter_type": "telehealth",
+      "date": "2024-12-04T18:00:00",
+      "provider": "Dr. Roy",
+      "department": "Emergency",
+      "reason": "Chronic disease management",
+      "notes": "Minute late cold take by doctor edge season. Decision however believe view. Nature ago however share bar energy choice.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "4fdb51a3",
+      "encounter_type": "outpatient",
+      "date": "2025-08-27T09:45:00",
+      "provider": "Dr. Pena",
+      "department": "Cardiology",
+      "reason": "Routine follow-up",
+      "notes": "Director scene kitchen call money. Agreement professional team foot. Level that various nature career way much.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "f46338d2",
+      "encounter_type": "outpatient",
+      "date": "2025-08-29T09:15:00",
+      "provider": "Dr. Garza",
+      "department": "Neurology",
+      "reason": "Acute complaint",
+      "notes": "See theory itself policy move training loss dinner. Kind hand employee field. Model serve carry.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Mitchell, MD",
+  "record_created": "2026-04-17T00:51:40.134671",
+  "last_updated": "2026-04-17T00:51:40.134676"
+}

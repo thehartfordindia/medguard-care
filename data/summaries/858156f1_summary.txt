@@ -1,0 +1,29 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Omar Alvarado (ID: 858156f1)
+Age: 67 | Gender: Male | Blood Type: B-
+PCP: Dr. Brown, MD
+
+ALLERGIES: Shellfish, Ibuprofen, Aspirin
+
+ACTIVE MEDICATIONS:
+  - Amlodipine 5mg (once daily)
+  - Hydrocodone/APAP 5/325mg (every 6 hours as needed)
+  - Alprazolam 0.5mg (twice daily as needed)
+
+DIAGNOSES:
+  - Pneumonia (J18.9) — moderate
+  - Urinary Tract Infection (N39.0) — mild
+  - Type 2 Diabetes Mellitus (E11.9) — moderate [CHRONIC]
+  - Essential Hypertension (I10) — moderate [CHRONIC]
+
+LATEST VITALS (2025-07-30):
+  BP: 115/84 mmHg
+  HR: 89 bpm | Temp: 97.7°F
+  SpO2: 98.1% | BMI: 26.2
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2025-11-16 — New symptom evaluation
+  - [TELEHEALTH] 2024-11-15 — Lab review
+  - [INPATIENT] 2024-06-20 — Medication review
+    ⚡ Follow-up required by 2024-09-16

@@ -1,0 +1,32 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Russell Davis (ID: 05d2e149)
+Age: 61 | Gender: Male | Blood Type: O+
+PCP: Dr. Johnson, MD
+
+ALLERGIES: No Known Allergies (NKA)
+
+ACTIVE MEDICATIONS:
+  - Amiodarone 200mg (once daily)
+
+DIAGNOSES:
+  - Pneumonia (J18.9) — moderate
+  - Hypothyroidism (E03.9) — mild [CHRONIC]
+  - Congestive Heart Failure (I50.9) — severe [CHRONIC]
+  - Gastroesophageal Reflux Disease (K21.0) — mild [CHRONIC]
+
+LATEST VITALS (2025-03-02):
+  BP: 113/70 mmHg
+  HR: 82 bpm | Temp: 97.7°F
+  SpO2: 95.1% | BMI: 25.3
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Fasting Glucose: 131.11 mg/dL (Ref: 70-100 mg/dL)
+  - Total Cholesterol: 294.96 mg/dL (Ref: <200 mg/dL)
+  - Hemoglobin: 9.89 g/dL (Ref: 12.0-17.5 g/dL)
+  - HbA1c: 6.51 % (Ref: 4.0-5.6%)
+
+RECENT ENCOUNTERS:
+  - [INPATIENT] 2026-01-01 — Lab review
+    ⚡ Follow-up required by 2026-03-09
+  - [INPATIENT] 2025-04-28 — Routine follow-up

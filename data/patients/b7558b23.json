@@ -1,0 +1,298 @@
+{
+  "patient_id": "b7558b23",
+  "first_name": "Patricia",
+  "last_name": "Keller",
+  "date_of_birth": "1942-09-10",
+  "gender": "Female",
+  "blood_type": "A+",
+  "phone": "(978)775-5886",
+  "email": "tinaallen@example.com",
+  "address": "57662 Hanna Crossroad Suite 171, Smithberg, MT 86324",
+  "emergency_contact_name": "Angela Harrington",
+  "emergency_contact_phone": "359-561-5865x780",
+  "insurance_provider": "Humana",
+  "insurance_id": "MCR-620856",
+  "allergies": [
+    "Fluoroquinolones",
+    "Ibuprofen"
+  ],
+  "medications": [
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2024-01-29",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Dickerson",
+      "is_active": true
+    },
+    {
+      "name": "Metoprolol",
+      "dosage": "50mg",
+      "frequency": "twice daily",
+      "start_date": "2023-04-20",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Morgan",
+      "is_active": true
+    },
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2024-08-08",
+      "end_date": null,
+      "prescribing_doctor": "Dr. French",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2023-10-30",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Adams",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2023-10-30",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Smith",
+      "is_active": false
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2024-11-05",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Barber",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2025-10-17",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Monroe",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2026-03-19",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Carpenter",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2023-07-27",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2021-01-24",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2023-06-25",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "Atrial Fibrillation",
+      "icd10_code": "I48.91",
+      "diagnosed_date": "2021-05-28",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T11:00:00",
+      "blood_pressure_systolic": 170,
+      "blood_pressure_diastolic": 93,
+      "heart_rate": 97,
+      "temperature_f": 100.3,
+      "oxygen_saturation": 90.2,
+      "weight_lbs": 221.1,
+      "bmi": 32.8
+    },
+    {
+      "recorded_date": "2025-01-31T13:00:00",
+      "blood_pressure_systolic": 120,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 65,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 98.9,
+      "weight_lbs": 262.7,
+      "bmi": 25.6
+    },
+    {
+      "recorded_date": "2025-03-02T13:00:00",
+      "blood_pressure_systolic": 115,
+      "blood_pressure_diastolic": 78,
+      "heart_rate": 89,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 97.4,
+      "weight_lbs": 252.9,
+      "bmi": 33.1
+    },
+    {
+      "recorded_date": "2025-04-01T10:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 72,
+      "heart_rate": 64,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 96.1,
+      "weight_lbs": 234.7,
+      "bmi": 31.7
+    },
+    {
+      "recorded_date": "2025-05-01T17:00:00",
+      "blood_pressure_systolic": 121,
+      "blood_pressure_diastolic": 72,
+      "heart_rate": 85,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 96.3,
+      "weight_lbs": 157.3,
+      "bmi": 25.7
+    },
+    {
+      "recorded_date": "2025-05-31T13:00:00",
+      "blood_pressure_systolic": 168,
+      "blood_pressure_diastolic": 102,
+      "heart_rate": 118,
+      "temperature_f": 99.8,
+      "oxygen_saturation": 89.2,
+      "weight_lbs": 143.5,
+      "bmi": 35.7
+    },
+    {
+      "recorded_date": "2025-06-30T12:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 72,
+      "heart_rate": 80,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 99.5,
+      "weight_lbs": 182.3,
+      "bmi": 26.5
+    },
+    {
+      "recorded_date": "2025-07-30T09:00:00",
+      "blood_pressure_systolic": 119,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 63,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 99.4,
+      "weight_lbs": 159.0,
+      "bmi": 27.3
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "WBC Count",
+      "value": 10.68,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2025-01-17"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 126.96,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-08-16"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 331.21,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-02-20"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 189.92,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-04-07"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 2.4,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-07-23"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 4.95,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2026-03-11"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 141.0,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-04-19"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 26.94,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-01-11"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "6a3fd831",
+      "encounter_type": "outpatient",
+      "date": "2024-08-26T12:15:00",
+      "provider": "Dr. Jordan",
+      "department": "Endocrinology",
+      "reason": "Acute complaint",
+      "notes": "Include radio conference company participant him raise. Tree central leave effect effort act source.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "371d8a8f",
+      "encounter_type": "outpatient",
+      "date": "2024-09-06T09:15:00",
+      "provider": "Dr. Welch",
+      "department": "Neurology",
+      "reason": "Lab review",
+      "notes": "Section its better plant their. Coach federal ahead food argue grow.",
+      "followup_required": true,
+      "followup_date": "2024-12-04"
+    }
+  ],
+  "primary_care_provider": "Dr. Santana, MD",
+  "record_created": "2026-04-17T00:52:37.005319",
+  "last_updated": "2026-04-17T00:52:37.005322"
+}

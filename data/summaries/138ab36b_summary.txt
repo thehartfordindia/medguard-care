@@ -1,0 +1,37 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Joshua Kidd (ID: 138ab36b)
+Age: 69 | Gender: Male | Blood Type: AB-
+PCP: Dr. Morris, MD
+
+ALLERGIES: Morphine, Ibuprofen, Contrast dye
+
+ACTIVE MEDICATIONS:
+  - Omeprazole 20mg (once daily before breakfast)
+  - Warfarin 5mg (once daily)
+  - Metformin 500mg (twice daily)
+  - Atorvastatin 20mg (once daily at bedtime)
+  - Hydrocodone/APAP 5/325mg (every 6 hours as needed)
+  - Alprazolam 0.5mg (twice daily as needed)
+
+DIAGNOSES:
+  - Type 2 Diabetes Mellitus (E11.9) — moderate [CHRONIC]
+  - Urinary Tract Infection (N39.0) — mild
+  - Acute Bronchitis (J20.9) — mild
+  - Pneumonia (J18.9) — moderate
+
+LATEST VITALS (2025-03-02):
+  BP: 124/83 mmHg
+  HR: 63 bpm | Temp: 98.7°F
+  SpO2: 95.6% | BMI: 35.6
+
+⚠️ ABNORMAL LAB RESULTS:
+  - WBC Count: 20.93 K/uL (Ref: 4.5-11.0 K/uL)
+  - Potassium: 6.33 mEq/L (Ref: 3.5-5.0 mEq/L)
+  - Total Cholesterol: 293.02 mg/dL (Ref: <200 mg/dL)
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2026-02-19 — Urgent care visit
+  - [EMERGENCY] 2026-01-08 — Medication review
+    ⚡ Follow-up required by 2026-04-05
+  - [OUTPATIENT] 2025-11-04 — New symptom evaluation

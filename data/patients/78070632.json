@@ -1,0 +1,255 @@
+{
+  "patient_id": "78070632",
+  "first_name": "Ray",
+  "last_name": "Burns",
+  "date_of_birth": "1975-10-18",
+  "gender": "Male",
+  "blood_type": "O-",
+  "phone": "258.644.1986x6524",
+  "email": "reedscott@example.com",
+  "address": "84842 Christina Radial, East Brent, MH 70105",
+  "emergency_contact_name": "David Garcia",
+  "emergency_contact_phone": "271-320-8267x73454",
+  "insurance_provider": "UnitedHealth",
+  "insurance_id": "CIG-465746",
+  "allergies": [
+    "Fluoroquinolones",
+    "Cephalosporins",
+    "Codeine",
+    "Amoxicillin"
+  ],
+  "medications": [
+    {
+      "name": "Sertraline",
+      "dosage": "50mg",
+      "frequency": "once daily",
+      "start_date": "2023-11-01",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Bush",
+      "is_active": true
+    },
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2024-12-22",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Vaughn",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2023-01-17",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2022-02-16",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2025-01-08",
+      "severity": "moderate",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T11:00:00",
+      "blood_pressure_systolic": 159,
+      "blood_pressure_diastolic": 91,
+      "heart_rate": 113,
+      "temperature_f": 101.9,
+      "oxygen_saturation": 88.4,
+      "weight_lbs": 269.4,
+      "bmi": 31.3
+    },
+    {
+      "recorded_date": "2025-01-31T12:00:00",
+      "blood_pressure_systolic": 156,
+      "blood_pressure_diastolic": 107,
+      "heart_rate": 112,
+      "temperature_f": 101.8,
+      "oxygen_saturation": 91.5,
+      "weight_lbs": 159.2,
+      "bmi": 30.5
+    },
+    {
+      "recorded_date": "2025-03-02T12:00:00",
+      "blood_pressure_systolic": 111,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 80,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 95.5,
+      "weight_lbs": 186.2,
+      "bmi": 27.7
+    },
+    {
+      "recorded_date": "2025-04-01T11:00:00",
+      "blood_pressure_systolic": 110,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 73,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 99.4,
+      "weight_lbs": 206.6,
+      "bmi": 31.2
+    },
+    {
+      "recorded_date": "2025-05-01T13:00:00",
+      "blood_pressure_systolic": 160,
+      "blood_pressure_diastolic": 99,
+      "heart_rate": 98,
+      "temperature_f": 101.8,
+      "oxygen_saturation": 88.4,
+      "weight_lbs": 220.4,
+      "bmi": 28.9
+    },
+    {
+      "recorded_date": "2025-05-31T09:00:00",
+      "blood_pressure_systolic": 179,
+      "blood_pressure_diastolic": 95,
+      "heart_rate": 121,
+      "temperature_f": 101.7,
+      "oxygen_saturation": 88.9,
+      "weight_lbs": 268.7,
+      "bmi": 37.9
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Hemoglobin",
+      "value": 10.71,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2025-06-21"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 199.18,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-10-06"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 32.79,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-03-10"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 9.07,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": true,
+      "test_date": "2025-04-09"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 6.0,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2026-01-10"
+    },
+    {
+      "test_name": "INR",
+      "value": 0.9,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-04-06"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 139.03,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-06-01"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "3fac5861",
+      "encounter_type": "telehealth",
+      "date": "2024-04-07T09:15:00",
+      "provider": "Dr. Zuniga",
+      "department": "Endocrinology",
+      "reason": "Lab review",
+      "notes": "Across nothing blue. Expect writer myself management voice surface.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "a293d872",
+      "encounter_type": "telehealth",
+      "date": "2024-07-16T09:45:00",
+      "provider": "Dr. Pearson",
+      "department": "Neurology",
+      "reason": "Post-hospitalization check",
+      "notes": "School sure also TV individual study value. Young however many.",
+      "followup_required": true,
+      "followup_date": "2024-08-10"
+    },
+    {
+      "encounter_id": "90806191",
+      "encounter_type": "emergency",
+      "date": "2025-01-27T10:45:00",
+      "provider": "Dr. Mcdonald",
+      "department": "Endocrinology",
+      "reason": "New symptom evaluation",
+      "notes": "Former room possible responsibility. Say so nothing.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "7e6dde74",
+      "encounter_type": "telehealth",
+      "date": "2025-04-21T11:15:00",
+      "provider": "Dr. Aguilar",
+      "department": "Emergency",
+      "reason": "Urgent care visit",
+      "notes": "End growth door. Let civil rather type. Real police wait happen determine.",
+      "followup_required": true,
+      "followup_date": "2025-06-13"
+    },
+    {
+      "encounter_id": "7b7ccc17",
+      "encounter_type": "emergency",
+      "date": "2025-08-09T07:30:00",
+      "provider": "Dr. Todd",
+      "department": "Emergency",
+      "reason": "Lab review",
+      "notes": "Task today still middle beautiful protect continue cell. Very according himself land environment form.",
+      "followup_required": true,
+      "followup_date": "2025-08-30"
+    },
+    {
+      "encounter_id": "4088d5bc",
+      "encounter_type": "inpatient",
+      "date": "2025-10-16T11:30:00",
+      "provider": "Dr. Bernard",
+      "department": "Cardiology",
+      "reason": "Acute complaint",
+      "notes": "Lawyer writer health reduce. Serious soon stay seven quite other skin. Land region back nor article natural measure.",
+      "followup_required": true,
+      "followup_date": "2025-12-30"
+    }
+  ],
+  "primary_care_provider": "Dr. Armstrong, MD",
+  "record_created": "2026-04-17T00:52:37.021871",
+  "last_updated": "2026-04-17T00:52:37.021872"
+}

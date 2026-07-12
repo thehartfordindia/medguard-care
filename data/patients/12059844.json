@@ -1,0 +1,235 @@
+{
+  "patient_id": "12059844",
+  "first_name": "Adam",
+  "last_name": "Woods",
+  "date_of_birth": "2008-02-12",
+  "gender": "Male",
+  "blood_type": "AB+",
+  "phone": "8648930853",
+  "email": "twright@example.net",
+  "address": "41638 Mitchell Summit Suite 631, East Keith, SC 60183",
+  "emergency_contact_name": "Denise Dean",
+  "emergency_contact_phone": "650.620.8021",
+  "insurance_provider": "BlueCross BlueShield",
+  "insurance_id": "AET-571023",
+  "allergies": [
+    "Peanuts",
+    "Fluoroquinolones",
+    "Aspirin",
+    "Ibuprofen"
+  ],
+  "medications": [
+    {
+      "name": "Omeprazole",
+      "dosage": "20mg",
+      "frequency": "once daily before breakfast",
+      "start_date": "2024-09-05",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Weeks",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2024-10-14",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Arroyo",
+      "is_active": false
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Congestive Heart Failure",
+      "icd10_code": "I50.9",
+      "diagnosed_date": "2020-10-19",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "COPD",
+      "icd10_code": "J44.1",
+      "diagnosed_date": "2024-06-15",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2023-04-08",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T17:00:00",
+      "blood_pressure_systolic": 118,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 83,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 99.6,
+      "weight_lbs": 223.5,
+      "bmi": 19.8
+    },
+    {
+      "recorded_date": "2025-01-31T11:00:00",
+      "blood_pressure_systolic": 113,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 66,
+      "temperature_f": 98.3,
+      "oxygen_saturation": 99.5,
+      "weight_lbs": 235.8,
+      "bmi": 34.6
+    },
+    {
+      "recorded_date": "2025-03-02T11:00:00",
+      "blood_pressure_systolic": 125,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 88,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 97.5,
+      "weight_lbs": 156.5,
+      "bmi": 27.9
+    },
+    {
+      "recorded_date": "2025-04-01T17:00:00",
+      "blood_pressure_systolic": 110,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 76,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 99.4,
+      "weight_lbs": 237.7,
+      "bmi": 26.9
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "WBC Count",
+      "value": 6.01,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2026-03-16"
+    },
+    {
+      "test_name": "TSH",
+      "value": 2.55,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-10-06"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 137.7,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-12-30"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 1.52,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-09-25"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 70.22,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-12-02"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 4.71,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-07-29"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 136.61,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-11-30"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "7a3e1488",
+      "encounter_type": "outpatient",
+      "date": "2024-05-28T14:45:00",
+      "provider": "Dr. Newman",
+      "department": "Internal Medicine",
+      "reason": "New symptom evaluation",
+      "notes": "Run again help right economy always. Next my majority note myself food. Every story trial never attention choice fast.",
+      "followup_required": true,
+      "followup_date": "2024-07-09"
+    },
+    {
+      "encounter_id": "141c4487",
+      "encounter_type": "telehealth",
+      "date": "2024-11-10T16:30:00",
+      "provider": "Dr. Hendrix",
+      "department": "Emergency",
+      "reason": "Acute complaint",
+      "notes": "Race fine follow pick among visit. Business loss federal growth appear project wind. Plan foot cold everybody build.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "d34bd796",
+      "encounter_type": "inpatient",
+      "date": "2025-02-14T12:00:00",
+      "provider": "Dr. Moore",
+      "department": "Pulmonology",
+      "reason": "Routine follow-up",
+      "notes": "Citizen before peace us young. Art green child movie blue maintain first next.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "fcc587f0",
+      "encounter_type": "inpatient",
+      "date": "2025-02-27T15:45:00",
+      "provider": "Dr. Jones",
+      "department": "Endocrinology",
+      "reason": "Urgent care visit",
+      "notes": "Court success stage stock. Window research his window. Scene almost leave side miss.",
+      "followup_required": true,
+      "followup_date": "2025-05-23"
+    },
+    {
+      "encounter_id": "3e3452b4",
+      "encounter_type": "emergency",
+      "date": "2025-07-02T13:30:00",
+      "provider": "Dr. Martinez",
+      "department": "Emergency",
+      "reason": "Annual physical",
+      "notes": "Do character management. Inside size marriage he recent all. Such weight argue simply.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "1e727c9e",
+      "encounter_type": "telehealth",
+      "date": "2025-11-06T08:15:00",
+      "provider": "Dr. Mccormick",
+      "department": "Emergency",
+      "reason": "Acute complaint",
+      "notes": "Ok real read.",
+      "followup_required": true,
+      "followup_date": "2025-12-02"
+    }
+  ],
+  "primary_care_provider": "Dr. Baker, MD",
+  "record_created": "2026-04-17T00:56:40.609202",
+  "last_updated": "2026-04-17T00:56:40.609205"
+}

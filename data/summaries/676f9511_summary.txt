@@ -1,0 +1,33 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Melissa Wilson (ID: 676f9511)
+Age: 46 | Gender: Female | Blood Type: B+
+PCP: Dr. Barron, MD
+
+ALLERGIES: Sulfa drugs
+
+ACTIVE MEDICATIONS:
+  - Atorvastatin 20mg (once daily at bedtime)
+  - Omeprazole 20mg (once daily before breakfast)
+  - Amiodarone 200mg (once daily)
+  - Aspirin 81mg (once daily)
+
+DIAGNOSES:
+  - Major Depressive Disorder (F33.0) — moderate [CHRONIC]
+  - Chronic Low Back Pain (M54.5) — moderate [CHRONIC]
+
+LATEST VITALS (2025-05-31):
+  BP: 166/93 mmHg
+  HR: 111 bpm | Temp: 100.7°F
+  SpO2: 89.5% | BMI: 19.5
+
+⚠️ ABNORMAL LAB RESULTS:
+  - WBC Count: 20.98 K/uL (Ref: 4.5-11.0 K/uL)
+  - TSH: 8.71 mIU/L (Ref: 0.4-4.0 mIU/L)
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2026-03-21 — Post-hospitalization check
+    ⚡ Follow-up required by 2026-06-14
+  - [OUTPATIENT] 2026-02-16 — Acute complaint
+  - [INPATIENT] 2026-02-13 — Annual physical
+    ⚡ Follow-up required by 2026-04-13

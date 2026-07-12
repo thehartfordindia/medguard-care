@@ -1,0 +1,244 @@
+{
+  "patient_id": "5bfb1d26",
+  "first_name": "Anna",
+  "last_name": "Torres",
+  "date_of_birth": "1935-09-18",
+  "gender": "Female",
+  "blood_type": "AB-",
+  "phone": "001-832-751-2257x207",
+  "email": "thompsonjoseph@example.org",
+  "address": "579 Tracy Gateway, Rodrigueztown, OK 89636",
+  "emergency_contact_name": "Sara Fox MD",
+  "emergency_contact_phone": "(611)945-7758",
+  "insurance_provider": "UnitedHealth",
+  "insurance_id": "CIG-760460",
+  "allergies": [],
+  "medications": [
+    {
+      "name": "Amlodipine",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2023-05-11",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Gordon",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2024-07-17",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Graves",
+      "is_active": true
+    },
+    {
+      "name": "Metformin",
+      "dosage": "500mg",
+      "frequency": "twice daily",
+      "start_date": "2025-02-16",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Woods",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Chronic Low Back Pain",
+      "icd10_code": "M54.5",
+      "diagnosed_date": "2022-05-08",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "COPD",
+      "icd10_code": "J44.1",
+      "diagnosed_date": "2022-12-08",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2025-03-22",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Osteoarthritis",
+      "icd10_code": "M17.11",
+      "diagnosed_date": "2022-10-28",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T13:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 61,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 95.3,
+      "weight_lbs": 276.1,
+      "bmi": 22.2
+    },
+    {
+      "recorded_date": "2025-01-31T16:00:00",
+      "blood_pressure_systolic": 171,
+      "blood_pressure_diastolic": 107,
+      "heart_rate": 127,
+      "temperature_f": 101.9,
+      "oxygen_saturation": 88.8,
+      "weight_lbs": 245.1,
+      "bmi": 26.0
+    },
+    {
+      "recorded_date": "2025-03-02T15:00:00",
+      "blood_pressure_systolic": 169,
+      "blood_pressure_diastolic": 98,
+      "heart_rate": 108,
+      "temperature_f": 100.0,
+      "oxygen_saturation": 88.8,
+      "weight_lbs": 170.5,
+      "bmi": 32.1
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Hemoglobin",
+      "value": 9.21,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2025-03-29"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 4.3,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-05-30"
+    },
+    {
+      "test_name": "INR",
+      "value": 0.86,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2026-03-29"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 45.32,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-03-24"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 130.78,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-05-08"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 14.73,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": true,
+      "test_date": "2025-03-01"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 0.81,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-11-06"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 262.19,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-12-28"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "cadba126",
+      "encounter_type": "emergency",
+      "date": "2024-05-16T13:30:00",
+      "provider": "Dr. King",
+      "department": "Internal Medicine",
+      "reason": "Routine follow-up",
+      "notes": "Still feeling free. Simple tax total other both rate rock. Challenge improve detail.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "6b72d337",
+      "encounter_type": "inpatient",
+      "date": "2024-07-04T14:15:00",
+      "provider": "Dr. Murray",
+      "department": "Cardiology",
+      "reason": "Chronic disease management",
+      "notes": "Site street benefit money reason mean. Life into inside improve agree next.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "35097b32",
+      "encounter_type": "inpatient",
+      "date": "2024-08-12T18:30:00",
+      "provider": "Dr. Mcknight",
+      "department": "Endocrinology",
+      "reason": "Routine follow-up",
+      "notes": "All officer receive issue deal become turn. Police whole theory quickly tonight last. Company travel give former operation war everybody.",
+      "followup_required": true,
+      "followup_date": "2024-11-02"
+    },
+    {
+      "encounter_id": "06db7892",
+      "encounter_type": "emergency",
+      "date": "2024-08-25T18:45:00",
+      "provider": "Dr. Ross",
+      "department": "Cardiology",
+      "reason": "Chronic disease management",
+      "notes": "Turn others community job then. Cause should economic indicate current figure father until.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "7430de53",
+      "encounter_type": "emergency",
+      "date": "2025-03-28T10:30:00",
+      "provider": "Dr. Torres",
+      "department": "Cardiology",
+      "reason": "Annual physical",
+      "notes": "Produce a edge go exist teacher. Choice beat establish you culture one ball. Allow usually eat question hit.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "c83dca53",
+      "encounter_type": "telehealth",
+      "date": "2026-03-07T16:00:00",
+      "provider": "Dr. Lee",
+      "department": "Emergency",
+      "reason": "New symptom evaluation",
+      "notes": "Reduce street but somebody note society get. Wide material rate letter. Model face newspaper class. Explain son administration American executive or apply.",
+      "followup_required": true,
+      "followup_date": "2026-05-30"
+    }
+  ],
+  "primary_care_provider": "Dr. Bernard, MD",
+  "record_created": "2026-04-17T00:52:12.643094",
+  "last_updated": "2026-04-17T00:52:12.643098"
+}

@@ -1,0 +1,275 @@
+{
+  "patient_id": "41b28f2c",
+  "first_name": "Eric",
+  "last_name": "Bolton",
+  "date_of_birth": "1941-10-19",
+  "gender": "Male",
+  "blood_type": "O-",
+  "phone": "001-884-504-4566x90782",
+  "email": "jenniferclark@example.org",
+  "address": "751 Singleton Meadow Suite 377, West Donberg, ME 97206",
+  "emergency_contact_name": "Robert Flowers",
+  "emergency_contact_phone": "736-866-8459x09022",
+  "insurance_provider": "Medicaid",
+  "insurance_id": "MCR-571804",
+  "allergies": [
+    "Fluoroquinolones",
+    "Codeine",
+    "Latex",
+    "Aspirin"
+  ],
+  "medications": [
+    {
+      "name": "Omeprazole",
+      "dosage": "20mg",
+      "frequency": "once daily before breakfast",
+      "start_date": "2024-02-07",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Ochoa",
+      "is_active": false
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2024-03-02",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Sutton",
+      "is_active": true
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2025-06-10",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hill",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2025-10-28",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Thornton",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Atrial Fibrillation",
+      "icd10_code": "I48.91",
+      "diagnosed_date": "2021-06-15",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "diagnosed_date": "2024-11-20",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2023-10-11",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2020-08-05",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2022-06-07",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T15:00:00",
+      "blood_pressure_systolic": 113,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 65,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 97.3,
+      "weight_lbs": 196.7,
+      "bmi": 31.3
+    },
+    {
+      "recorded_date": "2025-01-31T16:00:00",
+      "blood_pressure_systolic": 159,
+      "blood_pressure_diastolic": 109,
+      "heart_rate": 118,
+      "temperature_f": 101.2,
+      "oxygen_saturation": 92.8,
+      "weight_lbs": 234.5,
+      "bmi": 34.2
+    },
+    {
+      "recorded_date": "2025-03-02T11:00:00",
+      "blood_pressure_systolic": 110,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 63,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 98.5,
+      "weight_lbs": 166.4,
+      "bmi": 19.0
+    },
+    {
+      "recorded_date": "2025-04-01T11:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 73,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 99.3,
+      "weight_lbs": 215.4,
+      "bmi": 20.2
+    },
+    {
+      "recorded_date": "2025-05-01T11:00:00",
+      "blood_pressure_systolic": 165,
+      "blood_pressure_diastolic": 103,
+      "heart_rate": 96,
+      "temperature_f": 99.8,
+      "oxygen_saturation": 92.5,
+      "weight_lbs": 243.4,
+      "bmi": 27.2
+    },
+    {
+      "recorded_date": "2025-05-31T09:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 66,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 99.1,
+      "weight_lbs": 194.8,
+      "bmi": 25.0
+    },
+    {
+      "recorded_date": "2025-06-30T15:00:00",
+      "blood_pressure_systolic": 123,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 83,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 98.7,
+      "weight_lbs": 279.9,
+      "bmi": 19.2
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Hemoglobin",
+      "value": 8.69,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2025-06-11"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 5.9,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-11-28"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 140.26,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-09-11"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 238.44,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-08-18"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 132.5,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-05-28"
+    },
+    {
+      "test_name": "TSH",
+      "value": 9.69,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-08-13"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 4.35,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": false,
+      "test_date": "2026-04-11"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "4896473b",
+      "encounter_type": "inpatient",
+      "date": "2024-03-29T17:45:00",
+      "provider": "Dr. Browning",
+      "department": "Cardiology",
+      "reason": "Lab review",
+      "notes": "Writer can industry sea. Western tend candidate day it report. City offer financial data respond learn cut.",
+      "followup_required": true,
+      "followup_date": "2024-05-02"
+    },
+    {
+      "encounter_id": "d502bcaa",
+      "encounter_type": "emergency",
+      "date": "2024-04-13T13:45:00",
+      "provider": "Dr. Ritter",
+      "department": "Cardiology",
+      "reason": "Lab review",
+      "notes": "Station painting east forget. These least office say explain thing lead. Hospital statement sure indeed conference.",
+      "followup_required": true,
+      "followup_date": "2024-07-07"
+    },
+    {
+      "encounter_id": "c42a1377",
+      "encounter_type": "telehealth",
+      "date": "2025-11-20T17:30:00",
+      "provider": "Dr. Burns",
+      "department": "Cardiology",
+      "reason": "Lab review",
+      "notes": "Attorney white exist do process. Lawyer happy action force.",
+      "followup_required": true,
+      "followup_date": "2026-01-09"
+    },
+    {
+      "encounter_id": "7e8ac7de",
+      "encounter_type": "inpatient",
+      "date": "2026-01-02T17:45:00",
+      "provider": "Dr. Baird",
+      "department": "Endocrinology",
+      "reason": "Annual physical",
+      "notes": "As hit little forget while police. Behavior bit need allow ready.",
+      "followup_required": true,
+      "followup_date": "2026-03-10"
+    }
+  ],
+  "primary_care_provider": "Dr. Williamson, MD",
+  "record_created": "2026-04-17T00:52:12.611683",
+  "last_updated": "2026-04-17T00:52:12.611686"
+}

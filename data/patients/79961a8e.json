@@ -1,0 +1,271 @@
+{
+  "patient_id": "79961a8e",
+  "first_name": "James",
+  "last_name": "Williams",
+  "date_of_birth": "1956-11-14",
+  "gender": "Male",
+  "blood_type": "B-",
+  "phone": "875.699.0048",
+  "email": "ilambert@example.net",
+  "address": "2875 Anderson Island, Thomasville, MD 06289",
+  "emergency_contact_name": "Kathryn Mcpherson",
+  "emergency_contact_phone": "956-444-9485x625",
+  "insurance_provider": "Medicaid",
+  "insurance_id": "MCR-897846",
+  "allergies": [
+    "Latex"
+  ],
+  "medications": [
+    {
+      "name": "Omeprazole",
+      "dosage": "20mg",
+      "frequency": "once daily before breakfast",
+      "start_date": "2025-03-03",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Lewis",
+      "is_active": true
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-12-09",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Reyes",
+      "is_active": true
+    },
+    {
+      "name": "Metoprolol",
+      "dosage": "50mg",
+      "frequency": "twice daily",
+      "start_date": "2023-04-27",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Henderson",
+      "is_active": true
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2025-01-25",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Harper",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2026-03-23",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Jones",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2025-12-26",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hawkins",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2022-05-16",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "Major Depressive Disorder",
+      "icd10_code": "F33.0",
+      "diagnosed_date": "2021-07-21",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2020-04-21",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2020-05-09",
+      "severity": "moderate",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T16:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 75,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 98.4,
+      "weight_lbs": 214.6,
+      "bmi": 24.2
+    },
+    {
+      "recorded_date": "2025-01-31T10:00:00",
+      "blood_pressure_systolic": 116,
+      "blood_pressure_diastolic": 84,
+      "heart_rate": 62,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 99.5,
+      "weight_lbs": 180.4,
+      "bmi": 37.2
+    },
+    {
+      "recorded_date": "2025-03-02T13:00:00",
+      "blood_pressure_systolic": 113,
+      "blood_pressure_diastolic": 74,
+      "heart_rate": 75,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 96.0,
+      "weight_lbs": 273.3,
+      "bmi": 18.9
+    },
+    {
+      "recorded_date": "2025-04-01T17:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 71,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 98.7,
+      "weight_lbs": 143.0,
+      "bmi": 22.2
+    },
+    {
+      "recorded_date": "2025-05-01T12:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 80,
+      "heart_rate": 73,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 98.3,
+      "weight_lbs": 250.2,
+      "bmi": 28.0
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Potassium",
+      "value": 5.84,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-07-10"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 10.08,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2025-01-25"
+    },
+    {
+      "test_name": "INR",
+      "value": 0.91,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-03-27"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 18.22,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-10-02"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 197.99,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-03-06"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 23.76,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": true,
+      "test_date": "2026-02-11"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 138.14,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-01-22"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 2.94,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-08-14"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "10d5db83",
+      "encounter_type": "emergency",
+      "date": "2024-07-29T15:00:00",
+      "provider": "Dr. Peters",
+      "department": "Endocrinology",
+      "reason": "Acute complaint",
+      "notes": "Country approach consumer. Employee relationship job yet until American ground. Magazine manage suffer term buy behavior test.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "019fa853",
+      "encounter_type": "telehealth",
+      "date": "2024-12-05T17:30:00",
+      "provider": "Dr. Hood",
+      "department": "Endocrinology",
+      "reason": "Acute complaint",
+      "notes": "Ball store process. Pick especially price forget analysis performance laugh.",
+      "followup_required": true,
+      "followup_date": "2025-03-01"
+    },
+    {
+      "encounter_id": "3d68a6b2",
+      "encounter_type": "outpatient",
+      "date": "2025-07-06T09:30:00",
+      "provider": "Dr. White",
+      "department": "Internal Medicine",
+      "reason": "Annual physical",
+      "notes": "State none production defense your above short. Indicate baby should quality.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "af1ba7f4",
+      "encounter_type": "emergency",
+      "date": "2026-02-25T09:45:00",
+      "provider": "Dr. Clay",
+      "department": "Cardiology",
+      "reason": "Routine follow-up",
+      "notes": "Race quite hour opportunity week.",
+      "followup_required": true,
+      "followup_date": "2026-05-19"
+    }
+  ],
+  "primary_care_provider": "Dr. Meza, MD",
+  "record_created": "2026-04-17T00:52:12.591050",
+  "last_updated": "2026-04-17T00:52:12.591055"
+}

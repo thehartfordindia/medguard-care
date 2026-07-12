@@ -1,0 +1,319 @@
+{
+  "patient_id": "986b0191",
+  "first_name": "Barbara",
+  "last_name": "Donovan",
+  "date_of_birth": "1947-01-11",
+  "gender": "Female",
+  "blood_type": "AB+",
+  "phone": "353.246.2475",
+  "email": "khowell@example.org",
+  "address": "425 Natasha Land, Ericside, VT 40152",
+  "emergency_contact_name": "Victoria Valdez",
+  "emergency_contact_phone": "4846124118",
+  "insurance_provider": "Humana",
+  "insurance_id": "MCD-785743",
+  "allergies": [
+    "Penicillin",
+    "Amoxicillin",
+    "Morphine",
+    "Codeine"
+  ],
+  "medications": [
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-04-13",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Zamora",
+      "is_active": false
+    },
+    {
+      "name": "Metformin",
+      "dosage": "500mg",
+      "frequency": "twice daily",
+      "start_date": "2023-08-07",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Sanchez",
+      "is_active": true
+    },
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-05-16",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wheeler",
+      "is_active": true
+    },
+    {
+      "name": "Sertraline",
+      "dosage": "50mg",
+      "frequency": "once daily",
+      "start_date": "2023-03-12",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Harvey",
+      "is_active": true
+    },
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2024-01-14",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Barnes",
+      "is_active": true
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2026-03-03",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Silva",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2025-10-06",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Mills",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Chronic Low Back Pain",
+      "icd10_code": "M54.5",
+      "diagnosed_date": "2021-06-25",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2020-08-24",
+      "severity": "moderate",
+      "is_chronic": false
+    },
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2024-12-27",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "diagnosed_date": "2020-08-07",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T13:00:00",
+      "blood_pressure_systolic": 119,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 82,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 98.4,
+      "weight_lbs": 259.4,
+      "bmi": 28.4
+    },
+    {
+      "recorded_date": "2025-01-31T09:00:00",
+      "blood_pressure_systolic": 112,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 86,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 95.0,
+      "weight_lbs": 248.0,
+      "bmi": 30.9
+    },
+    {
+      "recorded_date": "2025-03-02T16:00:00",
+      "blood_pressure_systolic": 127,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 77,
+      "temperature_f": 97.5,
+      "oxygen_saturation": 95.4,
+      "weight_lbs": 263.6,
+      "bmi": 36.1
+    },
+    {
+      "recorded_date": "2025-04-01T14:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 74,
+      "heart_rate": 73,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 96.5,
+      "weight_lbs": 265.9,
+      "bmi": 34.0
+    },
+    {
+      "recorded_date": "2025-05-01T14:00:00",
+      "blood_pressure_systolic": 156,
+      "blood_pressure_diastolic": 97,
+      "heart_rate": 101,
+      "temperature_f": 100.4,
+      "oxygen_saturation": 90.8,
+      "weight_lbs": 262.5,
+      "bmi": 37.5
+    },
+    {
+      "recorded_date": "2025-05-31T12:00:00",
+      "blood_pressure_systolic": 177,
+      "blood_pressure_diastolic": 95,
+      "heart_rate": 106,
+      "temperature_f": 101.7,
+      "oxygen_saturation": 88.1,
+      "weight_lbs": 243.1,
+      "bmi": 25.0
+    },
+    {
+      "recorded_date": "2025-06-30T12:00:00",
+      "blood_pressure_systolic": 158,
+      "blood_pressure_diastolic": 95,
+      "heart_rate": 101,
+      "temperature_f": 100.5,
+      "oxygen_saturation": 88.2,
+      "weight_lbs": 205.9,
+      "bmi": 22.4
+    },
+    {
+      "recorded_date": "2025-07-30T14:00:00",
+      "blood_pressure_systolic": 159,
+      "blood_pressure_diastolic": 97,
+      "heart_rate": 109,
+      "temperature_f": 99.6,
+      "oxygen_saturation": 89.0,
+      "weight_lbs": 186.0,
+      "bmi": 35.4
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "TSH",
+      "value": 3.89,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-04-02"
+    },
+    {
+      "test_name": "INR",
+      "value": 4.95,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2025-01-20"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 4.15,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2026-01-09"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 17.67,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": true,
+      "test_date": "2025-09-19"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 96.99,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-04-08"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 5.13,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": false,
+      "test_date": "2025-01-01"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "e76f14e7",
+      "encounter_type": "telehealth",
+      "date": "2024-06-27T16:30:00",
+      "provider": "Dr. Brady",
+      "department": "Neurology",
+      "reason": "Routine follow-up",
+      "notes": "Wish specific thing agent. Site in prove same easy city.",
+      "followup_required": true,
+      "followup_date": "2024-08-18"
+    },
+    {
+      "encounter_id": "66132c8a",
+      "encounter_type": "inpatient",
+      "date": "2024-10-29T15:15:00",
+      "provider": "Dr. Wood",
+      "department": "Pulmonology",
+      "reason": "Annual physical",
+      "notes": "Involve among half value. Together decide economic. Government nice themselves wind.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "6a3e3757",
+      "encounter_type": "telehealth",
+      "date": "2025-03-16T16:30:00",
+      "provider": "Dr. Haynes",
+      "department": "Pulmonology",
+      "reason": "Chronic disease management",
+      "notes": "Teach develop staff. Glass star the development process huge everything. Whom evidence political hundred.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "4b093e95",
+      "encounter_type": "outpatient",
+      "date": "2025-06-07T14:15:00",
+      "provider": "Dr. Zavala",
+      "department": "Endocrinology",
+      "reason": "Urgent care visit",
+      "notes": "Voice boy wife condition while enter. Others generation skill job. Break tonight couple and job mind southern.",
+      "followup_required": true,
+      "followup_date": "2025-08-02"
+    },
+    {
+      "encounter_id": "ac5fe2e7",
+      "encounter_type": "emergency",
+      "date": "2025-07-05T17:15:00",
+      "provider": "Dr. Campbell",
+      "department": "Pulmonology",
+      "reason": "Medication review",
+      "notes": "Data plant enough major town suffer. Plant stop analysis four.",
+      "followup_required": true,
+      "followup_date": "2025-08-30"
+    },
+    {
+      "encounter_id": "f9e1193f",
+      "encounter_type": "emergency",
+      "date": "2025-11-10T08:30:00",
+      "provider": "Dr. Anderson",
+      "department": "Emergency",
+      "reason": "Annual physical",
+      "notes": "Scientist necessary into act. War real chance along.",
+      "followup_required": true,
+      "followup_date": "2026-01-04"
+    }
+  ],
+  "primary_care_provider": "Dr. Mcdaniel, MD",
+  "record_created": "2026-04-17T00:51:40.032723",
+  "last_updated": "2026-04-17T00:51:40.032725"
+}

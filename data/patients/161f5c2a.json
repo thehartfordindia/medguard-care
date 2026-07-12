@@ -1,0 +1,285 @@
+{
+  "patient_id": "161f5c2a",
+  "first_name": "Scott",
+  "last_name": "Carroll",
+  "date_of_birth": "1974-05-29",
+  "gender": "Male",
+  "blood_type": "A+",
+  "phone": "742.867.3204x41384",
+  "email": "gilbertmichael@example.net",
+  "address": "49542 Ford Mill, South Benjaminstad, NJ 84091",
+  "emergency_contact_name": "Claudia Brown",
+  "emergency_contact_phone": "649-685-1724",
+  "insurance_provider": "Humana",
+  "insurance_id": "MCD-726134",
+  "allergies": [
+    "Sulfa drugs"
+  ],
+  "medications": [
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2024-12-06",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hurley",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2024-12-14",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Ford",
+      "is_active": true
+    },
+    {
+      "name": "Metoprolol",
+      "dosage": "50mg",
+      "frequency": "twice daily",
+      "start_date": "2024-12-10",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Armstrong",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2020-10-23",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2021-10-25",
+      "severity": "moderate",
+      "is_chronic": false
+    },
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2023-09-22",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2024-08-13",
+      "severity": "mild",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T14:00:00",
+      "blood_pressure_systolic": 150,
+      "blood_pressure_diastolic": 94,
+      "heart_rate": 124,
+      "temperature_f": 101.8,
+      "oxygen_saturation": 90.5,
+      "weight_lbs": 184.3,
+      "bmi": 33.9
+    },
+    {
+      "recorded_date": "2025-01-31T13:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 74,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 99.3,
+      "weight_lbs": 228.8,
+      "bmi": 31.0
+    },
+    {
+      "recorded_date": "2025-03-02T09:00:00",
+      "blood_pressure_systolic": 116,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 73,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 98.9,
+      "weight_lbs": 224.1,
+      "bmi": 22.7
+    },
+    {
+      "recorded_date": "2025-04-01T12:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 71,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 95.1,
+      "weight_lbs": 265.5,
+      "bmi": 28.3
+    },
+    {
+      "recorded_date": "2025-05-01T16:00:00",
+      "blood_pressure_systolic": 170,
+      "blood_pressure_diastolic": 104,
+      "heart_rate": 121,
+      "temperature_f": 100.5,
+      "oxygen_saturation": 89.8,
+      "weight_lbs": 215.9,
+      "bmi": 28.7
+    },
+    {
+      "recorded_date": "2025-05-31T10:00:00",
+      "blood_pressure_systolic": 179,
+      "blood_pressure_diastolic": 95,
+      "heart_rate": 124,
+      "temperature_f": 100.6,
+      "oxygen_saturation": 88.9,
+      "weight_lbs": 223.3,
+      "bmi": 29.1
+    },
+    {
+      "recorded_date": "2025-06-30T15:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 82,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 99.6,
+      "weight_lbs": 260.0,
+      "bmi": 37.9
+    },
+    {
+      "recorded_date": "2025-07-30T10:00:00",
+      "blood_pressure_systolic": 152,
+      "blood_pressure_diastolic": 110,
+      "heart_rate": 96,
+      "temperature_f": 101.0,
+      "oxygen_saturation": 90.1,
+      "weight_lbs": 209.5,
+      "bmi": 33.2
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Creatinine",
+      "value": 1.07,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-10-10"
+    },
+    {
+      "test_name": "INR",
+      "value": 0.88,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-08-29"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 8.4,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2026-02-11"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 6.12,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2026-02-25"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 10.82,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": true,
+      "test_date": "2025-07-22"
+    },
+    {
+      "test_name": "TSH",
+      "value": 1.75,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-04-25"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 254.79,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-12-04"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 91.92,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-02-12"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "527d34a6",
+      "encounter_type": "outpatient",
+      "date": "2024-01-05T13:00:00",
+      "provider": "Dr. Booth",
+      "department": "Internal Medicine",
+      "reason": "Acute complaint",
+      "notes": "Piece chair peace anyone boy. Contain medical key.",
+      "followup_required": true,
+      "followup_date": "2024-03-06"
+    },
+    {
+      "encounter_id": "9c4e28ba",
+      "encounter_type": "outpatient",
+      "date": "2024-04-11T18:15:00",
+      "provider": "Dr. Madden",
+      "department": "Emergency",
+      "reason": "Annual physical",
+      "notes": "Fire win realize knowledge whatever improve bag. Measure trip president painting large industry notice.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "fb1a2660",
+      "encounter_type": "telehealth",
+      "date": "2025-02-03T18:15:00",
+      "provider": "Dr. Lewis",
+      "department": "Endocrinology",
+      "reason": "Urgent care visit",
+      "notes": "Price change several. Western when yeah not. Piece safe much building these sometimes parent. Minute first crime offer treat forget sometimes.",
+      "followup_required": true,
+      "followup_date": "2025-03-09"
+    },
+    {
+      "encounter_id": "2ea0b0ff",
+      "encounter_type": "outpatient",
+      "date": "2025-02-04T10:45:00",
+      "provider": "Dr. Perry",
+      "department": "Neurology",
+      "reason": "Annual physical",
+      "notes": "Central force small friend impact. Likely wind perform civil and us. Agent participant space member sit meet ok general.",
+      "followup_required": true,
+      "followup_date": "2025-03-06"
+    },
+    {
+      "encounter_id": "86968e80",
+      "encounter_type": "emergency",
+      "date": "2025-06-15T18:30:00",
+      "provider": "Dr. Stewart",
+      "department": "Cardiology",
+      "reason": "Annual physical",
+      "notes": "Article research else either question. Music and doctor board medical both. Down for he state.",
+      "followup_required": true,
+      "followup_date": "2025-07-29"
+    }
+  ],
+  "primary_care_provider": "Dr. Serrano, MD",
+  "record_created": "2026-04-17T00:52:12.649485",
+  "last_updated": "2026-04-17T00:52:12.649486"
+}

@@ -1,0 +1,34 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Tyler Sheppard (ID: f5454f60)
+Age: 78 | Gender: Male | Blood Type: O-
+PCP: Dr. Moore, MD
+
+ALLERGIES: Codeine, Contrast dye, Cephalosporins
+
+ACTIVE MEDICATIONS:
+  - Sertraline 50mg (once daily)
+  - Atorvastatin 20mg (once daily at bedtime)
+  - Warfarin 5mg (once daily)
+  - Simvastatin 40mg (once daily at bedtime)
+  - Amiodarone 200mg (once daily)
+
+DIAGNOSES:
+  - Type 2 Diabetes Mellitus (E11.9) — moderate [CHRONIC]
+  - Gastroesophageal Reflux Disease (K21.0) — mild [CHRONIC]
+  - Urinary Tract Infection (N39.0) — mild
+
+LATEST VITALS (2025-07-30):
+  BP: 125/79 mmHg
+  HR: 81 bpm | Temp: 98.9°F
+  SpO2: 99.1% | BMI: 27.4
+
+⚠️ ABNORMAL LAB RESULTS:
+  - HDL Cholesterol: 24.24 mg/dL (Ref: >40 mg/dL)
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2024-11-14 — Lab review
+    ⚡ Follow-up required by 2024-12-12
+  - [TELEHEALTH] 2024-10-06 — Chronic disease management
+    ⚡ Follow-up required by 2024-12-29
+  - [TELEHEALTH] 2024-04-30 — New symptom evaluation

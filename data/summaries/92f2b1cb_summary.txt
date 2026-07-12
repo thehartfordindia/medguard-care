@@ -1,0 +1,36 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Eddie Mills (ID: 92f2b1cb)
+Age: 71 | Gender: Male | Blood Type: O+
+PCP: Dr. Gonzalez, MD
+
+ALLERGIES: Latex, Morphine, Codeine
+
+ACTIVE MEDICATIONS:
+  - Hydrocodone/APAP 5/325mg (every 6 hours as needed)
+  - Lisinopril 10mg (once daily)
+  - Levothyroxine 75mcg (once daily on empty stomach)
+  - Simvastatin 40mg (once daily at bedtime)
+  - Amiodarone 200mg (once daily)
+
+DIAGNOSES:
+  - Acute Bronchitis (J20.9) — mild
+  - Essential Hypertension (I10) — moderate [CHRONIC]
+  - Urinary Tract Infection (N39.0) — mild
+  - COPD (J44.1) — moderate [CHRONIC]
+
+LATEST VITALS (2025-04-01):
+  BP: 111/74 mmHg
+  HR: 62 bpm | Temp: 97.9°F
+  SpO2: 98.2% | BMI: 37.0
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Hemoglobin: 8.0 g/dL (Ref: 12.0-17.5 g/dL)
+
+RECENT ENCOUNTERS:
+  - [EMERGENCY] 2026-04-09 — Medication review
+    ⚡ Follow-up required by 2026-07-02
+  - [TELEHEALTH] 2026-03-22 — Post-hospitalization check
+    ⚡ Follow-up required by 2026-06-14
+  - [EMERGENCY] 2024-11-03 — Lab review
+    ⚡ Follow-up required by 2024-12-02

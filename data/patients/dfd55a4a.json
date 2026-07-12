@@ -1,0 +1,192 @@
+{
+  "patient_id": "dfd55a4a",
+  "first_name": "Michael",
+  "last_name": "Berger",
+  "date_of_birth": "1945-12-01",
+  "gender": "Male",
+  "blood_type": "AB+",
+  "phone": "+1-707-678-7956",
+  "email": "gary94@example.net",
+  "address": "79290 Lamb Road Apt. 471, New Chase, WY 36919",
+  "emergency_contact_name": "Luis Hill",
+  "emergency_contact_phone": "901-492-9275x243",
+  "insurance_provider": "Humana",
+  "insurance_id": "CIG-753306",
+  "allergies": [
+    "Cephalosporins"
+  ],
+  "medications": [
+    {
+      "name": "Gabapentin",
+      "dosage": "300mg",
+      "frequency": "three times daily",
+      "start_date": "2024-04-05",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Ryan",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2023-12-06",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Riley",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2024-07-04",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Austin",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2023-09-30",
+      "severity": "mild",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T17:00:00",
+      "blood_pressure_systolic": 111,
+      "blood_pressure_diastolic": 78,
+      "heart_rate": 65,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 96.0,
+      "weight_lbs": 237.5,
+      "bmi": 23.8
+    },
+    {
+      "recorded_date": "2025-01-31T09:00:00",
+      "blood_pressure_systolic": 112,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 81,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 99.3,
+      "weight_lbs": 232.4,
+      "bmi": 35.4
+    },
+    {
+      "recorded_date": "2025-03-02T15:00:00",
+      "blood_pressure_systolic": 117,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 76,
+      "temperature_f": 99.0,
+      "oxygen_saturation": 95.5,
+      "weight_lbs": 184.2,
+      "bmi": 35.4
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Creatinine",
+      "value": 1.15,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-06-06"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 154.5,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-03-22"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 84.22,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-07-01"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 5.85,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-09-14"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 12.34,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-05-12"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 32.81,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-02-22"
+    },
+    {
+      "test_name": "TSH",
+      "value": 14.44,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-05-24"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 4.55,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": false,
+      "test_date": "2025-07-21"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "d3c19b7c",
+      "encounter_type": "inpatient",
+      "date": "2024-05-21T16:15:00",
+      "provider": "Dr. Nielsen",
+      "department": "Endocrinology",
+      "reason": "Urgent care visit",
+      "notes": "Raise hope enjoy most itself eye. High firm morning what best most government.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "83af0a46",
+      "encounter_type": "telehealth",
+      "date": "2024-11-15T16:30:00",
+      "provider": "Dr. Gutierrez",
+      "department": "Neurology",
+      "reason": "Acute complaint",
+      "notes": "Produce rise cold official success. Politics sense break. Less live live way.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "d41f6dcc",
+      "encounter_type": "telehealth",
+      "date": "2025-01-26T15:15:00",
+      "provider": "Dr. Lloyd",
+      "department": "Cardiology",
+      "reason": "Acute complaint",
+      "notes": "Worker whose other start study sell.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Richard, MD",
+  "record_created": "2026-04-17T00:51:40.161056",
+  "last_updated": "2026-04-17T00:51:40.161058"
+}

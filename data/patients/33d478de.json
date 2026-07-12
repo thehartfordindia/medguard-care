@@ -1,0 +1,204 @@
+{
+  "patient_id": "33d478de",
+  "first_name": "Bradley",
+  "last_name": "Hansen",
+  "date_of_birth": "1971-01-09",
+  "gender": "Male",
+  "blood_type": "A+",
+  "phone": "369.338.9833x1465",
+  "email": "whenderson@example.org",
+  "address": "2597 Scott Viaduct, East Gina, FL 99818",
+  "emergency_contact_name": "Angelica Singh",
+  "emergency_contact_phone": "992.240.5147",
+  "insurance_provider": "Humana",
+  "insurance_id": "MCD-543732",
+  "allergies": [
+    "Morphine",
+    "Penicillin",
+    "Fluoroquinolones"
+  ],
+  "medications": [
+    {
+      "name": "Gabapentin",
+      "dosage": "300mg",
+      "frequency": "three times daily",
+      "start_date": "2023-10-09",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Shaw",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-02-21",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Ayala",
+      "is_active": true
+    },
+    {
+      "name": "Prednisone",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-10-14",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Anderson",
+      "is_active": true
+    },
+    {
+      "name": "Sertraline",
+      "dosage": "50mg",
+      "frequency": "once daily",
+      "start_date": "2025-02-07",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Taylor",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2024-05-08",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "COPD",
+      "icd10_code": "J44.1",
+      "diagnosed_date": "2020-12-23",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2022-07-25",
+      "severity": "moderate",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T16:00:00",
+      "blood_pressure_systolic": 120,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 60,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 96.9,
+      "weight_lbs": 154.1,
+      "bmi": 25.6
+    },
+    {
+      "recorded_date": "2025-01-31T11:00:00",
+      "blood_pressure_systolic": 167,
+      "blood_pressure_diastolic": 98,
+      "heart_rate": 110,
+      "temperature_f": 100.2,
+      "oxygen_saturation": 92.8,
+      "weight_lbs": 188.0,
+      "bmi": 22.1
+    },
+    {
+      "recorded_date": "2025-03-02T15:00:00",
+      "blood_pressure_systolic": 121,
+      "blood_pressure_diastolic": 81,
+      "heart_rate": 87,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 97.3,
+      "weight_lbs": 220.0,
+      "bmi": 37.6
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Creatinine",
+      "value": 1.99,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-02-14"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 17.99,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-02-17"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 71.08,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-03-10"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 6.77,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-09-22"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 16.1,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": true,
+      "test_date": "2025-09-07"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "fd7ccb66",
+      "encounter_type": "emergency",
+      "date": "2025-01-03T15:30:00",
+      "provider": "Dr. Torres",
+      "department": "Internal Medicine",
+      "reason": "Annual physical",
+      "notes": "Season adult range green few you. Every artist election hit yourself wrong want. Difficult game hotel case role.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "07c4f845",
+      "encounter_type": "outpatient",
+      "date": "2025-08-04T07:45:00",
+      "provider": "Dr. Rivera",
+      "department": "Emergency",
+      "reason": "Acute complaint",
+      "notes": "Data model else low role. Reason property heavy town. Analysis color exist smile peace apply pressure.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "e3e74370",
+      "encounter_type": "inpatient",
+      "date": "2025-11-26T16:15:00",
+      "provider": "Dr. Meyer",
+      "department": "Endocrinology",
+      "reason": "Post-hospitalization check",
+      "notes": "Rather individual of interview fine painting last capital. Ok range dark catch. Travel involve training show prevent north citizen. Newspaper we brother fish.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "d9654636",
+      "encounter_type": "outpatient",
+      "date": "2026-04-13T11:45:00",
+      "provider": "Dr. Smith",
+      "department": "Pulmonology",
+      "reason": "Post-hospitalization check",
+      "notes": "Production tree growth blue fall. Discuss herself with between firm term. Because current whom night Republican always two.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Hobbs, MD",
+  "record_created": "2026-04-17T00:54:29.911385",
+  "last_updated": "2026-04-17T00:54:29.911394"
+}

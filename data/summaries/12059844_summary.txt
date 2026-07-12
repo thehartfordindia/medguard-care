@@ -1,0 +1,30 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Adam Woods (ID: 12059844)
+Age: 18 | Gender: Male | Blood Type: AB+
+PCP: Dr. Baker, MD
+
+ALLERGIES: Peanuts, Fluoroquinolones, Aspirin, Ibuprofen
+
+ACTIVE MEDICATIONS:
+  - Omeprazole 20mg (once daily before breakfast)
+
+DIAGNOSES:
+  - Congestive Heart Failure (I50.9) — severe [CHRONIC]
+  - COPD (J44.1) — moderate [CHRONIC]
+  - Gastroesophageal Reflux Disease (K21.0) — mild [CHRONIC]
+
+LATEST VITALS (2025-04-01):
+  BP: 110/83 mmHg
+  HR: 76 bpm | Temp: 98.1°F
+  SpO2: 99.4% | BMI: 26.9
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Creatinine: 1.52 mg/dL (Ref: 0.6-1.2 mg/dL)
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2025-11-06 — Acute complaint
+    ⚡ Follow-up required by 2025-12-02
+  - [EMERGENCY] 2025-07-02 — Annual physical
+  - [INPATIENT] 2025-02-27 — Urgent care visit
+    ⚡ Follow-up required by 2025-05-23

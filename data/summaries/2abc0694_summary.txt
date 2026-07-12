@@ -1,0 +1,30 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Michael Berger (ID: 2abc0694)
+Age: 80 | Gender: Male | Blood Type: AB+
+PCP: Dr. Richard, MD
+
+ALLERGIES: Cephalosporins
+
+ACTIVE MEDICATIONS:
+  - Gabapentin 300mg (three times daily)
+  - Warfarin 5mg (once daily)
+  - Aspirin 81mg (once daily)
+
+DIAGNOSES:
+  - Urinary Tract Infection (N39.0) — mild
+
+LATEST VITALS (2025-03-02):
+  BP: 117/82 mmHg
+  HR: 76 bpm | Temp: 99.0°F
+  SpO2: 95.5% | BMI: 35.4
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Potassium: 5.85 mEq/L (Ref: 3.5-5.0 mEq/L)
+  - HDL Cholesterol: 32.81 mg/dL (Ref: >40 mg/dL)
+  - TSH: 14.44 mIU/L (Ref: 0.4-4.0 mIU/L)
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2025-01-26 — Acute complaint
+  - [TELEHEALTH] 2024-11-15 — Acute complaint
+  - [INPATIENT] 2024-05-21 — Urgent care visit

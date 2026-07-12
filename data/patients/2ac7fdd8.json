@@ -1,0 +1,282 @@
+{
+  "patient_id": "2ac7fdd8",
+  "first_name": "Joshua",
+  "last_name": "Kidd",
+  "date_of_birth": "1956-05-07",
+  "gender": "Male",
+  "blood_type": "AB-",
+  "phone": "213.969.5944x0640",
+  "email": "kimberly39@example.com",
+  "address": "421 Kyle Mill, New Michaelberg, CO 39181",
+  "emergency_contact_name": "Jason Gonzalez",
+  "emergency_contact_phone": "+1-758-384-2474",
+  "insurance_provider": "Humana",
+  "insurance_id": "HUM-214351",
+  "allergies": [
+    "Morphine",
+    "Ibuprofen",
+    "Contrast dye"
+  ],
+  "medications": [
+    {
+      "name": "Omeprazole",
+      "dosage": "20mg",
+      "frequency": "once daily before breakfast",
+      "start_date": "2023-01-16",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Jones",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2025-03-18",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Landry",
+      "is_active": true
+    },
+    {
+      "name": "Gabapentin",
+      "dosage": "300mg",
+      "frequency": "three times daily",
+      "start_date": "2023-11-28",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Huerta",
+      "is_active": false
+    },
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2023-09-29",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Evans",
+      "is_active": false
+    },
+    {
+      "name": "Metformin",
+      "dosage": "500mg",
+      "frequency": "twice daily",
+      "start_date": "2025-01-29",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hayden",
+      "is_active": true
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-04-27",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Vaughn",
+      "is_active": true
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2025-08-18",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Bryant",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2026-02-03",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Turner",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Type 2 Diabetes Mellitus",
+      "icd10_code": "E11.9",
+      "diagnosed_date": "2022-12-03",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2021-09-09",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2022-07-27",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2023-08-10",
+      "severity": "moderate",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T16:00:00",
+      "blood_pressure_systolic": 122,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 81,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 98.6,
+      "weight_lbs": 202.1,
+      "bmi": 36.0
+    },
+    {
+      "recorded_date": "2025-01-31T11:00:00",
+      "blood_pressure_systolic": 112,
+      "blood_pressure_diastolic": 74,
+      "heart_rate": 68,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 97.9,
+      "weight_lbs": 239.7,
+      "bmi": 25.9
+    },
+    {
+      "recorded_date": "2025-03-02T13:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 63,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 95.6,
+      "weight_lbs": 231.7,
+      "bmi": 35.6
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Fasting Glucose",
+      "value": 91.89,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-06-10"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 83.26,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-07-11"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 20.93,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": true,
+      "test_date": "2025-08-31"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 16.57,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-02-17"
+    },
+    {
+      "test_name": "INR",
+      "value": 1.1,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-07-10"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 6.33,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-10-28"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 293.02,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-12-10"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 139.18,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-12-07"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "d0536c0b",
+      "encounter_type": "inpatient",
+      "date": "2024-06-07T17:45:00",
+      "provider": "Dr. Gibson",
+      "department": "Internal Medicine",
+      "reason": "Post-hospitalization check",
+      "notes": "Herself police he push likely people wall foreign. Determine as statement travel few impact cause watch.",
+      "followup_required": true,
+      "followup_date": "2024-08-31"
+    },
+    {
+      "encounter_id": "d6d947e7",
+      "encounter_type": "outpatient",
+      "date": "2024-11-12T12:30:00",
+      "provider": "Dr. Robinson",
+      "department": "Cardiology",
+      "reason": "Acute complaint",
+      "notes": "Similar small other everyone worker would. Economy company produce ago address so draw.",
+      "followup_required": true,
+      "followup_date": "2025-02-06"
+    },
+    {
+      "encounter_id": "12383060",
+      "encounter_type": "outpatient",
+      "date": "2025-11-04T18:30:00",
+      "provider": "Dr. Garcia",
+      "department": "Cardiology",
+      "reason": "New symptom evaluation",
+      "notes": "Top population art every why we station. Production politics others again. During call north attention share debate.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "1e59a078",
+      "encounter_type": "emergency",
+      "date": "2026-01-08T07:30:00",
+      "provider": "Dr. Mcdonald",
+      "department": "Endocrinology",
+      "reason": "Medication review",
+      "notes": "Senior difficult put purpose. Whose source hand so add Mr.",
+      "followup_required": true,
+      "followup_date": "2026-04-05"
+    },
+    {
+      "encounter_id": "c2e12090",
+      "encounter_type": "telehealth",
+      "date": "2026-02-19T11:15:00",
+      "provider": "Dr. Torres",
+      "department": "Neurology",
+      "reason": "Urgent care visit",
+      "notes": "Best thought career law. Industry score choice increase between majority impact. Allow have kitchen wear talk.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Morris, MD",
+  "record_created": "2026-04-17T00:56:40.564150",
+  "last_updated": "2026-04-17T00:56:40.564151"
+}

@@ -1,0 +1,40 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Patricia Keller (ID: 0609cae3)
+Age: 83 | Gender: Female | Blood Type: A+
+PCP: Dr. Santana, MD
+
+ALLERGIES: Fluoroquinolones, Ibuprofen
+
+ACTIVE MEDICATIONS:
+  - Levothyroxine 75mcg (once daily on empty stomach)
+  - Metoprolol 50mg (twice daily)
+  - Insulin Glargine 20 units (once daily at bedtime)
+  - Amiodarone 200mg (once daily)
+  - Warfarin 5mg (once daily)
+  - Warfarin 5mg (once daily)
+  - Aspirin 81mg (once daily)
+
+DIAGNOSES:
+  - Gastroesophageal Reflux Disease (K21.0) — mild [CHRONIC]
+  - Acute Bronchitis (J20.9) — mild
+  - Chronic Kidney Disease Stage 3 (N18.3) — severe [CHRONIC]
+  - Atrial Fibrillation (I48.91) — moderate [CHRONIC]
+
+LATEST VITALS (2025-07-30):
+  BP: 119/85 mmHg
+  HR: 63 bpm | Temp: 97.6°F
+  SpO2: 99.4% | BMI: 27.3
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Sodium: 126.96 mEq/L (Ref: 136-145 mEq/L)
+  - Total Cholesterol: 331.21 mg/dL (Ref: <200 mg/dL)
+  - Fasting Glucose: 189.92 mg/dL (Ref: 70-100 mg/dL)
+  - Creatinine: 2.4 mg/dL (Ref: 0.6-1.2 mg/dL)
+  - LDL Cholesterol: 141.0 mg/dL (Ref: <100 mg/dL)
+  - HDL Cholesterol: 26.94 mg/dL (Ref: >40 mg/dL)
+
+RECENT ENCOUNTERS:
+  - [OUTPATIENT] 2024-09-06 — Lab review
+    ⚡ Follow-up required by 2024-12-04
+  - [OUTPATIENT] 2024-08-26 — Acute complaint

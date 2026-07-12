@@ -1,0 +1,235 @@
+{
+  "patient_id": "d6775a8e",
+  "first_name": "Tyler",
+  "last_name": "Poole",
+  "date_of_birth": "1958-06-26",
+  "gender": "Male",
+  "blood_type": "B-",
+  "phone": "001-862-562-6582",
+  "email": "mckinneydavid@example.org",
+  "address": "482 Harris Course Apt. 609, North Christine, ND 10825",
+  "emergency_contact_name": "Allison Gross",
+  "emergency_contact_phone": "652.333.4383x640",
+  "insurance_provider": "Aetna",
+  "insurance_id": "UHC-997670",
+  "allergies": [
+    "Aspirin"
+  ],
+  "medications": [
+    {
+      "name": "Prednisone",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-11-17",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Haney",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2023-12-27",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Allen",
+      "is_active": true
+    },
+    {
+      "name": "Sertraline",
+      "dosage": "50mg",
+      "frequency": "once daily",
+      "start_date": "2024-06-06",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Beltran",
+      "is_active": true
+    },
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-04-12",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Lee",
+      "is_active": true
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2023-02-15",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Newman",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2023-04-26",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2022-01-05",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Atrial Fibrillation",
+      "icd10_code": "I48.91",
+      "diagnosed_date": "2021-07-22",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T15:00:00",
+      "blood_pressure_systolic": 152,
+      "blood_pressure_diastolic": 107,
+      "heart_rate": 111,
+      "temperature_f": 100.2,
+      "oxygen_saturation": 91.2,
+      "weight_lbs": 162.9,
+      "bmi": 27.4
+    },
+    {
+      "recorded_date": "2025-01-31T15:00:00",
+      "blood_pressure_systolic": 180,
+      "blood_pressure_diastolic": 94,
+      "heart_rate": 129,
+      "temperature_f": 100.0,
+      "oxygen_saturation": 91.1,
+      "weight_lbs": 177.7,
+      "bmi": 30.8
+    },
+    {
+      "recorded_date": "2025-03-02T14:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 73,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 96.6,
+      "weight_lbs": 250.3,
+      "bmi": 25.9
+    },
+    {
+      "recorded_date": "2025-04-01T12:00:00",
+      "blood_pressure_systolic": 152,
+      "blood_pressure_diastolic": 98,
+      "heart_rate": 102,
+      "temperature_f": 100.8,
+      "oxygen_saturation": 91.4,
+      "weight_lbs": 196.9,
+      "bmi": 24.9
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "TSH",
+      "value": 7.26,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-01-06"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 99.38,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-04-24"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 44.2,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-03-05"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 179.62,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-06-06"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "ad26f6e8",
+      "encounter_type": "outpatient",
+      "date": "2024-05-26T13:30:00",
+      "provider": "Dr. Potts",
+      "department": "Emergency",
+      "reason": "Post-hospitalization check",
+      "notes": "Common reach thought exactly hotel. Soldier onto close day reveal item land others.",
+      "followup_required": true,
+      "followup_date": "2024-07-10"
+    },
+    {
+      "encounter_id": "f223d590",
+      "encounter_type": "inpatient",
+      "date": "2024-06-23T12:45:00",
+      "provider": "Dr. Hayes",
+      "department": "Endocrinology",
+      "reason": "Urgent care visit",
+      "notes": "Federal tough process piece. Bring garden get.",
+      "followup_required": true,
+      "followup_date": "2024-09-15"
+    },
+    {
+      "encounter_id": "54b60182",
+      "encounter_type": "emergency",
+      "date": "2024-10-09T13:15:00",
+      "provider": "Dr. Jones",
+      "department": "Emergency",
+      "reason": "Medication review",
+      "notes": "Certain fire act read response degree. Somebody together no history own money bill. Respond watch space provide off.",
+      "followup_required": true,
+      "followup_date": "2024-12-01"
+    },
+    {
+      "encounter_id": "cc227fcd",
+      "encounter_type": "emergency",
+      "date": "2025-02-16T14:15:00",
+      "provider": "Dr. Cooley",
+      "department": "Internal Medicine",
+      "reason": "Urgent care visit",
+      "notes": "Above miss effort business paper movie military. Describe half together ahead. Detail road vote environment. Current begin remain present level speak job.",
+      "followup_required": true,
+      "followup_date": "2025-03-21"
+    },
+    {
+      "encounter_id": "0d9d2aa9",
+      "encounter_type": "inpatient",
+      "date": "2025-03-04T18:45:00",
+      "provider": "Dr. Nelson",
+      "department": "Pulmonology",
+      "reason": "Post-hospitalization check",
+      "notes": "Blue him current good today standard last threat. Education important page theory wear most huge. Conference follow so group.",
+      "followup_required": true,
+      "followup_date": "2025-05-16"
+    },
+    {
+      "encounter_id": "2a108644",
+      "encounter_type": "emergency",
+      "date": "2025-05-16T08:30:00",
+      "provider": "Dr. Donovan",
+      "department": "Neurology",
+      "reason": "New symptom evaluation",
+      "notes": "Point often billion. Until but center energy Congress back suddenly. Hospital make against available where. Decision information threat plant.",
+      "followup_required": true,
+      "followup_date": "2025-06-11"
+    }
+  ],
+  "primary_care_provider": "Dr. Lucas, MD",
+  "record_created": "2026-04-17T00:52:12.637404",
+  "last_updated": "2026-04-17T00:52:12.637407"
+}

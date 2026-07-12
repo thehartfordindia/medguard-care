@@ -1,0 +1,33 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Sarah Reed (ID: 9714a7d3)
+Age: 72 | Gender: Female | Blood Type: B+
+PCP: Dr. Wang, MD
+
+ALLERGIES: Penicillin, Sulfa drugs, Morphine, Aspirin
+
+ACTIVE MEDICATIONS:
+  - Atorvastatin 20mg (once daily at bedtime)
+  - Amiodarone 200mg (once daily)
+  - Amlodipine 5mg (once daily)
+  - Hydrocodone/APAP 5/325mg (every 6 hours as needed)
+  - Simvastatin 40mg (once daily at bedtime)
+  - Amiodarone 200mg (once daily)
+
+DIAGNOSES:
+  - Major Depressive Disorder (F33.0) — moderate [CHRONIC]
+  - Hyperlipidemia (E78.5) — mild [CHRONIC]
+  - Congestive Heart Failure (I50.9) — severe [CHRONIC]
+
+LATEST VITALS (2025-04-01):
+  BP: 125/79 mmHg
+  HR: 80 bpm | Temp: 98.9°F
+  SpO2: 97.4% | BMI: 31.9
+
+⚠️ ABNORMAL LAB RESULTS:
+  - HbA1c: 11.23 % (Ref: 4.0-5.6%)
+
+RECENT ENCOUNTERS:
+  - [INPATIENT] 2026-01-08 — Urgent care visit
+    ⚡ Follow-up required by 2026-03-22
+  - [INPATIENT] 2025-01-28 — Post-hospitalization check

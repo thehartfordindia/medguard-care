@@ -1,0 +1,33 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Danny Moon (ID: 6a303b20)
+Age: 33 | Gender: Male | Blood Type: B-
+PCP: Dr. Morrison, MD
+
+ALLERGIES: No Known Allergies (NKA)
+
+ACTIVE MEDICATIONS:
+
+DIAGNOSES:
+  - Type 2 Diabetes Mellitus (E11.9) — moderate [CHRONIC]
+  - Urinary Tract Infection (N39.0) — mild
+
+LATEST VITALS (2025-03-02):
+  BP: 129/75 mmHg
+  HR: 74 bpm | Temp: 98.0°F
+  SpO2: 96.1% | BMI: 36.4
+
+⚠️ ABNORMAL LAB RESULTS:
+  - INR: 3.05  (Ref: 0.8-1.2 (2.0-3.0 on warfarin))
+  - LDL Cholesterol: 159.78 mg/dL (Ref: <100 mg/dL)
+  - Creatinine: 3.02 mg/dL (Ref: 0.6-1.2 mg/dL)
+  - Potassium: 5.54 mEq/L (Ref: 3.5-5.0 mEq/L)
+  - Fasting Glucose: 178.49 mg/dL (Ref: 70-100 mg/dL)
+  - HbA1c: 7.54 % (Ref: 4.0-5.6%)
+
+RECENT ENCOUNTERS:
+  - [OUTPATIENT] 2026-02-27 — New symptom evaluation
+    ⚡ Follow-up required by 2026-04-09
+  - [TELEHEALTH] 2024-11-20 — Urgent care visit
+    ⚡ Follow-up required by 2024-12-26
+  - [OUTPATIENT] 2024-04-25 — Routine follow-up

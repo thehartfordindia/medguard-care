@@ -1,0 +1,178 @@
+{
+  "patient_id": "7e8f3e8e",
+  "first_name": "Kimberly",
+  "last_name": "Carr",
+  "date_of_birth": "1945-06-20",
+  "gender": "Female",
+  "blood_type": "B+",
+  "phone": "669-508-1974x0056",
+  "email": "pamela02@example.org",
+  "address": "037 Linda Port Apt. 516, New Timothyberg, KY 95309",
+  "emergency_contact_name": "Andrew Romero",
+  "emergency_contact_phone": "+1-256-974-3000x3896",
+  "insurance_provider": "BlueCross BlueShield",
+  "insurance_id": "MCD-489523",
+  "allergies": [
+    "Ibuprofen",
+    "Codeine",
+    "Sulfa drugs"
+  ],
+  "medications": [
+    {
+      "name": "Prednisone",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-11-17",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Allen",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2024-02-19",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Holmes",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2020-06-08",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T14:00:00",
+      "blood_pressure_systolic": 110,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 69,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 95.5,
+      "weight_lbs": 169.7,
+      "bmi": 18.7
+    },
+    {
+      "recorded_date": "2025-01-31T12:00:00",
+      "blood_pressure_systolic": 167,
+      "blood_pressure_diastolic": 96,
+      "heart_rate": 97,
+      "temperature_f": 100.1,
+      "oxygen_saturation": 88.4,
+      "weight_lbs": 219.8,
+      "bmi": 19.4
+    },
+    {
+      "recorded_date": "2025-03-02T16:00:00",
+      "blood_pressure_systolic": 151,
+      "blood_pressure_diastolic": 91,
+      "heart_rate": 115,
+      "temperature_f": 99.7,
+      "oxygen_saturation": 89.5,
+      "weight_lbs": 277.3,
+      "bmi": 33.2
+    },
+    {
+      "recorded_date": "2025-04-01T17:00:00",
+      "blood_pressure_systolic": 156,
+      "blood_pressure_diastolic": 100,
+      "heart_rate": 120,
+      "temperature_f": 101.3,
+      "oxygen_saturation": 92.9,
+      "weight_lbs": 238.4,
+      "bmi": 20.4
+    },
+    {
+      "recorded_date": "2025-05-01T17:00:00",
+      "blood_pressure_systolic": 113,
+      "blood_pressure_diastolic": 74,
+      "heart_rate": 60,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 96.9,
+      "weight_lbs": 222.1,
+      "bmi": 35.1
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Total Cholesterol",
+      "value": 141.17,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-12-15"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 259.78,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-03-24"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 9.01,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2026-01-09"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 2.81,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-01-29"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 4.68,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-06-23"
+    },
+    {
+      "test_name": "TSH",
+      "value": 2.64,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-08-09"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "afca73fd",
+      "encounter_type": "inpatient",
+      "date": "2025-05-24T08:00:00",
+      "provider": "Dr. White",
+      "department": "Endocrinology",
+      "reason": "Urgent care visit",
+      "notes": "Glass pretty each factor paper long.",
+      "followup_required": true,
+      "followup_date": "2025-06-18"
+    },
+    {
+      "encounter_id": "c0298560",
+      "encounter_type": "inpatient",
+      "date": "2026-03-03T17:45:00",
+      "provider": "Dr. Williams",
+      "department": "Cardiology",
+      "reason": "Medication review",
+      "notes": "Involve interview case just. Work happy create job around discussion open dinner. Nothing yard address rest spend baby camera.",
+      "followup_required": true,
+      "followup_date": "2026-04-05"
+    }
+  ],
+  "primary_care_provider": "Dr. Martinez, MD",
+  "record_created": "2026-04-17T00:52:12.646932",
+  "last_updated": "2026-04-17T00:52:12.646932"
+}

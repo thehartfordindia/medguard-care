@@ -1,0 +1,222 @@
+{
+  "patient_id": "a6ffa017",
+  "first_name": "Deborah",
+  "last_name": "West",
+  "date_of_birth": "1939-03-22",
+  "gender": "Female",
+  "blood_type": "AB+",
+  "phone": "(289)217-8390x847",
+  "email": "bboone@example.net",
+  "address": "15921 Joshua Roads Suite 698, Shawnchester, CT 92484",
+  "emergency_contact_name": "Matthew Rich",
+  "emergency_contact_phone": "+1-836-373-6576",
+  "insurance_provider": "Medicare",
+  "insurance_id": "UHC-914571",
+  "allergies": [
+    "Contrast dye",
+    "Sulfa drugs",
+    "Penicillin",
+    "Aspirin"
+  ],
+  "medications": [
+    {
+      "name": "Metformin",
+      "dosage": "500mg",
+      "frequency": "twice daily",
+      "start_date": "2025-02-03",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Martinez",
+      "is_active": true
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2024-01-21",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Fisher",
+      "is_active": true
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2025-03-22",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wilson",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2025-07-09",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Brown",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "diagnosed_date": "2020-04-11",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2023-10-12",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Gastroesophageal Reflux Disease",
+      "icd10_code": "K21.0",
+      "diagnosed_date": "2020-06-16",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T15:00:00",
+      "blood_pressure_systolic": 125,
+      "blood_pressure_diastolic": 84,
+      "heart_rate": 73,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 98.8,
+      "weight_lbs": 155.9,
+      "bmi": 26.9
+    },
+    {
+      "recorded_date": "2025-01-31T16:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 61,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 99.9,
+      "weight_lbs": 147.7,
+      "bmi": 22.5
+    },
+    {
+      "recorded_date": "2025-03-02T11:00:00",
+      "blood_pressure_systolic": 174,
+      "blood_pressure_diastolic": 98,
+      "heart_rate": 113,
+      "temperature_f": 100.3,
+      "oxygen_saturation": 88.0,
+      "weight_lbs": 244.6,
+      "bmi": 21.9
+    },
+    {
+      "recorded_date": "2025-04-01T12:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 81,
+      "heart_rate": 62,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 98.7,
+      "weight_lbs": 201.1,
+      "bmi": 27.5
+    },
+    {
+      "recorded_date": "2025-05-01T14:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 78,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 98.2,
+      "weight_lbs": 180.5,
+      "bmi": 26.4
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Total Cholesterol",
+      "value": 251.63,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-10-29"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 136.71,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2026-03-22"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 13.87,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-06-20"
+    },
+    {
+      "test_name": "TSH",
+      "value": 5.76,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-11-21"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 0.91,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-04-09"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 172.13,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-02-24"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "6c50cd1a",
+      "encounter_type": "inpatient",
+      "date": "2024-05-29T11:15:00",
+      "provider": "Dr. Edwards",
+      "department": "Neurology",
+      "reason": "Acute complaint",
+      "notes": "Hear check type attack story. It season head candidate. Only no form business.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "5ef96170",
+      "encounter_type": "inpatient",
+      "date": "2025-10-01T12:30:00",
+      "provider": "Dr. Austin",
+      "department": "Pulmonology",
+      "reason": "Medication review",
+      "notes": "Participant price really. Congress reflect finally. Go consider century price attorney scientist.",
+      "followup_required": true,
+      "followup_date": "2025-12-14"
+    },
+    {
+      "encounter_id": "7b84e326",
+      "encounter_type": "telehealth",
+      "date": "2025-11-02T08:15:00",
+      "provider": "Dr. Gomez",
+      "department": "Pulmonology",
+      "reason": "Chronic disease management",
+      "notes": "Why outside goal. Medical choice lot suggest glass news boy. Off southern suddenly window stand.",
+      "followup_required": true,
+      "followup_date": "2026-01-27"
+    }
+  ],
+  "primary_care_provider": "Dr. Bonilla, MD",
+  "record_created": "2026-04-17T00:51:40.048966",
+  "last_updated": "2026-04-17T00:51:40.048966"
+}

@@ -1,0 +1,33 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Kathleen White (ID: 2153d2f9)
+Age: 65 | Gender: Female | Blood Type: B+
+PCP: Dr. Mitchell, MD
+
+ALLERGIES: Aspirin, Fluoroquinolones, Contrast dye
+
+ACTIVE MEDICATIONS:
+  - Aspirin 81mg (once daily)
+  - Amlodipine 5mg (once daily)
+  - Warfarin 5mg (once daily)
+  - Alprazolam 0.5mg (twice daily as needed)
+
+DIAGNOSES:
+  - Gastroesophageal Reflux Disease (K21.0) — mild [CHRONIC]
+  - Pneumonia (J18.9) — moderate
+  - Hyperlipidemia (E78.5) — mild [CHRONIC]
+  - Urinary Tract Infection (N39.0) — mild
+
+LATEST VITALS (2025-03-02):
+  BP: 168/107 mmHg
+  HR: 106 bpm | Temp: 100.4°F
+  SpO2: 89.9% | BMI: 36.0
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Potassium: 6.03 mEq/L (Ref: 3.5-5.0 mEq/L)
+  - WBC Count: 18.52 K/uL (Ref: 4.5-11.0 K/uL)
+
+RECENT ENCOUNTERS:
+  - [OUTPATIENT] 2025-08-29 — Acute complaint
+  - [OUTPATIENT] 2025-08-27 — Routine follow-up
+  - [TELEHEALTH] 2024-12-04 — Chronic disease management

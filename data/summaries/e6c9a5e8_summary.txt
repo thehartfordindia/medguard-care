@@ -1,0 +1,31 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Jordan Hunter (ID: e6c9a5e8)
+Age: 41 | Gender: Female | Blood Type: AB+
+PCP: Dr. Kelley, MD
+
+ALLERGIES: Amoxicillin
+
+ACTIVE MEDICATIONS:
+  - Alprazolam 0.5mg (twice daily as needed)
+
+DIAGNOSES:
+  - Osteoarthritis (M17.11) — moderate [CHRONIC]
+
+LATEST VITALS (2025-03-02):
+  BP: 126/70 mmHg
+  HR: 83 bpm | Temp: 98.6°F
+  SpO2: 99.6% | BMI: 32.7
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Sodium: 130.17 mEq/L (Ref: 136-145 mEq/L)
+  - HDL Cholesterol: 34.13 mg/dL (Ref: >40 mg/dL)
+  - LDL Cholesterol: 225.21 mg/dL (Ref: <100 mg/dL)
+  - Potassium: 6.95 mEq/L (Ref: 3.5-5.0 mEq/L)
+  - Hemoglobin: 8.84 g/dL (Ref: 12.0-17.5 g/dL)
+
+RECENT ENCOUNTERS:
+  - [INPATIENT] 2026-02-05 — Post-hospitalization check
+  - [INPATIENT] 2025-08-10 — Lab review
+  - [OUTPATIENT] 2025-05-08 — Lab review
+    ⚡ Follow-up required by 2025-06-20

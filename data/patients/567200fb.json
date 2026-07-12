@@ -1,0 +1,167 @@
+{
+  "patient_id": "567200fb",
+  "first_name": "Brandon",
+  "last_name": "Carpenter",
+  "date_of_birth": "1992-07-29",
+  "gender": "Male",
+  "blood_type": "O+",
+  "phone": "(929)289-4062x607",
+  "email": "brownmaria@example.net",
+  "address": "9750 Joy Spring, Lake Jamieberg, OH 97549",
+  "emergency_contact_name": "Brandy Jacobson",
+  "emergency_contact_phone": "+1-324-340-7931x1029",
+  "insurance_provider": "Aetna",
+  "insurance_id": "CIG-776456",
+  "allergies": [
+    "Sulfa drugs",
+    "Cephalosporins",
+    "Morphine"
+  ],
+  "medications": [
+    {
+      "name": "Sertraline",
+      "dosage": "50mg",
+      "frequency": "once daily",
+      "start_date": "2023-07-01",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Taylor",
+      "is_active": true
+    },
+    {
+      "name": "Omeprazole",
+      "dosage": "20mg",
+      "frequency": "once daily before breakfast",
+      "start_date": "2024-12-04",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Meadows",
+      "is_active": true
+    },
+    {
+      "name": "Prednisone",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-03-13",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Buchanan",
+      "is_active": false
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "diagnosed_date": "2024-01-28",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T15:00:00",
+      "blood_pressure_systolic": 122,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 63,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 98.8,
+      "weight_lbs": 230.2,
+      "bmi": 19.4
+    },
+    {
+      "recorded_date": "2025-01-31T10:00:00",
+      "blood_pressure_systolic": 118,
+      "blood_pressure_diastolic": 74,
+      "heart_rate": 90,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 95.1,
+      "weight_lbs": 275.3,
+      "bmi": 37.2
+    },
+    {
+      "recorded_date": "2025-03-02T14:00:00",
+      "blood_pressure_systolic": 112,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 64,
+      "temperature_f": 98.2,
+      "oxygen_saturation": 97.8,
+      "weight_lbs": 202.2,
+      "bmi": 21.7
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Hemoglobin",
+      "value": 7.08,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2025-01-23"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 147.26,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-09-19"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 179.83,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-01-01"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 6.63,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": true,
+      "test_date": "2025-08-07"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 54.13,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-05-27"
+    },
+    {
+      "test_name": "TSH",
+      "value": 3.56,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-07-16"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "57611c7c",
+      "encounter_type": "emergency",
+      "date": "2024-04-22T10:00:00",
+      "provider": "Dr. Wright",
+      "department": "Endocrinology",
+      "reason": "Medication review",
+      "notes": "Agency media hospital unit feel low contain. Success national start race teacher.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "b50997c5",
+      "encounter_type": "outpatient",
+      "date": "2024-05-01T12:00:00",
+      "provider": "Dr. Williamson",
+      "department": "Neurology",
+      "reason": "Acute complaint",
+      "notes": "Player continue stand price. Memory record customer lose. Property where manage property hospital.",
+      "followup_required": true,
+      "followup_date": "2024-06-06"
+    }
+  ],
+  "primary_care_provider": "Dr. Wolfe, MD",
+  "record_created": "2026-04-17T00:52:12.644425",
+  "last_updated": "2026-04-17T00:52:12.644426"
+}

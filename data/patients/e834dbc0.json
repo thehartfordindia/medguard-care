@@ -1,0 +1,228 @@
+{
+  "patient_id": "e834dbc0",
+  "first_name": "Sarah",
+  "last_name": "Reed",
+  "date_of_birth": "1953-10-06",
+  "gender": "Female",
+  "blood_type": "B+",
+  "phone": "588-344-2258",
+  "email": "laurayoung@example.com",
+  "address": "8291 Kyle Stravenue Suite 866, East Teresaland, NV 61558",
+  "emergency_contact_name": "Haley Humphrey",
+  "emergency_contact_phone": "001-789-522-6801x82422",
+  "insurance_provider": "Medicaid",
+  "insurance_id": "AET-553633",
+  "allergies": [
+    "Penicillin",
+    "Sulfa drugs",
+    "Morphine",
+    "Aspirin"
+  ],
+  "medications": [
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-01-06",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hayes",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2024-02-25",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Roach",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2024-08-11",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wallace",
+      "is_active": false
+    },
+    {
+      "name": "Amlodipine",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2023-11-21",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Miller",
+      "is_active": true
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2024-04-05",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Fleming",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-06-26",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Bruce",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2025-03-07",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Flores",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Major Depressive Disorder",
+      "icd10_code": "F33.0",
+      "diagnosed_date": "2021-10-22",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "diagnosed_date": "2025-03-29",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Congestive Heart Failure",
+      "icd10_code": "I50.9",
+      "diagnosed_date": "2023-12-23",
+      "severity": "severe",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T17:00:00",
+      "blood_pressure_systolic": 119,
+      "blood_pressure_diastolic": 72,
+      "heart_rate": 68,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 99.8,
+      "weight_lbs": 178.4,
+      "bmi": 30.7
+    },
+    {
+      "recorded_date": "2025-01-31T10:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 78,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 95.8,
+      "weight_lbs": 232.2,
+      "bmi": 32.6
+    },
+    {
+      "recorded_date": "2025-03-02T09:00:00",
+      "blood_pressure_systolic": 110,
+      "blood_pressure_diastolic": 72,
+      "heart_rate": 61,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 98.9,
+      "weight_lbs": 177.1,
+      "bmi": 22.6
+    },
+    {
+      "recorded_date": "2025-04-01T09:00:00",
+      "blood_pressure_systolic": 125,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 80,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 97.4,
+      "weight_lbs": 252.7,
+      "bmi": 31.9
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Hemoglobin",
+      "value": 13.12,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-11-07"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 1.12,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-06-13"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 11.23,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": true,
+      "test_date": "2025-07-24"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 152.79,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-10-15"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 77.25,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-03-04"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 62.4,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-02-19"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "fae60d92",
+      "encounter_type": "inpatient",
+      "date": "2025-01-28T16:45:00",
+      "provider": "Dr. Reed",
+      "department": "Cardiology",
+      "reason": "Post-hospitalization check",
+      "notes": "Suffer economy play nearly by. Pass behavior political option oil. Probably result painting successful.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "32f0c283",
+      "encounter_type": "inpatient",
+      "date": "2026-01-08T12:15:00",
+      "provider": "Dr. Elliott",
+      "department": "Pulmonology",
+      "reason": "Urgent care visit",
+      "notes": "Animal political officer prepare.",
+      "followup_required": true,
+      "followup_date": "2026-03-22"
+    }
+  ],
+  "primary_care_provider": "Dr. Wang, MD",
+  "record_created": "2026-04-17T00:51:40.059561",
+  "last_updated": "2026-04-17T00:51:40.059564"
+}

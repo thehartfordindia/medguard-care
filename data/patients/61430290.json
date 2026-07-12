@@ -1,0 +1,255 @@
+{
+  "patient_id": "61430290",
+  "first_name": "Noah",
+  "last_name": "Brown",
+  "date_of_birth": "1955-03-10",
+  "gender": "Male",
+  "blood_type": "A-",
+  "phone": "(330)638-5677x005",
+  "email": "beth92@example.com",
+  "address": "184 Kaufman Fork Suite 557, Eatontown, NY 18715",
+  "emergency_contact_name": "David Robertson",
+  "emergency_contact_phone": "932-922-5913x651",
+  "insurance_provider": "BlueCross BlueShield",
+  "insurance_id": "MCD-790917",
+  "allergies": [
+    "Penicillin"
+  ],
+  "medications": [
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2024-04-10",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Webb",
+      "is_active": true
+    },
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2025-02-24",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Howard",
+      "is_active": true
+    },
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2024-04-29",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Robinson",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2024-01-08",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Freeman",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2024-06-26",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "Chronic Low Back Pain",
+      "icd10_code": "M54.5",
+      "diagnosed_date": "2021-08-20",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2023-01-26",
+      "severity": "moderate",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T10:00:00",
+      "blood_pressure_systolic": 111,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 75,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 98.6,
+      "weight_lbs": 241.0,
+      "bmi": 20.6
+    },
+    {
+      "recorded_date": "2025-01-31T12:00:00",
+      "blood_pressure_systolic": 113,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 66,
+      "temperature_f": 98.2,
+      "oxygen_saturation": 98.9,
+      "weight_lbs": 240.4,
+      "bmi": 20.6
+    },
+    {
+      "recorded_date": "2025-03-02T10:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 84,
+      "heart_rate": 81,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 97.5,
+      "weight_lbs": 274.9,
+      "bmi": 18.6
+    },
+    {
+      "recorded_date": "2025-04-01T17:00:00",
+      "blood_pressure_systolic": 179,
+      "blood_pressure_diastolic": 103,
+      "heart_rate": 125,
+      "temperature_f": 101.8,
+      "oxygen_saturation": 91.9,
+      "weight_lbs": 267.4,
+      "bmi": 32.0
+    },
+    {
+      "recorded_date": "2025-05-01T11:00:00",
+      "blood_pressure_systolic": 113,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 81,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 99.4,
+      "weight_lbs": 210.6,
+      "bmi": 26.0
+    },
+    {
+      "recorded_date": "2025-05-31T12:00:00",
+      "blood_pressure_systolic": 158,
+      "blood_pressure_diastolic": 102,
+      "heart_rate": 116,
+      "temperature_f": 101.9,
+      "oxygen_saturation": 90.3,
+      "weight_lbs": 158.7,
+      "bmi": 26.5
+    },
+    {
+      "recorded_date": "2025-06-30T17:00:00",
+      "blood_pressure_systolic": 159,
+      "blood_pressure_diastolic": 107,
+      "heart_rate": 115,
+      "temperature_f": 101.3,
+      "oxygen_saturation": 92.7,
+      "weight_lbs": 228.6,
+      "bmi": 22.4
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Fasting Glucose",
+      "value": 258.37,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-10-15"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 62.83,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-12-08"
+    },
+    {
+      "test_name": "TSH",
+      "value": 11.74,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2026-04-03"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 257.17,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-03-10"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 3.52,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-02-24"
+    },
+    {
+      "test_name": "INR",
+      "value": 0.86,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-12-10"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 6.24,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2026-02-07"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 13.58,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-05-09"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "ddb4665f",
+      "encounter_type": "telehealth",
+      "date": "2024-02-18T13:45:00",
+      "provider": "Dr. Cohen",
+      "department": "Emergency",
+      "reason": "Post-hospitalization check",
+      "notes": "Benefit live pass although six me brother lot. Top much ability visit.",
+      "followup_required": true,
+      "followup_date": "2024-05-12"
+    },
+    {
+      "encounter_id": "fe80000f",
+      "encounter_type": "telehealth",
+      "date": "2025-11-22T18:15:00",
+      "provider": "Dr. Keller",
+      "department": "Cardiology",
+      "reason": "Urgent care visit",
+      "notes": "Right garden law opportunity. Her car admit mission training.",
+      "followup_required": true,
+      "followup_date": "2026-01-11"
+    },
+    {
+      "encounter_id": "f4d325ae",
+      "encounter_type": "outpatient",
+      "date": "2025-12-08T11:15:00",
+      "provider": "Dr. Mendoza",
+      "department": "Endocrinology",
+      "reason": "Chronic disease management",
+      "notes": "Positive improve during campaign. Claim picture always occur argue election conference when. Wide point these road start water describe paper. Test color store over some star consider.",
+      "followup_required": true,
+      "followup_date": "2026-01-04"
+    }
+  ],
+  "primary_care_provider": "Dr. Gregory, MD",
+  "record_created": "2026-04-17T00:52:37.054096",
+  "last_updated": "2026-04-17T00:52:37.054096"
+}

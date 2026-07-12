@@ -1,0 +1,35 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Nichole Bradley (ID: 97e44993)
+Age: 89 | Gender: Female | Blood Type: A+
+PCP: Dr. Hunter, MD
+
+ALLERGIES: Latex
+
+ACTIVE MEDICATIONS:
+  - Lisinopril 10mg (once daily)
+  - Amiodarone 200mg (once daily)
+  - Simvastatin 40mg (once daily at bedtime)
+  - Amiodarone 200mg (once daily)
+
+DIAGNOSES:
+  - Gastroesophageal Reflux Disease (K21.0) — mild [CHRONIC]
+  - Osteoarthritis (M17.11) — moderate [CHRONIC]
+  - Hypothyroidism (E03.9) — mild [CHRONIC]
+  - Hyperlipidemia (E78.5) — mild [CHRONIC]
+
+LATEST VITALS (2025-05-01):
+  BP: 119/82 mmHg
+  HR: 80 bpm | Temp: 98.7°F
+  SpO2: 99.1% | BMI: 34.7
+
+⚠️ ABNORMAL LAB RESULTS:
+  - TSH: 10.27 mIU/L (Ref: 0.4-4.0 mIU/L)
+  - Total Cholesterol: 240.05 mg/dL (Ref: <200 mg/dL)
+  - Hemoglobin: 10.08 g/dL (Ref: 12.0-17.5 g/dL)
+
+RECENT ENCOUNTERS:
+  - [INPATIENT] 2024-10-15 — Acute complaint
+  - [INPATIENT] 2024-09-01 — Chronic disease management
+  - [INPATIENT] 2024-02-14 — New symptom evaluation
+    ⚡ Follow-up required by 2024-04-25

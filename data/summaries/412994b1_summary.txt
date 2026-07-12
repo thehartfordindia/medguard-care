@@ -1,0 +1,34 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: George Mejia (ID: 412994b1)
+Age: 53 | Gender: Male | Blood Type: O+
+PCP: Dr. Hodges, MD
+
+ALLERGIES: Aspirin, Ibuprofen
+
+ACTIVE MEDICATIONS:
+  - Omeprazole 20mg (once daily before breakfast)
+  - Gabapentin 300mg (three times daily)
+  - Lisinopril 10mg (once daily)
+  - Metoprolol 50mg (twice daily)
+
+DIAGNOSES:
+  - Essential Hypertension (I10) — moderate [CHRONIC]
+  - Hyperlipidemia (E78.5) — mild [CHRONIC]
+
+LATEST VITALS (2025-06-30):
+  BP: 127/82 mmHg
+  HR: 76 bpm | Temp: 98.6°F
+  SpO2: 99.8% | BMI: 27.1
+
+⚠️ ABNORMAL LAB RESULTS:
+  - HDL Cholesterol: 28.8 mg/dL (Ref: >40 mg/dL)
+  - WBC Count: 24.19 K/uL (Ref: 4.5-11.0 K/uL)
+  - Fasting Glucose: 194.39 mg/dL (Ref: 70-100 mg/dL)
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2025-06-07 — Annual physical
+    ⚡ Follow-up required by 2025-06-26
+  - [OUTPATIENT] 2025-04-05 — Annual physical
+  - [INPATIENT] 2024-04-02 — Medication review
+    ⚡ Follow-up required by 2024-04-27

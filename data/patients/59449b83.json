@@ -1,0 +1,235 @@
+{
+  "patient_id": "59449b83",
+  "first_name": "Jennifer",
+  "last_name": "Haney",
+  "date_of_birth": "1975-01-04",
+  "gender": "Female",
+  "blood_type": "O+",
+  "phone": "698.926.2244",
+  "email": "bryanhamilton@example.com",
+  "address": "4379 Stephen Dale, Adamfurt, MA 81790",
+  "emergency_contact_name": "Scott Alexander",
+  "emergency_contact_phone": "(592)745-9375x26547",
+  "insurance_provider": "Cigna",
+  "insurance_id": "HUM-681687",
+  "allergies": [
+    "Shellfish",
+    "Sulfa drugs",
+    "Penicillin",
+    "Cephalosporins"
+  ],
+  "medications": [
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2023-11-12",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Maxwell",
+      "is_active": true
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-02-18",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hardy",
+      "is_active": true
+    },
+    {
+      "name": "Metformin",
+      "dosage": "500mg",
+      "frequency": "twice daily",
+      "start_date": "2023-05-16",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hansen",
+      "is_active": false
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2023-05-07",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2023-05-09",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2024-05-25",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T09:00:00",
+      "blood_pressure_systolic": 159,
+      "blood_pressure_diastolic": 103,
+      "heart_rate": 119,
+      "temperature_f": 101.4,
+      "oxygen_saturation": 91.6,
+      "weight_lbs": 218.3,
+      "bmi": 37.9
+    },
+    {
+      "recorded_date": "2025-01-31T17:00:00",
+      "blood_pressure_systolic": 115,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 65,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 96.5,
+      "weight_lbs": 209.0,
+      "bmi": 19.7
+    },
+    {
+      "recorded_date": "2025-03-02T15:00:00",
+      "blood_pressure_systolic": 119,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 85,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 96.3,
+      "weight_lbs": 174.5,
+      "bmi": 30.7
+    },
+    {
+      "recorded_date": "2025-04-01T12:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 64,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 99.7,
+      "weight_lbs": 186.5,
+      "bmi": 30.6
+    },
+    {
+      "recorded_date": "2025-05-01T14:00:00",
+      "blood_pressure_systolic": 164,
+      "blood_pressure_diastolic": 100,
+      "heart_rate": 122,
+      "temperature_f": 101.5,
+      "oxygen_saturation": 92.3,
+      "weight_lbs": 276.4,
+      "bmi": 21.2
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Sodium",
+      "value": 127.62,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-12-22"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 246.13,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-02-05"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 14.07,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2026-02-23"
+    },
+    {
+      "test_name": "TSH",
+      "value": 8.65,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-10-16"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 199.79,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-04-03"
+    },
+    {
+      "test_name": "INR",
+      "value": 3.65,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2026-01-08"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "8761452c",
+      "encounter_type": "emergency",
+      "date": "2024-02-15T16:45:00",
+      "provider": "Dr. Cole",
+      "department": "Pulmonology",
+      "reason": "Medication review",
+      "notes": "Above Democrat everything region somebody officer. Cost for leader energy television month police. Home hotel box goal leader common purpose song.",
+      "followup_required": true,
+      "followup_date": "2024-03-01"
+    },
+    {
+      "encounter_id": "c4ce7d71",
+      "encounter_type": "outpatient",
+      "date": "2024-08-02T14:30:00",
+      "provider": "Dr. Bennett",
+      "department": "Pulmonology",
+      "reason": "Chronic disease management",
+      "notes": "Box nor or nation race nearly. Wall decide something story attorney summer some. Cause field education child institution help last.",
+      "followup_required": true,
+      "followup_date": "2024-09-02"
+    },
+    {
+      "encounter_id": "ea559ec8",
+      "encounter_type": "telehealth",
+      "date": "2024-09-04T11:15:00",
+      "provider": "Dr. Harper",
+      "department": "Pulmonology",
+      "reason": "Medication review",
+      "notes": "Move type thank industry already why. Order trial body eat professor coach partner. Worker quality hundred sell whole involve action. Develop section newspaper reach determine.",
+      "followup_required": true,
+      "followup_date": "2024-11-14"
+    },
+    {
+      "encounter_id": "827bebac",
+      "encounter_type": "telehealth",
+      "date": "2025-05-05T16:45:00",
+      "provider": "Dr. Brooks",
+      "department": "Neurology",
+      "reason": "Routine follow-up",
+      "notes": "Real character young lot far turn beat story. Give gas six miss. Live just recent five feel special.",
+      "followup_required": true,
+      "followup_date": "2025-07-04"
+    },
+    {
+      "encounter_id": "76281a40",
+      "encounter_type": "outpatient",
+      "date": "2026-04-11T15:00:00",
+      "provider": "Dr. Wilson",
+      "department": "Cardiology",
+      "reason": "Post-hospitalization check",
+      "notes": "Quality clearly worker during. Necessary former interview left. Picture control price how scene third.",
+      "followup_required": true,
+      "followup_date": "2026-05-16"
+    }
+  ],
+  "primary_care_provider": "Dr. Sellers, MD",
+  "record_created": "2026-04-17T00:52:37.031203",
+  "last_updated": "2026-04-17T00:52:37.031206"
+}

@@ -1,0 +1,38 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Barbara Donovan (ID: e401b985)
+Age: 79 | Gender: Female | Blood Type: AB+
+PCP: Dr. Mcdaniel, MD
+
+ALLERGIES: Penicillin, Amoxicillin, Morphine, Codeine
+
+ACTIVE MEDICATIONS:
+  - Metformin 500mg (twice daily)
+  - Insulin Glargine 20 units (once daily at bedtime)
+  - Sertraline 50mg (once daily)
+  - Levothyroxine 75mcg (once daily on empty stomach)
+  - Hydrocodone/APAP 5/325mg (every 6 hours as needed)
+  - Alprazolam 0.5mg (twice daily as needed)
+
+DIAGNOSES:
+  - Chronic Low Back Pain (M54.5) — moderate [CHRONIC]
+  - Pneumonia (J18.9) — moderate
+  - Essential Hypertension (I10) — moderate [CHRONIC]
+  - Hyperlipidemia (E78.5) — mild [CHRONIC]
+
+LATEST VITALS (2025-07-30):
+  BP: 159/97 mmHg
+  HR: 109 bpm | Temp: 99.6°F
+  SpO2: 89.0% | BMI: 35.4
+
+⚠️ ABNORMAL LAB RESULTS:
+  - INR: 4.95  (Ref: 0.8-1.2 (2.0-3.0 on warfarin))
+  - WBC Count: 17.67 K/uL (Ref: 4.5-11.0 K/uL)
+
+RECENT ENCOUNTERS:
+  - [EMERGENCY] 2025-11-10 — Annual physical
+    ⚡ Follow-up required by 2026-01-04
+  - [EMERGENCY] 2025-07-05 — Medication review
+    ⚡ Follow-up required by 2025-08-30
+  - [OUTPATIENT] 2025-06-07 — Urgent care visit
+    ⚡ Follow-up required by 2025-08-02

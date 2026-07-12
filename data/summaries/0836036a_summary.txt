@@ -1,0 +1,35 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Melissa Murphy (ID: 0836036a)
+Age: 76 | Gender: Female | Blood Type: A+
+PCP: Dr. Harmon, MD
+
+ALLERGIES: Shellfish, Sulfa drugs, Ibuprofen
+
+ACTIVE MEDICATIONS:
+  - Warfarin 5mg (once daily)
+  - Sertraline 50mg (once daily)
+
+DIAGNOSES:
+  - Urinary Tract Infection (N39.0) — mild
+  - Pneumonia (J18.9) — moderate
+  - Gastroesophageal Reflux Disease (K21.0) — mild [CHRONIC]
+  - Type 2 Diabetes Mellitus (E11.9) — moderate [CHRONIC]
+
+LATEST VITALS (2025-03-02):
+  BP: 127/82 mmHg
+  HR: 68 bpm | Temp: 97.6°F
+  SpO2: 97.5% | BMI: 21.0
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Hemoglobin: 7.78 g/dL (Ref: 12.0-17.5 g/dL)
+  - Potassium: 6.29 mEq/L (Ref: 3.5-5.0 mEq/L)
+  - Fasting Glucose: 226.23 mg/dL (Ref: 70-100 mg/dL)
+  - WBC Count: 17.51 K/uL (Ref: 4.5-11.0 K/uL)
+
+RECENT ENCOUNTERS:
+  - [TELEHEALTH] 2026-04-02 — Lab review
+    ⚡ Follow-up required by 2026-05-11
+  - [EMERGENCY] 2025-08-31 — Post-hospitalization check
+  - [OUTPATIENT] 2024-06-08 — Routine follow-up
+    ⚡ Follow-up required by 2024-07-23

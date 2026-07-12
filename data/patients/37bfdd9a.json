@@ -1,0 +1,213 @@
+{
+  "patient_id": "37bfdd9a",
+  "first_name": "Kayla",
+  "last_name": "Strickland",
+  "date_of_birth": "1949-07-27",
+  "gender": "Female",
+  "blood_type": "AB-",
+  "phone": "235.364.2087x37530",
+  "email": "conleyelizabeth@example.org",
+  "address": "USS Cummings, FPO AE 34041",
+  "emergency_contact_name": "Joyce Madden",
+  "emergency_contact_phone": "270-212-0455x611",
+  "insurance_provider": "Medicare",
+  "insurance_id": "AET-151685",
+  "allergies": [
+    "Codeine",
+    "Latex",
+    "Penicillin"
+  ],
+  "medications": [
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2024-08-08",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Williamson",
+      "is_active": true
+    },
+    {
+      "name": "Metoprolol",
+      "dosage": "50mg",
+      "frequency": "twice daily",
+      "start_date": "2023-02-08",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Campbell",
+      "is_active": true
+    },
+    {
+      "name": "Amlodipine",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2024-02-17",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Glover",
+      "is_active": false
+    },
+    {
+      "name": "Gabapentin",
+      "dosage": "300mg",
+      "frequency": "three times daily",
+      "start_date": "2024-09-15",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Jimenez",
+      "is_active": true
+    },
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2024-02-16",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Lynch",
+      "is_active": false
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2021-09-12",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "Congestive Heart Failure",
+      "icd10_code": "I50.9",
+      "diagnosed_date": "2021-09-28",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2021-07-28",
+      "severity": "mild",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T10:00:00",
+      "blood_pressure_systolic": 177,
+      "blood_pressure_diastolic": 97,
+      "heart_rate": 103,
+      "temperature_f": 100.3,
+      "oxygen_saturation": 91.7,
+      "weight_lbs": 248.4,
+      "bmi": 24.8
+    },
+    {
+      "recorded_date": "2025-01-31T10:00:00",
+      "blood_pressure_systolic": 156,
+      "blood_pressure_diastolic": 104,
+      "heart_rate": 108,
+      "temperature_f": 101.8,
+      "oxygen_saturation": 90.0,
+      "weight_lbs": 207.8,
+      "bmi": 28.6
+    },
+    {
+      "recorded_date": "2025-03-02T09:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 62,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 97.5,
+      "weight_lbs": 159.0,
+      "bmi": 35.1
+    },
+    {
+      "recorded_date": "2025-04-01T09:00:00",
+      "blood_pressure_systolic": 155,
+      "blood_pressure_diastolic": 96,
+      "heart_rate": 107,
+      "temperature_f": 101.6,
+      "oxygen_saturation": 89.2,
+      "weight_lbs": 203.9,
+      "bmi": 36.4
+    },
+    {
+      "recorded_date": "2025-05-01T13:00:00",
+      "blood_pressure_systolic": 161,
+      "blood_pressure_diastolic": 104,
+      "heart_rate": 127,
+      "temperature_f": 100.5,
+      "oxygen_saturation": 92.6,
+      "weight_lbs": 235.4,
+      "bmi": 23.2
+    },
+    {
+      "recorded_date": "2025-05-31T16:00:00",
+      "blood_pressure_systolic": 115,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 78,
+      "temperature_f": 98.3,
+      "oxygen_saturation": 96.7,
+      "weight_lbs": 257.3,
+      "bmi": 23.5
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 62.89,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-04-20"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 10.06,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": true,
+      "test_date": "2025-12-13"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 8.74,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2025-09-20"
+    },
+    {
+      "test_name": "INR",
+      "value": 1.11,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2026-01-28"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "bd575f56",
+      "encounter_type": "outpatient",
+      "date": "2024-05-15T17:15:00",
+      "provider": "Dr. Christian",
+      "department": "Cardiology",
+      "reason": "New symptom evaluation",
+      "notes": "Group just perform there behavior spring. Box hundred lead structure.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "6700a35b",
+      "encounter_type": "telehealth",
+      "date": "2024-11-08T18:30:00",
+      "provider": "Dr. Vaughn",
+      "department": "Pulmonology",
+      "reason": "Post-hospitalization check",
+      "notes": "Power someone both receive around wall. Billion treat lot notice. Consider here grow agreement range stuff.",
+      "followup_required": true,
+      "followup_date": "2025-01-19"
+    }
+  ],
+  "primary_care_provider": "Dr. Mcpherson, MD",
+  "record_created": "2026-04-17T00:52:37.049292",
+  "last_updated": "2026-04-17T00:52:37.049294"
+}

@@ -1,0 +1,34 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Andrea Brooks (ID: 217fbd5e)
+Age: 42 | Gender: Female | Blood Type: AB-
+PCP: Dr. Sullivan, MD
+
+ALLERGIES: Cephalosporins, Sulfa drugs
+
+ACTIVE MEDICATIONS:
+  - Prednisone 10mg (once daily)
+  - Metformin 500mg (twice daily)
+  - Alprazolam 0.5mg (twice daily as needed)
+
+DIAGNOSES:
+  - Pneumonia (J18.9) — moderate
+  - Hypothyroidism (E03.9) — mild [CHRONIC]
+  - COPD (J44.1) — moderate [CHRONIC]
+
+LATEST VITALS (2025-05-31):
+  BP: 113/73 mmHg
+  HR: 83 bpm | Temp: 97.8°F
+  SpO2: 96.9% | BMI: 31.3
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Sodium: 129.81 mEq/L (Ref: 136-145 mEq/L)
+  - TSH: 14.97 mIU/L (Ref: 0.4-4.0 mIU/L)
+  - HDL Cholesterol: 21.47 mg/dL (Ref: >40 mg/dL)
+
+RECENT ENCOUNTERS:
+  - [OUTPATIENT] 2025-06-07 — Chronic disease management
+    ⚡ Follow-up required by 2025-08-05
+  - [OUTPATIENT] 2025-02-13 — Post-hospitalization check
+  - [EMERGENCY] 2025-01-19 — Chronic disease management
+    ⚡ Follow-up required by 2025-03-24

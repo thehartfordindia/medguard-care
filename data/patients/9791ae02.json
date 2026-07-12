@@ -1,0 +1,181 @@
+{
+  "patient_id": "9791ae02",
+  "first_name": "Nicole",
+  "last_name": "Garcia",
+  "date_of_birth": "1963-01-20",
+  "gender": "Female",
+  "blood_type": "AB-",
+  "phone": "+1-283-286-3840x66658",
+  "email": "james73@example.net",
+  "address": "893 Kelly Fall Apt. 228, South Billyview, OH 35135",
+  "emergency_contact_name": "Kevin Scott",
+  "emergency_contact_phone": "372-702-5909x47985",
+  "insurance_provider": "Cigna",
+  "insurance_id": "MCR-240288",
+  "allergies": [
+    "Peanuts",
+    "Latex"
+  ],
+  "medications": [
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-10-25",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Johnson",
+      "is_active": true
+    },
+    {
+      "name": "Sertraline",
+      "dosage": "50mg",
+      "frequency": "once daily",
+      "start_date": "2024-06-16",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Cervantes",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2021-01-20",
+      "severity": "mild",
+      "is_chronic": false
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T15:00:00",
+      "blood_pressure_systolic": 150,
+      "blood_pressure_diastolic": 97,
+      "heart_rate": 109,
+      "temperature_f": 101.3,
+      "oxygen_saturation": 88.7,
+      "weight_lbs": 242.8,
+      "bmi": 30.0
+    },
+    {
+      "recorded_date": "2025-01-31T14:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 72,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 96.3,
+      "weight_lbs": 214.9,
+      "bmi": 19.4
+    },
+    {
+      "recorded_date": "2025-03-02T10:00:00",
+      "blood_pressure_systolic": 170,
+      "blood_pressure_diastolic": 90,
+      "heart_rate": 98,
+      "temperature_f": 101.2,
+      "oxygen_saturation": 90.1,
+      "weight_lbs": 193.2,
+      "bmi": 29.2
+    },
+    {
+      "recorded_date": "2025-04-01T11:00:00",
+      "blood_pressure_systolic": 116,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 69,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 95.5,
+      "weight_lbs": 212.8,
+      "bmi": 30.6
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "WBC Count",
+      "value": 5.19,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2025-04-12"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 3.44,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-03-02"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 5.8,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-12-27"
+    },
+    {
+      "test_name": "INR",
+      "value": 0.86,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-10-08"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 48.31,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-09-04"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "c149310a",
+      "encounter_type": "outpatient",
+      "date": "2024-01-14T17:00:00",
+      "provider": "Dr. Fox",
+      "department": "Neurology",
+      "reason": "Chronic disease management",
+      "notes": "Attention measure indeed Mr begin determine degree. Former family wear peace little no.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "3c4187f6",
+      "encounter_type": "outpatient",
+      "date": "2024-04-02T15:00:00",
+      "provider": "Dr. Goodwin",
+      "department": "Endocrinology",
+      "reason": "Lab review",
+      "notes": "Protect knowledge toward party.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "f3344325",
+      "encounter_type": "telehealth",
+      "date": "2024-10-24T12:30:00",
+      "provider": "Dr. Black",
+      "department": "Emergency",
+      "reason": "Medication review",
+      "notes": "Sort knowledge analysis together court message way. Will significant mouth phone. Prove similar ten interest billion.",
+      "followup_required": true,
+      "followup_date": "2024-11-19"
+    },
+    {
+      "encounter_id": "9e2a1284",
+      "encounter_type": "outpatient",
+      "date": "2024-10-30T11:45:00",
+      "provider": "Dr. Oliver",
+      "department": "Internal Medicine",
+      "reason": "Acute complaint",
+      "notes": "High someone box either rich agency.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Medina, MD",
+  "record_created": "2026-04-17T00:54:29.882265",
+  "last_updated": "2026-04-17T00:54:29.882266"
+}

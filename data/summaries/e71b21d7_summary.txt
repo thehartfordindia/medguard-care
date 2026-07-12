@@ -1,0 +1,29 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Nicole Garcia (ID: e71b21d7)
+Age: 63 | Gender: Female | Blood Type: AB-
+PCP: Dr. Medina, MD
+
+ALLERGIES: Peanuts, Latex
+
+ACTIVE MEDICATIONS:
+  - Lisinopril 10mg (once daily)
+  - Sertraline 50mg (once daily)
+
+DIAGNOSES:
+  - Acute Bronchitis (J20.9) — mild
+
+LATEST VITALS (2025-04-01):
+  BP: 116/70 mmHg
+  HR: 69 bpm | Temp: 98.1°F
+  SpO2: 95.5% | BMI: 30.6
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Creatinine: 3.44 mg/dL (Ref: 0.6-1.2 mg/dL)
+  - Potassium: 5.8 mEq/L (Ref: 3.5-5.0 mEq/L)
+
+RECENT ENCOUNTERS:
+  - [OUTPATIENT] 2024-10-30 — Acute complaint
+  - [TELEHEALTH] 2024-10-24 — Medication review
+    ⚡ Follow-up required by 2024-11-19
+  - [OUTPATIENT] 2024-04-02 — Lab review

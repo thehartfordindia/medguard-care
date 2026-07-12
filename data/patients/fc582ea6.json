@@ -1,0 +1,254 @@
+{
+  "patient_id": "fc582ea6",
+  "first_name": "Lisa",
+  "last_name": "Aguirre",
+  "date_of_birth": "1991-12-27",
+  "gender": "Female",
+  "blood_type": "AB+",
+  "phone": "(447)710-2767x7359",
+  "email": "jessica56@example.org",
+  "address": "3714 Wright Court, West Soniachester, IA 21433",
+  "emergency_contact_name": "Taylor Griffith",
+  "emergency_contact_phone": "327.887.7470",
+  "insurance_provider": "Humana",
+  "insurance_id": "BCB-988324",
+  "allergies": [],
+  "medications": [
+    {
+      "name": "Metformin",
+      "dosage": "500mg",
+      "frequency": "twice daily",
+      "start_date": "2024-04-13",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Johnson",
+      "is_active": true
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-08-09",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Small",
+      "is_active": true
+    },
+    {
+      "name": "Amlodipine",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2023-02-19",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Gardner",
+      "is_active": false
+    },
+    {
+      "name": "Metoprolol",
+      "dosage": "50mg",
+      "frequency": "twice daily",
+      "start_date": "2024-05-21",
+      "end_date": null,
+      "prescribing_doctor": "Dr. May",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-12-11",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Turner",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2025-08-29",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Sanchez",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "COPD",
+      "icd10_code": "J44.1",
+      "diagnosed_date": "2024-04-13",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "diagnosed_date": "2022-04-05",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Major Depressive Disorder",
+      "icd10_code": "F33.0",
+      "diagnosed_date": "2022-01-19",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2020-04-02",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2022-03-31",
+      "severity": "severe",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T12:00:00",
+      "blood_pressure_systolic": 121,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 62,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 97.3,
+      "weight_lbs": 217.0,
+      "bmi": 34.6
+    },
+    {
+      "recorded_date": "2025-01-31T10:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 72,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 99.9,
+      "weight_lbs": 218.1,
+      "bmi": 25.6
+    },
+    {
+      "recorded_date": "2025-03-02T17:00:00",
+      "blood_pressure_systolic": 122,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 61,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 98.6,
+      "weight_lbs": 252.6,
+      "bmi": 28.6
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Sodium",
+      "value": 144.92,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2026-01-14"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 6.39,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-09-17"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 289.2,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-12-29"
+    },
+    {
+      "test_name": "TSH",
+      "value": 9.75,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-01-09"
+    },
+    {
+      "test_name": "INR",
+      "value": 1.07,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-08-02"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "ed34e588",
+      "encounter_type": "emergency",
+      "date": "2025-04-15T15:30:00",
+      "provider": "Dr. Hampton",
+      "department": "Emergency",
+      "reason": "New symptom evaluation",
+      "notes": "Relationship million night your. Moment finish community treatment garden great sign. Particular court east newspaper different.",
+      "followup_required": true,
+      "followup_date": "2025-06-29"
+    },
+    {
+      "encounter_id": "2ffc825d",
+      "encounter_type": "telehealth",
+      "date": "2025-06-15T10:30:00",
+      "provider": "Dr. Becker",
+      "department": "Neurology",
+      "reason": "Annual physical",
+      "notes": "Way body affect finish charge real improve.",
+      "followup_required": true,
+      "followup_date": "2025-08-08"
+    },
+    {
+      "encounter_id": "eed51fab",
+      "encounter_type": "telehealth",
+      "date": "2025-08-20T14:15:00",
+      "provider": "Dr. Williams",
+      "department": "Cardiology",
+      "reason": "Lab review",
+      "notes": "No guy eye hit late near stay.",
+      "followup_required": true,
+      "followup_date": "2025-09-07"
+    },
+    {
+      "encounter_id": "a56a64e1",
+      "encounter_type": "telehealth",
+      "date": "2025-12-08T10:45:00",
+      "provider": "Dr. Patel",
+      "department": "Emergency",
+      "reason": "Routine follow-up",
+      "notes": "Little admit former body indicate. Someone rise read ago listen. Officer return on color pick people subject challenge.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "6cb45a9d",
+      "encounter_type": "outpatient",
+      "date": "2025-12-18T08:15:00",
+      "provider": "Dr. Hanson",
+      "department": "Pulmonology",
+      "reason": "Post-hospitalization check",
+      "notes": "Campaign benefit health would. Voice sense current meeting matter and case. Sound mind chance throw cause use. Class wrong school federal from stock.",
+      "followup_required": true,
+      "followup_date": "2026-02-23"
+    },
+    {
+      "encounter_id": "9a775f1a",
+      "encounter_type": "telehealth",
+      "date": "2026-01-12T18:00:00",
+      "provider": "Dr. Wagner",
+      "department": "Endocrinology",
+      "reason": "Lab review",
+      "notes": "On any example our successful. Experience account blue care enough hand idea.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Dudley, MD",
+  "record_created": "2026-04-17T00:56:40.576485",
+  "last_updated": "2026-04-17T00:56:40.576487"
+}

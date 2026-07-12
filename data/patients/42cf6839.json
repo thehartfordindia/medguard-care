@@ -1,0 +1,291 @@
+{
+  "patient_id": "42cf6839",
+  "first_name": "Heidi",
+  "last_name": "Martin",
+  "date_of_birth": "1956-07-03",
+  "gender": "Female",
+  "blood_type": "O-",
+  "phone": "8606290846",
+  "email": "regina04@example.net",
+  "address": "673 Terry Valleys, Roweport, CO 05346",
+  "emergency_contact_name": "Jean Higgins",
+  "emergency_contact_phone": "(788)443-1884",
+  "insurance_provider": "Medicare",
+  "insurance_id": "HUM-524089",
+  "allergies": [
+    "Morphine",
+    "Codeine",
+    "Aspirin"
+  ],
+  "medications": [
+    {
+      "name": "Omeprazole",
+      "dosage": "20mg",
+      "frequency": "once daily before breakfast",
+      "start_date": "2024-09-01",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Johnson",
+      "is_active": true
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2024-02-18",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Thomas",
+      "is_active": false
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2024-03-10",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Smith",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2023-10-13",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Drake",
+      "is_active": true
+    },
+    {
+      "name": "Prednisone",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2025-02-23",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Acevedo",
+      "is_active": true
+    },
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2023-10-07",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Miller",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-07-24",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Edwards",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2025-07-02",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Holden",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2020-08-09",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Osteoarthritis",
+      "icd10_code": "M17.11",
+      "diagnosed_date": "2020-09-07",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T12:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 74,
+      "heart_rate": 60,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 95.3,
+      "weight_lbs": 149.6,
+      "bmi": 31.7
+    },
+    {
+      "recorded_date": "2025-01-31T15:00:00",
+      "blood_pressure_systolic": 169,
+      "blood_pressure_diastolic": 100,
+      "heart_rate": 104,
+      "temperature_f": 100.3,
+      "oxygen_saturation": 91.1,
+      "weight_lbs": 246.4,
+      "bmi": 31.4
+    },
+    {
+      "recorded_date": "2025-03-02T16:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 69,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 97.5,
+      "weight_lbs": 176.6,
+      "bmi": 25.2
+    },
+    {
+      "recorded_date": "2025-04-01T17:00:00",
+      "blood_pressure_systolic": 150,
+      "blood_pressure_diastolic": 91,
+      "heart_rate": 122,
+      "temperature_f": 101.7,
+      "oxygen_saturation": 88.6,
+      "weight_lbs": 203.0,
+      "bmi": 35.1
+    },
+    {
+      "recorded_date": "2025-05-01T09:00:00",
+      "blood_pressure_systolic": 111,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 77,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 98.9,
+      "weight_lbs": 263.9,
+      "bmi": 21.7
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Total Cholesterol",
+      "value": 166.53,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-10-04"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 24.52,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-03-14"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 4.86,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2025-05-15"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 17.34,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-11-12"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 3.42,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-05-26"
+    },
+    {
+      "test_name": "INR",
+      "value": 0.81,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-01-24"
+    },
+    {
+      "test_name": "TSH",
+      "value": 1.72,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2026-02-19"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "44701432",
+      "encounter_type": "telehealth",
+      "date": "2024-02-08T14:45:00",
+      "provider": "Dr. Guzman",
+      "department": "Endocrinology",
+      "reason": "Routine follow-up",
+      "notes": "Building occur American check. Figure hear family agreement central six. Any thus threat democratic standard major.",
+      "followup_required": true,
+      "followup_date": "2024-04-22"
+    },
+    {
+      "encounter_id": "29a6d4d3",
+      "encounter_type": "emergency",
+      "date": "2024-11-20T13:45:00",
+      "provider": "Dr. Martinez",
+      "department": "Neurology",
+      "reason": "Medication review",
+      "notes": "That individual of not. Sit little result paper seven measure. Seven project chance road become person perhaps.",
+      "followup_required": true,
+      "followup_date": "2025-02-04"
+    },
+    {
+      "encounter_id": "67f6254f",
+      "encounter_type": "inpatient",
+      "date": "2025-02-25T12:00:00",
+      "provider": "Dr. Ferguson",
+      "department": "Cardiology",
+      "reason": "Lab review",
+      "notes": "Go expect size resource public. Mind easy foreign old state guess. Chair international include begin. Thousand live land hard moment open.",
+      "followup_required": true,
+      "followup_date": "2025-04-19"
+    },
+    {
+      "encounter_id": "6aa2c374",
+      "encounter_type": "outpatient",
+      "date": "2025-10-02T12:45:00",
+      "provider": "Dr. Johnson",
+      "department": "Pulmonology",
+      "reason": "Post-hospitalization check",
+      "notes": "Else strategy fight institution measure rule success employee. Great answer prepare by fear say law. South writer not thus physical.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "94e29ab1",
+      "encounter_type": "telehealth",
+      "date": "2025-11-22T10:30:00",
+      "provider": "Dr. Hughes",
+      "department": "Neurology",
+      "reason": "Post-hospitalization check",
+      "notes": "Must when three save position tend. Occur someone religious. Population popular be western my serious whatever.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "31df0f63",
+      "encounter_type": "outpatient",
+      "date": "2025-12-05T08:30:00",
+      "provider": "Dr. Stone",
+      "department": "Endocrinology",
+      "reason": "Acute complaint",
+      "notes": "Once PM you ready way. Statement certain camera represent can relate. Brother defense list second want hard weight.",
+      "followup_required": true,
+      "followup_date": "2025-12-21"
+    }
+  ],
+  "primary_care_provider": "Dr. Boyd, MD",
+  "record_created": "2026-04-17T00:52:12.601300",
+  "last_updated": "2026-04-17T00:52:12.601302"
+}

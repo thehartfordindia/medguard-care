@@ -1,0 +1,224 @@
+{
+  "patient_id": "9c3f7a4f",
+  "first_name": "Patrick",
+  "last_name": "Jackson",
+  "date_of_birth": "2004-07-05",
+  "gender": "Male",
+  "blood_type": "O+",
+  "phone": "(429)985-8567x287",
+  "email": "esmith@example.com",
+  "address": "24913 Porter Port, Port Juliehaven, MH 30434",
+  "emergency_contact_name": "Heidi Johnson",
+  "emergency_contact_phone": "+1-515-581-4888x1079",
+  "insurance_provider": "Medicare",
+  "insurance_id": "HUM-798249",
+  "allergies": [
+    "Contrast dye"
+  ],
+  "medications": [
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2024-03-04",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Ferrell",
+      "is_active": true
+    },
+    {
+      "name": "Prednisone",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-05-09",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Sullivan",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2023-09-08",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Montgomery",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Major Depressive Disorder",
+      "icd10_code": "F33.0",
+      "diagnosed_date": "2021-10-04",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2020-08-29",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Chronic Low Back Pain",
+      "icd10_code": "M54.5",
+      "diagnosed_date": "2020-06-15",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2022-04-16",
+      "severity": "severe",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T11:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 80,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 96.0,
+      "weight_lbs": 165.2,
+      "bmi": 27.4
+    },
+    {
+      "recorded_date": "2025-01-31T15:00:00",
+      "blood_pressure_systolic": 118,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 83,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 99.3,
+      "weight_lbs": 256.7,
+      "bmi": 19.0
+    },
+    {
+      "recorded_date": "2025-03-02T10:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 88,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 95.6,
+      "weight_lbs": 237.6,
+      "bmi": 23.2
+    },
+    {
+      "recorded_date": "2025-04-01T14:00:00",
+      "blood_pressure_systolic": 120,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 83,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 98.7,
+      "weight_lbs": 189.7,
+      "bmi": 27.3
+    },
+    {
+      "recorded_date": "2025-05-01T16:00:00",
+      "blood_pressure_systolic": 123,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 84,
+      "temperature_f": 98.2,
+      "oxygen_saturation": 95.7,
+      "weight_lbs": 165.7,
+      "bmi": 33.4
+    },
+    {
+      "recorded_date": "2025-05-31T17:00:00",
+      "blood_pressure_systolic": 152,
+      "blood_pressure_diastolic": 94,
+      "heart_rate": 95,
+      "temperature_f": 101.0,
+      "oxygen_saturation": 89.8,
+      "weight_lbs": 230.9,
+      "bmi": 25.9
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Total Cholesterol",
+      "value": 128.62,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-09-23"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 6.37,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2026-03-09"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 127.57,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-07-16"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 47.14,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-03-15"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 1.17,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-03-28"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 7.84,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2025-09-23"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 96.39,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-06-10"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "a66227c4",
+      "encounter_type": "emergency",
+      "date": "2024-06-18T08:30:00",
+      "provider": "Dr. Scott",
+      "department": "Pulmonology",
+      "reason": "Chronic disease management",
+      "notes": "Direction response concern without entire. Before couple store as total.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "01e6fcdc",
+      "encounter_type": "outpatient",
+      "date": "2024-06-22T11:30:00",
+      "provider": "Dr. Mills",
+      "department": "Cardiology",
+      "reason": "New symptom evaluation",
+      "notes": "Dinner one ok less Mr. Five plant cultural.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Wilson, MD",
+  "record_created": "2026-04-17T00:52:12.666091",
+  "last_updated": "2026-04-17T00:52:12.666092"
+}

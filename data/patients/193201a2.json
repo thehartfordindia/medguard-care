@@ -1,0 +1,233 @@
+{
+  "patient_id": "193201a2",
+  "first_name": "George",
+  "last_name": "Mejia",
+  "date_of_birth": "1972-05-22",
+  "gender": "Male",
+  "blood_type": "O+",
+  "phone": "001-839-338-5258x0010",
+  "email": "jenningsmichael@example.net",
+  "address": "09109 Stephanie Route, Lake Susanland, PR 79758",
+  "emergency_contact_name": "Matthew Yoder",
+  "emergency_contact_phone": "001-621-824-4717",
+  "insurance_provider": "Cigna",
+  "insurance_id": "UHC-564523",
+  "allergies": [
+    "Aspirin",
+    "Ibuprofen"
+  ],
+  "medications": [
+    {
+      "name": "Omeprazole",
+      "dosage": "20mg",
+      "frequency": "once daily before breakfast",
+      "start_date": "2024-06-29",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Adams",
+      "is_active": true
+    },
+    {
+      "name": "Gabapentin",
+      "dosage": "300mg",
+      "frequency": "three times daily",
+      "start_date": "2023-05-02",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Garcia",
+      "is_active": true
+    },
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-05-30",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Pena",
+      "is_active": true
+    },
+    {
+      "name": "Metoprolol",
+      "dosage": "50mg",
+      "frequency": "twice daily",
+      "start_date": "2025-02-22",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Myers",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2021-01-13",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Hyperlipidemia",
+      "icd10_code": "E78.5",
+      "diagnosed_date": "2020-02-23",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T12:00:00",
+      "blood_pressure_systolic": 129,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 67,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 96.8,
+      "weight_lbs": 236.3,
+      "bmi": 27.8
+    },
+    {
+      "recorded_date": "2025-01-31T16:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 81,
+      "heart_rate": 65,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 97.5,
+      "weight_lbs": 159.3,
+      "bmi": 22.3
+    },
+    {
+      "recorded_date": "2025-03-02T09:00:00",
+      "blood_pressure_systolic": 118,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 67,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 99.9,
+      "weight_lbs": 246.1,
+      "bmi": 19.8
+    },
+    {
+      "recorded_date": "2025-04-01T16:00:00",
+      "blood_pressure_systolic": 177,
+      "blood_pressure_diastolic": 109,
+      "heart_rate": 126,
+      "temperature_f": 101.2,
+      "oxygen_saturation": 92.3,
+      "weight_lbs": 264.3,
+      "bmi": 26.8
+    },
+    {
+      "recorded_date": "2025-05-01T15:00:00",
+      "blood_pressure_systolic": 173,
+      "blood_pressure_diastolic": 100,
+      "heart_rate": 120,
+      "temperature_f": 101.0,
+      "oxygen_saturation": 91.7,
+      "weight_lbs": 223.1,
+      "bmi": 28.7
+    },
+    {
+      "recorded_date": "2025-05-31T09:00:00",
+      "blood_pressure_systolic": 166,
+      "blood_pressure_diastolic": 93,
+      "heart_rate": 123,
+      "temperature_f": 100.6,
+      "oxygen_saturation": 92.4,
+      "weight_lbs": 262.9,
+      "bmi": 23.3
+    },
+    {
+      "recorded_date": "2025-06-30T09:00:00",
+      "blood_pressure_systolic": 127,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 76,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 99.8,
+      "weight_lbs": 166.6,
+      "bmi": 27.1
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 28.8,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-04-08"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 16.56,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-08-20"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 162.55,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-04-03"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 24.19,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": true,
+      "test_date": "2025-12-23"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 194.39,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-06-15"
+    },
+    {
+      "test_name": "INR",
+      "value": 0.87,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-10-30"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "883a674c",
+      "encounter_type": "inpatient",
+      "date": "2024-04-02T11:30:00",
+      "provider": "Dr. Schwartz",
+      "department": "Emergency",
+      "reason": "Medication review",
+      "notes": "Class available since him four. Election spend concern attorney. Particular condition man century shoulder.",
+      "followup_required": true,
+      "followup_date": "2024-04-27"
+    },
+    {
+      "encounter_id": "13928127",
+      "encounter_type": "outpatient",
+      "date": "2025-04-05T17:30:00",
+      "provider": "Dr. Robinson",
+      "department": "Neurology",
+      "reason": "Annual physical",
+      "notes": "Resource billion authority number economy knowledge. Chance policy usually professor entire record toward.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "a1b64368",
+      "encounter_type": "telehealth",
+      "date": "2025-06-07T16:15:00",
+      "provider": "Dr. Andrews",
+      "department": "Neurology",
+      "reason": "Annual physical",
+      "notes": "Long identify road speech audience difficult his. Building movement yard four field area young. Half table future subject.",
+      "followup_required": true,
+      "followup_date": "2025-06-26"
+    }
+  ],
+  "primary_care_provider": "Dr. Hodges, MD",
+  "record_created": "2026-04-17T00:51:40.164296",
+  "last_updated": "2026-04-17T00:51:40.164301"
+}

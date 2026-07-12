@@ -1,0 +1,224 @@
+{
+  "patient_id": "6ab33270",
+  "first_name": "Glenn",
+  "last_name": "Martin",
+  "date_of_birth": "1945-05-22",
+  "gender": "Male",
+  "blood_type": "AB+",
+  "phone": "481-859-9706",
+  "email": "brianrivera@example.org",
+  "address": "443 Brandon Ports Suite 205, South Christopherfort, ID 13213",
+  "emergency_contact_name": "Christopher Carter",
+  "emergency_contact_phone": "871-446-7741",
+  "insurance_provider": "UnitedHealth",
+  "insurance_id": "MCD-282313",
+  "allergies": [],
+  "medications": [
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2024-02-10",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Barron",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "COPD",
+      "icd10_code": "J44.1",
+      "diagnosed_date": "2022-07-15",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Congestive Heart Failure",
+      "icd10_code": "I50.9",
+      "diagnosed_date": "2023-02-12",
+      "severity": "severe",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T10:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 85,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 95.6,
+      "weight_lbs": 148.6,
+      "bmi": 33.7
+    },
+    {
+      "recorded_date": "2025-01-31T12:00:00",
+      "blood_pressure_systolic": 122,
+      "blood_pressure_diastolic": 81,
+      "heart_rate": 81,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 98.2,
+      "weight_lbs": 221.5,
+      "bmi": 23.5
+    },
+    {
+      "recorded_date": "2025-03-02T09:00:00",
+      "blood_pressure_systolic": 152,
+      "blood_pressure_diastolic": 96,
+      "heart_rate": 123,
+      "temperature_f": 101.5,
+      "oxygen_saturation": 88.5,
+      "weight_lbs": 258.6,
+      "bmi": 34.3
+    },
+    {
+      "recorded_date": "2025-04-01T16:00:00",
+      "blood_pressure_systolic": 111,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 89,
+      "temperature_f": 98.4,
+      "oxygen_saturation": 99.1,
+      "weight_lbs": 195.3,
+      "bmi": 19.1
+    },
+    {
+      "recorded_date": "2025-05-01T11:00:00",
+      "blood_pressure_systolic": 121,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 89,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 96.4,
+      "weight_lbs": 263.7,
+      "bmi": 19.2
+    },
+    {
+      "recorded_date": "2025-05-31T12:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 75,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 97.8,
+      "weight_lbs": 148.5,
+      "bmi": 24.0
+    },
+    {
+      "recorded_date": "2025-06-30T12:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 80,
+      "temperature_f": 99.0,
+      "oxygen_saturation": 97.7,
+      "weight_lbs": 142.7,
+      "bmi": 26.0
+    },
+    {
+      "recorded_date": "2025-07-30T16:00:00",
+      "blood_pressure_systolic": 167,
+      "blood_pressure_diastolic": 105,
+      "heart_rate": 117,
+      "temperature_f": 101.8,
+      "oxygen_saturation": 90.5,
+      "weight_lbs": 194.4,
+      "bmi": 22.0
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Sodium",
+      "value": 129.76,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2026-01-28"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 157.93,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-03-23"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 5.05,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": false,
+      "test_date": "2025-05-17"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 30.82,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2026-01-13"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 99.89,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-04-23"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 24.77,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": true,
+      "test_date": "2025-07-18"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "215cee8d",
+      "encounter_type": "emergency",
+      "date": "2024-06-26T09:15:00",
+      "provider": "Dr. Watson",
+      "department": "Emergency",
+      "reason": "Post-hospitalization check",
+      "notes": "Cost and keep enjoy student nor. Sell property beat gas. Including series dinner article hit mission whole.",
+      "followup_required": true,
+      "followup_date": "2024-09-23"
+    },
+    {
+      "encounter_id": "5ee3a439",
+      "encounter_type": "inpatient",
+      "date": "2025-05-04T07:30:00",
+      "provider": "Dr. Cooper",
+      "department": "Cardiology",
+      "reason": "Post-hospitalization check",
+      "notes": "Him magazine participant also every. Peace race I how. Real any little environmental head full.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "9128d074",
+      "encounter_type": "outpatient",
+      "date": "2025-05-17T07:00:00",
+      "provider": "Dr. Burton",
+      "department": "Cardiology",
+      "reason": "Lab review",
+      "notes": "Floor road southern beautiful news. For everybody leader them skill performance mission. Both change note old who beyond. None big experience movie.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "94e3c077",
+      "encounter_type": "inpatient",
+      "date": "2025-12-18T12:15:00",
+      "provider": "Dr. Mcdaniel",
+      "department": "Pulmonology",
+      "reason": "Urgent care visit",
+      "notes": "Think live bad total research maybe too. Quality per build serious common worker will. Call interest write itself young.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Leon, MD",
+  "record_created": "2026-04-17T00:56:40.592944",
+  "last_updated": "2026-04-17T00:56:40.592946"
+}

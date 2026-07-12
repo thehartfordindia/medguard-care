@@ -1,0 +1,291 @@
+{
+  "patient_id": "07f1b9dc",
+  "first_name": "John",
+  "last_name": "Clay",
+  "date_of_birth": "1958-10-30",
+  "gender": "Male",
+  "blood_type": "O-",
+  "phone": "418.895.6907x056",
+  "email": "heathlogan@example.com",
+  "address": "242 Jonathan Corners, West Stephanie, TX 22677",
+  "emergency_contact_name": "Tyrone White",
+  "emergency_contact_phone": "001-204-561-5265x461",
+  "insurance_provider": "Cigna",
+  "insurance_id": "AET-464187",
+  "allergies": [],
+  "medications": [
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2024-07-02",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Prince",
+      "is_active": true
+    },
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2023-09-29",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Martinez",
+      "is_active": false
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2024-08-10",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Mayer",
+      "is_active": true
+    },
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-08-20",
+      "end_date": null,
+      "prescribing_doctor": "Dr. White",
+      "is_active": true
+    },
+    {
+      "name": "Gabapentin",
+      "dosage": "300mg",
+      "frequency": "three times daily",
+      "start_date": "2023-04-05",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Smith",
+      "is_active": true
+    },
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2024-08-15",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Buchanan",
+      "is_active": false
+    },
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2025-05-20",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Sanchez",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2025-02-04",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Thornton",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2024-07-04",
+      "severity": "moderate",
+      "is_chronic": false
+    },
+    {
+      "condition": "Congestive Heart Failure",
+      "icd10_code": "I50.9",
+      "diagnosed_date": "2021-09-06",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "Major Depressive Disorder",
+      "icd10_code": "F33.0",
+      "diagnosed_date": "2022-06-05",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2023-09-20",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T15:00:00",
+      "blood_pressure_systolic": 122,
+      "blood_pressure_diastolic": 78,
+      "heart_rate": 79,
+      "temperature_f": 98.3,
+      "oxygen_saturation": 98.4,
+      "weight_lbs": 216.7,
+      "bmi": 35.7
+    },
+    {
+      "recorded_date": "2025-01-31T17:00:00",
+      "blood_pressure_systolic": 115,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 66,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 99.1,
+      "weight_lbs": 271.3,
+      "bmi": 23.7
+    },
+    {
+      "recorded_date": "2025-03-02T15:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 76,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 97.3,
+      "weight_lbs": 173.7,
+      "bmi": 33.1
+    },
+    {
+      "recorded_date": "2025-04-01T15:00:00",
+      "blood_pressure_systolic": 163,
+      "blood_pressure_diastolic": 100,
+      "heart_rate": 99,
+      "temperature_f": 101.1,
+      "oxygen_saturation": 92.2,
+      "weight_lbs": 177.4,
+      "bmi": 24.1
+    },
+    {
+      "recorded_date": "2025-05-01T12:00:00",
+      "blood_pressure_systolic": 122,
+      "blood_pressure_diastolic": 77,
+      "heart_rate": 63,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 95.1,
+      "weight_lbs": 251.6,
+      "bmi": 24.6
+    },
+    {
+      "recorded_date": "2025-05-31T15:00:00",
+      "blood_pressure_systolic": 123,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 66,
+      "temperature_f": 97.7,
+      "oxygen_saturation": 95.7,
+      "weight_lbs": 176.2,
+      "bmi": 34.2
+    },
+    {
+      "recorded_date": "2025-06-30T11:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 90,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 98.9,
+      "weight_lbs": 147.7,
+      "bmi": 36.0
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Sodium",
+      "value": 125.81,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2026-03-06"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 17.81,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-02-27"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 2.75,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-03-03"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 22.78,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": true,
+      "test_date": "2026-02-01"
+    },
+    {
+      "test_name": "TSH",
+      "value": 7.52,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2026-03-29"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 15.3,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2026-01-31"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "a005467c",
+      "encounter_type": "outpatient",
+      "date": "2024-02-27T14:30:00",
+      "provider": "Dr. Roberts",
+      "department": "Endocrinology",
+      "reason": "Urgent care visit",
+      "notes": "Art two event. Style herself goal place one.",
+      "followup_required": true,
+      "followup_date": "2024-05-05"
+    },
+    {
+      "encounter_id": "c7aa4fd0",
+      "encounter_type": "telehealth",
+      "date": "2024-06-28T10:30:00",
+      "provider": "Dr. Harris",
+      "department": "Pulmonology",
+      "reason": "New symptom evaluation",
+      "notes": "Music collection early weight which new. A let stop.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "916df5ee",
+      "encounter_type": "emergency",
+      "date": "2024-09-09T11:15:00",
+      "provider": "Dr. Dixon",
+      "department": "Pulmonology",
+      "reason": "Post-hospitalization check",
+      "notes": "School none feel house.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "13ae1946",
+      "encounter_type": "inpatient",
+      "date": "2025-08-21T18:45:00",
+      "provider": "Dr. Allen",
+      "department": "Pulmonology",
+      "reason": "Lab review",
+      "notes": "Door meet mean we especially five network assume. Imagine do though. Never only big several prepare. Fight image base player.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Martinez, MD",
+  "record_created": "2026-04-17T00:52:12.603369",
+  "last_updated": "2026-04-17T00:52:12.603371"
+}

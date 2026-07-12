@@ -1,0 +1,254 @@
+{
+  "patient_id": "1d72ec7d",
+  "first_name": "Rebecca",
+  "last_name": "Gibson",
+  "date_of_birth": "1949-01-31",
+  "gender": "Female",
+  "blood_type": "B-",
+  "phone": "793-811-0919x39284",
+  "email": "chardy@example.org",
+  "address": "24968 Collins Plains, East Terrance, PA 45445",
+  "emergency_contact_name": "Wesley Holmes",
+  "emergency_contact_phone": "+1-520-938-8065x33315",
+  "insurance_provider": "Humana",
+  "insurance_id": "CIG-360380",
+  "allergies": [
+    "Contrast dye",
+    "Amoxicillin"
+  ],
+  "medications": [
+    {
+      "name": "Amlodipine",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2023-10-17",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Hobbs",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2023-07-13",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Harvey",
+      "is_active": true
+    },
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2024-02-23",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Morgan",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2025-05-29",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Pace",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2025-05-15",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Logan",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2020-09-29",
+      "severity": "moderate",
+      "is_chronic": false
+    },
+    {
+      "condition": "Osteoarthritis",
+      "icd10_code": "M17.11",
+      "diagnosed_date": "2024-11-19",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2021-10-24",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Type 2 Diabetes Mellitus",
+      "icd10_code": "E11.9",
+      "diagnosed_date": "2023-11-20",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Congestive Heart Failure",
+      "icd10_code": "I50.9",
+      "diagnosed_date": "2022-03-25",
+      "severity": "severe",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T15:00:00",
+      "blood_pressure_systolic": 123,
+      "blood_pressure_diastolic": 78,
+      "heart_rate": 62,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 95.3,
+      "weight_lbs": 186.6,
+      "bmi": 23.1
+    },
+    {
+      "recorded_date": "2025-01-31T09:00:00",
+      "blood_pressure_systolic": 150,
+      "blood_pressure_diastolic": 98,
+      "heart_rate": 127,
+      "temperature_f": 101.0,
+      "oxygen_saturation": 89.5,
+      "weight_lbs": 195.3,
+      "bmi": 25.7
+    },
+    {
+      "recorded_date": "2025-03-02T17:00:00",
+      "blood_pressure_systolic": 151,
+      "blood_pressure_diastolic": 108,
+      "heart_rate": 106,
+      "temperature_f": 100.2,
+      "oxygen_saturation": 90.5,
+      "weight_lbs": 270.2,
+      "bmi": 35.6
+    },
+    {
+      "recorded_date": "2025-04-01T14:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 64,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 96.6,
+      "weight_lbs": 277.0,
+      "bmi": 28.2
+    },
+    {
+      "recorded_date": "2025-05-01T13:00:00",
+      "blood_pressure_systolic": 173,
+      "blood_pressure_diastolic": 101,
+      "heart_rate": 122,
+      "temperature_f": 100.2,
+      "oxygen_saturation": 92.4,
+      "weight_lbs": 225.8,
+      "bmi": 33.4
+    },
+    {
+      "recorded_date": "2025-05-31T14:00:00",
+      "blood_pressure_systolic": 123,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 70,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 97.5,
+      "weight_lbs": 273.0,
+      "bmi": 29.3
+    },
+    {
+      "recorded_date": "2025-06-30T16:00:00",
+      "blood_pressure_systolic": 151,
+      "blood_pressure_diastolic": 96,
+      "heart_rate": 104,
+      "temperature_f": 99.6,
+      "oxygen_saturation": 88.9,
+      "weight_lbs": 205.8,
+      "bmi": 21.7
+    },
+    {
+      "recorded_date": "2025-07-30T10:00:00",
+      "blood_pressure_systolic": 125,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 74,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 98.5,
+      "weight_lbs": 207.9,
+      "bmi": 28.1
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Creatinine",
+      "value": 0.7,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-09-18"
+    },
+    {
+      "test_name": "TSH",
+      "value": 10.63,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-12-06"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 227.54,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-01-03"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 198.49,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-08-02"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 19.92,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-09-13"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "075a7e64",
+      "encounter_type": "telehealth",
+      "date": "2024-01-27T11:00:00",
+      "provider": "Dr. Neal",
+      "department": "Endocrinology",
+      "reason": "Medication review",
+      "notes": "Realize system not friend federal forget bit then. Many turn police. Level defense lose shoulder spring.",
+      "followup_required": true,
+      "followup_date": "2024-03-22"
+    },
+    {
+      "encounter_id": "af81e0df",
+      "encounter_type": "telehealth",
+      "date": "2024-03-24T14:45:00",
+      "provider": "Dr. Aguirre",
+      "department": "Emergency",
+      "reason": "New symptom evaluation",
+      "notes": "Hundred step according act group. Boy fact create one she analysis ahead. Exist despite energy company suggest.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Sanchez, MD",
+  "record_created": "2026-04-17T00:52:12.607383",
+  "last_updated": "2026-04-17T00:52:12.607386"
+}

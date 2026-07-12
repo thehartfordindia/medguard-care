@@ -1,0 +1,197 @@
+{
+  "patient_id": "71dce86a",
+  "first_name": "Jennifer",
+  "last_name": "Shields",
+  "date_of_birth": "1941-04-24",
+  "gender": "Female",
+  "blood_type": "B+",
+  "phone": "7285439599",
+  "email": "nancy83@example.com",
+  "address": "926 Williams Key, Floydmouth, UT 55069",
+  "emergency_contact_name": "Elijah White",
+  "emergency_contact_phone": "+1-873-834-2708",
+  "insurance_provider": "Medicare",
+  "insurance_id": "MCR-547952",
+  "allergies": [
+    "Peanuts",
+    "Penicillin",
+    "Latex",
+    "Shellfish"
+  ],
+  "medications": [
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2024-02-28",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Young",
+      "is_active": true
+    },
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-03-04",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Robinson",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2023-11-27",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2022-05-02",
+      "severity": "mild",
+      "is_chronic": true
+    },
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2022-04-16",
+      "severity": "severe",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T11:00:00",
+      "blood_pressure_systolic": 127,
+      "blood_pressure_diastolic": 85,
+      "heart_rate": 67,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 96.5,
+      "weight_lbs": 239.1,
+      "bmi": 34.2
+    },
+    {
+      "recorded_date": "2025-01-31T17:00:00",
+      "blood_pressure_systolic": 163,
+      "blood_pressure_diastolic": 103,
+      "heart_rate": 130,
+      "temperature_f": 100.8,
+      "oxygen_saturation": 89.9,
+      "weight_lbs": 175.7,
+      "bmi": 24.9
+    },
+    {
+      "recorded_date": "2025-03-02T16:00:00",
+      "blood_pressure_systolic": 121,
+      "blood_pressure_diastolic": 72,
+      "heart_rate": 77,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 96.0,
+      "weight_lbs": 177.6,
+      "bmi": 31.6
+    },
+    {
+      "recorded_date": "2025-04-01T10:00:00",
+      "blood_pressure_systolic": 116,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 75,
+      "temperature_f": 97.8,
+      "oxygen_saturation": 99.5,
+      "weight_lbs": 182.4,
+      "bmi": 36.2
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 61.97,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-06-14"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 2.45,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-10-01"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 8.23,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2025-07-04"
+    },
+    {
+      "test_name": "Fasting Glucose",
+      "value": 212.53,
+      "unit": "mg/dL",
+      "reference_range": "70-100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-02-20"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 6.58,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2026-01-25"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "d62664b2",
+      "encounter_type": "outpatient",
+      "date": "2025-01-14T12:45:00",
+      "provider": "Dr. Grant",
+      "department": "Neurology",
+      "reason": "Lab review",
+      "notes": "Drug data position two suggest begin. Appear help painting always authority.",
+      "followup_required": true,
+      "followup_date": "2025-02-15"
+    },
+    {
+      "encounter_id": "a1575abb",
+      "encounter_type": "telehealth",
+      "date": "2025-01-23T16:15:00",
+      "provider": "Dr. Gill",
+      "department": "Neurology",
+      "reason": "Post-hospitalization check",
+      "notes": "Have including none determine certainly. Network once result far cultural. Here street material pressure range.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "a772e181",
+      "encounter_type": "telehealth",
+      "date": "2025-05-15T18:45:00",
+      "provider": "Dr. Scott",
+      "department": "Cardiology",
+      "reason": "Post-hospitalization check",
+      "notes": "Leave run goal cause national contain threat. Model stuff avoid stand. Share include successful.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "aec2ac0e",
+      "encounter_type": "emergency",
+      "date": "2025-07-20T16:45:00",
+      "provider": "Dr. Ballard",
+      "department": "Cardiology",
+      "reason": "Lab review",
+      "notes": "Describe decade trade field training deep couple. Section senior trial receive. However dream focus executive letter. Final growth third letter sort reveal.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Hall, MD",
+  "record_created": "2026-04-17T00:52:37.025917",
+  "last_updated": "2026-04-17T00:52:37.025922"
+}

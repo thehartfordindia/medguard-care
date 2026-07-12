@@ -1,0 +1,226 @@
+{
+  "patient_id": "4d0f0406",
+  "first_name": "Molly",
+  "last_name": "Pham",
+  "date_of_birth": "1938-01-16",
+  "gender": "Female",
+  "blood_type": "A-",
+  "phone": "+1-254-974-3553x79502",
+  "email": "valenzuelaemily@example.com",
+  "address": "8118 Patricia Via Suite 156, Paultown, DE 61147",
+  "emergency_contact_name": "Corey Smith",
+  "emergency_contact_phone": "001-604-953-1943x3750",
+  "insurance_provider": "Humana",
+  "insurance_id": "MCD-347864",
+  "allergies": [
+    "Shellfish",
+    "Penicillin",
+    "Fluoroquinolones"
+  ],
+  "medications": [
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-09-17",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Lutz",
+      "is_active": true
+    },
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-11-13",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Johns",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-07-05",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Clark",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2026-04-08",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Wagner",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Chronic Low Back Pain",
+      "icd10_code": "M54.5",
+      "diagnosed_date": "2021-09-08",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Major Depressive Disorder",
+      "icd10_code": "F33.0",
+      "diagnosed_date": "2020-07-03",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T11:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 80,
+      "heart_rate": 88,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 98.2,
+      "weight_lbs": 250.5,
+      "bmi": 23.8
+    },
+    {
+      "recorded_date": "2025-01-31T16:00:00",
+      "blood_pressure_systolic": 125,
+      "blood_pressure_diastolic": 83,
+      "heart_rate": 89,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 98.6,
+      "weight_lbs": 262.7,
+      "bmi": 34.5
+    },
+    {
+      "recorded_date": "2025-03-02T13:00:00",
+      "blood_pressure_systolic": 166,
+      "blood_pressure_diastolic": 92,
+      "heart_rate": 117,
+      "temperature_f": 100.6,
+      "oxygen_saturation": 91.6,
+      "weight_lbs": 216.7,
+      "bmi": 24.9
+    },
+    {
+      "recorded_date": "2025-04-01T09:00:00",
+      "blood_pressure_systolic": 130,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 80,
+      "temperature_f": 98.2,
+      "oxygen_saturation": 98.2,
+      "weight_lbs": 140.4,
+      "bmi": 22.4
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "TSH",
+      "value": 14.7,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2026-03-02"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 126.17,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": true,
+      "test_date": "2025-11-01"
+    },
+    {
+      "test_name": "Creatinine",
+      "value": 3.48,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-06-13"
+    },
+    {
+      "test_name": "INR",
+      "value": 1.15,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-03-10"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 176.56,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2026-02-28"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 3.92,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-02-13"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "c964ee9c",
+      "encounter_type": "outpatient",
+      "date": "2025-02-06T13:15:00",
+      "provider": "Dr. Conway",
+      "department": "Internal Medicine",
+      "reason": "Urgent care visit",
+      "notes": "According worker point book everyone. Management necessary process not radio north assume. Second camera value talk. Rock ever summer age wide question pass.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "9038fb4b",
+      "encounter_type": "telehealth",
+      "date": "2025-08-03T08:00:00",
+      "provider": "Dr. Collins",
+      "department": "Pulmonology",
+      "reason": "Chronic disease management",
+      "notes": "Benefit lose space or phone free economy blue. When strategy start mind door. Simply people shake personal. By window true help three really site artist.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "6c2d0d6e",
+      "encounter_type": "inpatient",
+      "date": "2025-09-24T13:30:00",
+      "provider": "Dr. Walker",
+      "department": "Internal Medicine",
+      "reason": "Post-hospitalization check",
+      "notes": "Mother first hot free they space. Within interest avoid economic clearly.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "a50c328e",
+      "encounter_type": "telehealth",
+      "date": "2025-10-03T10:00:00",
+      "provider": "Dr. Becker",
+      "department": "Cardiology",
+      "reason": "New symptom evaluation",
+      "notes": "Visit political wall. Take follow such. Ever quite level guess service this.",
+      "followup_required": true,
+      "followup_date": "2025-11-07"
+    },
+    {
+      "encounter_id": "d5ab5028",
+      "encounter_type": "emergency",
+      "date": "2025-12-31T10:15:00",
+      "provider": "Dr. Lang",
+      "department": "Endocrinology",
+      "reason": "Chronic disease management",
+      "notes": "Particularly it big argue appear. I pay in ten skin perhaps.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Chavez, MD",
+  "record_created": "2026-04-17T00:52:12.605113",
+  "last_updated": "2026-04-17T00:52:12.605116"
+}

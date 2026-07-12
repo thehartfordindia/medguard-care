@@ -1,0 +1,32 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Jennifer Shields (ID: faba5b30)
+Age: 84 | Gender: Female | Blood Type: B+
+PCP: Dr. Hall, MD
+
+ALLERGIES: Peanuts, Penicillin, Latex, Shellfish
+
+ACTIVE MEDICATIONS:
+  - Aspirin 81mg (once daily)
+  - Insulin Glargine 20 units (once daily at bedtime)
+
+DIAGNOSES:
+  - Acute Bronchitis (J20.9) — mild
+  - Hypothyroidism (E03.9) — mild [CHRONIC]
+  - Chronic Kidney Disease Stage 3 (N18.3) — severe [CHRONIC]
+
+LATEST VITALS (2025-04-01):
+  BP: 116/76 mmHg
+  HR: 75 bpm | Temp: 97.8°F
+  SpO2: 99.5% | BMI: 36.2
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Creatinine: 2.45 mg/dL (Ref: 0.6-1.2 mg/dL)
+  - Hemoglobin: 8.23 g/dL (Ref: 12.0-17.5 g/dL)
+  - Fasting Glucose: 212.53 mg/dL (Ref: 70-100 mg/dL)
+  - Potassium: 6.58 mEq/L (Ref: 3.5-5.0 mEq/L)
+
+RECENT ENCOUNTERS:
+  - [EMERGENCY] 2025-07-20 — Lab review
+  - [TELEHEALTH] 2025-05-15 — Post-hospitalization check
+  - [TELEHEALTH] 2025-01-23 — Post-hospitalization check

@@ -1,0 +1,275 @@
+{
+  "patient_id": "a9b9c81d",
+  "first_name": "Jennifer",
+  "last_name": "Turner",
+  "date_of_birth": "1987-08-08",
+  "gender": "Female",
+  "blood_type": "A+",
+  "phone": "+1-469-646-1195",
+  "email": "sarahsanders@example.com",
+  "address": "0116 Pena Street, Jacksonstad, HI 92781",
+  "emergency_contact_name": "John Shaw",
+  "emergency_contact_phone": "679-832-3023",
+  "insurance_provider": "Humana",
+  "insurance_id": "MCR-934832",
+  "allergies": [
+    "Morphine",
+    "Amoxicillin"
+  ],
+  "medications": [
+    {
+      "name": "Gabapentin",
+      "dosage": "300mg",
+      "frequency": "three times daily",
+      "start_date": "2024-09-30",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Willis",
+      "is_active": true
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2023-08-27",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Santana",
+      "is_active": true
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2023-12-14",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Stone",
+      "is_active": true
+    },
+    {
+      "name": "Sertraline",
+      "dosage": "50mg",
+      "frequency": "once daily",
+      "start_date": "2024-11-17",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Lopez",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2025-01-23",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Henderson",
+      "is_active": true
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5mg",
+      "frequency": "once daily",
+      "start_date": "2026-03-20",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Gallegos",
+      "is_active": true
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81mg",
+      "frequency": "once daily",
+      "start_date": "2025-03-26",
+      "end_date": null,
+      "prescribing_doctor": "Dr. King",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2020-06-23",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Pneumonia",
+      "icd10_code": "J18.9",
+      "diagnosed_date": "2021-01-29",
+      "severity": "moderate",
+      "is_chronic": false
+    },
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2023-06-21",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T09:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 84,
+      "temperature_f": 98.2,
+      "oxygen_saturation": 99.5,
+      "weight_lbs": 156.8,
+      "bmi": 36.8
+    },
+    {
+      "recorded_date": "2025-01-31T09:00:00",
+      "blood_pressure_systolic": 118,
+      "blood_pressure_diastolic": 76,
+      "heart_rate": 67,
+      "temperature_f": 98.7,
+      "oxygen_saturation": 99.2,
+      "weight_lbs": 221.1,
+      "bmi": 20.2
+    },
+    {
+      "recorded_date": "2025-03-02T14:00:00",
+      "blood_pressure_systolic": 122,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 75,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 95.1,
+      "weight_lbs": 201.2,
+      "bmi": 26.6
+    },
+    {
+      "recorded_date": "2025-04-01T14:00:00",
+      "blood_pressure_systolic": 162,
+      "blood_pressure_diastolic": 98,
+      "heart_rate": 100,
+      "temperature_f": 99.8,
+      "oxygen_saturation": 88.5,
+      "weight_lbs": 163.5,
+      "bmi": 21.3
+    },
+    {
+      "recorded_date": "2025-05-01T10:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 79,
+      "heart_rate": 90,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 95.8,
+      "weight_lbs": 226.0,
+      "bmi": 24.8
+    },
+    {
+      "recorded_date": "2025-05-31T09:00:00",
+      "blood_pressure_systolic": 119,
+      "blood_pressure_diastolic": 82,
+      "heart_rate": 63,
+      "temperature_f": 98.0,
+      "oxygen_saturation": 97.1,
+      "weight_lbs": 185.4,
+      "bmi": 25.8
+    },
+    {
+      "recorded_date": "2025-06-30T10:00:00",
+      "blood_pressure_systolic": 151,
+      "blood_pressure_diastolic": 96,
+      "heart_rate": 110,
+      "temperature_f": 101.4,
+      "oxygen_saturation": 90.9,
+      "weight_lbs": 209.0,
+      "bmi": 33.2
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Creatinine",
+      "value": 0.62,
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.2 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-11-21"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 75.45,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-05-18"
+    },
+    {
+      "test_name": "HbA1c",
+      "value": 9.72,
+      "unit": "%",
+      "reference_range": "4.0-5.6%",
+      "is_abnormal": true,
+      "test_date": "2025-02-21"
+    },
+    {
+      "test_name": "TSH",
+      "value": 2.4,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2026-02-07"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 15.13,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-08-17"
+    },
+    {
+      "test_name": "INR",
+      "value": 1.05,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": false,
+      "test_date": "2025-04-15"
+    },
+    {
+      "test_name": "LDL Cholesterol",
+      "value": 147.08,
+      "unit": "mg/dL",
+      "reference_range": "<100 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-10-04"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "58115953",
+      "encounter_type": "telehealth",
+      "date": "2024-06-20T07:00:00",
+      "provider": "Dr. Tucker",
+      "department": "Endocrinology",
+      "reason": "New symptom evaluation",
+      "notes": "Investment he three yourself stage wait professor her. Wish their south able. Rise thousand catch own than evidence.",
+      "followup_required": true,
+      "followup_date": "2024-08-21"
+    },
+    {
+      "encounter_id": "b5f85a0d",
+      "encounter_type": "outpatient",
+      "date": "2025-07-04T13:45:00",
+      "provider": "Dr. Alexander",
+      "department": "Internal Medicine",
+      "reason": "Chronic disease management",
+      "notes": "Than coach fall help. Ask ahead doctor magazine set. Article seem account. Smile among decision social heart mind while entire.",
+      "followup_required": true,
+      "followup_date": "2025-08-24"
+    },
+    {
+      "encounter_id": "54a0bde2",
+      "encounter_type": "outpatient",
+      "date": "2025-10-09T10:30:00",
+      "provider": "Dr. Lyons",
+      "department": "Cardiology",
+      "reason": "Urgent care visit",
+      "notes": "Later rather thank method produce about. Admit growth animal space for know.",
+      "followup_required": true,
+      "followup_date": "2026-01-03"
+    }
+  ],
+  "primary_care_provider": "Dr. Lawson, MD",
+  "record_created": "2026-04-17T00:52:12.619787",
+  "last_updated": "2026-04-17T00:52:12.619789"
+}

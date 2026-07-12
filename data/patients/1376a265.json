@@ -1,0 +1,244 @@
+{
+  "patient_id": "1376a265",
+  "first_name": "Karen",
+  "last_name": "Alexander",
+  "date_of_birth": "1953-01-26",
+  "gender": "Female",
+  "blood_type": "AB-",
+  "phone": "345-808-9935",
+  "email": "timothyalvarado@example.net",
+  "address": "28772 Karen Islands, West Tara, AR 66945",
+  "emergency_contact_name": "Mason Powell",
+  "emergency_contact_phone": "717.379.7177",
+  "insurance_provider": "Humana",
+  "insurance_id": "MCR-722615",
+  "allergies": [
+    "Codeine",
+    "Fluoroquinolones",
+    "Amoxicillin",
+    "Sulfa drugs"
+  ],
+  "medications": [
+    {
+      "name": "Sertraline",
+      "dosage": "50mg",
+      "frequency": "once daily",
+      "start_date": "2024-08-21",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Freeman",
+      "is_active": false
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "0.5mg",
+      "frequency": "twice daily as needed",
+      "start_date": "2024-06-07",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Clay",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Osteoarthritis",
+      "icd10_code": "M17.11",
+      "diagnosed_date": "2023-08-04",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2021-10-27",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Chronic Kidney Disease Stage 3",
+      "icd10_code": "N18.3",
+      "diagnosed_date": "2024-10-30",
+      "severity": "severe",
+      "is_chronic": true
+    },
+    {
+      "condition": "Major Depressive Disorder",
+      "icd10_code": "F33.0",
+      "diagnosed_date": "2021-07-21",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T13:00:00",
+      "blood_pressure_systolic": 116,
+      "blood_pressure_diastolic": 74,
+      "heart_rate": 76,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 99.5,
+      "weight_lbs": 252.8,
+      "bmi": 34.1
+    },
+    {
+      "recorded_date": "2025-01-31T14:00:00",
+      "blood_pressure_systolic": 114,
+      "blood_pressure_diastolic": 70,
+      "heart_rate": 80,
+      "temperature_f": 98.2,
+      "oxygen_saturation": 96.5,
+      "weight_lbs": 267.0,
+      "bmi": 26.4
+    },
+    {
+      "recorded_date": "2025-03-02T12:00:00",
+      "blood_pressure_systolic": 160,
+      "blood_pressure_diastolic": 97,
+      "heart_rate": 129,
+      "temperature_f": 101.1,
+      "oxygen_saturation": 90.4,
+      "weight_lbs": 271.7,
+      "bmi": 25.5
+    },
+    {
+      "recorded_date": "2025-04-01T11:00:00",
+      "blood_pressure_systolic": 127,
+      "blood_pressure_diastolic": 75,
+      "heart_rate": 69,
+      "temperature_f": 97.6,
+      "oxygen_saturation": 95.6,
+      "weight_lbs": 176.2,
+      "bmi": 34.3
+    },
+    {
+      "recorded_date": "2025-05-01T11:00:00",
+      "blood_pressure_systolic": 180,
+      "blood_pressure_diastolic": 100,
+      "heart_rate": 100,
+      "temperature_f": 100.1,
+      "oxygen_saturation": 89.1,
+      "weight_lbs": 262.0,
+      "bmi": 26.7
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "TSH",
+      "value": 0.59,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-11-21"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 33.89,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": true,
+      "test_date": "2025-02-06"
+    },
+    {
+      "test_name": "Sodium",
+      "value": 137.75,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-03-03"
+    },
+    {
+      "test_name": "INR",
+      "value": 3.15,
+      "unit": "",
+      "reference_range": "0.8-1.2 (2.0-3.0 on warfarin)",
+      "is_abnormal": true,
+      "test_date": "2025-06-02"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 16.79,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": false,
+      "test_date": "2025-03-19"
+    },
+    {
+      "test_name": "WBC Count",
+      "value": 5.8,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2025-07-29"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "ae72c4d8",
+      "encounter_type": "telehealth",
+      "date": "2024-06-21T16:15:00",
+      "provider": "Dr. Underwood",
+      "department": "Internal Medicine",
+      "reason": "Acute complaint",
+      "notes": "Effect cultural building system. Lead sit response blue increase. But through leader operation mean white above save.",
+      "followup_required": true,
+      "followup_date": "2024-08-29"
+    },
+    {
+      "encounter_id": "47b02d57",
+      "encounter_type": "outpatient",
+      "date": "2024-06-30T12:00:00",
+      "provider": "Dr. Conner",
+      "department": "Pulmonology",
+      "reason": "New symptom evaluation",
+      "notes": "Three none pressure lay future. Staff such forward. Outside respond guy laugh best probably able great. Natural hear blood to manage.",
+      "followup_required": true,
+      "followup_date": "2024-08-09"
+    },
+    {
+      "encounter_id": "78d07480",
+      "encounter_type": "emergency",
+      "date": "2024-09-11T10:30:00",
+      "provider": "Dr. Craig",
+      "department": "Cardiology",
+      "reason": "Medication review",
+      "notes": "There institution actually blood herself. Prove customer seek. Worker raise chair artist.",
+      "followup_required": true,
+      "followup_date": "2024-11-13"
+    },
+    {
+      "encounter_id": "125103e8",
+      "encounter_type": "inpatient",
+      "date": "2025-01-17T07:30:00",
+      "provider": "Dr. Evans",
+      "department": "Internal Medicine",
+      "reason": "Routine follow-up",
+      "notes": "Republican very plan cut person fact. Tv car report window concern my. Report set no old wall report.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "aa4f679c",
+      "encounter_type": "telehealth",
+      "date": "2025-02-17T13:45:00",
+      "provider": "Dr. Tran",
+      "department": "Internal Medicine",
+      "reason": "Routine follow-up",
+      "notes": "Lot meet TV concern official room campaign hold. Paper focus thing industry participant realize eat huge. Wife laugh card include record security.",
+      "followup_required": true,
+      "followup_date": "2025-05-10"
+    },
+    {
+      "encounter_id": "8f524cad",
+      "encounter_type": "inpatient",
+      "date": "2025-04-13T09:30:00",
+      "provider": "Dr. Hooper",
+      "department": "Internal Medicine",
+      "reason": "Chronic disease management",
+      "notes": "Idea along near stay.",
+      "followup_required": true,
+      "followup_date": "2025-06-08"
+    }
+  ],
+  "primary_care_provider": "Dr. Mueller, MD",
+  "record_created": "2026-04-17T00:51:40.115800",
+  "last_updated": "2026-04-17T00:51:40.115805"
+}

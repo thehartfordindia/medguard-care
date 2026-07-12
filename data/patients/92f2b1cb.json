@@ -1,0 +1,233 @@
+{
+  "patient_id": "92f2b1cb",
+  "first_name": "Eddie",
+  "last_name": "Mills",
+  "date_of_birth": "1954-10-31",
+  "gender": "Male",
+  "blood_type": "O+",
+  "phone": "(718)688-8806x706",
+  "email": "kellycarlos@example.org",
+  "address": "520 Payne Via, Port Kimberly, NH 91647",
+  "emergency_contact_name": "Clarence Taylor",
+  "emergency_contact_phone": "001-970-643-0305x486",
+  "insurance_provider": "UnitedHealth",
+  "insurance_id": "AET-620306",
+  "allergies": [
+    "Latex",
+    "Morphine",
+    "Codeine"
+  ],
+  "medications": [
+    {
+      "name": "Hydrocodone/APAP",
+      "dosage": "5/325mg",
+      "frequency": "every 6 hours as needed",
+      "start_date": "2024-11-02",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Smith",
+      "is_active": true
+    },
+    {
+      "name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "once daily",
+      "start_date": "2023-05-08",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Gomez",
+      "is_active": true
+    },
+    {
+      "name": "Levothyroxine",
+      "dosage": "75mcg",
+      "frequency": "once daily on empty stomach",
+      "start_date": "2024-03-23",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Duncan",
+      "is_active": true
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "40mg",
+      "frequency": "once daily at bedtime",
+      "start_date": "2025-08-14",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Lopez",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2026-04-04",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Barnett",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Acute Bronchitis",
+      "icd10_code": "J20.9",
+      "diagnosed_date": "2020-06-10",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "Essential Hypertension",
+      "icd10_code": "I10",
+      "diagnosed_date": "2022-05-31",
+      "severity": "moderate",
+      "is_chronic": true
+    },
+    {
+      "condition": "Urinary Tract Infection",
+      "icd10_code": "N39.0",
+      "diagnosed_date": "2023-05-18",
+      "severity": "mild",
+      "is_chronic": false
+    },
+    {
+      "condition": "COPD",
+      "icd10_code": "J44.1",
+      "diagnosed_date": "2024-08-11",
+      "severity": "moderate",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T14:00:00",
+      "blood_pressure_systolic": 113,
+      "blood_pressure_diastolic": 72,
+      "heart_rate": 70,
+      "temperature_f": 98.5,
+      "oxygen_saturation": 96.5,
+      "weight_lbs": 224.4,
+      "bmi": 26.8
+    },
+    {
+      "recorded_date": "2025-01-31T14:00:00",
+      "blood_pressure_systolic": 124,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 83,
+      "temperature_f": 98.8,
+      "oxygen_saturation": 96.8,
+      "weight_lbs": 279.7,
+      "bmi": 23.9
+    },
+    {
+      "recorded_date": "2025-03-02T09:00:00",
+      "blood_pressure_systolic": 152,
+      "blood_pressure_diastolic": 110,
+      "heart_rate": 120,
+      "temperature_f": 100.4,
+      "oxygen_saturation": 92.0,
+      "weight_lbs": 235.1,
+      "bmi": 37.1
+    },
+    {
+      "recorded_date": "2025-04-01T16:00:00",
+      "blood_pressure_systolic": 111,
+      "blood_pressure_diastolic": 74,
+      "heart_rate": 62,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 98.2,
+      "weight_lbs": 190.7,
+      "bmi": 37.0
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Sodium",
+      "value": 142.87,
+      "unit": "mEq/L",
+      "reference_range": "136-145 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2025-10-21"
+    },
+    {
+      "test_name": "Total Cholesterol",
+      "value": 152.52,
+      "unit": "mg/dL",
+      "reference_range": "<200 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-06-10"
+    },
+    {
+      "test_name": "Hemoglobin",
+      "value": 8.0,
+      "unit": "g/dL",
+      "reference_range": "12.0-17.5 g/dL",
+      "is_abnormal": true,
+      "test_date": "2025-02-28"
+    },
+    {
+      "test_name": "TSH",
+      "value": 1.07,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": false,
+      "test_date": "2025-09-23"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "9485ccae",
+      "encounter_type": "telehealth",
+      "date": "2024-04-30T11:30:00",
+      "provider": "Dr. Johnson",
+      "department": "Cardiology",
+      "reason": "New symptom evaluation",
+      "notes": "Ground sit tend forward buy. Join hundred keep what fund cost.",
+      "followup_required": true,
+      "followup_date": "2024-07-15"
+    },
+    {
+      "encounter_id": "e2d7a6f5",
+      "encounter_type": "inpatient",
+      "date": "2024-05-18T08:45:00",
+      "provider": "Dr. Holt",
+      "department": "Emergency",
+      "reason": "Chronic disease management",
+      "notes": "Entire bar interesting issue yet Congress family. Bag produce fill owner. Coach know language risk treatment past.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "416e8284",
+      "encounter_type": "emergency",
+      "date": "2024-11-03T09:15:00",
+      "provider": "Dr. Johnson",
+      "department": "Neurology",
+      "reason": "Lab review",
+      "notes": "Sing hand him note painting. We head several off morning huge power.",
+      "followup_required": true,
+      "followup_date": "2024-12-02"
+    },
+    {
+      "encounter_id": "35377068",
+      "encounter_type": "telehealth",
+      "date": "2026-03-22T09:15:00",
+      "provider": "Dr. Wright",
+      "department": "Internal Medicine",
+      "reason": "Post-hospitalization check",
+      "notes": "Save material hit. Brother simple region Democrat partner really your.",
+      "followup_required": true,
+      "followup_date": "2026-06-14"
+    },
+    {
+      "encounter_id": "e9d3fd81",
+      "encounter_type": "emergency",
+      "date": "2026-04-09T17:30:00",
+      "provider": "Dr. Graham",
+      "department": "Emergency",
+      "reason": "Medication review",
+      "notes": "Provide image message seek. Well central parent sit.",
+      "followup_required": true,
+      "followup_date": "2026-07-02"
+    }
+  ],
+  "primary_care_provider": "Dr. Gonzalez, MD",
+  "record_created": "2026-04-17T00:52:37.017361",
+  "last_updated": "2026-04-17T00:52:37.017363"
+}

@@ -1,0 +1,32 @@
+PATIENT CLINICAL SUMMARY
+========================
+Patient: Julie Carpenter (ID: 631304fe)
+Age: 50 | Gender: Female | Blood Type: A-
+PCP: Dr. Rivas, MD
+
+ALLERGIES: Peanuts, Ibuprofen, Sulfa drugs, Penicillin
+
+ACTIVE MEDICATIONS:
+  - Insulin Glargine 20 units (once daily at bedtime)
+  - Warfarin 5mg (once daily)
+
+DIAGNOSES:
+  - Atrial Fibrillation (I48.91) — moderate [CHRONIC]
+  - Hyperlipidemia (E78.5) — mild [CHRONIC]
+  - Pneumonia (J18.9) — moderate
+
+LATEST VITALS (2025-03-02):
+  BP: 112/81 mmHg
+  HR: 85 bpm | Temp: 98.3°F
+  SpO2: 99.9% | BMI: 29.3
+
+⚠️ ABNORMAL LAB RESULTS:
+  - Fasting Glucose: 243.89 mg/dL (Ref: 70-100 mg/dL)
+  - Sodium: 126.14 mEq/L (Ref: 136-145 mEq/L)
+
+RECENT ENCOUNTERS:
+  - [OUTPATIENT] 2024-10-09 — Urgent care visit
+    ⚡ Follow-up required by 2024-12-15
+  - [OUTPATIENT] 2024-09-21 — Urgent care visit
+    ⚡ Follow-up required by 2024-11-24
+  - [OUTPATIENT] 2024-06-02 — Medication review

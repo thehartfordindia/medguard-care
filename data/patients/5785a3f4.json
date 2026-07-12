@@ -1,0 +1,226 @@
+{
+  "patient_id": "5785a3f4",
+  "first_name": "Michael",
+  "last_name": "Mcneil",
+  "date_of_birth": "2005-12-26",
+  "gender": "Male",
+  "blood_type": "A-",
+  "phone": "(427)413-6111x55426",
+  "email": "morenoalan@example.net",
+  "address": "326 Heath Corners Apt. 219, Bellchester, MD 18828",
+  "emergency_contact_name": "Matthew Wright",
+  "emergency_contact_phone": "+1-699-240-4389x836",
+  "insurance_provider": "Humana",
+  "insurance_id": "BCB-380901",
+  "allergies": [
+    "Latex",
+    "Morphine",
+    "Penicillin",
+    "Peanuts"
+  ],
+  "medications": [
+    {
+      "name": "Metoprolol",
+      "dosage": "50mg",
+      "frequency": "twice daily",
+      "start_date": "2023-10-23",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Smith",
+      "is_active": true
+    },
+    {
+      "name": "Insulin Glargine",
+      "dosage": "20 units",
+      "frequency": "once daily at bedtime",
+      "start_date": "2024-04-13",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Dominguez",
+      "is_active": true
+    },
+    {
+      "name": "Amiodarone",
+      "dosage": "200mg",
+      "frequency": "once daily",
+      "start_date": "2025-03-02",
+      "end_date": null,
+      "prescribing_doctor": "Dr. Montoya",
+      "is_active": true
+    }
+  ],
+  "diagnoses": [
+    {
+      "condition": "Hypothyroidism",
+      "icd10_code": "E03.9",
+      "diagnosed_date": "2021-03-23",
+      "severity": "mild",
+      "is_chronic": true
+    }
+  ],
+  "vitals_history": [
+    {
+      "recorded_date": "2025-01-01T12:00:00",
+      "blood_pressure_systolic": 119,
+      "blood_pressure_diastolic": 71,
+      "heart_rate": 74,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 99.3,
+      "weight_lbs": 152.2,
+      "bmi": 35.4
+    },
+    {
+      "recorded_date": "2025-01-31T12:00:00",
+      "blood_pressure_systolic": 116,
+      "blood_pressure_diastolic": 81,
+      "heart_rate": 87,
+      "temperature_f": 98.6,
+      "oxygen_saturation": 98.2,
+      "weight_lbs": 163.2,
+      "bmi": 21.2
+    },
+    {
+      "recorded_date": "2025-03-02T12:00:00",
+      "blood_pressure_systolic": 111,
+      "blood_pressure_diastolic": 81,
+      "heart_rate": 77,
+      "temperature_f": 97.9,
+      "oxygen_saturation": 97.7,
+      "weight_lbs": 185.3,
+      "bmi": 32.2
+    },
+    {
+      "recorded_date": "2025-04-01T13:00:00",
+      "blood_pressure_systolic": 126,
+      "blood_pressure_diastolic": 73,
+      "heart_rate": 64,
+      "temperature_f": 98.9,
+      "oxygen_saturation": 98.9,
+      "weight_lbs": 268.6,
+      "bmi": 37.9
+    },
+    {
+      "recorded_date": "2025-05-01T11:00:00",
+      "blood_pressure_systolic": 172,
+      "blood_pressure_diastolic": 94,
+      "heart_rate": 110,
+      "temperature_f": 99.9,
+      "oxygen_saturation": 89.6,
+      "weight_lbs": 174.7,
+      "bmi": 34.9
+    },
+    {
+      "recorded_date": "2025-05-31T11:00:00",
+      "blood_pressure_systolic": 128,
+      "blood_pressure_diastolic": 78,
+      "heart_rate": 80,
+      "temperature_f": 98.1,
+      "oxygen_saturation": 97.3,
+      "weight_lbs": 228.7,
+      "bmi": 35.7
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "WBC Count",
+      "value": 7.67,
+      "unit": "K/uL",
+      "reference_range": "4.5-11.0 K/uL",
+      "is_abnormal": false,
+      "test_date": "2025-10-25"
+    },
+    {
+      "test_name": "Potassium",
+      "value": 4.66,
+      "unit": "mEq/L",
+      "reference_range": "3.5-5.0 mEq/L",
+      "is_abnormal": false,
+      "test_date": "2026-01-11"
+    },
+    {
+      "test_name": "HDL Cholesterol",
+      "value": 78.89,
+      "unit": "mg/dL",
+      "reference_range": ">40 mg/dL",
+      "is_abnormal": false,
+      "test_date": "2025-11-22"
+    },
+    {
+      "test_name": "TSH",
+      "value": 8.58,
+      "unit": "mIU/L",
+      "reference_range": "0.4-4.0 mIU/L",
+      "is_abnormal": true,
+      "test_date": "2025-02-02"
+    }
+  ],
+  "encounters": [
+    {
+      "encounter_id": "3b51351c",
+      "encounter_type": "emergency",
+      "date": "2025-01-04T11:00:00",
+      "provider": "Dr. Adams",
+      "department": "Emergency",
+      "reason": "Acute complaint",
+      "notes": "Friend investment model. Republican office baby lawyer growth.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "bae9b326",
+      "encounter_type": "emergency",
+      "date": "2025-03-14T10:15:00",
+      "provider": "Dr. Sanchez",
+      "department": "Cardiology",
+      "reason": "New symptom evaluation",
+      "notes": "Law participant finally score. Budget remain reduce clearly. Mission situation result cold camera sit.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "ec737133",
+      "encounter_type": "emergency",
+      "date": "2025-03-15T10:45:00",
+      "provider": "Dr. Bowers",
+      "department": "Endocrinology",
+      "reason": "New symptom evaluation",
+      "notes": "History drop point audience thousand activity guess. Car team nothing half raise several.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "9336f746",
+      "encounter_type": "emergency",
+      "date": "2025-08-14T09:45:00",
+      "provider": "Dr. Best",
+      "department": "Emergency",
+      "reason": "Routine follow-up",
+      "notes": "Onto add democratic. We huge expert Republican.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "d4b2075d",
+      "encounter_type": "telehealth",
+      "date": "2025-10-02T11:15:00",
+      "provider": "Dr. Porter",
+      "department": "Emergency",
+      "reason": "Medication review",
+      "notes": "Happy effort bill off. Direction meeting analysis television. Animal hair turn condition whether.",
+      "followup_required": false,
+      "followup_date": null
+    },
+    {
+      "encounter_id": "677765b0",
+      "encounter_type": "outpatient",
+      "date": "2025-10-03T14:00:00",
+      "provider": "Dr. Wang",
+      "department": "Cardiology",
+      "reason": "Chronic disease management",
+      "notes": "Bar Mr pattern everyone finally memory. Window choice force only shake. Financial join well draw.",
+      "followup_required": false,
+      "followup_date": null
+    }
+  ],
+  "primary_care_provider": "Dr. Johnson, MD",
+  "record_created": "2026-04-17T00:56:40.587750",
+  "last_updated": "2026-04-17T00:56:40.587750"
+}
