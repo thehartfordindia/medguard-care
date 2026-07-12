@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedGuard Care | Medicines & At-Home Doctor, Nurse & Caretaker</title>
+    <meta
+      name="description"
+      content="MedGuard Care delivers medicines to your door and books doctors, nurses and caretakers at home or online — based on your live location."
+    />
+    <meta name="theme-color" content="#0e7490" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css?v=2" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">🩺</span>
+        <div>
+          <strong>MedGuard Care</strong>
+          <small>Medicines & care, at your door</small>
+        </div>
+      </div>
+      <nav class="top-nav">
+        <a href="#medicines">Medicines</a>
+        <a href="#devices">Devices</a>
+        <a href="#labs">Lab Tests</a>
+        <a href="#care">Doctors & Care</a>
+        <a href="#track">Track Order</a>
+        <a href="#support">Support</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark mode">🌙</button>
+        <button id="cartToggle" class="cart-btn" type="button">
+          🛒 <span id="cartCount" class="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="pill">🚚 Door-to-door • ⚕️ At-home care • 💻 Online consults</span>
+        <h1>Healthcare that comes <span class="grad">to you</span>.</h1>
+        <p>
+          Order medicines for delivery, book a doctor, nurse or caretaker to your home, or consult a
+          doctor online — all matched to your live location for the fastest care.
+        </p>
+        <div class="hero-cta">
+          <button id="useLocationBtn" class="btn btn-primary">📍 Use my location</button>
+          <a href="#care" class="btn btn-ghost">Book a doctor</a>
+        </div>
+        <p id="locationStatus" class="loc-status">Location not set — tap “Use my location” for accurate delivery ETA.</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-row">
+          <span>Nearest MedGuard hub</span>
+          <strong id="nearestHub">—</strong>
+        </div>
+        <div class="hero-card-row">
+          <span>Delivery ETA</span>
+          <strong id="deliveryEta">—</strong>
+        </div>
+        <div id="miniMap" class="mini-map"></div>
+      </div>
+    </section>
+
+    <main class="container">
+      <!-- Quick stats -->
+      <section class="stat-strip">
+        <div class="stat"><b>24/7</b><span>Emergency support</span></div>
+        <div class="stat"><b>500+</b><span>Medicines</span></div>
+        <div class="stat"><b>Verified</b><span>Doctors & nurses</span></div>
+        <div class="stat"><b>Free</b><span>Delivery over ₹500</span></div>
+      </section>
+
+      <!-- Medicines -->
+      <section id="medicines" class="panel">
+        <div class="panel-head">
+          <h2>💊 Order Medicines</h2>
+          <p>Search, add to cart, and get them delivered from your nearest hub.</p>
+        </div>
+        <div class="med-toolbar">
+          <input id="medSearch" type="search" placeholder="Search medicine, symptom (fever, bp, sugar)…" />
+          <select id="medCategory"><option value="all">All categories</option></select>
+        </div>
+        <div id="medGrid" class="med-grid" aria-live="polite"></div>
+      </section>
+
+      <!-- Medical devices & equipment -->
+      <section id="devices" class="panel">
+        <div class="panel-head">
+          <h2>🩻 Medical Devices & Equipment</h2>
+          <p>Monitors, nebulizers, mobility aids and first-aid essentials — delivered to your door.</p>
+        </div>
+        <div id="deviceGrid" class="med-grid" aria-live="polite"></div>
+      </section>
+
+      <!-- Lab tests at home -->
+      <section id="labs" class="panel">
+        <div class="panel-head">
+          <h2>🧪 Lab Tests at Home</h2>
+          <p>Book diagnostic tests with free home sample collection. Reports on your phone.</p>
+        </div>
+        <div class="lab-toolbar">
+          <select id="labCategory"><option value="all">All tests</option></select>
+          <span class="lab-hint">🏠 Free collection on tests over ₹500</span>
+        </div>
+        <div id="labGrid" class="lab-grid" aria-live="polite"></div>
+      </section>
+
+      <!-- Care providers -->
+      <section id="care" class="panel">
+        <div class="panel-head">
+          <h2>⚕️ Doctors, Nurses & Caretakers</h2>
+          <p>Book a visit at home or an online consultation. Sorted by distance when your location is on.</p>
+        </div>
+        <div class="care-tabs" role="tablist">
+          <button class="care-tab active" data-role="all">All</button>
+          <button class="care-tab" data-role="doctor">👨‍⚕️ Doctors</button>
+          <button class="care-tab" data-role="nurse">💉 Nurses</button>
+          <button class="care-tab" data-role="caretaker">🤝 Caretakers</button>
+        </div>
+        <div id="providerGrid" class="provider-grid" aria-live="polite"></div>
+      </section>
+
+      <!-- Track order -->
+      <section id="track" class="panel two-col">
+        <div>
+          <div class="panel-head">
+            <h2>📦 Track your order</h2>
+            <p>Enter your order reference to see live status.</p>
+          </div>
+          <div class="track-box">
+            <input id="trackInput" type="text" placeholder="e.g. MED-… or CARE-…" />
+            <button id="trackBtn" class="btn btn-primary" type="button">Check status</button>
+          </div>
+          <div id="trackOutput" class="track-output"></div>
+        </div>
+
+        <!-- Assistant -->
+        <aside class="assistant">
+          <h3>🤖 Care Assistant</h3>
+          <p>Ask about medicines, bookings, delivery or online consults.</p>
+          <div id="chatLog" class="chat-log" aria-live="polite"></div>
+          <div id="chatChips" class="chat-chips"></div>
+          <form id="chatForm" class="chat-form" autocomplete="off">
+            <input id="chatInput" type="text" placeholder="Type your question…" aria-label="Ask the assistant" />
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+          <details id="help" class="helpdesk">
+            <summary>📞 Emergency & Help Desk</summary>
+            <ul>
+              <li>Emergency: <a href="tel:+911800555000">1800-555-000</a> (24/7)</li>
+              <li>Pharmacy: <a href="tel:+911800555111">1800-555-111</a></li>
+              <li>Email: <a href="mailto:care@medguard.example">care@medguard.example</a></li>
+            </ul>
+          </details>
+        </aside>
+      </section>
+
+      <!-- Customer support -->
+      <section id="support" class="panel two-col">
+        <div>
+          <div class="panel-head">
+            <h2>🎧 Customer Support</h2>
+            <p>Raise a ticket or request a callback — our care team responds fast.</p>
+          </div>
+          <form id="supportForm" class="support-form">
+            <div class="support-grid">
+              <input id="supName" type="text" placeholder="Your name" required />
+              <input id="supContact" type="text" placeholder="Phone or email" required />
+            </div>
+            <div class="support-grid">
+              <select id="supCategory">
+                <option value="Order Issue">Order Issue</option>
+                <option value="Delivery">Delivery</option>
+                <option value="Refund">Refund / Payment</option>
+                <option value="Lab Test">Lab Test</option>
+                <option value="Doctor Booking">Doctor Booking</option>
+                <option value="General">General Query</option>
+              </select>
+              <input id="supOrderRef" type="text" placeholder="Order ref (optional)" />
+            </div>
+            <textarea id="supMessage" rows="3" placeholder="How can we help you?" required></textarea>
+            <label class="support-callback">
+              <input id="supCallback" type="checkbox" /> Request a callback (within 30 min)
+            </label>
+            <button type="submit" class="btn btn-primary btn-block">Submit request</button>
+          </form>
+          <div id="supportResult" class="support-result"></div>
+        </div>
+        <aside class="support-side">
+          <h3>⚡ Quick help</h3>
+          <div class="support-cards">
+            <a class="support-card" href="tel:+911800555000"><b>📞 Call us</b><span>1800-555-000 · 24/7</span></a>
+            <a class="support-card" href="https://wa.me/911800555111" target="_blank" rel="noopener"><b>💬 WhatsApp</b><span>Chat with an agent</span></a>
+            <a class="support-card" href="mailto:care@medguard.example"><b>✉️ Email</b><span>care@medguard.example</span></a>
+          </div>
+          <h4>Track a ticket</h4>
+          <div class="track-box">
+            <input id="ticketInput" type="text" placeholder="e.g. TKT-…" />
+            <button id="ticketBtn" class="btn btn-ghost" type="button">Look up</button>
+          </div>
+          <div id="ticketOutput" class="track-output"></div>
+        </aside>
+      </section>
+    </main>
+
+    <!-- Cart drawer -->
+    <div id="cartDrawer" class="cart-drawer" aria-hidden="true">
+      <div class="cart-drawer-head">
+        <h3>Your cart</h3>
+        <button id="cartClose" class="icon-btn" type="button" aria-label="Close cart">✕</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-totals" id="cartTotals"></div>
+      <form id="checkoutForm" class="checkout-form">
+        <h4>Delivery details</h4>
+        <input id="custName" type="text" placeholder="Full name" required />
+        <input id="custPhone" type="tel" placeholder="Phone number" required />
+        <textarea id="custAddress" rows="2" placeholder="Delivery address"></textarea>
+        <label class="rx-line" id="rxLine" hidden>
+          <input id="rxUploaded" type="checkbox" />
+          I have a valid prescription for the Rx items
+        </label>
+        <div class="coupon-row">
+          <input id="couponInput" type="text" placeholder="Promo code (e.g. MED10)" autocomplete="off" />
+          <button type="button" id="applyCouponBtn" class="btn btn-ghost">Apply</button>
+        </div>
+        <div id="couponMsg" class="coupon-msg"></div>
+        <button type="submit" class="btn btn-primary btn-block" id="placeOrderBtn">Place order</button>
+      </form>
+      <div id="checkoutResult" class="checkout-result"></div>
+    </div>
+    <div id="cartBackdrop" class="backdrop" hidden></div>
+
+    <!-- Care booking modal -->
+    <div id="careModal" class="modal" hidden>
+      <div class="modal-card">
+        <button id="careModalClose" class="icon-btn modal-close" type="button" aria-label="Close">✕</button>
+        <div id="careModalBody"></div>
+      </div>
+    </div>
+
+    <!-- Lab test booking modal -->
+    <div id="labModal" class="modal" hidden>
+      <div class="modal-card">
+        <button id="labModalClose" class="icon-btn modal-close" type="button" aria-label="Close">✕</button>
+        <div id="labModalBody"></div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p>MedGuard Care — a demo patient-care platform. Not for real medical use.</p>
+      <p class="disclaimer">
+        Always consult a licensed professional. In an emergency, call your local emergency number.
+      </p>
+    </footer>
+
+    <div id="toastHost" class="toast-host" aria-live="polite"></div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+      defer
+    ></script>
+    <script src="app.js?v=2" defer></script>
+  </body>
+</html>
