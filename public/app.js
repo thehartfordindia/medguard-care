@@ -16,9 +16,13 @@ const state = {
   location: null, // { lat, lon }
   role: "all",
   careSelection: null, // { provider, mode, slot }
+  user: null, // logged-in user { id, name, email, plusActive }
+  token: null, // session token
+  plan: null, // MedGuard Plus plan details
 };
 
 const DEVICE_CATEGORIES = ["Devices", "Mobility Aids", "Protection"];
+const MEMBER_RATE = 0.05;
 
 const dom = {};
 
@@ -28,6 +32,12 @@ function $(id) {
 }
 function inr(n) {
   return "₹" + Math.round(n).toLocaleString("en-IN");
+}
+function isPlus() {
+  return Boolean(state.user && state.user.plusActive);
+}
+function authHeaders() {
+  return state.token ? { "x-auth-token": state.token } : {};
 }
 function escapeHtml(v) {
   return String(v == null ? "" : v).replace(/[&<>"']/g, (c) =>
@@ -230,10 +240,19 @@ function setQty(id, qty) {
 }
 function cartTotals() {
   const subtotal = state.cart.reduce((s, i) => s + i.price * i.qty, 0);
-  const deliveryFee = subtotal >= 500 || subtotal === 0 ? 0 : 40;
+  const plus = isPlus();
+  const deliveryFee = plus ? 0 : subtotal >= 500 || subtotal === 0 ? 0 : 40;
   const requiresRx = state.cart.some((i) => i.rx);
   const discount = state.coupon ? Math.min(state.coupon.discount, subtotal) : 0;
-  return { subtotal, deliveryFee, discount, total: Math.max(0, subtotal + deliveryFee - discount), requiresRx };
+  const memberDiscount = plus ? Math.round(subtotal * MEMBER_RATE) : 0;
+  return {
+    subtotal,
+    deliveryFee,
+    discount,
+    memberDiscount,
+    total: Math.max(0, subtotal + deliveryFee - discount - memberDiscount),
+    requiresRx,
+  };
 }
 function renderCart() {
   const count = state.cart.reduce((s, i) => s + i.qty, 0);
@@ -265,7 +284,8 @@ function renderCart() {
   const t = cartTotals();
   $("cartTotals").innerHTML = `
     <div class="row"><span>Subtotal</span><span>${inr(t.subtotal)}</span></div>
-    <div class="row"><span>Delivery</span><span>${t.deliveryFee === 0 ? "FREE" : inr(t.deliveryFee)}</span></div>
+    <div class="row"><span>Delivery${isPlus() ? " <b class='mini-plus'>PLUS</b>" : ""}</span><span>${t.deliveryFee === 0 ? "FREE" : inr(t.deliveryFee)}</span></div>
+    ${t.memberDiscount > 0 ? `<div class="row discount"><span>Plus member −5%</span><span>−${inr(t.memberDiscount)}</span></div>` : ""}
     ${t.discount > 0 ? `<div class="row discount"><span>Discount ${state.coupon ? "(" + escapeHtml(state.coupon.code) + ")" : ""}</span><span>−${inr(t.discount)}</span></div>` : ""}
     <div class="row grand"><span>Total</span><span>${inr(t.total)}</span></div>`;
   $("rxLine").hidden = !t.requiresRx;
@@ -329,7 +349,7 @@ async function placeOrder(e) {
   try {
     const res = await fetch(`${API}/api/orders`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", ...authHeaders() },
       body: JSON.stringify({
         type: "medicine",
         items: state.cart.map((i) => ({ id: i.id, qty: i.qty })),
@@ -346,9 +366,10 @@ async function placeOrder(e) {
     });
     const order = await res.json();
     if (!res.ok) throw new Error(order.error || "Order failed");
+    const saved = (order.discount || 0) + (order.memberDiscount || 0);
     $("checkoutResult").textContent =
       `✅ Order placed!\nReference: ${order.id}\nTotal: ${inr(order.total)}\n` +
-      (order.discount ? `You saved: ${inr(order.discount)}\n` : "") +
+      (saved ? `You saved: ${inr(saved)}${order.memberDiscount ? " (incl. Plus)" : ""}\n` : "") +
       `From: ${order.fulfilledBy.name}\nETA: ~${order.etaMinutes} min\nStatus: ${order.status}`;
     state.cart = [];
     state.coupon = null;
@@ -453,7 +474,7 @@ async function confirmCare() {
   try {
     const res = await fetch(`${API}/api/orders`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", ...authHeaders() },
       body: JSON.stringify({
         type: "care",
         providerId: provider.id,
@@ -551,7 +572,7 @@ async function confirmLab() {
   try {
     const res = await fetch(`${API}/api/orders`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", ...authHeaders() },
       body: JSON.stringify({
         type: "lab",
         tests: chosen.map((t) => t.id),
@@ -629,6 +650,238 @@ async function lookupTicket() {
       `${t.callbackRequested ? "Callback: requested\n" : ""}Raised: ${new Date(t.createdAt).toLocaleString()}`;
   } catch (err) {
     $("ticketOutput").textContent = `⚠️ ${err.message}`;
+  }
+}
+
+/* ---------- accounts / auth ---------- */
+function setUser(user, token) {
+  state.user = user;
+  if (token) {
+    state.token = token;
+    localStorage.setItem("mg_token", token);
+  }
+  renderAccount();
+  renderPlus();
+  renderCart();
+  prefillCheckout();
+}
+function clearUser() {
+  state.user = null;
+  state.token = null;
+  localStorage.removeItem("mg_token");
+  renderAccount();
+  renderPlus();
+  renderCart();
+}
+async function restoreSession() {
+  const token = localStorage.getItem("mg_token");
+  if (!token) {
+    renderAccount();
+    return;
+  }
+  state.token = token;
+  try {
+    const res = await fetch(`${API}/api/auth/me`, { headers: authHeaders() });
+    if (!res.ok) throw new Error("expired");
+    const data = await res.json();
+    setUser(data.user, token);
+  } catch (_e) {
+    clearUser();
+  }
+}
+function renderAccount() {
+  const loginBtn = $("loginBtn");
+  const userMenu = $("userMenu");
+  if (state.user) {
+    loginBtn.hidden = true;
+    userMenu.hidden = false;
+    const name = state.user.name || "User";
+    $("userName").textContent = name.split(" ")[0];
+    $("userAvatar").textContent = (name[0] || "U").toUpperCase();
+    $("userAvatar").style.background = avatarColor(name);
+    $("ddName").textContent = name;
+    $("ddEmail").textContent = state.user.email || "";
+    const plus = isPlus();
+    $("plusBadge").hidden = !plus;
+    $("ddPlusStatus").innerHTML = plus
+      ? `<span class="dd-plus-on">⭐ MedGuard Plus active</span>`
+      : `<span class="dd-plus-off">Not a Plus member yet</span>`;
+  } else {
+    loginBtn.hidden = false;
+    userMenu.hidden = true;
+    $("userDropdown").hidden = true;
+  }
+}
+function prefillCheckout() {
+  if (!state.user) return;
+  if ($("custName") && !$("custName").value) $("custName").value = state.user.name || "";
+  if ($("custPhone") && !$("custPhone").value) $("custPhone").value = state.user.phone || "";
+}
+function openAuthModal(tab) {
+  switchAuthTab(tab || "login");
+  $("authModal").hidden = false;
+}
+function switchAuthTab(tab) {
+  document.querySelectorAll(".auth-tab").forEach((b) => {
+    b.classList.toggle("active", b.getAttribute("data-auth-tab") === tab);
+  });
+  $("loginForm").hidden = tab !== "login";
+  $("signupForm").hidden = tab !== "signup";
+  $("loginMsg").textContent = "";
+  $("signupMsg").textContent = "";
+}
+async function doLogin(e) {
+  e.preventDefault();
+  const email = $("loginEmail").value.trim();
+  const password = $("loginPassword").value;
+  const msg = $("loginMsg");
+  msg.className = "auth-msg";
+  msg.textContent = "Logging in…";
+  try {
+    const res = await fetch(`${API}/api/auth/login`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Login failed");
+    setUser(data.user, data.token);
+    $("authModal").hidden = true;
+    $("loginForm").reset();
+    toast(`Welcome back, ${data.user.name.split(" ")[0]}!`);
+  } catch (err) {
+    msg.className = "auth-msg err";
+    msg.textContent = `⚠️ ${err.message}`;
+  }
+}
+async function doRegister(e) {
+  e.preventDefault();
+  const name = $("signupName").value.trim();
+  const email = $("signupEmail").value.trim();
+  const phone = $("signupPhone").value.trim();
+  const password = $("signupPassword").value;
+  const msg = $("signupMsg");
+  msg.className = "auth-msg";
+  msg.textContent = "Creating your account…";
+  try {
+    const res = await fetch(`${API}/api/auth/register`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, phone, password }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Sign up failed");
+    setUser(data.user, data.token);
+    $("authModal").hidden = true;
+    $("signupForm").reset();
+    toast(`Welcome to MedGuard, ${data.user.name.split(" ")[0]}!`);
+  } catch (err) {
+    msg.className = "auth-msg err";
+    msg.textContent = `⚠️ ${err.message}`;
+  }
+}
+async function doLogout() {
+  try {
+    await fetch(`${API}/api/auth/logout`, { method: "POST", headers: authHeaders() });
+  } catch (_e) {
+    /* ignore */
+  }
+  clearUser();
+  toast("Logged out.");
+}
+
+/* ---------- MedGuard Plus membership ---------- */
+async function loadPlan() {
+  try {
+    const res = await fetch(`${API}/api/plan`);
+    const data = await res.json();
+    state.plan = data.plan;
+    if (state.plan && $("plusPrice")) $("plusPrice").textContent = inr(state.plan.price);
+    renderPlus();
+  } catch (_e) {
+    /* ignore */
+  }
+}
+function renderPlus() {
+  const benefitsEl = $("plusBenefits");
+  const ctaEl = $("plusCta");
+  if (!benefitsEl || !state.plan) return;
+  benefitsEl.innerHTML = state.plan.benefits
+    .map(
+      (b) => `
+    <div class="plus-benefit">
+      <span class="plus-benefit-icon">${b.icon}</span>
+      <div>
+        <strong>${escapeHtml(b.title)}</strong>
+        <span>${escapeHtml(b.desc)}</span>
+      </div>
+    </div>`
+    )
+    .join("");
+  if (!state.user) {
+    ctaEl.innerHTML = `<button class="btn btn-primary btn-lg" id="plusLoginBtn">Log in to subscribe</button>`;
+    $("plusLoginBtn").addEventListener("click", () => openAuthModal("signup"));
+  } else if (isPlus()) {
+    const until = state.user.plusExpiry ? new Date(state.user.plusExpiry).toLocaleDateString() : "";
+    ctaEl.innerHTML = `<div class="plus-active-badge">⭐ You're a Plus member${until ? ` · renews ${escapeHtml(until)}` : ""}</div>`;
+  } else {
+    ctaEl.innerHTML = `<button class="btn btn-primary btn-lg" id="subscribeBtn">Subscribe to Plus · ${inr(state.plan.price)}/yr</button>`;
+    $("subscribeBtn").addEventListener("click", subscribePlus);
+  }
+}
+async function subscribePlus() {
+  if (!state.user) return openAuthModal("signup");
+  const btn = $("subscribeBtn");
+  if (btn) btn.disabled = true;
+  try {
+    const res = await fetch(`${API}/api/plus/subscribe`, { method: "POST", headers: authHeaders() });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Could not subscribe");
+    setUser(data.user);
+    toast("🎉 You're now a MedGuard Plus member!");
+  } catch (err) {
+    toast(`⚠️ ${err.message}`);
+    if (btn) btn.disabled = false;
+  }
+}
+
+/* ---------- my orders ---------- */
+async function openMyOrders() {
+  if (!state.user) return openAuthModal("login");
+  $("ordersModal").hidden = false;
+  $("ordersModalBody").innerHTML = "<p>Loading…</p>";
+  try {
+    const res = await fetch(`${API}/api/my/orders`, { headers: authHeaders() });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Could not load orders");
+    const orders = data.orders || [];
+    if (!orders.length) {
+      $("ordersModalBody").innerHTML = "<p>You have no orders yet.</p>";
+      return;
+    }
+    $("ordersModalBody").innerHTML = orders
+      .map((o) => {
+        const icon = o.type === "medicine" ? "📦" : o.type === "lab" ? "🧪" : "⚕️";
+        let detail = "";
+        if (o.type === "medicine") detail = (o.items || []).map((i) => `${i.name} ×${i.qty}`).join(", ");
+        else if (o.type === "lab") detail = (o.tests || []).map((t) => t.name).join(", ");
+        else detail = `${o.provider ? o.provider.name : ""} · ${o.visitMode || ""}`;
+        return `
+        <div class="order-row">
+          <div class="order-row-head">
+            <strong>${icon} ${escapeHtml(o.id)}</strong>
+            <span class="order-status">${escapeHtml(o.status)}</span>
+          </div>
+          <small>${escapeHtml(detail)}</small>
+          <div class="order-row-foot">
+            <span>${new Date(o.createdAt).toLocaleDateString()}</span>
+            <strong>${inr(o.total)}</strong>
+          </div>
+        </div>`;
+      })
+      .join("");
+  } catch (err) {
+    $("ordersModalBody").innerHTML = `<p>⚠️ ${escapeHtml(err.message)}</p>`;
   }
 }
 
@@ -889,6 +1142,39 @@ function bindEvents() {
   $("trackBtn").addEventListener("click", trackOrder);
   $("themeToggle").addEventListener("click", toggleTheme);
 
+  // account / auth
+  $("loginBtn").addEventListener("click", () => openAuthModal("login"));
+  $("authModalClose").addEventListener("click", () => ($("authModal").hidden = true));
+  $("authModal").addEventListener("click", (e) => {
+    if (e.target.id === "authModal") $("authModal").hidden = true;
+  });
+  document.querySelectorAll(".auth-tab").forEach((b) => {
+    b.addEventListener("click", () => switchAuthTab(b.getAttribute("data-auth-tab")));
+  });
+  $("loginForm").addEventListener("submit", doLogin);
+  $("signupForm").addEventListener("submit", doRegister);
+  $("userMenuBtn").addEventListener("click", () => {
+    $("userDropdown").hidden = !$("userDropdown").hidden;
+  });
+  document.addEventListener("click", (e) => {
+    if (!$("userMenu").hidden && !$("userMenu").contains(e.target)) {
+      $("userDropdown").hidden = true;
+    }
+  });
+  $("logoutBtn").addEventListener("click", () => {
+    $("userDropdown").hidden = true;
+    doLogout();
+  });
+  $("ddMyOrders").addEventListener("click", () => {
+    $("userDropdown").hidden = true;
+    openMyOrders();
+  });
+  $("ddPlusLink").addEventListener("click", () => ($("userDropdown").hidden = true));
+  $("ordersModalClose").addEventListener("click", () => ($("ordersModal").hidden = true));
+  $("ordersModal").addEventListener("click", (e) => {
+    if (e.target.id === "ordersModal") $("ordersModal").hidden = true;
+  });
+
   $("chatForm").addEventListener("submit", (e) => {
     e.preventDefault();
     const val = $("chatInput").value;
@@ -904,6 +1190,8 @@ function init() {
   loadCatalog();
   loadLabTests();
   loadProviders();
+  loadPlan();
+  restoreSession();
   renderCart();
   initChat();
 }
