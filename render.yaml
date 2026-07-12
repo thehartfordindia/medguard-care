@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: medguard-care
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node backend/server.js
+    envVars:
+      - key: ADMIN_SECRET
+        generateValue: true
+      # - key: DATABASE_URL   # add a Postgres URL for durable storage
+      # - key: WEBSITE_URL     # e.g. https://medguard-care.onrender.com
