@@ -1,0 +1,17 @@
+{
+  "name": "medguard-care",
+  "version": "1.0.0",
+  "description": "MedGuard Care — door-to-door medicine delivery and at-home doctor, nurse & caretaker booking with geolocation and online consultations.",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {},
+  "optionalDependencies": {
+    "pg": "^8.13.1"
+  },
+  "license": "MIT"
+}
