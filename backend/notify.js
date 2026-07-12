@@ -87,7 +87,16 @@ async function sendViaTwilio(recipient, payload) {
     body: form,
     signal: AbortSignal.timeout(NOTIFY_TIMEOUT_MS),
   });
-  if (!res.ok) throw new Error(`Twilio HTTP ${res.status}`);
+  if (!res.ok) {
+    let reason = "";
+    try {
+      const body = await res.json();
+      reason = body && body.message ? ` — ${body.message}` : "";
+    } catch (_e) {
+      /* ignore parse errors */
+    }
+    throw new Error(`Twilio HTTP ${res.status}${reason}`);
+  }
 }
 
 async function sendViaWebhook(channel, recipient, payload) {
@@ -212,7 +221,19 @@ function send(recipientEmail, recipientPhone, built) {
   Promise.allSettled([
     dispatch("email", recipientEmail, built.email),
     dispatch("sms", recipientPhone, built.sms),
-  ]).catch(() => {});
+  ])
+    .then((results) => {
+      for (const r of results) {
+        if (r.status !== "fulfilled") continue;
+        const note = r.value;
+        if (note.status === "SENT") {
+          console.log(`[notify] ${note.channel} SENT via ${note.provider} -> ${note.recipient}`);
+        } else if (note.status === "FAILED") {
+          console.error(`[notify] ${note.channel} FAILED -> ${note.recipient}: ${note.detail}`);
+        }
+      }
+    })
+    .catch(() => {});
   return summary;
 }
 
