@@ -364,6 +364,7 @@ async function placeOrder(e) {
   const name = $("custName").value.trim();
   const phone = $("custPhone").value.trim();
   const address = $("custAddress").value.trim();
+  const email = $("custEmail") ? $("custEmail").value.trim() : "";
   if (!name || !phone) return toast("Please enter name and phone.");
   const t = cartTotals();
   if (t.requiresRx && !$("rxUploaded").checked) {
@@ -383,6 +384,7 @@ async function placeOrder(e) {
           name,
           phone,
           address,
+          email,
           lat: state.location ? state.location.lat : null,
           lon: state.location ? state.location.lon : null,
         },
@@ -740,6 +742,7 @@ function prefillCheckout() {
   if (!state.user) return;
   if ($("custName") && !$("custName").value) $("custName").value = state.user.name || "";
   if ($("custPhone") && !$("custPhone").value) $("custPhone").value = state.user.phone || "";
+  if ($("custEmail") && !$("custEmail").value) $("custEmail").value = state.user.email || "";
 }
 function openAuthModal(tab) {
   switchAuthTab(tab || "login");
