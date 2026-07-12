@@ -295,7 +295,7 @@ function plusActive(user) {
 /** Strip sensitive fields before returning a user to the client. */
 function publicUser(user) {
   if (!user) return null;
-  const { passwordHash, passwordSalt, ...safe } = user;
+  const { passwordHash, passwordSalt, reset, ...safe } = user;
   return { ...safe, plusActive: plusActive(user) };
 }
 
@@ -452,6 +452,98 @@ const server = http.createServer(async (req, res) => {
       const user = await getSessionUser(req);
       if (!user) return sendJson(res, 401, { error: "Not logged in." });
       return sendJson(res, 200, { user: publicUser(user) });
+    }
+
+    // ---- Forgot password: request a reset code ----
+    if (pathname === "/api/auth/forgot" && req.method === "POST") {
+      const body = await readBody(req);
+      const email = cleanText(body.email, 120).toLowerCase();
+      if (!email) {
+        return sendJson(res, 400, { error: "Please enter your email address." });
+      }
+      const users = await store.getUsers();
+      const user = users.find((u) => u.email === email);
+      // Generic response either way, so we never reveal which emails exist.
+      const generic = {
+        ok: true,
+        message: "If an account exists for that email, a reset code has been sent.",
+      };
+      if (!user) return sendJson(res, 200, generic);
+
+      const code = String(crypto.randomInt(100000, 1000000)); // 6-digit
+      const { salt, hash } = hashPassword(code);
+      user.reset = {
+        salt,
+        hash,
+        expiresAt: Date.now() + 15 * 60 * 1000,
+        attempts: 0,
+      };
+      await store.saveUsers([user]);
+
+      // Deliver via SMS/email if configured; always log for operator fallback.
+      const notifications = notify.sendReset(user, code);
+      console.log(`[auth] password reset code for ${user.email}: ${code} (expires in 15 min)`);
+
+      const channels = notifications
+        .filter((n) => n.status === "QUEUED")
+        .map((n) => n.channel);
+      return sendJson(res, 200, {
+        ...generic,
+        delivered: channels, // e.g. ["sms"] or [] when nothing configured
+        hasPhone: Boolean(user.phone),
+      });
+    }
+
+    // ---- Reset password: verify code + set new password ----
+    if (pathname === "/api/auth/reset" && req.method === "POST") {
+      const body = await readBody(req);
+      const email = cleanText(body.email, 120).toLowerCase();
+      const code = cleanText(body.code, 12);
+      const password = String(body.password || "");
+      if (!email || !code || !password) {
+        return sendJson(res, 400, { error: "Email, code and new password are required." });
+      }
+      if (password.length < 6) {
+        return sendJson(res, 400, { error: "Password must be at least 6 characters." });
+      }
+      const users = await store.getUsers();
+      const user = users.find((u) => u.email === email);
+      if (!user || !user.reset) {
+        return sendJson(res, 400, { error: "No active reset request. Please request a new code." });
+      }
+      if (Date.now() > user.reset.expiresAt) {
+        delete user.reset;
+        await store.saveUsers([user]);
+        return sendJson(res, 400, { error: "This code has expired. Please request a new one." });
+      }
+      if (user.reset.attempts >= 5) {
+        delete user.reset;
+        await store.saveUsers([user]);
+        return sendJson(res, 400, { error: "Too many attempts. Please request a new code." });
+      }
+      if (!verifyPassword(code, user.reset.salt, user.reset.hash)) {
+        user.reset.attempts += 1;
+        await store.saveUsers([user]);
+        return sendJson(res, 400, { error: "Incorrect code. Please check and try again." });
+      }
+      // Success: set new password, clear the reset, and log them in.
+      const { salt, hash } = hashPassword(password);
+      user.passwordSalt = salt;
+      user.passwordHash = hash;
+      delete user.reset;
+      await store.saveUsers([user]);
+
+      const token = crypto.randomBytes(32).toString("hex");
+      const now = Date.now();
+      await store.saveSessions([
+        {
+          token,
+          userId: user.id,
+          createdAt: new Date(now).toISOString(),
+          expiresAt: new Date(now + 30 * 24 * 60 * 60 * 1000).toISOString(),
+        },
+      ]);
+      return sendJson(res, 200, { token, user: publicUser(user) });
     }
 
     // ---- MedGuard Plus subscription (demo, no real payment) ----
