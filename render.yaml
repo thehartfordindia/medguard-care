@@ -19,3 +19,10 @@ services:
           name: medguard-db
           property: connectionString
       # - key: WEBSITE_URL     # e.g. https://medguard-care.onrender.com
+      # --- Notifications (optional; leave unset to disable) ---
+      # - key: SENDGRID_API_KEY   # email via SendGrid
+      # - key: EMAIL_FROM         # verified sender, e.g. care@yourdomain.com
+      # - key: EMAIL_FROM_NAME    # e.g. MedGuard Care
+      # - key: TWILIO_ACCOUNT_SID # SMS via Twilio
+      # - key: TWILIO_AUTH_TOKEN
+      # - key: TWILIO_FROM_NUMBER
