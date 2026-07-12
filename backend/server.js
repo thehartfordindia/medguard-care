@@ -85,6 +85,22 @@ const COUPONS = {
   LAB25: { type: "percent", value: 25, maxDiscount: 400, minOrder: 400, label: "25% off lab tests" },
 };
 
+// MedGuard Plus — paid membership (demo, no real payment is processed).
+const PLUS_PLAN = {
+  id: "plus",
+  name: "MedGuard Plus",
+  price: 499,
+  period: "year",
+  memberDiscountRate: 0.05, // 5% off medicines, devices & lab tests
+  benefits: [
+    { icon: "🚚", title: "Free delivery, always", desc: "No minimum order — every medicine delivery is free." },
+    { icon: "🏷️", title: "Flat 5% member discount", desc: "Auto-applied on medicines, devices & lab tests." },
+    { icon: "🧪", title: "Free lab sample collection", desc: "Home collection is always free for members." },
+    { icon: "⚡", title: "Priority support", desc: "Your tickets and callbacks jump the queue." },
+    { icon: "👨‍⚕️", title: "Member consult savings", desc: "5% off every doctor home visit and online consult." },
+  ],
+};
+
 const PROVIDERS = [
   { id: "dr-anitha", role: "doctor", name: "Dr. Anitha Rao", specialty: "General Physician", exp: 12, rating: 4.9, feeHome: 800, feeOnline: 400, lat: 17.4239, lon: 78.4738, languages: ["English", "Telugu", "Hindi"], modes: ["online", "home"] },
   { id: "dr-imran", role: "doctor", name: "Dr. Imran Khan", specialty: "Cardiologist", exp: 18, rating: 4.8, feeHome: 1500, feeOnline: 700, lat: 17.4483, lon: 78.3915, languages: ["English", "Hindi", "Urdu"], modes: ["online", "home"] },
@@ -161,7 +177,7 @@ function sendJson(res, status, payload) {
   res.writeHead(status, {
     "Content-Type": "application/json; charset=utf-8",
     "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "Content-Type, x-admin-secret",
+    "Access-Control-Allow-Headers": "Content-Type, x-admin-secret, x-auth-token, authorization",
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
   });
   res.end(body);
@@ -252,6 +268,57 @@ function applyCoupon(code, amount) {
 }
 
 /* ============================================================
+   Accounts / authentication
+   ============================================================ */
+
+function hashPassword(password, salt) {
+  const useSalt = salt || crypto.randomBytes(16).toString("hex");
+  const hash = crypto.scryptSync(String(password), useSalt, 64).toString("hex");
+  return { salt: useSalt, hash };
+}
+
+function verifyPassword(password, salt, expectedHash) {
+  const { hash } = hashPassword(password, salt);
+  const a = Buffer.from(hash, "hex");
+  const b = Buffer.from(expectedHash, "hex");
+  return a.length === b.length && crypto.timingSafeEqual(a, b);
+}
+
+/** Is the user's MedGuard Plus membership currently active? */
+function plusActive(user) {
+  if (!user || !user.plusMember) return false;
+  if (!user.plusExpiry) return true;
+  return new Date(user.plusExpiry).getTime() > Date.now();
+}
+
+/** Strip sensitive fields before returning a user to the client. */
+function publicUser(user) {
+  if (!user) return null;
+  const { passwordHash, passwordSalt, ...safe } = user;
+  return { ...safe, plusActive: plusActive(user) };
+}
+
+function readAuthToken(req) {
+  const header = req.headers["x-auth-token"];
+  if (header) return String(header);
+  const auth = req.headers["authorization"] || "";
+  if (auth.toLowerCase().startsWith("bearer ")) return auth.slice(7).trim();
+  return "";
+}
+
+/** Resolve the logged-in user from the request token, or null. */
+async function getSessionUser(req) {
+  const token = readAuthToken(req);
+  if (!token) return null;
+  const sessions = await store.getSessions();
+  const session = sessions.find((s) => s.token === token);
+  if (!session) return null;
+  if (session.expiresAt && new Date(session.expiresAt).getTime() < Date.now()) return null;
+  const users = await store.getUsers();
+  return users.find((u) => u.id === session.userId) || null;
+}
+
+/* ============================================================
    Request router
    ============================================================ */
 
@@ -262,7 +329,7 @@ const server = http.createServer(async (req, res) => {
   if (req.method === "OPTIONS") {
     res.writeHead(204, {
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "Content-Type, x-admin-secret",
+      "Access-Control-Allow-Headers": "Content-Type, x-admin-secret, x-auth-token, authorization",
       "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     });
     res.end();
@@ -294,6 +361,130 @@ const server = http.createServer(async (req, res) => {
       const amount = clampNumber(body.amount, 0, 1000000, 0);
       const result = applyCoupon(body.code, amount);
       return sendJson(res, result.valid ? 200 : 400, result);
+    }
+
+    // ---- Membership plan (public info) ----
+    if (pathname === "/api/plan") {
+      return sendJson(res, 200, { plan: PLUS_PLAN });
+    }
+
+    // ---- Accounts / authentication ----
+    if (pathname === "/api/auth/register" && req.method === "POST") {
+      const body = await readBody(req);
+      const name = cleanText(body.name, 80);
+      const email = cleanText(body.email, 120).toLowerCase();
+      const phone = cleanText(body.phone, 20);
+      const password = String(body.password || "");
+      if (!name || !email || !password) {
+        return sendJson(res, 400, { error: "Name, email and password are required." });
+      }
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+        return sendJson(res, 400, { error: "Please enter a valid email address." });
+      }
+      if (password.length < 6) {
+        return sendJson(res, 400, { error: "Password must be at least 6 characters." });
+      }
+      const users = await store.getUsers();
+      if (users.some((u) => u.email === email)) {
+        return sendJson(res, 409, { error: "An account with this email already exists." });
+      }
+      const { salt, hash } = hashPassword(password);
+      const user = {
+        id: genId("USR"),
+        name,
+        email,
+        phone,
+        passwordSalt: salt,
+        passwordHash: hash,
+        plusMember: false,
+        plusSince: null,
+        plusExpiry: null,
+        createdAt: new Date().toISOString(),
+      };
+      await store.saveUsers([user]);
+      const token = crypto.randomBytes(32).toString("hex");
+      const now = Date.now();
+      await store.saveSessions([
+        {
+          token,
+          userId: user.id,
+          createdAt: new Date(now).toISOString(),
+          expiresAt: new Date(now + 30 * 24 * 60 * 60 * 1000).toISOString(),
+        },
+      ]);
+      return sendJson(res, 201, { token, user: publicUser(user) });
+    }
+
+    if (pathname === "/api/auth/login" && req.method === "POST") {
+      const body = await readBody(req);
+      const email = cleanText(body.email, 120).toLowerCase();
+      const password = String(body.password || "");
+      if (!email || !password) {
+        return sendJson(res, 400, { error: "Email and password are required." });
+      }
+      const users = await store.getUsers();
+      const user = users.find((u) => u.email === email);
+      if (!user || !verifyPassword(password, user.passwordSalt, user.passwordHash)) {
+        return sendJson(res, 401, { error: "Invalid email or password." });
+      }
+      const token = crypto.randomBytes(32).toString("hex");
+      const now = Date.now();
+      await store.saveSessions([
+        {
+          token,
+          userId: user.id,
+          createdAt: new Date(now).toISOString(),
+          expiresAt: new Date(now + 30 * 24 * 60 * 60 * 1000).toISOString(),
+        },
+      ]);
+      return sendJson(res, 200, { token, user: publicUser(user) });
+    }
+
+    if (pathname === "/api/auth/logout" && req.method === "POST") {
+      const token = readAuthToken(req);
+      if (token) await store.deleteSession(token);
+      return sendJson(res, 200, { ok: true });
+    }
+
+    if (pathname === "/api/auth/me" && req.method === "GET") {
+      const user = await getSessionUser(req);
+      if (!user) return sendJson(res, 401, { error: "Not logged in." });
+      return sendJson(res, 200, { user: publicUser(user) });
+    }
+
+    // ---- MedGuard Plus subscription (demo, no real payment) ----
+    if (pathname === "/api/plus/subscribe" && req.method === "POST") {
+      const user = await getSessionUser(req);
+      if (!user) return sendJson(res, 401, { error: "Please log in to subscribe." });
+      const now = new Date();
+      const expiry = new Date(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+      user.plusMember = true;
+      user.plusSince = user.plusSince || now.toISOString();
+      user.plusExpiry = expiry.toISOString();
+      await store.saveUsers([user]);
+      return sendJson(res, 200, {
+        ok: true,
+        user: publicUser(user),
+        message: "Welcome to MedGuard Plus! Your benefits are active.",
+      });
+    }
+
+    if (pathname === "/api/plus/cancel" && req.method === "POST") {
+      const user = await getSessionUser(req);
+      if (!user) return sendJson(res, 401, { error: "Please log in first." });
+      user.plusMember = false;
+      user.plusExpiry = null;
+      await store.saveUsers([user]);
+      return sendJson(res, 200, { ok: true, user: publicUser(user) });
+    }
+
+    // ---- My orders (logged-in user's history) ----
+    if (pathname === "/api/my/orders" && req.method === "GET") {
+      const user = await getSessionUser(req);
+      if (!user) return sendJson(res, 401, { error: "Please log in to view your orders." });
+      const orders = await store.getOrders();
+      const mine = orders.filter((o) => o.userId === user.id).reverse();
+      return sendJson(res, 200, { orders: mine });
     }
 
     if (pathname === "/api/providers") {
@@ -343,6 +534,9 @@ const server = http.createServer(async (req, res) => {
         return sendJson(res, 400, { error: "Name and phone are required." });
       }
 
+      const sessionUser = await getSessionUser(req);
+      const isPlus = plusActive(sessionUser);
+
       const geo =
         customer.lat != null && customer.lon != null
           ? { lat: Number(customer.lat), lon: Number(customer.lon) }
@@ -352,6 +546,8 @@ const server = http.createServer(async (req, res) => {
         id: genId(type === "care" ? "CARE" : type === "lab" ? "LAB" : "MED"),
         type,
         status: "PLACED",
+        userId: sessionUser ? sessionUser.id : null,
+        plusMember: isPlus,
         customer: { name, phone, address, ...(geo || {}) },
         notes: cleanText(body.notes, 300),
         createdAt: new Date().toISOString(),
@@ -373,14 +569,17 @@ const server = http.createServer(async (req, res) => {
             couponCode = applied.code;
           }
         }
+        const memberDiscount = isPlus ? Math.round(quote.subtotal * PLUS_PLAN.memberDiscountRate) : 0;
+        const deliveryFee = isPlus ? 0 : quote.deliveryFee;
         order = {
           ...order,
           items: quote.lines,
           subtotal: quote.subtotal,
-          deliveryFee: quote.deliveryFee,
+          deliveryFee,
           discount,
+          memberDiscount,
           coupon: couponCode,
-          total: Math.max(0, quote.total - discount),
+          total: Math.max(0, quote.subtotal + deliveryFee - discount - memberDiscount),
           requiresRx: quote.requiresRx,
           rxUploaded: Boolean(body.rxUploaded),
           fulfilledBy: { id: near.id, name: near.name },
@@ -393,7 +592,7 @@ const server = http.createServer(async (req, res) => {
           .filter(Boolean);
         if (!tests.length) return sendJson(res, 400, { error: "Select at least one lab test." });
         const subtotal = tests.reduce((s, t) => s + t.price, 0);
-        const collectionFee = subtotal >= 500 ? 0 : 50;
+        const collectionFee = isPlus ? 0 : subtotal >= 500 ? 0 : 50;
         let discount = 0;
         let couponCode = null;
         if (body.coupon) {
@@ -403,6 +602,7 @@ const server = http.createServer(async (req, res) => {
             couponCode = applied.code;
           }
         }
+        const memberDiscount = isPlus ? Math.round(subtotal * PLUS_PLAN.memberDiscountRate) : 0;
         const maxReport = Math.max(...tests.map((t) => t.reportHours));
         const anyFasting = tests.some((t) => t.fasting);
         order = {
@@ -411,8 +611,9 @@ const server = http.createServer(async (req, res) => {
           subtotal,
           collectionFee,
           discount,
+          memberDiscount,
           coupon: couponCode,
-          total: Math.max(0, subtotal + collectionFee - discount),
+          total: Math.max(0, subtotal + collectionFee - discount - memberDiscount),
           slot: cleanText(body.slot, 40),
           fasting: anyFasting,
           reportHours: maxReport,
@@ -435,6 +636,7 @@ const server = http.createServer(async (req, res) => {
             couponCode = applied.code;
           }
         }
+        const memberDiscount = isPlus ? Math.round(fee * PLUS_PLAN.memberDiscountRate) : 0;
         order = {
           ...order,
           provider: { id: provider.id, name: provider.name, role: provider.role, specialty: provider.specialty },
@@ -442,8 +644,9 @@ const server = http.createServer(async (req, res) => {
           slot: cleanText(body.slot, 40),
           fee,
           discount,
+          memberDiscount,
           coupon: couponCode,
-          total: Math.max(0, fee - discount),
+          total: Math.max(0, fee - discount - memberDiscount),
           paymentStatus: "PAY_AT_VISIT",
         };
       }
