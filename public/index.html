@@ -21,7 +21,7 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
-    <link rel="stylesheet" href="styles.css?v=6" />
+    <link rel="stylesheet" href="styles.css?v=7" />
   </head>
   <body>
     <!-- Header -->
@@ -337,7 +337,23 @@
           <input id="loginEmail" type="email" placeholder="Email" autocomplete="username" required />
           <input id="loginPassword" type="password" placeholder="Password" autocomplete="current-password" required />
           <button type="submit" class="btn btn-primary btn-block">Log in</button>
+          <button type="button" id="forgotLink" class="auth-link">Forgot password?</button>
           <div id="loginMsg" class="auth-msg"></div>
+        </form>
+        <form id="forgotForm" class="auth-form" hidden>
+          <h3>Reset your password 🔑</h3>
+          <p class="auth-hint" id="forgotStep1Hint">
+            Enter your account email and we'll send a 6-digit reset code by SMS.
+          </p>
+          <input id="forgotEmail" type="email" placeholder="Account email" autocomplete="email" required />
+          <button type="submit" class="btn btn-primary btn-block" id="forgotSendBtn">Send reset code</button>
+          <div id="forgotResetFields" hidden>
+            <input id="resetCode" type="text" inputmode="numeric" placeholder="6-digit code" autocomplete="one-time-code" />
+            <input id="resetPassword" type="password" placeholder="New password (min 6 chars)" autocomplete="new-password" />
+            <button type="button" class="btn btn-primary btn-block" id="resetConfirmBtn">Set new password</button>
+          </div>
+          <button type="button" id="backToLogin" class="auth-link">← Back to log in</button>
+          <div id="forgotMsg" class="auth-msg"></div>
         </form>
         <form id="signupForm" class="auth-form" hidden>
           <h3>Create your account</h3>
@@ -375,6 +391,6 @@
       crossorigin=""
       defer
     ></script>
-    <script src="app.js?v=6" defer></script>
+    <script src="app.js?v=7" defer></script>
   </body>
 </html>
