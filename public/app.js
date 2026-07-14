@@ -927,7 +927,9 @@ async function renderVitals() {
     const cards = types
       .map((t) => vitalCardHtml(t, (data.byType && data.byType[t.key]) || []))
       .join("");
+    const nudges = (data.nudges || []).map(vitalNudgeHtml).join("");
     host.innerHTML = `
+      ${nudges ? `<div class="vital-nudges">${nudges}</div>` : ""}
       <div class="vital-log">
         <strong>➕ Log a new reading</strong>
         <div class="vital-form">
@@ -1019,6 +1021,28 @@ function vitalSparkline(readings) {
   return `<svg class="vital-spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">
       <polyline points="${pts}" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </svg>`;
+}
+
+// A supportive "here's what you can do" card for a flagged vital.
+function vitalNudgeHtml(n) {
+  const actions = (n.actions || [])
+    .map((a) => {
+      if (a.kind === "med") return `<button class="btn btn-outline btn-sm" data-nudge-med="${escapeHtml(a.id)}">${escapeHtml(a.label)}</button>`;
+      if (a.kind === "lab") return `<button class="btn btn-outline btn-sm" data-nudge-lab="${escapeHtml(a.id)}">${escapeHtml(a.label)}</button>`;
+      if (a.kind === "care") return `<button class="btn btn-outline btn-sm" data-nudge-care="${escapeHtml(a.specialty || "")}">${escapeHtml(a.label)}</button>`;
+      if (a.kind === "consult") return `<button class="btn btn-outline btn-sm" data-nudge-consult="1">${escapeHtml(a.label)}</button>`;
+      return "";
+    })
+    .join("");
+  return `
+    <div class="vital-nudge nudge-${n.level === "warn" ? "warn" : "info"}">
+      <div class="vital-nudge-head">
+        <strong>${n.emoji} ${escapeHtml(n.title)}</strong>
+        <span class="vital-nudge-reading">${escapeHtml(n.reading)}</span>
+      </div>
+      <p class="vital-nudge-msg">${escapeHtml(n.message)}</p>
+      <div class="vital-nudge-actions">${actions}</div>
+    </div>`;
 }
 
 async function saveVital() {
@@ -2293,6 +2317,26 @@ function bindEvents() {
       if (e.target.id === "vitalSaveBtn") return saveVital();
       const vitalDel = e.target.getAttribute("data-vital-del");
       if (vitalDel) return deleteVitalReading(vitalDel);
+      const nudgeMed = e.target.getAttribute("data-nudge-med");
+      if (nudgeMed) return addToCart(nudgeMed);
+      const nudgeLab = e.target.getAttribute("data-nudge-lab");
+      if (nudgeLab) {
+        $("healthModal").hidden = true;
+        showView("labs");
+        if (typeof openLabModal === "function") openLabModal(nudgeLab);
+        return;
+      }
+      const nudgeCare = e.target.getAttribute("data-nudge-care");
+      if (nudgeCare !== null) {
+        $("healthModal").hidden = true;
+        showView("care");
+        toast(nudgeCare ? `Showing ${nudgeCare} — pick a slot to book` : "Choose a doctor to book");
+        return;
+      }
+      if (e.target.getAttribute("data-nudge-consult")) {
+        $("healthModal").hidden = true;
+        return openConsult(null);
+      }
     });
   if ($("healthBody"))
     $("healthBody").addEventListener("change", (e) => {
