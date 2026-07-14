@@ -22,6 +22,7 @@ const state = {
   view: "medicines", // active section view
   labQuery: "", // free-text filter for lab tests
   safetyPicks: [], // medicine ids selected in the standalone safety checker
+  consult: null, // { id, provider } active in-app doctor chat
 };
 
 const DEVICE_CATEGORIES = ["Devices", "Mobility Aids", "Protection"];
@@ -197,19 +198,26 @@ function renderLabTests() {
   grid.innerHTML = list
     .map(
       (t) => `
-    <div class="lab-card">
+    <div class="lab-card${t.imaging ? " imaging-card" : ""}">
       <div class="lab-card-top">
-        <h4>${escapeHtml(t.name)}</h4>
+        <h4>${t.imaging ? "🩻 " : "🧪 "}${escapeHtml(t.name)}</h4>
         <span class="lab-cat">${escapeHtml(t.category)}</span>
       </div>
       <div class="lab-meta">
-        ${t.fasting ? '<span class="lab-flag">🍽️ Fasting</span>' : '<span class="lab-flag ok">No fasting</span>'}
+        ${
+          t.imaging
+            ? '<span class="lab-flag scan">🏥 At-center scan</span>'
+            : t.fasting
+              ? '<span class="lab-flag">🍽️ Fasting</span>'
+              : '<span class="lab-flag ok">No fasting</span>'
+        }
         <span>📄 Report in ${t.reportHours}h</span>
       </div>
+      ${t.imaging && t.prep ? `<div class="lab-prep">📋 ${escapeHtml(t.prep)}</div>` : ""}
       <div class="lab-tags">${(t.tags || []).map((x) => `<span class="tag">${escapeHtml(x)}</span>`).join("")}</div>
       <div class="med-foot">
         <span class="med-price">${inr(t.price)}</span>
-        <button class="add-btn" data-lab="${t.id}">Book test</button>
+        <button class="add-btn" data-lab="${t.id}">${t.imaging ? "Book scan" : "Book test"}</button>
       </div>
     </div>`
     )
@@ -438,6 +446,122 @@ function renderSafetyModal() {
     });
 }
 
+/* ---------- in-app doctor consultation (live chat) ---------- */
+function consultBubbleHtml(m) {
+  if (m.from === "system") {
+    return `<div class="cmsg cmsg-system">${escapeHtml(m.text)}</div>`;
+  }
+  const isDoc = m.from === "doctor";
+  const sug = m.suggestions || {};
+  const meds = (sug.meds || [])
+    .map((name) => {
+      const med = state.medicines.find((x) => x.name === name);
+      return med
+        ? `<button class="csug-btn" data-consult-add="${med.id}">➕ ${escapeHtml(name)}</button>`
+        : `<span class="csug-tag">💊 ${escapeHtml(name)}</span>`;
+    })
+    .join("");
+  const labs = (sug.labs || [])
+    .map((name) => {
+      const t = state.labTests.find((x) => x.name === name);
+      return t
+        ? `<button class="csug-btn" data-consult-lab="${t.id}">🧪 ${escapeHtml(name)}</button>`
+        : `<span class="csug-tag">🧪 ${escapeHtml(name)}</span>`;
+    })
+    .join("");
+  const suggestions =
+    meds || labs
+      ? `<div class="csug">${meds ? `<div class="csug-row">${meds}</div>` : ""}${labs ? `<div class="csug-row">${labs}</div>` : ""}</div>`
+      : "";
+  return `
+    <div class="cmsg ${isDoc ? "cmsg-doc" : "cmsg-me"} ${m.emergency ? "cmsg-emergency" : ""}">
+      ${isDoc && m.author ? `<div class="cmsg-author">${escapeHtml(m.author)}</div>` : ""}
+      <div class="cmsg-text">${escapeHtml(m.text).replace(/\n/g, "<br>")}</div>
+      ${suggestions}
+    </div>`;
+}
+
+function renderConsultMessages(messages, append) {
+  const host = $("consultMessages");
+  if (!host) return;
+  const html = messages.map(consultBubbleHtml).join("");
+  if (append) host.insertAdjacentHTML("beforeend", html);
+  else host.innerHTML = html;
+  host.scrollTop = host.scrollHeight;
+}
+
+function showConsultTyping(on) {
+  const host = $("consultMessages");
+  if (!host) return;
+  const existing = $("consultTyping");
+  if (on) {
+    if (!existing) {
+      host.insertAdjacentHTML(
+        "beforeend",
+        '<div class="cmsg cmsg-doc" id="consultTyping"><div class="cmsg-text typing"><span></span><span></span><span></span></div></div>'
+      );
+      host.scrollTop = host.scrollHeight;
+    }
+  } else if (existing) {
+    existing.remove();
+  }
+}
+
+async function openConsult(providerId) {
+  const provider = providerId ? state.providers.find((p) => p.id === providerId) : null;
+  $("consultModal").hidden = false;
+  $("consultMessages").innerHTML = '<p class="safety-hint">Connecting you to a doctor…</p>';
+  $("consultText").value = "";
+  try {
+    const res = await fetch(`${API}/api/consult/start`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...authHeaders() },
+      body: JSON.stringify({
+        providerId: provider ? provider.id : null,
+        name: state.user ? state.user.name : "",
+      }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Could not start consultation");
+    state.consult = { id: data.consultId, provider: data.provider };
+    const doc = data.provider || { name: "MedGuard Doctor", specialty: "General Physician" };
+    $("consultDocName").textContent = doc.name;
+    $("consultDocSpec").textContent = doc.specialty || "Online consultation";
+    renderConsultMessages(data.messages, false);
+    $("consultText").focus();
+  } catch (err) {
+    $("consultMessages").innerHTML = `<p class="safety-hint">⚠️ ${escapeHtml(err.message)}</p>`;
+  }
+}
+
+async function sendConsultMessage(e) {
+  if (e) e.preventDefault();
+  const input = $("consultText");
+  const text = input.value.trim();
+  if (!text || !state.consult) return;
+  renderConsultMessages([{ from: "patient", text }], true);
+  input.value = "";
+  $("consultSend").disabled = true;
+  showConsultTyping(true);
+  try {
+    const res = await fetch(`${API}/api/consult/message`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...authHeaders() },
+      body: JSON.stringify({ consultId: state.consult.id, text }),
+    });
+    const data = await res.json();
+    showConsultTyping(false);
+    if (!res.ok) throw new Error(data.error || "Message failed");
+    renderConsultMessages([data.reply], true);
+  } catch (err) {
+    showConsultTyping(false);
+    renderConsultMessages([{ from: "system", text: `⚠️ ${err.message}` }], true);
+  } finally {
+    $("consultSend").disabled = false;
+    $("consultText").focus();
+  }
+}
+
 
 /* ---------- coupons ---------- */
 async function applyCoupon() {
@@ -545,6 +669,10 @@ function renderProviders() {
   grid.innerHTML = state.providers
     .map((p) => {
       const dist = p.distanceKm != null ? `📍 ${p.distanceKm} km` : "";
+      const chat =
+        p.role === "doctor"
+          ? `<button class="btn btn-ghost" data-consult="${p.id}">💬 Chat now</button>`
+          : "";
       const modes = p.modes.includes("online")
         ? `<button class="btn btn-ghost" data-book="${p.id}" data-mode="online">💻 Online ${inr(p.feeOnline)}</button>`
         : "";
@@ -567,7 +695,7 @@ function renderProviders() {
           ${dist ? `<span>${dist}</span>` : ""}
         </div>
         <div class="provider-meta">🗣️ ${p.languages.join(", ")}</div>
-        <div class="provider-actions">${home}${modes}</div>
+        <div class="provider-actions">${chat}${home}${modes}</div>
       </div>`;
     })
     .join("");
@@ -668,43 +796,47 @@ function openLabModal(testId) {
 function labSelectionTotals() {
   const chosen = state.labTests.filter((t) => state.labSelection.tests.has(t.id));
   const subtotal = chosen.reduce((s, t) => s + t.price, 0);
-  const collectionFee = subtotal >= 500 ? 0 : 50;
-  return { chosen, subtotal, collectionFee, total: subtotal + collectionFee };
+  const allImaging = chosen.length > 0 && chosen.every((t) => t.imaging);
+  const collectionFee = allImaging ? 0 : subtotal >= 500 ? 0 : 50;
+  return { chosen, subtotal, collectionFee, total: subtotal + collectionFee, allImaging };
 }
 function renderLabModal() {
   const { slot } = state.labSelection;
-  const { chosen, subtotal, collectionFee, total } = labSelectionTotals();
+  const { chosen, subtotal, collectionFee, total, allImaging } = labSelectionTotals();
   const fasting = chosen.some((t) => t.fasting);
+  const anyImaging = chosen.some((t) => t.imaging);
+  const prepNotes = chosen.filter((t) => t.imaging && t.prep);
   $("labModalBody").innerHTML = `
-    <h3>🧪 Book Lab Tests</h3>
-    <p class="provider-spec">Home sample collection · reports on your phone</p>
+    <h3>${anyImaging ? "🩻 Book Lab Tests & Scans" : "🧪 Book Lab Tests"}</h3>
+    <p class="provider-spec">${allImaging ? "At-center appointment · reports on your phone" : "Home sample collection · reports on your phone"}</p>
     <div class="lab-pick-list">
       ${state.labTests
         .map(
           (t) => `
         <label class="lab-pick ${state.labSelection.tests.has(t.id) ? "active" : ""}">
           <input type="checkbox" data-lab-toggle="${t.id}" ${state.labSelection.tests.has(t.id) ? "checked" : ""} />
-          <span>${escapeHtml(t.name)}</span>
+          <span>${t.imaging ? "🩻 " : ""}${escapeHtml(t.name)}</span>
           <b>${inr(t.price)}</b>
         </label>`
         )
         .join("")}
     </div>
-    <label style="font-weight:700;font-size:.85rem">Preferred collection slot</label>
+    <label style="font-weight:700;font-size:.85rem">${allImaging ? "Preferred appointment slot" : "Preferred collection slot"}</label>
     <div class="slot-grid">
       ${LAB_SLOTS.map((s) => `<button class="slot-btn ${s === slot ? "active" : ""}" data-lab-slot="${s}">${s}</button>`).join("")}
     </div>
     ${fasting ? '<p class="lab-fast-note">🍽️ One or more tests require 8–12h fasting.</p>' : ""}
+    ${prepNotes.length ? `<div class="lab-prep-list">${prepNotes.map((t) => `<p class="lab-prep">📋 <b>${escapeHtml(t.name)}:</b> ${escapeHtml(t.prep)}</p>`).join("")}</div>` : ""}
     <input id="labName" type="text" placeholder="Patient name" />
     <input id="labPhone" type="tel" placeholder="Phone number" />
-    <input id="labAddress" type="text" placeholder="Collection address" />
+    <input id="labAddress" type="text" placeholder="${allImaging ? "Address (for directions to nearest centre)" : "Collection address"}" />
     <div class="cart-totals" style="margin:.6rem 0">
       <div class="row"><span>Tests (${chosen.length})</span><span>${inr(subtotal)}</span></div>
-      <div class="row"><span>Home collection</span><span>${collectionFee === 0 ? "FREE" : inr(collectionFee)}</span></div>
+      <div class="row"><span>${allImaging ? "Centre visit" : "Home collection"}</span><span>${collectionFee === 0 ? "FREE" : inr(collectionFee)}</span></div>
       <div class="row grand"><span>Total</span><span>${inr(total)}</span></div>
     </div>
     <button class="btn btn-primary btn-block" id="confirmLabBtn" ${chosen.length ? "" : "disabled"}>
-      Confirm booking · ${inr(total)}
+      ${anyImaging ? "Confirm booking" : "Confirm booking"} · ${inr(total)}
     </button>
     <div id="labResult" class="checkout-result"></div>`;
 }
@@ -1441,6 +1573,29 @@ function bindEvents() {
       }
     });
 
+  // In-app doctor consultation
+  if ($("talkDoctorBtn")) $("talkDoctorBtn").addEventListener("click", () => openConsult(null));
+  if ($("consultModalClose")) $("consultModalClose").addEventListener("click", () => ($("consultModal").hidden = true));
+  if ($("consultModal"))
+    $("consultModal").addEventListener("click", (e) => {
+      if (e.target.id === "consultModal") $("consultModal").hidden = true;
+    });
+  if ($("consultForm")) $("consultForm").addEventListener("submit", sendConsultMessage);
+  if ($("consultMessages"))
+    $("consultMessages").addEventListener("click", (e) => {
+      const addId = e.target.getAttribute("data-consult-add");
+      const labId = e.target.getAttribute("data-consult-lab");
+      if (addId) {
+        addToCart(addId);
+        toast("Added to cart 🛒");
+      }
+      if (labId) {
+        $("consultModal").hidden = true;
+        showView("labs");
+        openLabModal(labId);
+      }
+    });
+
   document.querySelectorAll(".care-tab").forEach((tab) => {
     tab.addEventListener("click", () => {
       document.querySelectorAll(".care-tab").forEach((t) => t.classList.remove("active"));
@@ -1450,6 +1605,8 @@ function bindEvents() {
     });
   });
   $("providerGrid").addEventListener("click", (e) => {
+    const consultId = e.target.getAttribute("data-consult");
+    if (consultId) return openConsult(consultId);
     const id = e.target.getAttribute("data-book");
     const mode = e.target.getAttribute("data-mode");
     if (id) openCareModal(id, mode);
