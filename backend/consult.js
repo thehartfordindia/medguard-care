@@ -160,7 +160,6 @@ const DOSAGE = {
 function dosageFor(name) {
   return DOSAGE[name] || { dose: "As directed", freq: "As directed", duration: "As advised", note: "Follow your doctor's instructions." };
 }
-
 /**
  * Build a printable prescription from a consultation record. It gathers every
  * medicine and lab test the assistant suggested during the chat, de-duplicates
@@ -317,4 +316,40 @@ function docReply(author, text) {
   };
 }
 
-module.exports = { greeting, reply, buildPrescription, DISCLAIMER, isEmergency };
+// Display metadata (emoji + friendly label + a triage question) for the guided
+// symptom checker, keyed by the SYMPTOMS[].key values.
+const SYMPTOM_META = {
+  fever: { emoji: "🤒", label: "Fever & chills", question: "How long have you had the fever?" },
+  cough_cold: { emoji: "🤧", label: "Cough & cold", question: "Is your cough dry or with phlegm?" },
+  headache: { emoji: "🤕", label: "Headache", question: "How severe is it, and how long has it lasted?" },
+  diabetes: { emoji: "🩸", label: "Sugar / diabetes", question: "Are you already diagnosed, or checking for the first time?" },
+  bp: { emoji: "❤️", label: "Blood pressure", question: "Do you have a recent BP reading?" },
+  acidity: { emoji: "🔥", label: "Acidity & gas", question: "Does it get worse after meals or lying down?" },
+  pain_body: { emoji: "🦴", label: "Body / joint pain", question: "Which area hurts, and did it start after an injury?" },
+  allergy: { emoji: "🌾", label: "Allergy & rash", question: "When did it start and what might have triggered it?" },
+  breathing: { emoji: "🫁", label: "Breathing / asthma", question: "Do you have a known history of asthma?" },
+  thyroid: { emoji: "🦋", label: "Thyroid & fatigue", question: "Any recent weight change, hair fall or tiredness?" },
+  stomach_infection: { emoji: "🤢", label: "Loose motions / vomiting", question: "Are you able to keep fluids down?" },
+};
+
+/**
+ * Returns a browsable list of common health concerns for the guided symptom
+ * checker (label, emoji, a triage question, self-care advice, and the exact
+ * medicine / lab names available on MedGuard).
+ */
+function symptomCatalog() {
+  return SYMPTOMS.map((s) => {
+    const meta = SYMPTOM_META[s.key] || {};
+    return {
+      key: s.key,
+      emoji: meta.emoji || "🩺",
+      label: meta.label || s.key.replace(/_/g, " "),
+      question: meta.question || (s.followups && s.followups[0]) || "",
+      advice: s.advice,
+      meds: s.meds || [],
+      labs: s.labs || [],
+    };
+  });
+}
+
+module.exports = { greeting, reply, buildPrescription, symptomCatalog, DISCLAIMER, isEmergency };
