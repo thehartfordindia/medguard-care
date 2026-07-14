@@ -21,6 +21,7 @@ const state = {
   plan: null, // MedGuard Plus plan details
   view: "medicines", // active section view
   labQuery: "", // free-text filter for lab tests
+  safetyPicks: [], // medicine ids selected in the standalone safety checker
 };
 
 const DEVICE_CATEGORIES = ["Devices", "Mobility Aids", "Protection"];
@@ -313,7 +314,130 @@ function renderCart() {
     ${t.discount > 0 ? `<div class="row discount"><span>Discount ${state.coupon ? "(" + escapeHtml(state.coupon.code) + ")" : ""}</span><span>−${inr(t.discount)}</span></div>` : ""}
     <div class="row grand"><span>Total</span><span>${inr(t.total)}</span></div>`;
   $("rxLine").hidden = !t.requiresRx;
+  renderCartSafety();
 }
+
+/* ---------- GARMA Rx safety ---------- */
+const SEVERITY_META = {
+  CRITICAL: { label: "Critical", icon: "🚨", cls: "sev-critical" },
+  HIGH: { label: "High", icon: "⛔", cls: "sev-high" },
+  MEDIUM: { label: "Caution", icon: "⚠️", cls: "sev-medium" },
+  LOW: { label: "Note", icon: "ℹ️", cls: "sev-low" },
+};
+
+function alertCardHtml(al) {
+  const meta = SEVERITY_META[al.severity] || SEVERITY_META.LOW;
+  return `
+    <div class="safety-alert ${meta.cls}">
+      <div class="safety-alert-top">
+        <span class="safety-badge">${meta.icon} ${meta.label}</span>
+        <strong>${escapeHtml(al.title)}</strong>
+      </div>
+      <div class="safety-pair">${escapeHtml(al.drugA)} + ${escapeHtml(al.drugB)}</div>
+      <p class="safety-detail">${escapeHtml(al.detail)}</p>
+      <p class="safety-advice">👉 ${escapeHtml(al.advice)}</p>
+    </div>`;
+}
+
+async function checkRx(items) {
+  const res = await fetch(`${API}/api/rx/check`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ items }),
+  });
+  if (!res.ok) throw new Error("check failed");
+  return res.json();
+}
+
+async function renderCartSafety() {
+  const host = $("cartSafety");
+  if (!host) return;
+  const meds = state.cart.map((i) => ({ id: i.id, name: i.name }));
+  if (meds.length < 2) {
+    host.hidden = true;
+    host.innerHTML = "";
+    return;
+  }
+  try {
+    const data = await checkRx(meds);
+    if (!data.alerts.length) {
+      host.hidden = false;
+      host.innerHTML = `
+        <div class="safety-banner safety-ok">
+          <b>🛡️ Safety check passed</b>
+          <span>No known risky combinations found in your cart.</span>
+        </div>`;
+      return;
+    }
+    host.hidden = false;
+    host.innerHTML = `
+      <div class="safety-banner ${(SEVERITY_META[data.maxSeverity] || SEVERITY_META.LOW).cls}">
+        <b>🛡️ Safety check — ${data.alerts.length} note${data.alerts.length > 1 ? "s" : ""} found</b>
+        <span>Please review before you order.</span>
+      </div>
+      ${data.alerts.map(alertCardHtml).join("")}
+      <p class="safety-disclaimer">${escapeHtml(data.disclaimer)}</p>`;
+  } catch (_) {
+    host.hidden = true;
+  }
+}
+
+/* ---------- standalone Safety Checker modal ---------- */
+function openSafetyModal() {
+  const sel = $("safetySelect");
+  if (sel && sel.options.length <= 1) {
+    const meds = state.medicines
+      .filter((m) => m.category !== "Devices" && m.category !== "Mobility Aids")
+      .slice()
+      .sort((a, b) => a.name.localeCompare(b.name));
+    sel.innerHTML =
+      '<option value="">➕ Add a medicine…</option>' +
+      meds.map((m) => `<option value="${m.id}">${escapeHtml(m.name)}</option>`).join("");
+  }
+  $("safetyModal").hidden = false;
+  renderSafetyModal();
+}
+
+function renderSafetyModal() {
+  const chips = $("safetyChips");
+  const picks = state.safetyPicks
+    .map((id) => state.medicines.find((m) => m.id === id))
+    .filter(Boolean);
+  chips.innerHTML = picks.length
+    ? picks
+        .map(
+          (m) =>
+            `<span class="safety-chip">${escapeHtml(m.name)}<button data-remove-pick="${m.id}" aria-label="Remove">✕</button></span>`
+        )
+        .join("")
+    : '<span class="safety-empty">No medicines added yet.</span>';
+  const result = $("safetyResult");
+  if (picks.length < 2) {
+    result.innerHTML = '<p class="safety-hint">Add at least two medicines to run a check.</p>';
+    return;
+  }
+  result.innerHTML = '<p class="safety-hint">Checking…</p>';
+  checkRx(picks.map((m) => ({ id: m.id, name: m.name })))
+    .then((data) => {
+      if (!data.alerts.length) {
+        result.innerHTML = `
+          <div class="safety-banner safety-ok">
+            <b>🛡️ No known interactions</b>
+            <span>These medicines have no flagged combinations in our database.</span>
+          </div>`;
+        return;
+      }
+      result.innerHTML = `
+        <div class="safety-banner ${(SEVERITY_META[data.maxSeverity] || SEVERITY_META.LOW).cls}">
+          <b>${data.alerts.length} interaction note${data.alerts.length > 1 ? "s" : ""}</b>
+        </div>
+        ${data.alerts.map(alertCardHtml).join("")}`;
+    })
+    .catch(() => {
+      result.innerHTML = '<p class="safety-hint">Could not run the check. Please try again.</p>';
+    });
+}
+
 
 /* ---------- coupons ---------- */
 async function applyCoupon() {
@@ -1293,6 +1417,29 @@ function bindEvents() {
     if (rem) setQty(rem, 0);
   });
   $("checkoutForm").addEventListener("submit", placeOrder);
+
+  // Rx safety checker
+  if ($("safetyCheckBtn")) $("safetyCheckBtn").addEventListener("click", openSafetyModal);
+  if ($("safetyModalClose")) $("safetyModalClose").addEventListener("click", () => ($("safetyModal").hidden = true));
+  if ($("safetyModal"))
+    $("safetyModal").addEventListener("click", (e) => {
+      if (e.target.id === "safetyModal") $("safetyModal").hidden = true;
+    });
+  if ($("safetySelect"))
+    $("safetySelect").addEventListener("change", (e) => {
+      const id = e.target.value;
+      if (id && !state.safetyPicks.includes(id)) state.safetyPicks.push(id);
+      e.target.value = "";
+      renderSafetyModal();
+    });
+  if ($("safetyChips"))
+    $("safetyChips").addEventListener("click", (e) => {
+      const id = e.target.getAttribute("data-remove-pick");
+      if (id) {
+        state.safetyPicks = state.safetyPicks.filter((p) => p !== id);
+        renderSafetyModal();
+      }
+    });
 
   document.querySelectorAll(".care-tab").forEach((tab) => {
     tab.addEventListener("click", () => {
