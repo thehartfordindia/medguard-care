@@ -143,6 +143,71 @@ const SYMPTOMS = [
 const GREETINGS = ["hi", "hello", "hey", "namaste", "good morning", "good evening", "good afternoon", "doctor"];
 const THANKS = ["thanks", "thank you", "thankyou", "ok thanks", "great", "helpful"];
 
+// Standard dosage guidance for medicines the assistant may suggest. Used to
+// fill out a printable prescription. (Demo values — a real Rx is set by a doctor.)
+const DOSAGE = {
+  "Paracetamol 500mg": { dose: "1 tablet", freq: "Every 6 hours if needed", duration: "3 days", note: "After food. Max 4 tablets a day." },
+  "Cetirizine 10mg": { dose: "1 tablet", freq: "Once at night", duration: "5 days", note: "May cause mild drowsiness." },
+  "Metformin 500mg": { dose: "1 tablet", freq: "Twice daily", duration: "As advised", note: "After meals. Confirm dose with your doctor." },
+  "Amlodipine 5mg": { dose: "1 tablet", freq: "Once daily", duration: "Ongoing", note: "Same time each day. Monitor BP." },
+  "Telmisartan 40mg": { dose: "1 tablet", freq: "Once daily (morning)", duration: "Ongoing", note: "Monitor BP regularly." },
+  "Pantoprazole 40mg": { dose: "1 tablet", freq: "Once daily", duration: "7 days", note: "30 minutes before breakfast." },
+  "Ibuprofen 400mg": { dose: "1 tablet", freq: "Twice daily if needed", duration: "3 days", note: "After food. Avoid with BP/kidney/ulcer issues." },
+  "Salbutamol Inhaler": { dose: "2 puffs", freq: "When breathless (max 4x/day)", duration: "As needed", note: "Rinse mouth after use." },
+  "Thyroxine 50mcg": { dose: "1 tablet", freq: "Once daily (morning)", duration: "Ongoing", note: "Empty stomach, 30 min before food. Away from calcium." },
+};
+
+function dosageFor(name) {
+  return DOSAGE[name] || { dose: "As directed", freq: "As directed", duration: "As advised", note: "Follow your doctor's instructions." };
+}
+
+/**
+ * Build a printable prescription from a consultation record. It gathers every
+ * medicine and lab test the assistant suggested during the chat, de-duplicates
+ * them, and attaches standard dosage guidance.
+ * @param {object} record   the stored consultation record (with messages[])
+ * @param {object} provider the doctor provider record (optional)
+ * @returns {object} prescription object
+ */
+function buildPrescription(record, provider) {
+  const medNames = [];
+  const labNames = [];
+  const symptomsSeen = new Set();
+
+  for (const m of record.messages || []) {
+    if (m.from === "patient" && m.text) {
+      const s = matchSymptom(m.text);
+      if (s) symptomsSeen.add(s.key.replace(/_/g, " "));
+    }
+    const sug = m.suggestions;
+    if (sug) {
+      (sug.meds || []).forEach((x) => { if (!medNames.includes(x)) medNames.push(x); });
+      (sug.labs || []).forEach((x) => { if (!labNames.includes(x)) labNames.push(x); });
+    }
+  }
+
+  const meds = medNames.map((name) => ({ name, ...dosageFor(name) }));
+  const docName = (provider && provider.name) || (record.provider && record.provider.name) || "Dr. MedGuard";
+  const spec = (provider && provider.specialty) || (record.provider && record.provider.specialty) || "General Physician";
+
+  return {
+    rxNo: "RX-" + String(record.id || "").replace(/[^0-9]/g, "").slice(-6).padStart(6, "0"),
+    issuedAt: new Date().toISOString(),
+    doctor: docName,
+    specialty: spec,
+    patientName: record.patientName || "Patient",
+    complaints: [...symptomsSeen],
+    meds,
+    labs: labNames,
+    advice:
+      "Take medicines as noted above. Stay hydrated, rest well, and complete the suggested tests. " +
+      "If symptoms worsen or do not improve in a few days, book an in-person consultation.",
+    disclaimer:
+      "This is a computer-generated summary from MedGuard's AI care assistant for demo purposes and is NOT a legally valid prescription. " +
+      "Please confirm all medicines and doses with a licensed doctor before use.",
+  };
+}
+
 function norm(text) {
   return String(text || "").toLowerCase().trim();
 }
@@ -252,4 +317,4 @@ function docReply(author, text) {
   };
 }
 
-module.exports = { greeting, reply, DISCLAIMER, isEmergency };
+module.exports = { greeting, reply, buildPrescription, DISCLAIMER, isEmergency };
