@@ -2291,6 +2291,52 @@ a:hover {
 }
 
 /* ---------- health vitals tracker (v=14) ---------- */
+.vital-nudges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+.vital-nudge {
+  border-radius: 12px;
+  padding: 0.85rem 0.95rem;
+  border-left: 4px solid #2563eb;
+}
+.vital-nudge.nudge-warn {
+  background: rgba(220, 38, 38, 0.06);
+  border-left-color: #dc2626;
+}
+.vital-nudge.nudge-info {
+  background: rgba(37, 99, 235, 0.06);
+  border-left-color: #2563eb;
+}
+.vital-nudge-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.vital-nudge-head strong {
+  font-size: 0.95rem;
+}
+.vital-nudge-reading {
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.06);
+}
+.vital-nudge-msg {
+  margin: 0.4rem 0 0.7rem;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+.vital-nudge-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
 .vital-log {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
