@@ -231,6 +231,130 @@ function vitalFlag(type, r) {
   return "normal";
 }
 
+// Turn a flagged latest reading into a friendly "here's what you can do" nudge.
+// Each action: { kind: "med"|"lab"|"care"|"consult", id?, label }
+// Purely supportive suggestions — never a diagnosis.
+function buildVitalNudges(byType) {
+  const medLabel = (id) => {
+    const m = MEDICINES.find((x) => x.id === id);
+    return m ? `🛒 ${m.name} · ₹${m.price}` : null;
+  };
+  const labLabel = (id) => {
+    const t = LAB_TESTS.find((x) => x.id === id);
+    return t ? `🧪 ${t.name} · ₹${t.price}` : null;
+  };
+  const RULES = {
+    "bp:high": {
+      level: "warn",
+      title: "Blood pressure is running high",
+      message: "A few high readings are worth a check. Consider a heart review and keeping an eye on it at home.",
+      actions: [
+        { kind: "care", specialty: "Cardiologist", label: "❤️ Book a Cardiologist" },
+        { kind: "med", id: "bp-monitor" },
+        { kind: "lab", id: "ecg" },
+      ],
+    },
+    "bp:low": {
+      level: "info",
+      title: "Blood pressure is on the lower side",
+      message: "If you feel dizzy or faint, sip fluids and rest. A quick word with a doctor helps rule things out.",
+      actions: [{ kind: "consult", label: "💬 Talk to a doctor" }],
+    },
+    "sugar:high": {
+      level: "warn",
+      title: "Blood sugar is high",
+      message: "Track it a bit more closely and consider a diabetes review. An HbA1c shows your 3-month average.",
+      actions: [
+        { kind: "care", specialty: "Diabetologist", label: "🩸 Book a Diabetologist" },
+        { kind: "med", id: "glucometer" },
+        { kind: "lab", id: "hba1c" },
+      ],
+    },
+    "sugar:low": {
+      level: "warn",
+      title: "Blood sugar is low",
+      message: "If you feel shaky or sweaty, take something sugary now. Talk to a doctor if this repeats.",
+      actions: [{ kind: "consult", label: "💬 Talk to a doctor" }],
+    },
+    "spo2:low": {
+      level: "warn",
+      title: "Oxygen level is low",
+      message: "Recheck with a proper pulse oximeter. If you also feel breathless, please seek care promptly.",
+      actions: [
+        { kind: "med", id: "oximeter" },
+        { kind: "lab", id: "xray-chest" },
+        { kind: "consult", label: "💬 Talk to a doctor" },
+      ],
+    },
+    "pulse:high": {
+      level: "info",
+      title: "Heart rate is high",
+      message: "Resting heart rate looks elevated. If it stays high or comes with palpitations, get it reviewed.",
+      actions: [
+        { kind: "care", specialty: "Cardiologist", label: "❤️ Book a Cardiologist" },
+        { kind: "lab", id: "ecg" },
+      ],
+    },
+    "pulse:low": {
+      level: "info",
+      title: "Heart rate is low",
+      message: "A low resting pulse can be normal for fit people, but mention it to a doctor if you feel unwell.",
+      actions: [{ kind: "consult", label: "💬 Talk to a doctor" }],
+    },
+    "temp:high": {
+      level: "warn",
+      title: "You have a fever",
+      message: "Stay hydrated and rest. Paracetamol helps; if it lasts 3+ days or spikes, get a fever panel done.",
+      actions: [
+        { kind: "med", id: "para-500" },
+        { kind: "lab", id: "fever-panel" },
+        { kind: "consult", label: "💬 Talk to a doctor" },
+      ],
+    },
+    "temp:low": {
+      level: "info",
+      title: "Body temperature is low",
+      message: "Warm up and recheck. If a low reading persists, please talk to a doctor.",
+      actions: [{ kind: "consult", label: "💬 Talk to a doctor" }],
+    },
+  };
+  const nudges = [];
+  for (const key of Object.keys(byType || {})) {
+    const readings = byType[key] || [];
+    const latest = readings[0];
+    if (!latest || !latest.flag || latest.flag === "normal") continue;
+    const rule = RULES[`${key}:${latest.flag}`];
+    if (!rule) continue;
+    const type = VITAL_TYPES.find((t) => t.key === key);
+    const actions = rule.actions
+      .map((a) => {
+        if (a.kind === "med") {
+          const label = medLabel(a.id);
+          return label ? { kind: "med", id: a.id, label } : null;
+        }
+        if (a.kind === "lab") {
+          const label = labLabel(a.id);
+          return label ? { kind: "lab", id: a.id, label } : null;
+        }
+        return a;
+      })
+      .filter(Boolean);
+    nudges.push({
+      type: key,
+      emoji: type ? type.emoji : "🩺",
+      flag: latest.flag,
+      level: rule.level,
+      title: rule.title,
+      message: rule.message,
+      reading: latest.display || String(latest.value),
+      actions,
+    });
+  }
+  // Show the more urgent (warn) nudges first.
+  nudges.sort((a, b) => (a.level === "warn" ? 0 : 1) - (b.level === "warn" ? 0 : 1));
+  return nudges;
+}
+
 function cleanText(value, max = 500) {
   return String(value == null ? "" : value)
     .replace(/[<>]/g, "")
@@ -815,7 +939,7 @@ const server = http.createServer(async (req, res) => {
         if (!byType[v.type]) byType[v.type] = [];
         byType[v.type].push(v);
       }
-      return sendJson(res, 200, { vitals: mine, byType, types: VITAL_TYPES });
+      return sendJson(res, 200, { vitals: mine, byType, types: VITAL_TYPES, nudges: buildVitalNudges(byType) });
     }
 
     if (pathname === "/api/vitals" && req.method === "POST") {
