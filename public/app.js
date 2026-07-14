@@ -25,6 +25,7 @@ const state = {
   consult: null, // { id, provider } active in-app doctor chat
   rx: null, // last prescription object being viewed
   health: null, // My Health dashboard data { summary, orders, consultations, prescriptions }
+  symptoms: null, // guided symptom-checker catalog
 };
 
 const DEVICE_CATEGORIES = ["Devices", "Mobility Aids", "Protection"];
@@ -904,6 +905,71 @@ async function reorderFromReminder(id) {
   const data = await res.json().catch(() => ({}));
   const r = (data.reminders || []).find((x) => x.id === id);
   if (r) reorderItems(r.items);
+}
+
+/* ---------- guided symptom checker ---------- */
+async function openSymptomChecker() {
+  $("symptomModal").hidden = false;
+  if (!state.symptoms) {
+    $("symptomBody").innerHTML = "<p>Loading…</p>";
+    try {
+      const res = await fetch(`${API}/api/symptoms`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Could not load");
+      state.symptoms = data.symptoms || [];
+    } catch (err) {
+      $("symptomBody").innerHTML = `<p class="health-empty">⚠️ ${escapeHtml(err.message)}</p>`;
+      return;
+    }
+  }
+  renderSymptomList();
+}
+
+function renderSymptomList() {
+  const host = $("symptomBody");
+  host.innerHTML = `
+    <p class="symptom-q">What's bothering you today?</p>
+    <div class="symptom-grid">
+      ${state.symptoms
+        .map(
+          (s) => `<button class="symptom-tile" data-symptom="${escapeHtml(s.key)}" type="button">
+            <span class="symptom-emoji">${s.emoji}</span>
+            <span>${escapeHtml(s.label)}</span>
+          </button>`
+        )
+        .join("")}
+    </div>
+    <p class="symptom-none">None of these? <button class="linklike" id="symptomToChat" type="button">💬 Chat with a doctor →</button></p>`;
+}
+
+function renderSymptomDetail(key) {
+  const s = state.symptoms.find((x) => x.key === key);
+  if (!s) return;
+  const host = $("symptomBody");
+  const medBtns = s.meds
+    .map((m) =>
+      m.id
+        ? `<button class="csug-btn" data-symptom-add="${escapeHtml(m.id)}" type="button">➕ ${escapeHtml(m.name)} · ${inr(m.price)}</button>`
+        : `<span class="csug-tag">${escapeHtml(m.name)}</span>`
+    )
+    .join("");
+  const labBtns = s.labs
+    .map((l) =>
+      l.id
+        ? `<button class="csug-btn" data-symptom-lab="${escapeHtml(l.id)}" type="button">🧪 ${escapeHtml(l.name)}</button>`
+        : `<span class="csug-tag">🧪 ${escapeHtml(l.name)}</span>`
+    )
+    .join("");
+  host.innerHTML = `
+    <button class="linklike symptom-back" id="symptomBack" type="button">← All symptoms</button>
+    <div class="symptom-detail">
+      <h4>${s.emoji} ${escapeHtml(s.label)}</h4>
+      <p class="symptom-question">${escapeHtml(s.question)}</p>
+      <p class="symptom-advice">${escapeHtml(s.advice)}</p>
+      ${medBtns ? `<div class="symptom-sec"><strong>Suggested medicines</strong><div class="csug-row">${medBtns}</div></div>` : ""}
+      ${labBtns ? `<div class="symptom-sec"><strong>Suggested tests</strong><div class="csug-row">${labBtns}</div></div>` : ""}
+      <button class="btn btn-primary btn-block symptom-chat" id="symptomToChat" type="button">💬 Talk to a doctor about this</button>
+    </div>`;
 }
 
 function findPrescriptionByRxNo(rxNo) {
@@ -2086,6 +2152,36 @@ function bindEvents() {
       if (pendingReminder) pendingReminder.days = parseInt(days, 10);
     });
   if ($("remindConfirmBtn")) $("remindConfirmBtn").addEventListener("click", confirmReminder);
+
+  // Guided symptom checker
+  if ($("symptomCheckerBtn")) $("symptomCheckerBtn").addEventListener("click", openSymptomChecker);
+  if ($("symptomModalClose")) $("symptomModalClose").addEventListener("click", () => ($("symptomModal").hidden = true));
+  if ($("symptomModal"))
+    $("symptomModal").addEventListener("click", (e) => {
+      if (e.target.id === "symptomModal") $("symptomModal").hidden = true;
+    });
+  if ($("symptomBody"))
+    $("symptomBody").addEventListener("click", (e) => {
+      const tile = e.target.closest("[data-symptom]");
+      if (tile) return renderSymptomDetail(tile.getAttribute("data-symptom"));
+      if (e.target.id === "symptomBack") return renderSymptomList();
+      if (e.target.id === "symptomToChat") {
+        $("symptomModal").hidden = true;
+        return openConsult(null);
+      }
+      const addId = e.target.getAttribute("data-symptom-add");
+      if (addId) {
+        addToCart(addId);
+        return;
+      }
+      const labId = e.target.getAttribute("data-symptom-lab");
+      if (labId) {
+        $("symptomModal").hidden = true;
+        showView("labs");
+        if (typeof openLabModal === "function") openLabModal(labId);
+        return;
+      }
+    });
 
   // Prescription (from consult chat + rx modal)
   if ($("consultRxBtn")) $("consultRxBtn").addEventListener("click", getPrescription);
