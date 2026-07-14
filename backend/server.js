@@ -634,7 +634,11 @@ const server = http.createServer(async (req, res) => {
     if (pathname === "/api/my/health" && req.method === "GET") {
       const user = await getSessionUser(req);
       if (!user) return sendJson(res, 401, { error: "Please log in to view your health records." });
-      const [orders, consults] = await Promise.all([store.getOrders(), store.getConsultations()]);
+      const [orders, consults, reminders] = await Promise.all([
+        store.getOrders(),
+        store.getConsultations(),
+        store.getReminders(),
+      ]);
       const myOrders = orders.filter((o) => o.userId === user.id).reverse();
       const myConsults = consults
         .filter((c) => c.userId === user.id)
@@ -651,12 +655,14 @@ const server = http.createServer(async (req, res) => {
       const prescriptions = myConsults.filter((c) => c.prescription).map((c) => c.prescription);
       const medOrders = myOrders.filter((o) => o.type !== "lab" && o.type !== "care" && o.type !== "booking");
       const labOrders = myOrders.filter((o) => o.type === "lab");
+      const activeReminders = reminders.filter((r) => r.userId === user.id && r.status !== "DONE");
       const summary = {
         totalOrders: myOrders.length,
         medicineOrders: medOrders.length,
         labOrders: labOrders.length,
         consultations: myConsults.length,
         prescriptions: prescriptions.length,
+        reminders: activeReminders.length,
         plusMember: !!(user.plusMember && (!user.plusExpiry || new Date(user.plusExpiry) > new Date())),
       };
       return sendJson(res, 200, {
@@ -666,6 +672,87 @@ const server = http.createServer(async (req, res) => {
         consultations: myConsults,
         prescriptions,
       });
+    }
+
+    // ---- Refill reminders (logged-in) ----
+    if (pathname === "/api/my/reminders" && req.method === "GET") {
+      const user = await getSessionUser(req);
+      if (!user) return sendJson(res, 401, { error: "Please log in to view your reminders." });
+      const all = await store.getReminders();
+      const mine = all
+        .filter((r) => r.userId === user.id && r.status !== "DONE")
+        .sort((a, b) => new Date(a.dueAt) - new Date(b.dueAt));
+      const now = Date.now();
+      const withState = mine.map((r) => ({
+        ...r,
+        daysLeft: Math.ceil((new Date(r.dueAt).getTime() - now) / (24 * 60 * 60 * 1000)),
+        due: new Date(r.dueAt).getTime() <= now,
+      }));
+      return sendJson(res, 200, { reminders: withState });
+    }
+
+    if (pathname === "/api/reminders" && req.method === "POST") {
+      const user = await getSessionUser(req);
+      if (!user) return sendJson(res, 401, { error: "Please log in to set a reminder." });
+      const body = await readBody(req);
+      const days = Math.min(365, Math.max(1, parseInt(body.days, 10) || 30));
+      // Resolve items -> valid medicines from the catalog.
+      const items = (Array.isArray(body.items) ? body.items : [])
+        .map((it) => {
+          const med = MEDICINES.find((m) => m.id === (it.id || it));
+          if (!med) return null;
+          return { id: med.id, name: med.name, qty: Math.max(1, parseInt(it.qty, 10) || 1) };
+        })
+        .filter(Boolean);
+      if (!items.length) return sendJson(res, 400, { error: "No valid medicines to remind about." });
+      const now = new Date();
+      const dueAt = new Date(now.getTime() + days * 24 * 60 * 60 * 1000);
+      const record = {
+        id: genId("REMIND"),
+        userId: user.id,
+        orderId: cleanText(body.orderId, 60) || null,
+        items,
+        intervalDays: days,
+        status: "ACTIVE",
+        createdAt: now.toISOString(),
+        dueAt: dueAt.toISOString(),
+      };
+      await store.saveReminders([record]);
+      return sendJson(res, 201, { reminder: record });
+    }
+
+    if (pathname.startsWith("/api/reminders/") && req.method === "POST") {
+      const user = await getSessionUser(req);
+      if (!user) return sendJson(res, 401, { error: "Please log in first." });
+      const parts = pathname.split("/");
+      const id = decodeURIComponent(parts[3] || "");
+      const action = parts[4] || "";
+      const all = await store.getReminders();
+      const record = all.find((r) => r.id === id && r.userId === user.id);
+      if (!record) return sendJson(res, 404, { error: "Reminder not found." });
+      if (action === "snooze") {
+        const now = Date.now();
+        record.dueAt = new Date(now + 7 * 24 * 60 * 60 * 1000).toISOString();
+        record.status = "ACTIVE";
+      } else if (action === "done") {
+        record.status = "DONE";
+        record.completedAt = new Date().toISOString();
+      } else {
+        return sendJson(res, 400, { error: "Unknown action." });
+      }
+      await store.saveReminders([record]);
+      return sendJson(res, 200, { reminder: record });
+    }
+
+    if (pathname.startsWith("/api/reminders/") && req.method === "DELETE") {
+      const user = await getSessionUser(req);
+      if (!user) return sendJson(res, 401, { error: "Please log in first." });
+      const id = decodeURIComponent(pathname.split("/")[3] || "");
+      const all = await store.getReminders();
+      const record = all.find((r) => r.id === id && r.userId === user.id);
+      if (!record) return sendJson(res, 404, { error: "Reminder not found." });
+      await store.deleteReminder(id);
+      return sendJson(res, 200, { ok: true });
     }
 
     if (pathname === "/api/providers") {
