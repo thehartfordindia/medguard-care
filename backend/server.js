@@ -769,9 +769,26 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, 200, { providers: list });
     }
 
+    // ---- Guided symptom checker catalog ----
+    if (pathname === "/api/symptoms" && req.method === "GET") {
+      const items = consult.symptomCatalog().map((s) => {
+        const meds = s.meds
+          .map((name) => {
+            const med = MEDICINES.find((m) => m.name === name);
+            return med ? { id: med.id, name: med.name, price: med.price, rx: med.rx } : { id: null, name };
+          });
+        const labs = s.labs
+          .map((name) => {
+            const lab = LAB_TESTS.find((t) => t.name === name);
+            return lab ? { id: lab.id, name: lab.name, price: lab.price } : { id: null, name };
+          });
+        return { key: s.key, emoji: s.emoji, label: s.label, question: s.question, advice: s.advice, meds, labs };
+      });
+      return sendJson(res, 200, { symptoms: items, disclaimer: consult.DISCLAIMER });
+    }
+
     // ---- In-app doctor consultation (live text chat) ----
-    if (pathname === "/api/consult/start" && req.method === "POST") {
-      const body = await readBody(req);
+    if (pathname === "/api/consult/start" && req.method === "POST") {      const body = await readBody(req);
       const provider = PROVIDERS.find((p) => p.id === body.providerId && p.role === "doctor");
       const sessionUser = await getSessionUser(req);
       const patientName = cleanText(body.name, 80) || (sessionUser ? sessionUser.name : "");
