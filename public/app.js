@@ -691,6 +691,7 @@ async function openMyHealth() {
     const s = data.summary;
     $("healthStats").innerHTML = `
       <div class="hstat"><strong>${s.prescriptions}</strong><span>Prescriptions</span></div>
+      <div class="hstat"><strong>${s.reminders || 0}</strong><span>Refill reminders</span></div>
       <div class="hstat"><strong>${s.consultations}</strong><span>Consultations</span></div>
       <div class="hstat"><strong>${s.medicineOrders}</strong><span>Medicine orders</span></div>
       <div class="hstat"><strong>${s.labOrders}</strong><span>Lab / scan orders</span></div>`;
@@ -744,6 +745,8 @@ function renderHealthTab(tab) {
           })
           .join("")
       : `<p class="health-empty">No consultations yet. Tap “Talk to a doctor now” in Doctors & Care.</p>`;
+  } else if (tab === "reminders") {
+    renderReminders();
   } else {
     const list = data.orders || [];
     host.innerHTML = list.length
@@ -751,9 +754,16 @@ function renderHealthTab(tab) {
           .map((o) => {
             const icon = o.type === "lab" ? "🧪" : o.type === "medicine" ? "📦" : "⚕️";
             let detail = "";
+            const isMed = o.type === "medicine" && (o.items || []).length;
             if (o.type === "medicine") detail = (o.items || []).map((i) => `${i.name} ×${i.qty}`).join(", ");
             else if (o.type === "lab") detail = (o.tests || []).map((t) => t.name).join(", ");
             else detail = `${o.provider ? o.provider.name : ""} · ${o.visitMode || ""}`;
+            const actions = isMed
+              ? `<div class="hcard-actions">
+                   <button class="btn btn-outline btn-sm" data-reorder="${escapeHtml(o.id)}">🔁 Reorder</button>
+                   <button class="btn btn-outline btn-sm" data-remind="${escapeHtml(o.id)}">🔔 Refill reminder</button>
+                 </div>`
+              : "";
             return `
         <div class="hcard">
           <div class="hcard-head">
@@ -762,11 +772,138 @@ function renderHealthTab(tab) {
           </div>
           <small>${escapeHtml(detail)}</small>
           <div class="hcard-foot"><small>${new Date(o.createdAt).toLocaleDateString()}</small><strong>${inr(o.total)}</strong></div>
+          ${actions}
         </div>`;
           })
           .join("")
       : `<p class="health-empty">No orders yet.</p>`;
   }
+}
+
+/* ---------- refill reminders ---------- */
+async function renderReminders() {
+  const host = $("healthBody");
+  host.innerHTML = "<p>Loading reminders…</p>";
+  try {
+    const res = await fetch(`${API}/api/my/reminders`, { headers: authHeaders() });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Could not load reminders");
+    const list = data.reminders || [];
+    if (!list.length) {
+      host.innerHTML = `<p class="health-empty">No refill reminders yet. Open the “Orders &amp; Tests” tab and tap “🔔 Refill reminder” on a medicine order.</p>`;
+      return;
+    }
+    host.innerHTML = list
+      .map((r) => {
+        const items = (r.items || []).map((i) => `${i.name} ×${i.qty}`).join(", ");
+        const when = r.due
+          ? `<span class="remind-due">Due now</span>`
+          : `<span class="remind-soon">in ${r.daysLeft} day${r.daysLeft === 1 ? "" : "s"}</span>`;
+        return `
+      <div class="hcard ${r.due ? "hcard-due" : ""}">
+        <div class="hcard-head">
+          <strong>🔔 Refill ${when}</strong>
+          <small>${new Date(r.dueAt).toLocaleDateString()}</small>
+        </div>
+        <small>${escapeHtml(items)}</small>
+        <div class="hcard-actions">
+          <button class="btn btn-primary btn-sm" data-remind-reorder="${escapeHtml(r.id)}">🔁 Reorder now</button>
+          <button class="btn btn-outline btn-sm" data-remind-snooze="${escapeHtml(r.id)}">😴 Snooze 7d</button>
+          <button class="btn btn-outline btn-sm" data-remind-done="${escapeHtml(r.id)}">✓ Done</button>
+        </div>
+      </div>`;
+      })
+      .join("");
+  } catch (err) {
+    host.innerHTML = `<p class="health-empty">⚠️ ${escapeHtml(err.message)}</p>`;
+  }
+}
+
+let pendingReminder = null; // { items, orderId, days }
+
+function openRemindModal(orderId) {
+  const order = (state.health && state.health.orders || []).find((o) => o.id === orderId);
+  if (!order || !(order.items || []).length) return toast("Nothing to remind about for this order.");
+  pendingReminder = {
+    orderId,
+    items: order.items.map((i) => ({ id: i.id, qty: i.qty })),
+    days: 30,
+  };
+  $("remindItems").textContent = order.items.map((i) => `${i.name} ×${i.qty}`).join(", ");
+  document.querySelectorAll(".remind-opt").forEach((b) =>
+    b.classList.toggle("active", b.getAttribute("data-days") === "30")
+  );
+  $("remindModal").hidden = false;
+}
+
+async function confirmReminder() {
+  if (!pendingReminder) return;
+  $("remindConfirmBtn").disabled = true;
+  try {
+    const res = await fetch(`${API}/api/reminders`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...authHeaders() },
+      body: JSON.stringify(pendingReminder),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Could not set reminder");
+    $("remindModal").hidden = true;
+    toast(`🔔 We'll remind you in ${pendingReminder.days} days`);
+  } catch (err) {
+    toast(err.message);
+  } finally {
+    $("remindConfirmBtn").disabled = false;
+  }
+}
+
+function reorderItems(items) {
+  let added = 0;
+  (items || []).forEach((it) => {
+    const med = state.medicines.find((m) => m.id === it.id);
+    if (med) {
+      const existing = state.cart.find((c) => c.id === med.id);
+      const qty = Math.max(1, it.qty || 1);
+      if (existing) existing.qty += qty;
+      else state.cart.push({ id: med.id, name: med.name, price: med.price, qty, rx: med.rx });
+      added += qty;
+    }
+  });
+  renderCart();
+  if (added) {
+    $("healthModal").hidden = true;
+    toast(`🛒 ${added} item${added === 1 ? "" : "s"} added to your cart`);
+    openCart();
+  } else {
+    toast("Those items are no longer available.");
+  }
+}
+
+async function reorderFromOrder(orderId) {
+  const order = (state.health && state.health.orders || []).find((o) => o.id === orderId);
+  if (order) reorderItems(order.items);
+}
+
+async function reminderAction(id, action) {
+  try {
+    const res = await fetch(`${API}/api/reminders/${encodeURIComponent(id)}/${action}`, {
+      method: "POST",
+      headers: authHeaders(),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Action failed");
+    if (action === "snooze") toast("😴 Snoozed for 7 days");
+    if (action === "done") toast("✓ Reminder cleared");
+    renderReminders();
+  } catch (err) {
+    toast(err.message);
+  }
+}
+
+async function reorderFromReminder(id) {
+  const res = await fetch(`${API}/api/my/reminders`, { headers: authHeaders() });
+  const data = await res.json().catch(() => ({}));
+  const r = (data.reminders || []).find((x) => x.id === id);
+  if (r) reorderItems(r.items);
 }
 
 function findPrescriptionByRxNo(rxNo) {
@@ -1920,8 +2057,35 @@ function bindEvents() {
       if (rxNo) {
         const rx = findPrescriptionByRxNo(rxNo);
         if (rx) openRx(rx);
+        return;
       }
+      const reorderId = e.target.getAttribute("data-reorder");
+      if (reorderId) return reorderFromOrder(reorderId);
+      const remindId = e.target.getAttribute("data-remind");
+      if (remindId) return openRemindModal(remindId);
+      const rReorder = e.target.getAttribute("data-remind-reorder");
+      if (rReorder) return reorderFromReminder(rReorder);
+      const rSnooze = e.target.getAttribute("data-remind-snooze");
+      if (rSnooze) return reminderAction(rSnooze, "snooze");
+      const rDone = e.target.getAttribute("data-remind-done");
+      if (rDone) return reminderAction(rDone, "done");
     });
+
+  // Refill reminder modal
+  if ($("remindModalClose")) $("remindModalClose").addEventListener("click", () => ($("remindModal").hidden = true));
+  if ($("remindModal"))
+    $("remindModal").addEventListener("click", (e) => {
+      if (e.target.id === "remindModal") $("remindModal").hidden = true;
+    });
+  if ($("remindOptions"))
+    $("remindOptions").addEventListener("click", (e) => {
+      const days = e.target.getAttribute("data-days");
+      if (!days) return;
+      document.querySelectorAll(".remind-opt").forEach((b) => b.classList.remove("active"));
+      e.target.classList.add("active");
+      if (pendingReminder) pendingReminder.days = parseInt(days, 10);
+    });
+  if ($("remindConfirmBtn")) $("remindConfirmBtn").addEventListener("click", confirmReminder);
 
   // Prescription (from consult chat + rx modal)
   if ($("consultRxBtn")) $("consultRxBtn").addEventListener("click", getPrescription);
