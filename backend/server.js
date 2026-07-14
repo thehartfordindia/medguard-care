@@ -192,6 +192,45 @@ function genId(prefix) {
   return `${prefix}-${Date.now()}-${crypto.randomBytes(3).toString("hex").toUpperCase()}`;
 }
 
+// Health vitals the user can log and trend over time.
+const VITAL_TYPES = [
+  { key: "bp", label: "Blood Pressure", unit: "mmHg", emoji: "❤️", composite: true, normal: "Around 120/80" },
+  { key: "sugar", label: "Blood Sugar", unit: "mg/dL", emoji: "🩸", normal: "Fasting 70–100" },
+  { key: "weight", label: "Weight", unit: "kg", emoji: "⚖️", normal: "" },
+  { key: "spo2", label: "Oxygen (SpO₂)", unit: "%", emoji: "🫁", normal: "95–100%" },
+  { key: "pulse", label: "Heart Rate", unit: "bpm", emoji: "💓", normal: "60–100 bpm" },
+  { key: "temp", label: "Temperature", unit: "°F", emoji: "🌡️", normal: "97–99°F" },
+];
+
+// Very light, non-diagnostic "is this in the usual range?" flag.
+function vitalFlag(type, r) {
+  if (type === "bp") {
+    if (r.systolic >= 140 || r.diastolic >= 90) return "high";
+    if (r.systolic < 90 || r.diastolic < 60) return "low";
+    return "normal";
+  }
+  if (type === "sugar") {
+    if (r.value >= 180) return "high";
+    if (r.value < 70) return "low";
+    return "normal";
+  }
+  if (type === "spo2") {
+    if (r.value < 94) return "low";
+    return "normal";
+  }
+  if (type === "pulse") {
+    if (r.value > 100) return "high";
+    if (r.value < 60) return "low";
+    return "normal";
+  }
+  if (type === "temp") {
+    if (r.value >= 100.4) return "high";
+    if (r.value < 95) return "low";
+    return "normal";
+  }
+  return "normal";
+}
+
 function cleanText(value, max = 500) {
   return String(value == null ? "" : value)
     .replace(/[<>]/g, "")
@@ -639,6 +678,7 @@ const server = http.createServer(async (req, res) => {
         store.getConsultations(),
         store.getReminders(),
       ]);
+      const myVitals = (await store.getVitals()).filter((v) => v.userId === user.id);
       const myOrders = orders.filter((o) => o.userId === user.id).reverse();
       const myConsults = consults
         .filter((c) => c.userId === user.id)
@@ -663,6 +703,7 @@ const server = http.createServer(async (req, res) => {
         consultations: myConsults.length,
         prescriptions: prescriptions.length,
         reminders: activeReminders.length,
+        vitals: myVitals.length,
         plusMember: !!(user.plusMember && (!user.plusExpiry || new Date(user.plusExpiry) > new Date())),
       };
       return sendJson(res, 200, {
@@ -752,6 +793,75 @@ const server = http.createServer(async (req, res) => {
       const record = all.find((r) => r.id === id && r.userId === user.id);
       if (!record) return sendJson(res, 404, { error: "Reminder not found." });
       await store.deleteReminder(id);
+      return sendJson(res, 200, { ok: true });
+    }
+
+    // ---- Health vitals tracker (logged-in) ----
+    if (pathname === "/api/vitals/types" && req.method === "GET") {
+      return sendJson(res, 200, { types: VITAL_TYPES });
+    }
+
+    if (pathname === "/api/my/vitals" && req.method === "GET") {
+      const user = await getSessionUser(req);
+      if (!user) return sendJson(res, 401, { error: "Please log in to view your vitals." });
+      const all = await store.getVitals();
+      const mine = all
+        .filter((v) => v.userId === user.id)
+        .sort((a, b) => new Date(b.at) - new Date(a.at));
+      // Group by metric for easy charting.
+      const byType = {};
+      for (const t of VITAL_TYPES) byType[t.key] = [];
+      for (const v of mine) {
+        if (!byType[v.type]) byType[v.type] = [];
+        byType[v.type].push(v);
+      }
+      return sendJson(res, 200, { vitals: mine, byType, types: VITAL_TYPES });
+    }
+
+    if (pathname === "/api/vitals" && req.method === "POST") {
+      const user = await getSessionUser(req);
+      if (!user) return sendJson(res, 401, { error: "Please log in to log a vital." });
+      const body = await readBody(req);
+      const type = VITAL_TYPES.find((t) => t.key === cleanText(body.type, 20));
+      if (!type) return sendJson(res, 400, { error: "Unknown vital type." });
+      const record = {
+        id: genId("VITAL"),
+        userId: user.id,
+        type: type.key,
+        at: new Date().toISOString(),
+        note: cleanText(body.note, 120),
+      };
+      if (type.key === "bp") {
+        const sys = parseInt(body.systolic, 10);
+        const dia = parseInt(body.diastolic, 10);
+        if (!Number.isFinite(sys) || !Number.isFinite(dia) || sys < 50 || sys > 300 || dia < 30 || dia > 200) {
+          return sendJson(res, 400, { error: "Enter a valid blood pressure (e.g. 120 / 80)." });
+        }
+        record.systolic = sys;
+        record.diastolic = dia;
+        record.value = sys; // primary series for charting
+        record.display = `${sys}/${dia}`;
+      } else {
+        const value = Number(body.value);
+        if (!Number.isFinite(value) || value < 0 || value > 100000) {
+          return sendJson(res, 400, { error: `Enter a valid ${type.label.toLowerCase()} reading.` });
+        }
+        record.value = Math.round(value * 100) / 100;
+        record.display = `${record.value} ${type.unit}`.trim();
+      }
+      record.flag = vitalFlag(type.key, record);
+      await store.saveVitals([record]);
+      return sendJson(res, 201, { vital: record });
+    }
+
+    if (pathname.startsWith("/api/vitals/") && req.method === "DELETE") {
+      const user = await getSessionUser(req);
+      if (!user) return sendJson(res, 401, { error: "Please log in first." });
+      const id = decodeURIComponent(pathname.split("/")[3] || "");
+      const all = await store.getVitals();
+      const record = all.find((v) => v.id === id && v.userId === user.id);
+      if (!record) return sendJson(res, 404, { error: "Reading not found." });
+      await store.deleteVital(id);
       return sendJson(res, 200, { ok: true });
     }
 
