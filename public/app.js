@@ -23,6 +23,8 @@ const state = {
   labQuery: "", // free-text filter for lab tests
   safetyPicks: [], // medicine ids selected in the standalone safety checker
   consult: null, // { id, provider } active in-app doctor chat
+  rx: null, // last prescription object being viewed
+  health: null, // My Health dashboard data { summary, orders, consultations, prescriptions }
 };
 
 const DEVICE_CATEGORIES = ["Devices", "Mobility Aids", "Protection"];
@@ -560,6 +562,219 @@ async function sendConsultMessage(e) {
     $("consultSend").disabled = false;
     $("consultText").focus();
   }
+}
+
+/* ---------- prescription ---------- */
+async function getPrescription() {
+  if (!state.consult) return;
+  const btn = $("consultRxBtn");
+  if (btn) btn.disabled = true;
+  try {
+    const res = await fetch(`${API}/api/consult/prescription`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...authHeaders() },
+      body: JSON.stringify({ consultId: state.consult.id }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Could not generate prescription");
+    openRx(data.prescription);
+    renderConsultMessages(
+      [{ from: "system", text: `📄 Prescription ${data.prescription.rxNo} is ready. You can view or download it anytime from “My Health”.` }],
+      true
+    );
+  } catch (err) {
+    renderConsultMessages([{ from: "system", text: `⚠️ ${err.message}` }], true);
+  } finally {
+    if (btn) btn.disabled = false;
+  }
+}
+
+function rxSheetHtml(rx) {
+  const medRows = (rx.meds || [])
+    .map(
+      (m, i) => `
+      <tr>
+        <td>${i + 1}</td>
+        <td><strong>${escapeHtml(m.name)}</strong><br><small>${escapeHtml(m.note || "")}</small></td>
+        <td>${escapeHtml(m.dose || "")}</td>
+        <td>${escapeHtml(m.freq || "")}</td>
+        <td>${escapeHtml(m.duration || "")}</td>
+      </tr>`
+    )
+    .join("");
+  const labRows = (rx.labs || []).map((l) => `<li>${escapeHtml(l)}</li>`).join("");
+  const complaints = (rx.complaints || []).length
+    ? (rx.complaints || []).map((c) => escapeHtml(c)).join(", ")
+    : "General consultation";
+  const date = new Date(rx.issuedAt).toLocaleString();
+  return `
+    <div class="rx-header">
+      <div class="rx-brand">
+        <span class="rx-logo">⚕️</span>
+        <div>
+          <strong>MedGuard Care</strong>
+          <small>Online Consultation Summary</small>
+        </div>
+      </div>
+      <div class="rx-meta">
+        <div><span>Rx No.</span> <strong>${escapeHtml(rx.rxNo)}</strong></div>
+        <div><span>Date</span> ${escapeHtml(date)}</div>
+      </div>
+    </div>
+    <div class="rx-parties">
+      <div><span>Doctor</span><strong>${escapeHtml(rx.doctor)}</strong><small>${escapeHtml(rx.specialty || "")}</small></div>
+      <div><span>Patient</span><strong>${escapeHtml(rx.patientName || "Patient")}</strong><small>Complaints: ${complaints}</small></div>
+    </div>
+    ${
+      (rx.meds || []).length
+        ? `<h4 class="rx-sec">℞ Medicines</h4>
+    <table class="rx-table">
+      <thead><tr><th>#</th><th>Medicine</th><th>Dose</th><th>Frequency</th><th>Duration</th></tr></thead>
+      <tbody>${medRows}</tbody>
+    </table>`
+        : ""
+    }
+    ${(rx.labs || []).length ? `<h4 class="rx-sec">🧪 Suggested tests</h4><ul class="rx-labs">${labRows}</ul>` : ""}
+    <h4 class="rx-sec">📝 Advice</h4>
+    <p class="rx-advice">${escapeHtml(rx.advice || "")}</p>
+    <p class="rx-disclaimer">${escapeHtml(rx.disclaimer || "")}</p>
+  `;
+}
+
+function openRx(rx) {
+  state.rx = rx;
+  $("rxSheet").innerHTML = rxSheetHtml(rx);
+  $("rxModal").hidden = false;
+}
+
+function printRx() {
+  if (!state.rx) return;
+  const rx = state.rx;
+  const win = window.open("", "_blank", "width=800,height=900");
+  if (!win) {
+    toast("Please allow pop-ups to print your prescription.");
+    return;
+  }
+  win.document.write(`<!doctype html><html><head><title>${escapeHtml(rx.rxNo)} — MedGuard</title>
+    <style>
+      body{font-family:Segoe UI,Arial,sans-serif;color:#1f2937;margin:32px;line-height:1.5}
+      .rx-header,.rx-parties{display:flex;justify-content:space-between;gap:16px}
+      .rx-header{border-bottom:2px solid #2563eb;padding-bottom:12px;margin-bottom:12px}
+      .rx-brand strong{font-size:20px;color:#2563eb;display:block}
+      .rx-meta{text-align:right;font-size:13px}
+      .rx-meta span,.rx-parties span{color:#6b7280;font-size:12px;display:block}
+      .rx-parties{background:#f8fafc;border-radius:10px;padding:12px;margin:12px 0}
+      .rx-parties small{color:#6b7280}
+      .rx-sec{color:#2563eb;margin:18px 0 8px;border-left:4px solid #2563eb;padding-left:8px}
+      table{width:100%;border-collapse:collapse;font-size:13px}
+      th,td{border:1px solid #e5e7eb;padding:7px 9px;text-align:left;vertical-align:top}
+      th{background:#eff6ff}
+      ul{margin:4px 0 0 18px}
+      .rx-disclaimer{margin-top:20px;font-size:11px;color:#6b7280;border-top:1px dashed #d1d5db;padding-top:10px}
+    </style></head><body>${rxSheetHtml(rx)}</body></html>`);
+  win.document.close();
+  win.focus();
+  setTimeout(() => win.print(), 400);
+}
+
+/* ---------- My Health dashboard ---------- */
+async function openMyHealth() {
+  if (!state.user) return openAuthModal("login");
+  $("healthModal").hidden = false;
+  $("healthStats").innerHTML = "";
+  $("healthBody").innerHTML = "<p>Loading your health records…</p>";
+  try {
+    const res = await fetch(`${API}/api/my/health`, { headers: authHeaders() });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Could not load your health records");
+    state.health = data;
+    const s = data.summary;
+    $("healthStats").innerHTML = `
+      <div class="hstat"><strong>${s.prescriptions}</strong><span>Prescriptions</span></div>
+      <div class="hstat"><strong>${s.consultations}</strong><span>Consultations</span></div>
+      <div class="hstat"><strong>${s.medicineOrders}</strong><span>Medicine orders</span></div>
+      <div class="hstat"><strong>${s.labOrders}</strong><span>Lab / scan orders</span></div>`;
+    document.querySelectorAll(".health-tab").forEach((t) =>
+      t.classList.toggle("active", t.getAttribute("data-htab") === "prescriptions")
+    );
+    renderHealthTab("prescriptions");
+  } catch (err) {
+    $("healthBody").innerHTML = `<p>⚠️ ${escapeHtml(err.message)}</p>`;
+  }
+}
+
+function renderHealthTab(tab) {
+  const data = state.health;
+  const host = $("healthBody");
+  if (!data) return;
+  if (tab === "prescriptions") {
+    const list = data.prescriptions || [];
+    host.innerHTML = list.length
+      ? list
+          .map(
+            (rx) => `
+        <div class="hcard">
+          <div class="hcard-head">
+            <strong>📄 ${escapeHtml(rx.rxNo)}</strong>
+            <small>${new Date(rx.issuedAt).toLocaleDateString()}</small>
+          </div>
+          <small>${escapeHtml(rx.doctor)} · ${(rx.meds || []).length} medicine(s), ${(rx.labs || []).length} test(s)</small>
+          <div class="hcard-foot">
+            <button class="btn btn-outline btn-sm" data-rx="${escapeHtml(rx.rxNo)}">View / download</button>
+          </div>
+        </div>`
+          )
+          .join("")
+      : `<p class="health-empty">No prescriptions yet. Start a doctor chat and tap “Get prescription”.</p>`;
+  } else if (tab === "consultations") {
+    const list = data.consultations || [];
+    host.innerHTML = list.length
+      ? list
+          .map((c) => {
+            const doc = c.provider ? c.provider.name : "MedGuard Doctor";
+            return `
+        <div class="hcard">
+          <div class="hcard-head">
+            <strong>💬 ${escapeHtml(doc)}</strong>
+            <small>${new Date(c.createdAt).toLocaleDateString()}</small>
+          </div>
+          <small>${escapeHtml(c.provider && c.provider.specialty ? c.provider.specialty : "General Physician")} · ${c.messageCount} messages · ${escapeHtml(c.status)}</small>
+          ${c.prescription ? `<div class="hcard-foot"><button class="btn btn-outline btn-sm" data-rx="${escapeHtml(c.prescription.rxNo)}">📄 View prescription</button></div>` : ""}
+        </div>`;
+          })
+          .join("")
+      : `<p class="health-empty">No consultations yet. Tap “Talk to a doctor now” in Doctors & Care.</p>`;
+  } else {
+    const list = data.orders || [];
+    host.innerHTML = list.length
+      ? list
+          .map((o) => {
+            const icon = o.type === "lab" ? "🧪" : o.type === "medicine" ? "📦" : "⚕️";
+            let detail = "";
+            if (o.type === "medicine") detail = (o.items || []).map((i) => `${i.name} ×${i.qty}`).join(", ");
+            else if (o.type === "lab") detail = (o.tests || []).map((t) => t.name).join(", ");
+            else detail = `${o.provider ? o.provider.name : ""} · ${o.visitMode || ""}`;
+            return `
+        <div class="hcard">
+          <div class="hcard-head">
+            <strong>${icon} ${escapeHtml(o.id)}</strong>
+            <span class="order-status">${escapeHtml(o.status)}</span>
+          </div>
+          <small>${escapeHtml(detail)}</small>
+          <div class="hcard-foot"><small>${new Date(o.createdAt).toLocaleDateString()}</small><strong>${inr(o.total)}</strong></div>
+        </div>`;
+          })
+          .join("")
+      : `<p class="health-empty">No orders yet.</p>`;
+  }
+}
+
+function findPrescriptionByRxNo(rxNo) {
+  if (!state.health) return null;
+  const direct = (state.health.prescriptions || []).find((r) => r.rxNo === rxNo);
+  if (direct) return direct;
+  const c = (state.health.consultations || []).find((c) => c.prescription && c.prescription.rxNo === rxNo);
+  return c ? c.prescription : null;
 }
 
 
@@ -1680,6 +1895,42 @@ function bindEvents() {
   $("ordersModal").addEventListener("click", (e) => {
     if (e.target.id === "ordersModal") $("ordersModal").hidden = true;
   });
+
+  // My Health dashboard
+  if ($("ddMyHealth"))
+    $("ddMyHealth").addEventListener("click", () => {
+      $("userDropdown").hidden = true;
+      openMyHealth();
+    });
+  if ($("healthModalClose")) $("healthModalClose").addEventListener("click", () => ($("healthModal").hidden = true));
+  if ($("healthModal"))
+    $("healthModal").addEventListener("click", (e) => {
+      if (e.target.id === "healthModal") $("healthModal").hidden = true;
+    });
+  document.querySelectorAll(".health-tab").forEach((t) =>
+    t.addEventListener("click", () => {
+      document.querySelectorAll(".health-tab").forEach((x) => x.classList.remove("active"));
+      t.classList.add("active");
+      renderHealthTab(t.getAttribute("data-htab"));
+    })
+  );
+  if ($("healthBody"))
+    $("healthBody").addEventListener("click", (e) => {
+      const rxNo = e.target.getAttribute("data-rx");
+      if (rxNo) {
+        const rx = findPrescriptionByRxNo(rxNo);
+        if (rx) openRx(rx);
+      }
+    });
+
+  // Prescription (from consult chat + rx modal)
+  if ($("consultRxBtn")) $("consultRxBtn").addEventListener("click", getPrescription);
+  if ($("rxModalClose")) $("rxModalClose").addEventListener("click", () => ($("rxModal").hidden = true));
+  if ($("rxModal"))
+    $("rxModal").addEventListener("click", (e) => {
+      if (e.target.id === "rxModal") $("rxModal").hidden = true;
+    });
+  if ($("rxPrintBtn")) $("rxPrintBtn").addEventListener("click", printRx);
 
   $("chatForm").addEventListener("submit", (e) => {
     e.preventDefault();
