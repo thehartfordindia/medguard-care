@@ -1927,5 +1927,210 @@ a:hover {
   }
 }
 
+/* ---------- prescription + My Health (v=11) ---------- */
+.consult-actions {
+  display: flex;
+  justify-content: center;
+  padding: 0.4rem 0.9rem 0;
+  background: #fff;
+}
+.rx-card {
+  max-width: 640px;
+  width: 100%;
+}
+.rx-sheet {
+  background: #fff;
+  color: #1f2937;
+  border-radius: 12px;
+  padding: 1.2rem 1.3rem;
+  max-height: 70vh;
+  overflow: auto;
+}
+.rx-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 2px solid #2563eb;
+  padding-bottom: 0.7rem;
+}
+.rx-brand {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+.rx-logo {
+  font-size: 1.8rem;
+}
+.rx-brand strong {
+  color: #2563eb;
+  font-size: 1.2rem;
+  display: block;
+}
+.rx-brand small,
+.rx-meta span,
+.rx-parties span {
+  color: #6b7280;
+  font-size: 0.72rem;
+  display: block;
+}
+.rx-meta {
+  text-align: right;
+  font-size: 0.8rem;
+}
+.rx-parties {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 0.8rem;
+  margin: 0.9rem 0;
+}
+.rx-parties strong {
+  display: block;
+}
+.rx-parties small {
+  color: #6b7280;
+  font-size: 0.72rem;
+}
+.rx-sec {
+  color: #2563eb;
+  margin: 1.1rem 0 0.5rem;
+  border-left: 4px solid #2563eb;
+  padding-left: 0.5rem;
+  font-size: 0.95rem;
+}
+.rx-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+.rx-table th,
+.rx-table td {
+  border: 1px solid #e5e7eb;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+.rx-table th {
+  background: #eff6ff;
+  color: #1f2937;
+}
+.rx-table small {
+  color: #6b7280;
+}
+.rx-labs {
+  margin: 0.3rem 0 0 1.1rem;
+  font-size: 0.85rem;
+}
+.rx-advice {
+  font-size: 0.85rem;
+  margin: 0.3rem 0;
+}
+.rx-disclaimer {
+  margin-top: 1rem;
+  font-size: 0.68rem;
+  color: #6b7280;
+  border-top: 1px dashed #d1d5db;
+  padding-top: 0.6rem;
+}
+.rx-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.9rem;
+}
+
+.health-card {
+  max-width: 680px;
+  width: 100%;
+}
+.health-head h3 {
+  margin: 0;
+}
+.health-head small {
+  opacity: 0.7;
+}
+.health-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+  margin: 0.9rem 0;
+}
+.hstat {
+  background: linear-gradient(135deg, #eff6ff, #f0fdfa);
+  border-radius: 12px;
+  padding: 0.7rem 0.5rem;
+  text-align: center;
+}
+.hstat strong {
+  display: block;
+  font-size: 1.4rem;
+  color: #2563eb;
+}
+.hstat span {
+  font-size: 0.68rem;
+  opacity: 0.75;
+}
+.health-tabs {
+  display: flex;
+  gap: 0.4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+}
+.health-tab {
+  background: none;
+  border: none;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  border-bottom: 2px solid transparent;
+  color: inherit;
+  opacity: 0.65;
+}
+.health-tab.active {
+  border-bottom-color: #2563eb;
+  color: #2563eb;
+  opacity: 1;
+  font-weight: 600;
+}
+.health-body {
+  max-height: 52vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.hcard {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 0.7rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.hcard-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hcard-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.2rem;
+}
+.health-empty {
+  text-align: center;
+  opacity: 0.7;
+  padding: 1.5rem 0.5rem;
+}
+@media (max-width: 640px) {
+  .health-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 
 
