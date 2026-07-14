@@ -17,6 +17,7 @@ const TICKETS_FILE = path.join(DATA_DIR, "tickets.json");
 const USERS_FILE = path.join(DATA_DIR, "users.json");
 const SESSIONS_FILE = path.join(DATA_DIR, "sessions.json");
 const REMINDERS_FILE = path.join(DATA_DIR, "reminders.json");
+const VITALS_FILE = path.join(DATA_DIR, "vitals.json");
 
 const DATABASE_URL = process.env.DATABASE_URL || "";
 
@@ -104,6 +105,13 @@ async function ensureReady() {
           created_at TIMESTAMPTZ NOT NULL DEFAULT now()
         );
       `);
+      await pool.query(`
+        CREATE TABLE IF NOT EXISTS vitals (
+          id TEXT PRIMARY KEY,
+          data JSONB NOT NULL,
+          created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+        );
+      `);
     } else {
       ensureDataDir();
       if (!fs.existsSync(ORDERS_FILE)) writeJsonFile(ORDERS_FILE, []);
@@ -112,6 +120,7 @@ async function ensureReady() {
       if (!fs.existsSync(USERS_FILE)) writeJsonFile(USERS_FILE, []);
       if (!fs.existsSync(SESSIONS_FILE)) writeJsonFile(SESSIONS_FILE, []);
       if (!fs.existsSync(REMINDERS_FILE)) writeJsonFile(REMINDERS_FILE, []);
+      if (!fs.existsSync(VITALS_FILE)) writeJsonFile(VITALS_FILE, []);
     }
   })();
   return ready;
@@ -314,6 +323,46 @@ async function deleteReminder(id) {
   writeJsonFile(REMINDERS_FILE, kept);
 }
 
+/* ---------- health vitals ---------- */
+
+async function getVitals() {
+  await ensureReady();
+  if (usingDb()) {
+    const result = await pool.query("SELECT data FROM vitals ORDER BY created_at ASC");
+    return result.rows.map((row) => row.data);
+  }
+  const list = readJsonFile(VITALS_FILE, []);
+  return Array.isArray(list) ? list : [];
+}
+
+async function saveVitals(vitals) {
+  await ensureReady();
+  if (usingDb()) {
+    for (const v of vitals) {
+      await pool.query(
+        "INSERT INTO vitals (id, data, created_at) VALUES ($1, $2, $3) ON CONFLICT (id) DO UPDATE SET data = EXCLUDED.data",
+        [v.id, v, v.createdAt || new Date().toISOString()]
+      );
+    }
+    return;
+  }
+  const existing = readJsonFile(VITALS_FILE, []);
+  const byId = new Map((Array.isArray(existing) ? existing : []).map((v) => [v.id, v]));
+  for (const v of vitals) byId.set(v.id, v);
+  writeJsonFile(VITALS_FILE, [...byId.values()]);
+}
+
+async function deleteVital(id) {
+  await ensureReady();
+  if (usingDb()) {
+    await pool.query("DELETE FROM vitals WHERE id = $1", [id]);
+    return;
+  }
+  const existing = readJsonFile(VITALS_FILE, []);
+  const kept = (Array.isArray(existing) ? existing : []).filter((v) => v.id !== id);
+  writeJsonFile(VITALS_FILE, kept);
+}
+
 module.exports = {
   mode,
   ensureReady,
@@ -331,4 +380,7 @@ module.exports = {
   getReminders,
   saveReminders,
   deleteReminder,
+  getVitals,
+  saveVitals,
+  deleteVital,
 };
