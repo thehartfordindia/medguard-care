@@ -630,6 +630,44 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, 200, { orders: mine });
     }
 
+    // ---- My Health dashboard: orders + consultations + prescriptions ----
+    if (pathname === "/api/my/health" && req.method === "GET") {
+      const user = await getSessionUser(req);
+      if (!user) return sendJson(res, 401, { error: "Please log in to view your health records." });
+      const [orders, consults] = await Promise.all([store.getOrders(), store.getConsultations()]);
+      const myOrders = orders.filter((o) => o.userId === user.id).reverse();
+      const myConsults = consults
+        .filter((c) => c.userId === user.id)
+        .reverse()
+        .map((c) => ({
+          id: c.id,
+          provider: c.provider,
+          status: c.status,
+          createdAt: c.createdAt,
+          updatedAt: c.updatedAt,
+          messageCount: (c.messages || []).length,
+          prescription: c.prescription || null,
+        }));
+      const prescriptions = myConsults.filter((c) => c.prescription).map((c) => c.prescription);
+      const medOrders = myOrders.filter((o) => o.type !== "lab" && o.type !== "care" && o.type !== "booking");
+      const labOrders = myOrders.filter((o) => o.type === "lab");
+      const summary = {
+        totalOrders: myOrders.length,
+        medicineOrders: medOrders.length,
+        labOrders: labOrders.length,
+        consultations: myConsults.length,
+        prescriptions: prescriptions.length,
+        plusMember: !!(user.plusMember && (!user.plusExpiry || new Date(user.plusExpiry) > new Date())),
+      };
+      return sendJson(res, 200, {
+        user: publicUser(user),
+        summary,
+        orders: myOrders,
+        consultations: myConsults,
+        prescriptions,
+      });
+    }
+
     if (pathname === "/api/providers") {
       const role = query.get("role");
       let list = PROVIDERS;
@@ -680,6 +718,27 @@ const server = http.createServer(async (req, res) => {
       record.updatedAt = new Date().toISOString();
       await store.saveConsultations([record]);
       return sendJson(res, 200, { reply: doctorMsg, patientMsg });
+    }
+
+    // ---- Issue a prescription summary from a consultation ----
+    if (pathname === "/api/consult/prescription" && req.method === "POST") {
+      const body = await readBody(req);
+      const consultId = cleanText(body.consultId, 60);
+      const all = await store.getConsultations();
+      const record = all.find((c) => c.id === consultId);
+      if (!record) return sendJson(res, 404, { error: "Consultation not found." });
+      const provider = PROVIDERS.find((p) => p.id === record.providerId) || null;
+      const prescription = consult.buildPrescription(record, provider);
+      if (!prescription.meds.length && !prescription.labs.length) {
+        return sendJson(res, 400, {
+          error: "No medicines or tests were discussed yet. Please describe your symptoms first so the doctor can advise.",
+        });
+      }
+      record.prescription = prescription;
+      record.status = "PRESCRIBED";
+      record.updatedAt = new Date().toISOString();
+      await store.saveConsultations([record]);
+      return sendJson(res, 200, { prescription });
     }
 
     if (pathname.startsWith("/api/consult/") && req.method === "GET") {
