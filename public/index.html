@@ -21,7 +21,7 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
-    <link rel="stylesheet" href="styles.css?v=10" />
+    <link rel="stylesheet" href="styles.css?v=11" />
   </head>
   <body>
     <!-- Header -->
@@ -59,6 +59,7 @@
                 <small id="ddEmail">user@email.com</small>
               </div>
               <div id="ddPlusStatus" class="dd-plus"></div>
+              <button id="ddMyHealth" class="dd-item" type="button">🩺 My Health</button>
               <button id="ddMyOrders" class="dd-item" type="button">📦 My orders</button>
               <a href="#" class="dd-item" id="ddPlusLink" data-view="plus">⭐ MedGuard Plus</a>
               <button id="logoutBtn" class="dd-item danger" type="button">🚪 Log out</button>
@@ -408,6 +409,9 @@
           <span class="consult-live">🟢 Live</span>
         </div>
         <div id="consultMessages" class="consult-messages"></div>
+        <div id="consultActions" class="consult-actions">
+          <button id="consultRxBtn" class="btn btn-outline btn-sm" type="button">📄 Get prescription</button>
+        </div>
         <form id="consultForm" class="consult-input">
           <input id="consultText" type="text" placeholder="Describe your symptoms…" autocomplete="off" />
           <button type="submit" class="btn btn-primary" id="consultSend">Send</button>
@@ -422,6 +426,35 @@
         <button id="ordersModalClose" class="icon-btn modal-close" type="button" aria-label="Close">✕</button>
         <h3>📦 My orders</h3>
         <div id="ordersModalBody" class="orders-list"></div>
+      </div>
+    </div>
+
+    <!-- My Health dashboard modal -->
+    <div id="healthModal" class="modal" hidden>
+      <div class="modal-card health-card">
+        <button id="healthModalClose" class="icon-btn modal-close" type="button" aria-label="Close">✕</button>
+        <div class="health-head">
+          <h3>🩺 My Health</h3>
+          <small>Your orders, tests, consultations and prescriptions in one place.</small>
+        </div>
+        <div id="healthStats" class="health-stats"></div>
+        <div class="health-tabs">
+          <button class="health-tab active" data-htab="prescriptions" type="button">📄 Prescriptions</button>
+          <button class="health-tab" data-htab="consultations" type="button">💬 Consultations</button>
+          <button class="health-tab" data-htab="orders" type="button">📦 Orders &amp; Tests</button>
+        </div>
+        <div id="healthBody" class="health-body"></div>
+      </div>
+    </div>
+
+    <!-- Prescription view modal -->
+    <div id="rxModal" class="modal" hidden>
+      <div class="modal-card rx-card">
+        <button id="rxModalClose" class="icon-btn modal-close" type="button" aria-label="Close">✕</button>
+        <div id="rxSheet" class="rx-sheet"></div>
+        <div class="rx-actions">
+          <button id="rxPrintBtn" class="btn btn-primary" type="button">🖨️ Print / Save PDF</button>
+        </div>
       </div>
     </div>
 
@@ -440,6 +473,6 @@
       crossorigin=""
       defer
     ></script>
-    <script src="app.js?v=10" defer></script>
+    <script src="app.js?v=11" defer></script>
   </body>
 </html>
