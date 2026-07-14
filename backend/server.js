@@ -17,6 +17,7 @@ const crypto = require("crypto");
 const store = require("./store");
 const notify = require("./notify");
 const garma = require("./garma");
+const consult = require("./consult");
 const PORT = Number(process.env.PORT) || 8790;
 const ADMIN_SECRET = process.env.ADMIN_SECRET || "change-me";
 const WEBSITE_URL = process.env.WEBSITE_URL || `http://localhost:${PORT}`;
@@ -73,9 +74,41 @@ const LAB_TESTS = [
   { id: "vitd", name: "Vitamin D Test", category: "Vitamins", price: 899, reportHours: 36, fasting: false, tags: ["vitamin", "bones"] },
   { id: "liver", name: "Liver Function Test (LFT)", category: "Organ", price: 649, reportHours: 24, fasting: true, tags: ["liver"] },
   { id: "kidney", name: "Kidney Function Test (KFT)", category: "Organ", price: 649, reportHours: 24, fasting: true, tags: ["kidney"] },
+  // More blood & routine tests
+  { id: "vitb12", name: "Vitamin B12 Test", category: "Vitamins", price: 799, reportHours: 36, fasting: false, tags: ["vitamin", "energy", "nerves"] },
+  { id: "iron", name: "Iron Studies (Ferritin, TIBC)", category: "Blood", price: 899, reportHours: 24, fasting: true, tags: ["iron", "anemia"] },
+  { id: "crp", name: "CRP (Inflammation)", category: "Blood", price: 449, reportHours: 12, fasting: false, tags: ["inflammation", "infection"] },
+  { id: "urine", name: "Urine Routine & Microscopy", category: "Blood", price: 199, reportHours: 12, fasting: false, tags: ["urine", "infection", "kidney"] },
+  { id: "hormone-fem", name: "Female Hormone Panel (FSH, LH, Prolactin)", category: "Hormone", price: 1199, reportHours: 36, fasting: false, tags: ["hormone", "fertility", "women"] },
+  { id: "testosterone", name: "Testosterone (Total)", category: "Hormone", price: 699, reportHours: 36, fasting: false, tags: ["hormone", "men"] },
+  { id: "pt-inr", name: "PT / INR (Blood Clotting)", category: "Blood", price: 399, reportHours: 12, fasting: false, tags: ["clotting", "warfarin", "blood"] },
+  { id: "hiv", name: "HIV Screening (confidential)", category: "Blood", price: 499, reportHours: 24, fasting: false, tags: ["hiv", "screening"] },
+  { id: "covid-rtpcr", name: "COVID-19 RT-PCR", category: "Blood", price: 799, reportHours: 24, fasting: false, tags: ["covid", "infection", "fever"] },
+  { id: "dengue", name: "Dengue NS1 + Antibody", category: "Blood", price: 899, reportHours: 24, fasting: false, tags: ["dengue", "fever", "platelets"] },
+  { id: "psa", name: "PSA (Prostate Screening)", category: "Blood", price: 749, reportHours: 36, fasting: false, tags: ["prostate", "cancer", "men"] },
+  // Imaging & scans (at-center appointment, no home collection)
+  { id: "xray-chest", name: "X-Ray — Chest", category: "Imaging & Scans", price: 599, reportHours: 6, imaging: true, prep: "No special preparation needed.", tags: ["xray", "chest", "lungs", "cough"] },
+  { id: "xray-limb", name: "X-Ray — Limb / Joint", category: "Imaging & Scans", price: 649, reportHours: 6, imaging: true, prep: "Remove metal objects/jewellery from the area.", tags: ["xray", "bone", "fracture", "joint"] },
+  { id: "usg-abdomen", name: "Ultrasound — Whole Abdomen", category: "Imaging & Scans", price: 1299, reportHours: 12, imaging: true, prep: "Fast 6 hours; drink water and hold a full bladder before the scan.", tags: ["ultrasound", "usg", "abdomen", "liver", "kidney"] },
+  { id: "usg-preg", name: "Ultrasound — Pregnancy / Obstetric", category: "Imaging & Scans", price: 1499, reportHours: 6, imaging: true, prep: "Full bladder needed for early pregnancy scans.", tags: ["ultrasound", "pregnancy", "women"] },
+  { id: "ct-brain", name: "CT Scan — Brain (Plain)", category: "Imaging & Scans", price: 2999, reportHours: 12, imaging: true, prep: "Remove metal/jewellery. Inform staff of allergies.", tags: ["ct", "brain", "head", "headache", "stroke"] },
+  { id: "ct-chest", name: "CT Scan — Chest (HRCT)", category: "Imaging & Scans", price: 3999, reportHours: 12, imaging: true, prep: "No food 4 hours before if contrast is advised.", tags: ["ct", "chest", "lungs"] },
+  { id: "mri-brain", name: "MRI — Brain", category: "Imaging & Scans", price: 5999, reportHours: 24, imaging: true, prep: "No metal implants/pacemaker. Arrive 30 min early.", tags: ["mri", "brain", "head", "neuro"] },
+  { id: "mri-spine", name: "MRI — Spine (LS / Cervical)", category: "Imaging & Scans", price: 6499, reportHours: 24, imaging: true, prep: "No metal implants/pacemaker. Wear loose clothing.", tags: ["mri", "spine", "back pain", "slip disc"] },
+  { id: "mri-knee", name: "MRI — Knee / Joint", category: "Imaging & Scans", price: 5499, reportHours: 24, imaging: true, prep: "Remove all metal objects before the scan.", tags: ["mri", "knee", "joint", "ligament"] },
+  { id: "ecg", name: "ECG (Heart Rhythm)", category: "Imaging & Scans", price: 399, reportHours: 2, imaging: true, prep: "No special preparation. Avoid oily skin creams.", tags: ["ecg", "heart", "palpitations"] },
+  { id: "echo", name: "2D Echo (Heart Ultrasound)", category: "Imaging & Scans", price: 1799, reportHours: 6, imaging: true, prep: "No special preparation needed.", tags: ["echo", "heart", "cardiac"] },
+  { id: "tmt", name: "TMT (Stress / Treadmill Test)", category: "Imaging & Scans", price: 2199, reportHours: 6, imaging: true, prep: "Wear comfortable shoes; light meal 2 hours before.", tags: ["tmt", "stress", "heart", "exercise"] },
+  { id: "mammography", name: "Mammography (Breast Screening)", category: "Imaging & Scans", price: 2499, reportHours: 24, imaging: true, prep: "Avoid deodorant/powder on the day of scan.", tags: ["mammography", "breast", "women", "cancer"] },
+  { id: "dexa", name: "DEXA Bone Density Scan", category: "Imaging & Scans", price: 2299, reportHours: 12, imaging: true, prep: "Avoid calcium supplements 24 hours before.", tags: ["dexa", "bone", "osteoporosis", "density"] },
+  // Health packages
   { id: "fullbody", name: "Full Body Checkup (70+ params)", category: "Packages", price: 1499, reportHours: 36, fasting: true, tags: ["package", "checkup", "wellness"] },
   { id: "fever-panel", name: "Fever Panel", category: "Packages", price: 799, reportHours: 24, fasting: false, tags: ["fever", "dengue", "malaria", "typhoid"] },
   { id: "senior-care", name: "Senior Citizen Health Package", category: "Packages", price: 2499, reportHours: 48, fasting: true, tags: ["package", "elderly", "wellness"] },
+  { id: "diabetes-pkg", name: "Diabetes Care Package", category: "Packages", price: 1299, reportHours: 36, fasting: true, tags: ["package", "sugar", "diabetes", "hba1c"] },
+  { id: "heart-pkg", name: "Heart Health Package (Lipid + ECG + Echo)", category: "Packages", price: 3499, reportHours: 24, imaging: true, prep: "Fast 10–12 hours for the lipid blood test.", tags: ["package", "heart", "cardiac", "ecg", "echo"] },
+  { id: "women-pkg", name: "Women's Wellness Package", category: "Packages", price: 2799, reportHours: 36, fasting: true, tags: ["package", "women", "thyroid", "iron", "vitamin"] },
+  { id: "preemploy-pkg", name: "Pre-Employment / Fitness Package", category: "Packages", price: 1799, reportHours: 24, imaging: true, prep: "Includes chest X-ray — remove metal objects.", tags: ["package", "fitness", "employment", "xray"] },
 ];
 
 // Promo codes (percentage or flat), applied at checkout.
@@ -611,6 +644,52 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, 200, { providers: list });
     }
 
+    // ---- In-app doctor consultation (live text chat) ----
+    if (pathname === "/api/consult/start" && req.method === "POST") {
+      const body = await readBody(req);
+      const provider = PROVIDERS.find((p) => p.id === body.providerId && p.role === "doctor");
+      const sessionUser = await getSessionUser(req);
+      const patientName = cleanText(body.name, 80) || (sessionUser ? sessionUser.name : "");
+      const messages = consult.greeting(provider, patientName);
+      const record = {
+        id: genId("CONSULT"),
+        providerId: provider ? provider.id : null,
+        provider: provider ? { id: provider.id, name: provider.name, specialty: provider.specialty } : null,
+        userId: sessionUser ? sessionUser.id : null,
+        patientName,
+        status: "OPEN",
+        messages,
+        createdAt: new Date().toISOString(),
+      };
+      await store.saveConsultations([record]);
+      return sendJson(res, 201, { consultId: record.id, provider: record.provider, messages });
+    }
+
+    if (pathname === "/api/consult/message" && req.method === "POST") {
+      const body = await readBody(req);
+      const consultId = cleanText(body.consultId, 60);
+      const text = cleanText(body.text, 800);
+      if (!text) return sendJson(res, 400, { error: "Message cannot be empty." });
+      const all = await store.getConsultations();
+      const record = all.find((c) => c.id === consultId);
+      if (!record) return sendJson(res, 404, { error: "Consultation not found." });
+      const provider = PROVIDERS.find((p) => p.id === record.providerId) || null;
+      const patientMsg = { from: "patient", text, time: new Date().toISOString() };
+      const doctorMsg = consult.reply(text, provider);
+      record.messages = [...(record.messages || []), patientMsg, doctorMsg];
+      record.updatedAt = new Date().toISOString();
+      await store.saveConsultations([record]);
+      return sendJson(res, 200, { reply: doctorMsg, patientMsg });
+    }
+
+    if (pathname.startsWith("/api/consult/") && req.method === "GET") {
+      const id = decodeURIComponent(pathname.split("/")[3] || "");
+      const all = await store.getConsultations();
+      const record = all.find((c) => c.id === id);
+      if (!record) return sendJson(res, 404, { error: "Consultation not found." });
+      return sendJson(res, 200, { consult: record });
+    }
+
     if (pathname === "/api/pharmacy/nearest") {
       const lat = Number(query.get("lat"));
       const lon = Number(query.get("lon"));
@@ -703,7 +782,10 @@ const server = http.createServer(async (req, res) => {
           .filter(Boolean);
         if (!tests.length) return sendJson(res, 400, { error: "Select at least one lab test." });
         const subtotal = tests.reduce((s, t) => s + t.price, 0);
-        const collectionFee = isPlus ? 0 : subtotal >= 500 ? 0 : 50;
+        const anyImaging = tests.some((t) => t.imaging);
+        const allImaging = tests.every((t) => t.imaging);
+        // Imaging/scan is an at-center appointment (no home collection fee).
+        const collectionFee = allImaging ? 0 : isPlus ? 0 : subtotal >= 500 ? 0 : 50;
         let discount = 0;
         let couponCode = null;
         if (body.coupon) {
@@ -718,7 +800,7 @@ const server = http.createServer(async (req, res) => {
         const anyFasting = tests.some((t) => t.fasting);
         order = {
           ...order,
-          tests: tests.map((t) => ({ id: t.id, name: t.name, price: t.price })),
+          tests: tests.map((t) => ({ id: t.id, name: t.name, price: t.price, imaging: Boolean(t.imaging), prep: t.prep || "" })),
           subtotal,
           collectionFee,
           discount,
@@ -727,6 +809,8 @@ const server = http.createServer(async (req, res) => {
           total: Math.max(0, subtotal + collectionFee - discount - memberDiscount),
           slot: cleanText(body.slot, 40),
           fasting: anyFasting,
+          imaging: anyImaging,
+          fulfilment: allImaging ? "center-visit" : "home-collection",
           reportHours: maxReport,
           paymentStatus: "PAY_AT_COLLECTION",
         };
