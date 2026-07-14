@@ -21,7 +21,7 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
-    <link rel="stylesheet" href="styles.css?v=12" />
+    <link rel="stylesheet" href="styles.css?v=13" />
   </head>
   <body>
     <!-- Header -->
@@ -94,6 +94,7 @@
         </div>
         <div class="condition-chips" id="conditionChips" aria-label="Common conditions"></div>
         <div class="hero-cta">
+          <button id="symptomCheckerBtn" class="btn btn-primary btn-sm">🩺 Check my symptoms</button>
           <button id="useLocationBtn" class="btn btn-ghost btn-sm">📍 Use my location</button>
         </div>
         <p id="locationStatus" class="loc-status">Location not set — tap “Use my location” for accurate delivery ETA.</p>
@@ -476,6 +477,19 @@
       </div>
     </div>
 
+    <!-- Guided symptom checker modal -->
+    <div id="symptomModal" class="modal" hidden>
+      <div class="modal-card symptom-card">
+        <button id="symptomModalClose" class="icon-btn modal-close" type="button" aria-label="Close">✕</button>
+        <div class="symptom-head">
+          <h3>🩺 Symptom Checker</h3>
+          <small>Answer a couple of quick questions and we’ll guide you to the right care.</small>
+        </div>
+        <div id="symptomBody" class="symptom-body"></div>
+        <p class="consult-disclaimer">Automated guidance for common concerns · not a diagnosis. If symptoms are severe or worsening, see a doctor or call emergency services.</p>
+      </div>
+    </div>
+
     <footer class="site-footer">
       <p>MedGuard Care — a demo patient-care platform. Not for real medical use.</p>
       <p class="disclaimer">
@@ -491,6 +505,6 @@
       crossorigin=""
       defer
     ></script>
-    <script src="app.js?v=12" defer></script>
+    <script src="app.js?v=13" defer></script>
   </body>
 </html>
