@@ -16,7 +16,7 @@ const path = require("path");
 const crypto = require("crypto");
 const store = require("./store");
 const notify = require("./notify");
-
+const garma = require("./garma");
 const PORT = Number(process.env.PORT) || 8790;
 const ADMIN_SECRET = process.env.ADMIN_SECRET || "change-me";
 const WEBSITE_URL = process.env.WEBSITE_URL || `http://localhost:${PORT}`;
@@ -362,6 +362,22 @@ const server = http.createServer(async (req, res) => {
       const amount = clampNumber(body.amount, 0, 1000000, 0);
       const result = applyCoupon(body.code, amount);
       return sendJson(res, result.valid ? 200 : 400, result);
+    }
+
+    // ---- Rx Safety Check (GARMA drug-interaction engine) ----
+    if (pathname === "/api/rx/check" && req.method === "POST") {
+      const body = await readBody(req);
+      const raw = Array.isArray(body.items) ? body.items.slice(0, 40) : [];
+      const items = raw.map((it) => {
+        if (typeof it === "string") {
+          const med = MEDICINES.find((m) => m.id === it);
+          return med ? { id: med.id, name: med.name } : it;
+        }
+        const id = cleanText(it && it.id, 40);
+        const med = MEDICINES.find((m) => m.id === id);
+        return { id, name: (med && med.name) || cleanText(it && it.name, 120) };
+      });
+      return sendJson(res, 200, garma.checkInteractions(items));
     }
 
     // ---- Membership plan (public info) ----
