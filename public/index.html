@@ -21,7 +21,7 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
-    <link rel="stylesheet" href="styles.css?v=8" />
+    <link rel="stylesheet" href="styles.css?v=9" />
   </head>
   <body>
     <!-- Header -->
@@ -43,6 +43,7 @@
         <a href="#" data-view="support">Support</a>
       </nav>
       <div class="header-actions">
+        <button id="safetyCheckBtn" class="btn btn-ghost btn-sm safety-nav-btn" type="button" title="Check medicines for risky combinations">🛡️ Safety Check</button>
         <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark mode">🌙</button>
         <div id="accountArea" class="account-area">
           <button id="loginBtn" class="btn btn-ghost btn-sm" type="button">Log in</button>
@@ -286,6 +287,7 @@
         <button id="cartClose" class="icon-btn" type="button" aria-label="Close cart">✕</button>
       </div>
       <div id="cartItems" class="cart-items"></div>
+      <div id="cartSafety" class="cart-safety" hidden></div>
       <div class="cart-totals" id="cartTotals"></div>
       <form id="checkoutForm" class="checkout-form">
         <h4>Delivery details</h4>
@@ -367,6 +369,23 @@
       </div>
     </div>
 
+    <!-- Rx Safety Checker modal -->
+    <div id="safetyModal" class="modal" hidden>
+      <div class="modal-card">
+        <button id="safetyModalClose" class="icon-btn modal-close" type="button" aria-label="Close">✕</button>
+        <div class="safety-head">
+          <h3>🛡️ Medicine Safety Checker</h3>
+          <p>Pick two or more medicines to instantly check for risky combinations — powered by GARMA, MedGuard's drug-interaction engine.</p>
+        </div>
+        <div class="safety-picker">
+          <select id="safetySelect"><option value="">➕ Add a medicine…</option></select>
+        </div>
+        <div id="safetyChips" class="safety-chips"></div>
+        <div id="safetyResult" class="safety-result"></div>
+        <p class="safety-disclaimer">ℹ️ Informational only — not medical advice. Always confirm with your doctor or pharmacist.</p>
+      </div>
+    </div>
+
     <!-- My orders modal -->
     <div id="ordersModal" class="modal" hidden>
       <div class="modal-card">
@@ -391,6 +410,6 @@
       crossorigin=""
       defer
     ></script>
-    <script src="app.js?v=8" defer></script>
+    <script src="app.js?v=9" defer></script>
   </body>
 </html>
