@@ -16,6 +16,7 @@ const CONSULTS_FILE = path.join(DATA_DIR, "consultations.json");
 const TICKETS_FILE = path.join(DATA_DIR, "tickets.json");
 const USERS_FILE = path.join(DATA_DIR, "users.json");
 const SESSIONS_FILE = path.join(DATA_DIR, "sessions.json");
+const REMINDERS_FILE = path.join(DATA_DIR, "reminders.json");
 
 const DATABASE_URL = process.env.DATABASE_URL || "";
 
@@ -96,6 +97,13 @@ async function ensureReady() {
           created_at TIMESTAMPTZ NOT NULL DEFAULT now()
         );
       `);
+      await pool.query(`
+        CREATE TABLE IF NOT EXISTS reminders (
+          id TEXT PRIMARY KEY,
+          data JSONB NOT NULL,
+          created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+        );
+      `);
     } else {
       ensureDataDir();
       if (!fs.existsSync(ORDERS_FILE)) writeJsonFile(ORDERS_FILE, []);
@@ -103,6 +111,7 @@ async function ensureReady() {
       if (!fs.existsSync(TICKETS_FILE)) writeJsonFile(TICKETS_FILE, []);
       if (!fs.existsSync(USERS_FILE)) writeJsonFile(USERS_FILE, []);
       if (!fs.existsSync(SESSIONS_FILE)) writeJsonFile(SESSIONS_FILE, []);
+      if (!fs.existsSync(REMINDERS_FILE)) writeJsonFile(REMINDERS_FILE, []);
     }
   })();
   return ready;
@@ -265,6 +274,46 @@ async function deleteSession(token) {
   writeJsonFile(SESSIONS_FILE, kept);
 }
 
+/* ---------- refill reminders ---------- */
+
+async function getReminders() {
+  await ensureReady();
+  if (usingDb()) {
+    const result = await pool.query("SELECT data FROM reminders ORDER BY created_at ASC");
+    return result.rows.map((row) => row.data);
+  }
+  const list = readJsonFile(REMINDERS_FILE, []);
+  return Array.isArray(list) ? list : [];
+}
+
+async function saveReminders(reminders) {
+  await ensureReady();
+  if (usingDb()) {
+    for (const r of reminders) {
+      await pool.query(
+        "INSERT INTO reminders (id, data, created_at) VALUES ($1, $2, $3) ON CONFLICT (id) DO UPDATE SET data = EXCLUDED.data",
+        [r.id, r, r.createdAt || new Date().toISOString()]
+      );
+    }
+    return;
+  }
+  const existing = readJsonFile(REMINDERS_FILE, []);
+  const byId = new Map((Array.isArray(existing) ? existing : []).map((r) => [r.id, r]));
+  for (const r of reminders) byId.set(r.id, r);
+  writeJsonFile(REMINDERS_FILE, [...byId.values()]);
+}
+
+async function deleteReminder(id) {
+  await ensureReady();
+  if (usingDb()) {
+    await pool.query("DELETE FROM reminders WHERE id = $1", [id]);
+    return;
+  }
+  const existing = readJsonFile(REMINDERS_FILE, []);
+  const kept = (Array.isArray(existing) ? existing : []).filter((r) => r.id !== id);
+  writeJsonFile(REMINDERS_FILE, kept);
+}
+
 module.exports = {
   mode,
   ensureReady,
@@ -279,4 +328,7 @@ module.exports = {
   getSessions,
   saveSessions,
   deleteSession,
+  getReminders,
+  saveReminders,
+  deleteReminder,
 };
