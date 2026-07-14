@@ -26,6 +26,7 @@ const state = {
   rx: null, // last prescription object being viewed
   health: null, // My Health dashboard data { summary, orders, consultations, prescriptions }
   symptoms: null, // guided symptom-checker catalog
+  vitals: null, // health vitals tracker data { byType, types }
 };
 
 const DEVICE_CATEGORIES = ["Devices", "Mobility Aids", "Protection"];
@@ -693,6 +694,7 @@ async function openMyHealth() {
     $("healthStats").innerHTML = `
       <div class="hstat"><strong>${s.prescriptions}</strong><span>Prescriptions</span></div>
       <div class="hstat"><strong>${s.reminders || 0}</strong><span>Refill reminders</span></div>
+      <div class="hstat"><strong>${s.vitals || 0}</strong><span>Vitals logged</span></div>
       <div class="hstat"><strong>${s.consultations}</strong><span>Consultations</span></div>
       <div class="hstat"><strong>${s.medicineOrders}</strong><span>Medicine orders</span></div>
       <div class="hstat"><strong>${s.labOrders}</strong><span>Lab / scan orders</span></div>`;
@@ -748,6 +750,8 @@ function renderHealthTab(tab) {
       : `<p class="health-empty">No consultations yet. Tap “Talk to a doctor now” in Doctors & Care.</p>`;
   } else if (tab === "reminders") {
     renderReminders();
+  } else if (tab === "vitals") {
+    renderVitals();
   } else {
     const list = data.orders || [];
     host.innerHTML = list.length
@@ -905,6 +909,157 @@ async function reorderFromReminder(id) {
   const data = await res.json().catch(() => ({}));
   const r = (data.reminders || []).find((x) => x.id === id);
   if (r) reorderItems(r.items);
+}
+
+/* ---------- health vitals tracker ---------- */
+async function renderVitals() {
+  const host = $("healthBody");
+  host.innerHTML = "<p>Loading your vitals…</p>";
+  try {
+    const res = await fetch(`${API}/api/my/vitals`, { headers: authHeaders() });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Could not load your vitals");
+    state.vitals = data;
+    const types = data.types || [];
+    const options = types
+      .map((t) => `<option value="${t.key}">${t.emoji} ${escapeHtml(t.label)}</option>`)
+      .join("");
+    const cards = types
+      .map((t) => vitalCardHtml(t, (data.byType && data.byType[t.key]) || []))
+      .join("");
+    host.innerHTML = `
+      <div class="vital-log">
+        <strong>➕ Log a new reading</strong>
+        <div class="vital-form">
+          <select id="vitalType">${options}</select>
+          <div id="vitalInputs" class="vital-inputs"></div>
+          <button class="btn btn-primary btn-sm" id="vitalSaveBtn" type="button">Save</button>
+        </div>
+        <input id="vitalNote" class="vital-note" type="text" maxlength="120" placeholder="Optional note (e.g. after breakfast)" />
+      </div>
+      <div class="vital-cards">${cards}</div>
+      <p class="symptom-none" style="margin-top:1rem;">Tracking only · not a diagnosis. Discuss trends with your doctor.</p>`;
+    renderVitalInputs();
+  } catch (err) {
+    host.innerHTML = `<p class="health-empty">⚠️ ${escapeHtml(err.message)}</p>`;
+  }
+}
+
+function vitalTypeMeta(key) {
+  return ((state.vitals && state.vitals.types) || []).find((t) => t.key === key);
+}
+
+function renderVitalInputs() {
+  const sel = $("vitalType");
+  const host = $("vitalInputs");
+  if (!sel || !host) return;
+  const t = vitalTypeMeta(sel.value);
+  if (t && t.composite) {
+    host.innerHTML = `
+      <input id="vitalSys" class="vital-in" type="number" inputmode="numeric" placeholder="Systolic" />
+      <span class="vital-sep">/</span>
+      <input id="vitalDia" class="vital-in" type="number" inputmode="numeric" placeholder="Diastolic" />
+      <span class="vital-unit">${escapeHtml(t.unit)}</span>`;
+  } else {
+    host.innerHTML = `
+      <input id="vitalValue" class="vital-in" type="number" inputmode="decimal" placeholder="Value" />
+      <span class="vital-unit">${t ? escapeHtml(t.unit) : ""}</span>`;
+  }
+}
+
+function vitalCardHtml(t, readings) {
+  const latest = readings[0];
+  const spark = vitalSparkline(readings);
+  const rows = readings
+    .slice(0, 8)
+    .map(
+      (r) => `
+      <li class="vital-row">
+        <span class="vital-flag flag-${r.flag || "normal"}"></span>
+        <span class="vital-val">${escapeHtml(r.display || String(r.value))}</span>
+        <span class="vital-when">${new Date(r.at).toLocaleDateString()}${r.note ? " · " + escapeHtml(r.note) : ""}</span>
+        <button class="vital-del" data-vital-del="${escapeHtml(r.id)}" title="Delete">✕</button>
+      </li>`
+    )
+    .join("");
+  return `
+    <div class="vital-card">
+      <div class="vital-card-head">
+        <strong>${t.emoji} ${escapeHtml(t.label)}</strong>
+        ${latest ? `<span class="vital-latest flag-${latest.flag || "normal"}">${escapeHtml(latest.display || String(latest.value))}</span>` : `<span class="vital-latest muted">No readings</span>`}
+      </div>
+      ${t.normal ? `<small class="vital-normal">Typical: ${escapeHtml(t.normal)}</small>` : ""}
+      ${spark}
+      ${readings.length ? `<ul class="vital-list">${rows}</ul>` : `<p class="vital-empty">Log your first ${escapeHtml(t.label.toLowerCase())} reading above.</p>`}
+    </div>`;
+}
+
+// Tiny inline SVG sparkline of the value series (oldest -> newest).
+function vitalSparkline(readings) {
+  if (!readings || readings.length < 2) return "";
+  const series = readings
+    .slice(0, 12)
+    .map((r) => Number(r.value))
+    .filter((n) => Number.isFinite(n))
+    .reverse();
+  if (series.length < 2) return "";
+  const w = 260;
+  const h = 44;
+  const min = Math.min(...series);
+  const max = Math.max(...series);
+  const span = max - min || 1;
+  const step = w / (series.length - 1);
+  const pts = series
+    .map((v, i) => {
+      const x = Math.round(i * step);
+      const y = Math.round(h - 4 - ((v - min) / span) * (h - 8));
+      return `${x},${y}`;
+    })
+    .join(" ");
+  return `<svg class="vital-spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">
+      <polyline points="${pts}" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>`;
+}
+
+async function saveVital() {
+  const sel = $("vitalType");
+  if (!sel) return;
+  const t = vitalTypeMeta(sel.value);
+  const note = ($("vitalNote") && $("vitalNote").value) || "";
+  const payload = { type: sel.value, note };
+  if (t && t.composite) {
+    payload.systolic = ($("vitalSys") && $("vitalSys").value) || "";
+    payload.diastolic = ($("vitalDia") && $("vitalDia").value) || "";
+  } else {
+    payload.value = ($("vitalValue") && $("vitalValue").value) || "";
+  }
+  try {
+    const res = await fetch(`${API}/api/vitals`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...authHeaders() },
+      body: JSON.stringify(payload),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Could not save reading");
+    toast(`${t ? t.label : "Reading"} saved`);
+    renderVitals();
+  } catch (err) {
+    toast(err.message);
+  }
+}
+
+async function deleteVitalReading(id) {
+  try {
+    const res = await fetch(`${API}/api/vitals/${encodeURIComponent(id)}`, {
+      method: "DELETE",
+      headers: authHeaders(),
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || "Could not delete reading");
+    renderVitals();
+  } catch (err) {
+    toast(err.message);
+  }
 }
 
 /* ---------- guided symptom checker ---------- */
@@ -2135,6 +2290,13 @@ function bindEvents() {
       if (rSnooze) return reminderAction(rSnooze, "snooze");
       const rDone = e.target.getAttribute("data-remind-done");
       if (rDone) return reminderAction(rDone, "done");
+      if (e.target.id === "vitalSaveBtn") return saveVital();
+      const vitalDel = e.target.getAttribute("data-vital-del");
+      if (vitalDel) return deleteVitalReading(vitalDel);
+    });
+  if ($("healthBody"))
+    $("healthBody").addEventListener("change", (e) => {
+      if (e.target.id === "vitalType") renderVitalInputs();
     });
 
   // Refill reminder modal
