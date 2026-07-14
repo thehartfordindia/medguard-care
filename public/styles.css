@@ -1533,3 +1533,168 @@ a:hover {
   }
 }
 
+/* ============================================================
+   GARMA Rx Safety Check
+   ============================================================ */
+.safety-nav-btn {
+  border: 1px solid rgba(16, 185, 129, 0.5) !important;
+}
+.cart-safety {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0.4rem 0 0.8rem;
+}
+.safety-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.7rem 0.85rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+}
+.safety-banner b {
+  font-size: 0.95rem;
+}
+.safety-banner span {
+  opacity: 0.85;
+  font-size: 0.82rem;
+}
+.safety-ok {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #047857;
+}
+.safety-alert {
+  border-radius: 12px;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  display: grid;
+  gap: 0.3rem;
+}
+.safety-alert-top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.safety-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.safety-pair {
+  font-weight: 600;
+  font-size: 0.86rem;
+}
+.safety-detail {
+  font-size: 0.82rem;
+  opacity: 0.9;
+  margin: 0;
+}
+.safety-advice {
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin: 0;
+}
+/* severity colours */
+.sev-critical {
+  background: rgba(225, 29, 72, 0.1);
+  border-color: rgba(225, 29, 72, 0.5);
+  color: #9f1239;
+}
+.sev-critical .safety-badge {
+  background: #e11d48;
+  color: #fff;
+}
+.sev-high {
+  background: rgba(234, 88, 12, 0.1);
+  border-color: rgba(234, 88, 12, 0.5);
+  color: #9a3412;
+}
+.sev-high .safety-badge {
+  background: #ea580c;
+  color: #fff;
+}
+.sev-medium {
+  background: rgba(217, 119, 6, 0.1);
+  border-color: rgba(217, 119, 6, 0.45);
+  color: #92400e;
+}
+.sev-medium .safety-badge {
+  background: #d97706;
+  color: #fff;
+}
+.sev-low {
+  background: rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.35);
+  color: #1e40af;
+}
+.sev-low .safety-badge {
+  background: #2563eb;
+  color: #fff;
+}
+.safety-disclaimer {
+  font-size: 0.72rem;
+  opacity: 0.7;
+  margin: 0.2rem 0 0;
+}
+/* checker modal */
+.safety-head h3 {
+  margin: 0 0 0.25rem;
+}
+.safety-head p {
+  font-size: 0.86rem;
+  opacity: 0.85;
+  margin: 0 0 0.9rem;
+}
+.safety-picker select {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 0.9rem;
+}
+.safety-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.8rem 0;
+  min-height: 1.5rem;
+}
+.safety-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: 999px;
+  padding: 0.3rem 0.4rem 0.3rem 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.safety-chip button {
+  border: none;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  width: 1.15rem;
+  height: 1.15rem;
+  cursor: pointer;
+  line-height: 1;
+  font-size: 0.7rem;
+}
+.safety-empty,
+.safety-hint {
+  font-size: 0.82rem;
+  opacity: 0.7;
+}
+.safety-result {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 0.3rem;
+}
+
+
