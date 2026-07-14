@@ -21,7 +21,7 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
-    <link rel="stylesheet" href="styles.css?v=9" />
+    <link rel="stylesheet" href="styles.css?v=10" />
   </head>
   <body>
     <!-- Header -->
@@ -170,6 +170,13 @@
         <div class="panel-head">
           <h2>⚕️ Doctors, Nurses & Caretakers</h2>
           <p>Book a visit at home or an online consultation. Sorted by distance when your location is on.</p>
+        </div>
+        <div class="consult-cta">
+          <div class="consult-cta-copy">
+            <h3>💬 Talk to a doctor now</h3>
+            <p>Start a free live chat consultation right here — describe your symptoms and get instant guidance, medicine &amp; test suggestions.</p>
+          </div>
+          <button id="talkDoctorBtn" class="btn btn-primary" type="button">Start free chat →</button>
         </div>
         <div class="care-tabs" role="tablist">
           <button class="care-tab active" data-role="all">All</button>
@@ -386,6 +393,29 @@
       </div>
     </div>
 
+    <!-- In-app doctor consultation (live chat) modal -->
+    <div id="consultModal" class="modal" hidden>
+      <div class="modal-card consult-card">
+        <button id="consultModalClose" class="icon-btn modal-close" type="button" aria-label="Close">✕</button>
+        <div class="consult-head">
+          <div class="consult-doc">
+            <span id="consultAvatar" class="consult-avatar">👨‍⚕️</span>
+            <div>
+              <strong id="consultDocName">Doctor</strong>
+              <small id="consultDocSpec">Online consultation</small>
+            </div>
+          </div>
+          <span class="consult-live">🟢 Live</span>
+        </div>
+        <div id="consultMessages" class="consult-messages"></div>
+        <form id="consultForm" class="consult-input">
+          <input id="consultText" type="text" placeholder="Describe your symptoms…" autocomplete="off" />
+          <button type="submit" class="btn btn-primary" id="consultSend">Send</button>
+        </form>
+        <p class="consult-disclaimer">Automated AI care assistant · not a substitute for an in-person doctor. In an emergency, call your local emergency number.</p>
+      </div>
+    </div>
+
     <!-- My orders modal -->
     <div id="ordersModal" class="modal" hidden>
       <div class="modal-card">
@@ -410,6 +440,6 @@
       crossorigin=""
       defer
     ></script>
-    <script src="app.js?v=9" defer></script>
+    <script src="app.js?v=10" defer></script>
   </body>
 </html>
