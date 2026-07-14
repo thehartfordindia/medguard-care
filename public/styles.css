@@ -2192,5 +2192,104 @@ a:hover {
   width: 100%;
 }
 
+/* ---------- guided symptom checker (v=13) ---------- */
+.symptom-card {
+  max-width: 560px;
+  width: 100%;
+}
+.symptom-head h3 {
+  margin: 0;
+}
+.symptom-head small {
+  opacity: 0.7;
+}
+.symptom-body {
+  margin: 0.9rem 0;
+  max-height: 60vh;
+  overflow: auto;
+}
+.symptom-q {
+  font-weight: 600;
+  margin: 0 0 0.7rem;
+}
+.symptom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+.symptom-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.9rem 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.82rem;
+  text-align: center;
+  transition: transform 0.1s, border-color 0.1s, background 0.1s;
+}
+.symptom-tile:hover {
+  transform: translateY(-2px);
+  border-color: #2563eb;
+  background: rgba(37, 99, 235, 0.06);
+}
+.symptom-emoji {
+  font-size: 1.7rem;
+}
+.symptom-none {
+  text-align: center;
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+.linklike {
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-decoration: underline;
+}
+.symptom-back {
+  margin-bottom: 0.6rem;
+}
+.symptom-detail h4 {
+  margin: 0 0 0.3rem;
+  font-size: 1.15rem;
+}
+.symptom-question {
+  font-style: italic;
+  opacity: 0.75;
+  margin: 0 0 0.6rem;
+}
+.symptom-advice {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0 0 0.9rem;
+}
+.symptom-sec {
+  margin-bottom: 0.9rem;
+}
+.symptom-sec strong {
+  display: block;
+  font-size: 0.82rem;
+  opacity: 0.7;
+  margin-bottom: 0.4rem;
+}
+.symptom-chat {
+  margin-top: 0.4rem;
+}
+@media (max-width: 640px) {
+  .symptom-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
 
 
